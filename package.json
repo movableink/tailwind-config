@@ -1,0 +1,24 @@
+{
+  "name": "@movable/tailwind-config",
+  "version": "0.1.0",
+  "description": "Tailwind Config for Fluid",
+  "main": "index.js",
+  "repository": "git@github.com:movableink/tailwind-config.git",
+  "author": "Alex LaFroscia <alafroscia@movableink.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tailwind build css/tailwind-imports.css --config index.js -o dist/fluid-tailwind.css",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.19.1",
+    "tailwindcss": "^1.1.4"
+  },
+  "engines": {
+    "node": ">=10.16"
+  }
+}
