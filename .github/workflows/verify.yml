@@ -1,4 +1,4 @@
-name: CI
+name: Verify
 
 on: [push]
 
@@ -12,10 +12,8 @@ jobs:
         node-version: '10.x'
     - run: yarn install
     - run: yarn lint -f tap
-      env:
-        CI: true
 
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -23,4 +21,4 @@ jobs:
       with:
         node-version: '10.x'
     - run: yarn install
-    - run: yarn build
+    - run: yarn test
