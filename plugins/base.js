@@ -3,9 +3,7 @@
 module.exports = function fluidTailwindPlugin({ addBase, theme }) {
   addBase({
     html: {
-      fontFamily: theme('fontFamily.sans').reduce((acc, font) => `${acc}, ${font}`),
-      fontSize: '13px',
-      fontWeight: '400'
+      fontFamily: theme('fontFamily.sans').reduce((acc, font) => `${acc}, ${font}`)
     },
 
     'input, textarea': {
