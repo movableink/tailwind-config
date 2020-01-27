@@ -8,13 +8,17 @@
   "license": "MIT",
   "scripts": {
     "build": "tailwind build css/tailwind-imports.css --config index.js -o dist/fluid-tailwind.css",
+    "start": "start-storybook -s dist",
     "lint": "eslint .",
     "pretest": "yarn build",
     "test": "ava",
     "release": "standard-version"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@storybook/html": "^5.3.9",
     "ava": "^2.4.0",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-ava": "^9.0.0",
