@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/movableink/tailwind-config/compare/v0.2.0...v0.2.1) (2020-01-27)
+
+
+### Bug Fixes
+
+* whitelist files to publish to NPM ([b304081](https://github.com/movableink/tailwind-config/commit/b3040814d0ce6d03fcf6ba795ff211fc6ee5541f))
+
 ## 0.2.0 (2020-01-27)
 
 
