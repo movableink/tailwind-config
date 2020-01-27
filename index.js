@@ -2,7 +2,7 @@
 
 const fluidBasePlugin = require('./plugins/base');
 const { ...colors } = require('./colors');
-const { fontWeight } = require('./typography');
+const { fontFamily, fontWeight } = require('./typography');
 
 /**
  * Configures Tailwind to use Fluid's design tokens
@@ -11,12 +11,14 @@ module.exports = {
   theme: {
     colors,
     fill: colors,
+    fontFamily,
     fontWeight,
     stroke: colors
   },
   variants: {
     backgroundColor: [],
     fill: [],
+    fontFamily: [],
     fontStyle: [],
     fontWeight: [],
     float: [],
@@ -29,6 +31,7 @@ module.exports = {
   corePlugins: [
     'backgroundColor',
     'fill',
+    'fontFamily',
     'fontStyle',
     'fontWeight',
     'float',

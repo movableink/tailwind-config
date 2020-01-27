@@ -3,7 +3,7 @@
 module.exports = function fluidTailwindPlugin({ addBase, theme }) {
   addBase({
     html: {
-      fontFamily: "'Open Sans', 'Arial', sans-serif",
+      fontFamily: theme('fontFamily.sans').reduce((acc, font) => `${acc}, ${font}`),
       fontSize: '13px',
       fontWeight: '400'
     },
