@@ -1,8 +1,8 @@
 'use strict';
 
 const fluidBasePlugin = require('./plugins/base');
-const { ...colors } = require('./colors');
-const { fontFamily, fontWeight } = require('./typography');
+const { ...colors } = require('./config/colors');
+const { fontFamily, fontWeight } = require('./config/typography');
 
 /**
  * Configures Tailwind to use Fluid's design tokens

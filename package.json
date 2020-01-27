@@ -6,6 +6,12 @@
   "repository": "git@github.com:movableink/tailwind-config.git",
   "author": "Alex LaFroscia <alafroscia@movableink.com>",
   "license": "MIT",
+  "files": [
+    "config",
+    "dist",
+    "index.js",
+    "plugins"
+  ],
   "scripts": {
     "build": "tailwind build css/tailwind-imports.css --config index.js -o dist/fluid-tailwind.css",
     "start": "start-storybook -s dist",
