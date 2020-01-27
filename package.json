@@ -12,7 +12,8 @@
     "lint": "eslint .",
     "pretest": "yarn build",
     "test": "ava",
-    "release": "standard-version"
+    "release": "standard-version",
+    "prepare": "yarn build"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
