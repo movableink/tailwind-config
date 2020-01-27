@@ -1,5 +1,5 @@
 export default {
-  title: "Color|Text",
+  title: 'Color|Text',
   decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
 };
 
