@@ -1,7 +1,13 @@
 'use strict';
 
 const { ...colors } = require('./config/colors');
-const { fontFamily, fontWeight, letterSpacing, lineHeight } = require('./config/typography');
+const {
+  fontFamily,
+  fontSize,
+  fontWeight,
+  letterSpacing,
+  lineHeight
+} = require('./config/typography');
 const fluidBasePlugin = require('./plugins/base');
 
 /**
@@ -12,6 +18,7 @@ module.exports = {
     colors,
     fill: colors,
     fontFamily,
+    fontSize,
     fontWeight,
     letterSpacing,
     lineHeight,
@@ -21,6 +28,7 @@ module.exports = {
     backgroundColor: [],
     fill: [],
     fontFamily: [],
+    fontSize: [],
     fontStyle: [],
     fontWeight: [],
     float: [],
@@ -36,6 +44,7 @@ module.exports = {
     'backgroundColor',
     'fill',
     'fontFamily',
+    'fontSize',
     'fontStyle',
     'fontWeight',
     'float',

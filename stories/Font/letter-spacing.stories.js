@@ -17,7 +17,7 @@ export default {
 };
 
 export const ExtraExtraSmall = () =>
-  makeLetterSpacingStory('xxs', 'Reserved for large text, like headers');
+  makeLetterSpacingStory('2xs', 'Reserved for large text, like headers');
 
 export const ExtraSmall = () =>
   makeLetterSpacingStory('xs', 'Reserved for large text, like headers');

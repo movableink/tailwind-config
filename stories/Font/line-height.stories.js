@@ -17,7 +17,7 @@ export default {
 };
 
 export const ExtraExtraSmall = () =>
-  makeLetterSpacingStory('xxs', 'Use sparingly. Caption text only.');
+  makeLetterSpacingStory('2xs', 'Use sparingly. Caption text only.');
 
 export const ExtraSmall = () => makeLetterSpacingStory('xs', 'Use sparingly. Caption text only.');
 
