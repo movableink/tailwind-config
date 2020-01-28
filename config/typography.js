@@ -21,8 +21,21 @@ const letterSpacing = {
   md: '0.025em'
 };
 
+const lineHeight = {
+  xxs: 1,
+  xs: 1.25,
+  sm: 1.5,
+  base: 1.75,
+  md: 2,
+  lg: 2.25,
+  xl: 2.5,
+  '2xl': 2.75,
+  '3xl': 3.5
+};
+
 module.exports = {
   fontFamily,
   fontWeight,
-  letterSpacing
+  letterSpacing,
+  lineHeight
 };
