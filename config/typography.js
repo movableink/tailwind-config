@@ -13,7 +13,16 @@ const fontWeight = {
   extrabold: 800
 };
 
+const letterSpacing = {
+  xxs: '-0.075rem',
+  xs: '-0.0625rem',
+  sm: '-0.03125rem',
+  base: '0rem',
+  md: '0.025em'
+};
+
 module.exports = {
   fontFamily,
-  fontWeight
+  fontWeight,
+  letterSpacing
 };
