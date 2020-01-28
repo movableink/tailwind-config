@@ -1,5 +1,5 @@
 import { LoremIpsum } from 'lorem-ipsum';
-import makeCallout from '../_utils/callout';
+import makeCallout from '../../_utils/callout';
 
 const lorem = new LoremIpsum();
 
@@ -12,7 +12,7 @@ function makeFontSizeStory(size, notes) {
 }
 
 export default {
-  title: 'Font|Size',
+  title: 'Utilities|Font/Size',
   decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
 };
 

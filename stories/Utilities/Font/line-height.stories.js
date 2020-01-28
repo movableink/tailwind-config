@@ -1,5 +1,5 @@
 import { LoremIpsum } from 'lorem-ipsum';
-import makeCallout from '../_utils/callout';
+import makeCallout from '../../_utils/callout';
 
 const lorem = new LoremIpsum();
 
@@ -12,7 +12,7 @@ function makeLetterSpacingStory(size, notes) {
 }
 
 export default {
-  title: 'Font|Line Height',
+  title: 'Utilities|Font/Line Height',
   decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
 };
 

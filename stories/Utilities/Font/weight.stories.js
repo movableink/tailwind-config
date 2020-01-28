@@ -3,7 +3,7 @@ import { LoremIpsum } from 'lorem-ipsum';
 const lorem = new LoremIpsum();
 
 export default {
-  title: 'Font|Weight',
+  title: 'Utilities|Font/Weight',
   decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
 };
 
