@@ -6,8 +6,11 @@ const fontFamily = {
 };
 
 const fontWeight = {
+  thin: 200,
+  light: 300,
   normal: 400,
-  semibold: 600
+  semibold: 600,
+  extrabold: 800
 };
 
 module.exports = {
