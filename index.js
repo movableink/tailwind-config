@@ -1,8 +1,14 @@
 'use strict';
 
-const fluidBasePlugin = require('./plugins/base');
 const { ...colors } = require('./config/colors');
-const { fontFamily, fontWeight } = require('./config/typography');
+const {
+  fontFamily,
+  fontSize,
+  fontWeight,
+  letterSpacing,
+  lineHeight
+} = require('./config/typography');
+const fluidBasePlugin = require('./plugins/base');
 
 /**
  * Configures Tailwind to use Fluid's design tokens
@@ -12,16 +18,22 @@ module.exports = {
     colors,
     fill: colors,
     fontFamily,
+    fontSize,
     fontWeight,
+    letterSpacing,
+    lineHeight,
     stroke: colors
   },
   variants: {
     backgroundColor: [],
     fill: [],
     fontFamily: [],
+    fontSize: [],
     fontStyle: [],
     fontWeight: [],
     float: [],
+    letterSpacing: [],
+    lineHeight: [],
     stroke: [],
     textColor: ['hover']
   },
@@ -32,9 +44,12 @@ module.exports = {
     'backgroundColor',
     'fill',
     'fontFamily',
+    'fontSize',
     'fontStyle',
     'fontWeight',
     'float',
+    'letterSpacing',
+    'lineHeight',
     'preflight',
     'stroke',
     'textColor'

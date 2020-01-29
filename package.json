@@ -32,6 +32,7 @@
     "babel-loader": "^8.0.6",
     "csso-cli": "^3.0.0",
     "eslint-plugin-ava": "^9.0.0",
+    "lorem-ipsum": "^2.0.3",
     "postcss": "^7.0.24",
     "standard-version": "^7.0.1",
     "tailwindcss": "^1.1.4"
