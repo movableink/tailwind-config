@@ -30,13 +30,15 @@ module.exports = {
   variants: {
     backgroundColor: [],
     fill: [],
+    float: [],
     fontFamily: [],
     fontSize: [],
     fontStyle: [],
     fontWeight: [],
-    float: [],
     letterSpacing: [],
     lineHeight: [],
+    margin: [],
+    padding: [],
     stroke: [],
     textColor: ['hover']
   },
@@ -51,13 +53,15 @@ module.exports = {
   corePlugins: [
     'backgroundColor',
     'fill',
+    'float',
     'fontFamily',
     'fontSize',
     'fontStyle',
     'fontWeight',
-    'float',
     'letterSpacing',
     'lineHeight',
+    'margin',
+    'padding',
     'preflight',
     'stroke',
     'textColor'
