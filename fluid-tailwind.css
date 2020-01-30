@@ -600,7 +600,9 @@ video {
 }
 
 html {
+  color: #000000;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.75;
 }
 
 b, strong {
@@ -625,6 +627,78 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder {
 
 input::placeholder, textarea::placeholder {
   color: #c5c5ca;
+}
+
+.body-xl {
+  font-size: 1.266rem;
+  letter-spacing: -0.03125rem;
+  line-height: 2;
+}
+
+.body-lg {
+  font-size: 1.125rem;
+  letter-spacing: 0rem;
+  line-height: 1.75;
+}
+
+.body-base {
+  font-size: 1rem;
+  letter-spacing: 0rem;
+  line-height: 1.75;
+}
+
+.body-sm {
+  font-size: 0.889rem;
+  letter-spacing: 0rem;
+  line-height: 1.5;
+}
+
+.caption-lg {
+  font-size: 0.79rem;
+  letter-spacing: 0.025em;
+  line-height: 1.25;
+}
+
+.caption-sm {
+  font-size: 0.702rem;
+  letter-spacing: 0.025em;
+  line-height: 1;
+}
+
+.heading-2xl {
+  font-size: 2.566rem;
+  letter-spacing: -0.075rem;
+  line-height: 3.5;
+}
+
+.heading-xl {
+  font-size: 2.281rem;
+  letter-spacing: -0.0625rem;
+  line-height: 2.75;
+}
+
+.heading-lg {
+  font-size: 2.027rem;
+  letter-spacing: 0rem;
+  line-height: 2.5;
+}
+
+.heading-md {
+  font-size: 1.802rem;
+  letter-spacing: 0rem;
+  line-height: 2.25;
+}
+
+.heading-sm {
+  font-size: 1.602rem;
+  letter-spacing: 0rem;
+  line-height: 2.25;
+}
+
+.heading-xs {
+  font-size: 1.424rem;
+  letter-spacing: 0rem;
+  line-height: 1.75;
 }
 
 .bg-neutral-100 {
