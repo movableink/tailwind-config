@@ -3,7 +3,12 @@
 module.exports = function fluidTailwindPlugin({ addBase, theme }) {
   addBase({
     html: {
-      fontFamily: theme('fontFamily.sans').reduce((acc, font) => `${acc}, ${font}`)
+      // Default to our normal text color
+      color: theme('colors.neutral.900'),
+      // Default to using our `sans` font family
+      fontFamily: theme('fontFamily.sans').reduce((acc, font) => `${acc}, ${font}`),
+      // Default to the "base" line height
+      lineHeight: theme('lineHeight.base')
     },
 
     'b, strong': {
