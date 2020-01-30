@@ -1,5 +1,6 @@
 # Build Output
 dist
+storybook-static
 
 # Dependencies
 node_modules
