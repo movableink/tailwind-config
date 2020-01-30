@@ -603,6 +603,10 @@ html {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
+b, strong {
+  font-weight: 600;
+}
+
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #c5c5ca;
 }
@@ -1215,24 +1219,12 @@ input::placeholder, textarea::placeholder {
   font-style: normal;
 }
 
-.font-thin {
-  font-weight: 200;
-}
-
-.font-light {
-  font-weight: 300;
-}
-
 .font-normal {
   font-weight: 400;
 }
 
-.font-semibold {
+.font-bold {
   font-weight: 600;
-}
-
-.font-extrabold {
-  font-weight: 800;
 }
 
 .float-right {
