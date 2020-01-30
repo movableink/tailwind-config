@@ -10,6 +10,7 @@ const {
 } = require('./config/typography');
 const fluidBasePlugin = require('./plugins/base');
 const bodyTextComponentsPlugin = require('./plugins/components/body-text');
+const captionTextComponentsPlugin = require('./plugins/components/caption-text');
 
 /**
  * Configures Tailwind to use Fluid's design tokens
@@ -38,7 +39,7 @@ module.exports = {
     stroke: [],
     textColor: ['hover']
   },
-  plugins: [fluidBasePlugin, bodyTextComponentsPlugin],
+  plugins: [fluidBasePlugin, bodyTextComponentsPlugin, captionTextComponentsPlugin],
 
   // Whitelist only parts of Tailwind that we are ready to use
   corePlugins: [
