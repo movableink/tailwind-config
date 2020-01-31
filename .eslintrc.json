@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "@movable/eslint-config",
-    "@movable/eslint-config-node"
-  ],
+  "extends": ["@movable/eslint-config", "@movable/eslint-config-node"],
   "overrides": [
     {
       "files": ["stories/**/*.js"],

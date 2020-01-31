@@ -2,7 +2,7 @@
 
 > [Tailwind][tailwind] configuration file for Movable Ink's Fluid Design System
 
-*Note: if you wish to contribute to `@movable/tailwind-config`, please see our [contribution documentation](./CONTRIBUTING.md).*
+_Note: if you wish to contribute to `@movable/tailwind-config`, please see our [contribution documentation](./CONTRIBUTING.md)._
 
 ## Installation
 
@@ -36,7 +36,10 @@ And the CSS classes will be made available to you.
 If you want to go even _simpler_, you can link against the pre-built CSS file on [`unpkg`][unpkg]. Include the following in the `head` of your document.
 
 ```html
-<link rel="stylesheet" href="http://unpkg.com/@movable/tailwind-config/dist/fluid-tailwind.min.css">
+<link
+  rel="stylesheet"
+  href="http://unpkg.com/@movable/tailwind-config/dist/fluid-tailwind.min.css"
+/>
 ```
 
 Note that with this approach, you will _always_ get the latest version of the Tailwind CSS -- even if there was a major version bump. See the `unpkg` documentation if you want to link against a specific version the package.
@@ -48,7 +51,10 @@ Regardless of which approach you take to including the Tailwind CSS into your ap
 Include the following `link` in the `head` of your document, _before_ any other CSS files
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro:400,600&display=swap">
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro:400,600&display=swap"
+/>
 ```
 
 [tailwind]: https://tailwindcss.com
