@@ -48,7 +48,7 @@ Regardless of which approach you take to including the Tailwind CSS into your ap
 Include the following `link` in the `head` of your document, _before_ any other CSS files
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800|Source+Code+Pro:200,300,400,600,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro:400,600&display=swap">
 ```
 
 [tailwind]: https://tailwindcss.com
