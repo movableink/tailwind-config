@@ -17,8 +17,8 @@ yarn build
 yarn start
 ```
 
-* `yarn build` creates the Tailwind stylesheet
-* `yarn start` runs Storybook
+- `yarn build` creates the Tailwind stylesheet
+- `yarn start` runs Storybook
 
 If you change the Tailwind configuration, make sure to run `yarn build` again to re-build the CSS file.
 
