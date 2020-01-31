@@ -1,8 +1,10 @@
-import test from 'ava';
-import path from 'path';
-import fs from 'fs';
-import { promisify } from 'util';
-import postcss from 'postcss';
+'use strict';
+
+const test = require('ava');
+const path = require('path');
+const fs = require('fs');
+const { promisify } = require('util');
+const postcss = require('postcss');
 
 const readFile = promisify(fs.readFile);
 
