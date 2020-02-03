@@ -1,6 +1,7 @@
 # `@movable/tailwind-config`
 
 ![Verify](https://github.com/movableink/tailwind-config/workflows/Verify/badge.svg)
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/movableink/tailwind-config)
 
 > [Tailwind][tailwind] configuration file for Movable Ink's Fluid Design System
 
