@@ -1,6 +1,8 @@
 import { LoremIpsum } from 'lorem-ipsum';
+import random from '../_utils/random';
 
 const lorem = new LoremIpsum({
+  random,
   wordsPerSentence: {
     min: 5,
     max: 8
