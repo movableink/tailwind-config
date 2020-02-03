@@ -34,6 +34,7 @@ const letterSpacing = {
 };
 
 const lineHeight = {
+  none: 1,
   '2xs': '1rem',
   xs: '1.25rem',
   sm: '1.5rem',
