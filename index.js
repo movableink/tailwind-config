@@ -25,22 +25,8 @@ module.exports = {
     fontWeight,
     letterSpacing,
     lineHeight,
-    stroke: colors
-  },
-  variants: {
-    backgroundColor: [],
-    fill: [],
-    float: [],
-    fontFamily: [],
-    fontSize: [],
-    fontStyle: [],
-    fontWeight: [],
-    letterSpacing: [],
-    lineHeight: [],
-    margin: [],
-    padding: [],
-    stroke: [],
-    textColor: ['hover']
+    stroke: colors,
+    screens: {}
   },
   plugins: [
     fluidBasePlugin,
