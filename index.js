@@ -34,22 +34,12 @@ module.exports = {
     captionTextComponentsPlugin,
     headingTextComponentsPlugin
   ],
-
-  // Whitelist only parts of Tailwind that we are ready to use
-  corePlugins: [
-    'backgroundColor',
-    'fill',
-    'float',
-    'fontFamily',
-    'fontSize',
-    'fontStyle',
-    'fontWeight',
-    'letterSpacing',
-    'lineHeight',
-    'margin',
-    'padding',
-    'preflight',
-    'stroke',
-    'textColor'
-  ]
+  corePlugins: {
+    height: false,
+    maxHeight: false,
+    maxWidth: false,
+    minHeight: false,
+    minWidth: false,
+    width: false
+  }
 };
