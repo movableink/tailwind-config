@@ -22,3 +22,18 @@ jobs:
           node-version: '12.x'
       - run: yarn install
       - run: yarn test
+
+  percy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: yarn install
+      - name: Percy Test
+        uses: percy/storybook-action@v0.1.1
+        with:
+          storybook-flags: "-s dist"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
