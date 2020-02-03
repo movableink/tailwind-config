@@ -29,6 +29,7 @@
     "@movable/eslint-config": "^0.5.0",
     "@movable/eslint-config-node": "^0.4.1",
     "@movable/prettier-config": "^0.3.0",
+    "@percy/storybook": "^3.2.0",
     "@storybook/html": "^5.3.9",
     "ava": "^3.1.0",
     "babel-loader": "^8.0.6",
