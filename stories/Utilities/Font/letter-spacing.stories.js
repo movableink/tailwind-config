@@ -1,7 +1,8 @@
 import { LoremIpsum } from 'lorem-ipsum';
 import makeCallout from '../../_utils/callout';
+import random from '../../_utils/random';
 
-const lorem = new LoremIpsum();
+const lorem = new LoremIpsum({ random });
 
 function makeLetterSpacingStory(size, notes) {
   return `

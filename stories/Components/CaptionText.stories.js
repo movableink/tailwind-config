@@ -1,6 +1,7 @@
 import { LoremIpsum } from 'lorem-ipsum';
+import random from '../_utils/random';
 
-const lorem = new LoremIpsum();
+const lorem = new LoremIpsum({ random });
 
 function makeCaptionTextStory(size) {
   return `

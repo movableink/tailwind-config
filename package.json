@@ -39,6 +39,7 @@
     "lint-staged": "^10.0.7",
     "lorem-ipsum": "^2.0.3",
     "postcss": "^7.0.24",
+    "seedrandom": "^3.0.5",
     "standard-version": "^7.0.1",
     "tailwindcss": "^1.1.4"
   },
