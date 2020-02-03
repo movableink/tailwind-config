@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/movableink/tailwind-config/compare/v0.4.0...v0.5.0) (2020-02-03)
+
+### Features
+
+- whitelisting padding and margin ([8b940a4](https://github.com/movableink/tailwind-config/commit/8b940a4fdc3ff0a91b00923f33aa35dede35bd27))
+
 ## [0.4.0](https://github.com/movableink/tailwind-config/compare/v0.3.0...v0.4.0) (2020-01-31)
 
 ### ⚠ BREAKING CHANGES
