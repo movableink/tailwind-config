@@ -1,5 +1,7 @@
 # `@movable/tailwind-config`
 
+![Verify](https://github.com/movableink/tailwind-config/workflows/Verify/badge.svg)
+
 > [Tailwind][tailwind] configuration file for Movable Ink's Fluid Design System
 
 _Note: if you wish to contribute to `@movable/tailwind-config`, please see our [contribution documentation](./CONTRIBUTING.md)._
