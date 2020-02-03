@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/movableink/tailwind-config/compare/v0.5.0...v0.6.0) (2020-02-03)
+
+### Features
+
+- enable non-size-related core plugins ([567ac6b](https://github.com/movableink/tailwind-config/commit/567ac6b32c2507aa33b6c4df9741ccfd9a7c60f3)), closes [#4](https://github.com/movableink/tailwind-config/issues/4)
+
 ## [0.5.0](https://github.com/movableink/tailwind-config/compare/v0.4.0...v0.5.0) (2020-02-03)
 
 ### Features
