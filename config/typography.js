@@ -34,15 +34,16 @@ const letterSpacing = {
 };
 
 const lineHeight = {
-  '2xs': 1,
-  xs: 1.25,
-  sm: 1.5,
-  base: 1.75,
-  md: 2,
-  lg: 2.25,
-  xl: 2.5,
-  '2xl': 2.75,
-  '3xl': 3.5
+  none: 1,
+  '2xs': '1rem',
+  xs: '1.25rem',
+  sm: '1.5rem',
+  base: '1.75rem',
+  md: '2rem',
+  lg: '2.25rem',
+  xl: '2.5rem',
+  '2xl': '2.75rem',
+  '3xl': '3.5rem'
 };
 
 module.exports = {

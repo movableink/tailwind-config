@@ -17,6 +17,12 @@ export default {
   decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
 };
 
+export const None = () =>
+  makeLineHeightStory(
+    'none',
+    'Match the line height to the font size, no matter what the font size is'
+  );
+
 export const ExtraExtraSmall = () =>
   makeLineHeightStory('2xs', 'Use sparingly. Caption text only.');
 
