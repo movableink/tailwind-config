@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/movableink/tailwind-config/compare/v0.6.0...v0.7.0) (2020-02-04)
+
+### Features
+
+- add `leading-none` utility ([3a886ef](https://github.com/movableink/tailwind-config/commit/3a886ef32210e3081c7312e9b744a9cf1feadd1a))
+- generate stable Lorem Ipsum examples ([eedcc0b](https://github.com/movableink/tailwind-config/commit/eedcc0b3a60eec5aefb805b201b6026aebef967d))
+
+### Bug Fixes
+
+- set default text styles on `body` as well ([4ebf5ac](https://github.com/movableink/tailwind-config/commit/4ebf5acf0a1dd0fe791811ef8c022bd5e84d4db9))
+- use `rem` units for line height ([13eacff](https://github.com/movableink/tailwind-config/commit/13eacff069d5c53fd3f76dddaf83eb71157a1604))
+
+### [0.6.1](https://github.com/movableink/tailwind-config/compare/v0.6.0...v0.6.1) (2020-02-04)
+
+### Features
+
+- add `leading-none` utility ([3a886ef](https://github.com/movableink/tailwind-config/commit/3a886ef32210e3081c7312e9b744a9cf1feadd1a))
+- generate stable Lorem Ipsum examples ([eedcc0b](https://github.com/movableink/tailwind-config/commit/eedcc0b3a60eec5aefb805b201b6026aebef967d))
+
+### Bug Fixes
+
+- set default text styles on `body` as well ([4ebf5ac](https://github.com/movableink/tailwind-config/commit/4ebf5acf0a1dd0fe791811ef8c022bd5e84d4db9))
+- use `rem` units for line height ([13eacff](https://github.com/movableink/tailwind-config/commit/13eacff069d5c53fd3f76dddaf83eb71157a1604))
+
 ## [0.6.0](https://github.com/movableink/tailwind-config/compare/v0.5.0...v0.6.0) (2020-02-03)
 
 ### Features
