@@ -599,10 +599,10 @@ video {
   height: auto;
 }
 
-html {
+html, body {
   color: #000000;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  line-height: 1.75;
+  line-height: 1.75rem;
 }
 
 b, strong {
@@ -636,73 +636,73 @@ input::placeholder, textarea::placeholder {
 .body-xl {
   font-size: 1.266rem;
   letter-spacing: -0.03125rem;
-  line-height: 2;
+  line-height: 2rem;
 }
 
 .body-lg {
   font-size: 1.125rem;
   letter-spacing: 0rem;
-  line-height: 1.75;
+  line-height: 1.75rem;
 }
 
 .body-base {
   font-size: 1rem;
   letter-spacing: 0rem;
-  line-height: 1.75;
+  line-height: 1.75rem;
 }
 
 .body-sm {
   font-size: 0.889rem;
   letter-spacing: 0rem;
-  line-height: 1.5;
+  line-height: 1.5rem;
 }
 
 .caption-lg {
   font-size: 0.79rem;
   letter-spacing: 0.025em;
-  line-height: 1.25;
+  line-height: 1.25rem;
 }
 
 .caption-sm {
   font-size: 0.702rem;
   letter-spacing: 0.025em;
-  line-height: 1;
+  line-height: 1rem;
 }
 
 .heading-2xl {
   font-size: 2.566rem;
   letter-spacing: -0.075rem;
-  line-height: 3.5;
+  line-height: 3.5rem;
 }
 
 .heading-xl {
   font-size: 2.281rem;
   letter-spacing: -0.0625rem;
-  line-height: 2.75;
+  line-height: 2.75rem;
 }
 
 .heading-lg {
   font-size: 2.027rem;
   letter-spacing: 0rem;
-  line-height: 2.5;
+  line-height: 2.5rem;
 }
 
 .heading-md {
   font-size: 1.802rem;
   letter-spacing: 0rem;
-  line-height: 2.25;
+  line-height: 2.25rem;
 }
 
 .heading-sm {
   font-size: 1.602rem;
   letter-spacing: 0rem;
-  line-height: 2.25;
+  line-height: 2.25rem;
 }
 
 .heading-xs {
   font-size: 1.424rem;
   letter-spacing: 0rem;
-  line-height: 1.75;
+  line-height: 1.75rem;
 }
 
 .sr-only {
@@ -3107,40 +3107,44 @@ input::placeholder, textarea::placeholder {
   font-weight: 600;
 }
 
-.leading-2xs {
+.leading-none {
   line-height: 1;
 }
 
+.leading-2xs {
+  line-height: 1rem;
+}
+
 .leading-xs {
-  line-height: 1.25;
+  line-height: 1.25rem;
 }
 
 .leading-sm {
-  line-height: 1.5;
+  line-height: 1.5rem;
 }
 
 .leading-base {
-  line-height: 1.75;
+  line-height: 1.75rem;
 }
 
 .leading-md {
-  line-height: 2;
+  line-height: 2rem;
 }
 
 .leading-lg {
-  line-height: 2.25;
+  line-height: 2.25rem;
 }
 
 .leading-xl {
-  line-height: 2.5;
+  line-height: 2.5rem;
 }
 
 .leading-2xl {
-  line-height: 2.75;
+  line-height: 2.75rem;
 }
 
 .leading-3xl {
-  line-height: 3.5;
+  line-height: 3.5rem;
 }
 
 .list-inside {
