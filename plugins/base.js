@@ -2,7 +2,7 @@
 
 module.exports = function fluidTailwindPlugin({ addBase, theme }) {
   addBase({
-    html: {
+    'html, body': {
       // Default to our normal text color
       color: theme('colors.neutral.900'),
       // Default to using our `sans` font family
