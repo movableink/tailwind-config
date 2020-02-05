@@ -356,23 +356,6 @@ template {
  */
 
 /**
- * 1. Prevent padding and border from affecting element width
- * https://goo.gl/pYtbK7
- * 2. Change the default font family in all browsers (opinionated)
- */
-
-html {
-  box-sizing: border-box; /* 1 */
-  font-family: sans-serif; /* 2 */
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-/**
  * Removes the default spacing and border for appropriate elements.
  */
 
@@ -393,7 +376,8 @@ pre {
 }
 
 button {
-  background: transparent;
+  background-color: transparent;
+  background-image: none;
   padding: 0;
 }
 
@@ -424,38 +408,50 @@ ul {
  */
 
 /**
- * 1. Use the system font stack as a sane default.
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
  * 2. Use Tailwind's default "normal" line-height so the user isn't forced
- * to override it to ensure consistency even when using the default theme.
+ *    to override it to ensure consistency even when using the default theme.
  */
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
 /**
- * Allow adding a border to an element by just adding a border-width.
+ * 1. Prevent padding and border from affecting element width.
  *
- * By default, the way the browser specifies that an element should have no
- * border is by setting it's border-style to `none` in the user-agent
- * stylesheet.
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
  *
- * In order to easily add borders to elements by just setting the `border-width`
- * property, we change the default border-style for all elements to `solid`, and
- * use border-width to hide them instead. This way our `border` utilities only
- * need to set the `border-width` property instead of the entire `border`
- * shorthand, making our border utilities much more straightforward to compose.
+ *    https://github.com/mozdevs/cssremedy/issues/4
  *
- * https://github.com/tailwindcss/tailwindcss/pull/116
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
  */
 
 *,
-*::before,
-*::after {
-  border-width: 0;
-  border-style: solid;
-  border-color: currentColor;
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: currentColor; /* 2 */
 }
 
 /*
@@ -2445,6 +2441,10 @@ input::placeholder, textarea::placeholder {
   border-radius: 0.25rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -2511,6 +2511,26 @@ input::placeholder, textarea::placeholder {
 .rounded-l {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-t-md {
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.rounded-r-md {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
+.rounded-b-md {
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-l-md {
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
 }
 
 .rounded-t-lg {
@@ -2599,6 +2619,22 @@ input::placeholder, textarea::placeholder {
 
 .rounded-bl {
   border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-tl-md {
+  border-top-left-radius: 0.375rem;
+}
+
+.rounded-tr-md {
+  border-top-right-radius: 0.375rem;
+}
+
+.rounded-br-md {
+  border-bottom-right-radius: 0.375rem;
+}
+
+.rounded-bl-md {
+  border-bottom-left-radius: 0.375rem;
 }
 
 .rounded-tl-lg {
@@ -2753,6 +2789,14 @@ input::placeholder, textarea::placeholder {
   border-left-width: 1px;
 }
 
+.box-border {
+  box-sizing: border-box;
+}
+
+.box-content {
+  box-sizing: content-box;
+}
+
 .cursor-auto {
   cursor: auto;
 }
@@ -2803,16 +2847,44 @@ input::placeholder, textarea::placeholder {
   display: inline-flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .table {
   display: table;
 }
 
-.table-row {
-  display: table-row;
+.table-caption {
+  display: table-caption;
 }
 
 .table-cell {
   display: table-cell;
+}
+
+.table-column {
+  display: table-column;
+}
+
+.table-column-group {
+  display: table-column-group;
+}
+
+.table-footer-group {
+  display: table-footer-group;
+}
+
+.table-header-group {
+  display: table-header-group;
+}
+
+.table-row-group {
+  display: table-row-group;
+}
+
+.table-row {
+  display: table-row;
 }
 
 .hidden {
@@ -2922,6 +2994,11 @@ input::placeholder, textarea::placeholder {
 
 .justify-around {
   justify-content: space-around;
+}
+
+.justify-evenly {
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .content-center {
@@ -3072,6 +3149,18 @@ input::placeholder, textarea::placeholder {
 .clearfix:after {
   content: "";
   display: table;
+  clear: both;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}
+
+.clear-both {
   clear: both;
 }
 
@@ -7822,6 +7911,14 @@ input::placeholder, textarea::placeholder {
   resize: both;
 }
 
+.shadow-xs {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
 .shadow {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
@@ -7854,6 +7951,14 @@ input::placeholder, textarea::placeholder {
   box-shadow: none;
 }
 
+.hover\:shadow-xs:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.hover\:shadow-sm:hover {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
 .hover\:shadow:hover {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
@@ -7884,6 +7989,14 @@ input::placeholder, textarea::placeholder {
 
 .hover\:shadow-none:hover {
   box-shadow: none;
+}
+
+.focus\:shadow-xs:focus {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.focus\:shadow-sm:focus {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .focus\:shadow:focus {
@@ -8444,6 +8557,18 @@ input::placeholder, textarea::placeholder {
 
 .stroke-red {
   stroke: #fc5142;
+}
+
+.stroke-0 {
+  stroke-width: 0;
+}
+
+.stroke-1 {
+  stroke-width: 1;
+}
+
+.stroke-2 {
+  stroke-width: 2;
 }
 
 .table-auto {
@@ -9525,5 +9650,2467 @@ input::placeholder, textarea::placeholder {
 
 .z-auto {
   z-index: auto;
+}
+
+.gap-0 {
+  grid-gap: 0;
+  gap: 0;
+}
+
+.gap-1 {
+  grid-gap: 0.25rem;
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  grid-gap: 0.75rem;
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.gap-5 {
+  grid-gap: 1.25rem;
+  gap: 1.25rem;
+}
+
+.gap-6 {
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+
+.gap-10 {
+  grid-gap: 2.5rem;
+  gap: 2.5rem;
+}
+
+.gap-12 {
+  grid-gap: 3rem;
+  gap: 3rem;
+}
+
+.gap-16 {
+  grid-gap: 4rem;
+  gap: 4rem;
+}
+
+.gap-20 {
+  grid-gap: 5rem;
+  gap: 5rem;
+}
+
+.gap-24 {
+  grid-gap: 6rem;
+  gap: 6rem;
+}
+
+.gap-32 {
+  grid-gap: 8rem;
+  gap: 8rem;
+}
+
+.gap-40 {
+  grid-gap: 10rem;
+  gap: 10rem;
+}
+
+.gap-48 {
+  grid-gap: 12rem;
+  gap: 12rem;
+}
+
+.gap-56 {
+  grid-gap: 14rem;
+  gap: 14rem;
+}
+
+.gap-64 {
+  grid-gap: 16rem;
+  gap: 16rem;
+}
+
+.gap-px {
+  grid-gap: 1px;
+  gap: 1px;
+}
+
+.col-gap-0 {
+  grid-column-gap: 0;
+  -webkit-column-gap: 0;
+     -moz-column-gap: 0;
+          column-gap: 0;
+}
+
+.col-gap-1 {
+  grid-column-gap: 0.25rem;
+  -webkit-column-gap: 0.25rem;
+     -moz-column-gap: 0.25rem;
+          column-gap: 0.25rem;
+}
+
+.col-gap-2 {
+  grid-column-gap: 0.5rem;
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
+.col-gap-3 {
+  grid-column-gap: 0.75rem;
+  -webkit-column-gap: 0.75rem;
+     -moz-column-gap: 0.75rem;
+          column-gap: 0.75rem;
+}
+
+.col-gap-4 {
+  grid-column-gap: 1rem;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.col-gap-5 {
+  grid-column-gap: 1.25rem;
+  -webkit-column-gap: 1.25rem;
+     -moz-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+}
+
+.col-gap-6 {
+  grid-column-gap: 1.5rem;
+  -webkit-column-gap: 1.5rem;
+     -moz-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+.col-gap-8 {
+  grid-column-gap: 2rem;
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.col-gap-10 {
+  grid-column-gap: 2.5rem;
+  -webkit-column-gap: 2.5rem;
+     -moz-column-gap: 2.5rem;
+          column-gap: 2.5rem;
+}
+
+.col-gap-12 {
+  grid-column-gap: 3rem;
+  -webkit-column-gap: 3rem;
+     -moz-column-gap: 3rem;
+          column-gap: 3rem;
+}
+
+.col-gap-16 {
+  grid-column-gap: 4rem;
+  -webkit-column-gap: 4rem;
+     -moz-column-gap: 4rem;
+          column-gap: 4rem;
+}
+
+.col-gap-20 {
+  grid-column-gap: 5rem;
+  -webkit-column-gap: 5rem;
+     -moz-column-gap: 5rem;
+          column-gap: 5rem;
+}
+
+.col-gap-24 {
+  grid-column-gap: 6rem;
+  -webkit-column-gap: 6rem;
+     -moz-column-gap: 6rem;
+          column-gap: 6rem;
+}
+
+.col-gap-32 {
+  grid-column-gap: 8rem;
+  -webkit-column-gap: 8rem;
+     -moz-column-gap: 8rem;
+          column-gap: 8rem;
+}
+
+.col-gap-40 {
+  grid-column-gap: 10rem;
+  -webkit-column-gap: 10rem;
+     -moz-column-gap: 10rem;
+          column-gap: 10rem;
+}
+
+.col-gap-48 {
+  grid-column-gap: 12rem;
+  -webkit-column-gap: 12rem;
+     -moz-column-gap: 12rem;
+          column-gap: 12rem;
+}
+
+.col-gap-56 {
+  grid-column-gap: 14rem;
+  -webkit-column-gap: 14rem;
+     -moz-column-gap: 14rem;
+          column-gap: 14rem;
+}
+
+.col-gap-64 {
+  grid-column-gap: 16rem;
+  -webkit-column-gap: 16rem;
+     -moz-column-gap: 16rem;
+          column-gap: 16rem;
+}
+
+.col-gap-px {
+  grid-column-gap: 1px;
+  -webkit-column-gap: 1px;
+     -moz-column-gap: 1px;
+          column-gap: 1px;
+}
+
+.row-gap-0 {
+  grid-row-gap: 0;
+  row-gap: 0;
+}
+
+.row-gap-1 {
+  grid-row-gap: 0.25rem;
+  row-gap: 0.25rem;
+}
+
+.row-gap-2 {
+  grid-row-gap: 0.5rem;
+  row-gap: 0.5rem;
+}
+
+.row-gap-3 {
+  grid-row-gap: 0.75rem;
+  row-gap: 0.75rem;
+}
+
+.row-gap-4 {
+  grid-row-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.row-gap-5 {
+  grid-row-gap: 1.25rem;
+  row-gap: 1.25rem;
+}
+
+.row-gap-6 {
+  grid-row-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.row-gap-8 {
+  grid-row-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.row-gap-10 {
+  grid-row-gap: 2.5rem;
+  row-gap: 2.5rem;
+}
+
+.row-gap-12 {
+  grid-row-gap: 3rem;
+  row-gap: 3rem;
+}
+
+.row-gap-16 {
+  grid-row-gap: 4rem;
+  row-gap: 4rem;
+}
+
+.row-gap-20 {
+  grid-row-gap: 5rem;
+  row-gap: 5rem;
+}
+
+.row-gap-24 {
+  grid-row-gap: 6rem;
+  row-gap: 6rem;
+}
+
+.row-gap-32 {
+  grid-row-gap: 8rem;
+  row-gap: 8rem;
+}
+
+.row-gap-40 {
+  grid-row-gap: 10rem;
+  row-gap: 10rem;
+}
+
+.row-gap-48 {
+  grid-row-gap: 12rem;
+  row-gap: 12rem;
+}
+
+.row-gap-56 {
+  grid-row-gap: 14rem;
+  row-gap: 14rem;
+}
+
+.row-gap-64 {
+  grid-row-gap: 16rem;
+  row-gap: 16rem;
+}
+
+.row-gap-px {
+  grid-row-gap: 1px;
+  row-gap: 1px;
+}
+
+.grid-flow-row {
+  grid-auto-flow: row;
+}
+
+.grid-flow-col {
+  grid-auto-flow: column;
+}
+
+.grid-flow-row-dense {
+  grid-auto-flow: row dense;
+}
+
+.grid-flow-col-dense {
+  grid-auto-flow: column dense;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-cols-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid-cols-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid-cols-11 {
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-cols-none {
+  grid-template-columns: none;
+}
+
+.col-auto {
+  grid-column: auto;
+}
+
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+
+.col-span-7 {
+  grid-column: span 7 / span 7;
+}
+
+.col-span-8 {
+  grid-column: span 8 / span 8;
+}
+
+.col-span-9 {
+  grid-column: span 9 / span 9;
+}
+
+.col-span-10 {
+  grid-column: span 10 / span 10;
+}
+
+.col-span-11 {
+  grid-column: span 11 / span 11;
+}
+
+.col-span-12 {
+  grid-column: span 12 / span 12;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.col-start-3 {
+  grid-column-start: 3;
+}
+
+.col-start-4 {
+  grid-column-start: 4;
+}
+
+.col-start-5 {
+  grid-column-start: 5;
+}
+
+.col-start-6 {
+  grid-column-start: 6;
+}
+
+.col-start-7 {
+  grid-column-start: 7;
+}
+
+.col-start-8 {
+  grid-column-start: 8;
+}
+
+.col-start-9 {
+  grid-column-start: 9;
+}
+
+.col-start-10 {
+  grid-column-start: 10;
+}
+
+.col-start-11 {
+  grid-column-start: 11;
+}
+
+.col-start-12 {
+  grid-column-start: 12;
+}
+
+.col-start-13 {
+  grid-column-start: 13;
+}
+
+.col-start-auto {
+  grid-column-start: auto;
+}
+
+.col-end-1 {
+  grid-column-end: 1;
+}
+
+.col-end-2 {
+  grid-column-end: 2;
+}
+
+.col-end-3 {
+  grid-column-end: 3;
+}
+
+.col-end-4 {
+  grid-column-end: 4;
+}
+
+.col-end-5 {
+  grid-column-end: 5;
+}
+
+.col-end-6 {
+  grid-column-end: 6;
+}
+
+.col-end-7 {
+  grid-column-end: 7;
+}
+
+.col-end-8 {
+  grid-column-end: 8;
+}
+
+.col-end-9 {
+  grid-column-end: 9;
+}
+
+.col-end-10 {
+  grid-column-end: 10;
+}
+
+.col-end-11 {
+  grid-column-end: 11;
+}
+
+.col-end-12 {
+  grid-column-end: 12;
+}
+
+.col-end-13 {
+  grid-column-end: 13;
+}
+
+.col-end-auto {
+  grid-column-end: auto;
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.grid-rows-4 {
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+
+.grid-rows-5 {
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+}
+
+.grid-rows-6 {
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+}
+
+.grid-rows-none {
+  grid-template-rows: none;
+}
+
+.row-auto {
+  grid-row: auto;
+}
+
+.row-span-1 {
+  grid-row: span 1 / span 1;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.row-span-3 {
+  grid-row: span 3 / span 3;
+}
+
+.row-span-4 {
+  grid-row: span 4 / span 4;
+}
+
+.row-span-5 {
+  grid-row: span 5 / span 5;
+}
+
+.row-span-6 {
+  grid-row: span 6 / span 6;
+}
+
+.row-start-1 {
+  grid-row-start: 1;
+}
+
+.row-start-2 {
+  grid-row-start: 2;
+}
+
+.row-start-3 {
+  grid-row-start: 3;
+}
+
+.row-start-4 {
+  grid-row-start: 4;
+}
+
+.row-start-5 {
+  grid-row-start: 5;
+}
+
+.row-start-6 {
+  grid-row-start: 6;
+}
+
+.row-start-7 {
+  grid-row-start: 7;
+}
+
+.row-start-auto {
+  grid-row-start: auto;
+}
+
+.row-end-1 {
+  grid-row-end: 1;
+}
+
+.row-end-2 {
+  grid-row-end: 2;
+}
+
+.row-end-3 {
+  grid-row-end: 3;
+}
+
+.row-end-4 {
+  grid-row-end: 4;
+}
+
+.row-end-5 {
+  grid-row-end: 5;
+}
+
+.row-end-6 {
+  grid-row-end: 6;
+}
+
+.row-end-7 {
+  grid-row-end: 7;
+}
+
+.row-end-auto {
+  grid-row-end: auto;
+}
+
+.transform {
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  -webkit-transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+          transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+}
+
+.transform-none {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.origin-center {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.origin-top {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.origin-top-right {
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.origin-right {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.origin-bottom-right {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.origin-bottom {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.origin-bottom-left {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.origin-left {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.origin-top-left {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.scale-0 {
+  --transform-scale-x: 0;
+  --transform-scale-y: 0;
+}
+
+.scale-50 {
+  --transform-scale-x: .5;
+  --transform-scale-y: .5;
+}
+
+.scale-75 {
+  --transform-scale-x: .75;
+  --transform-scale-y: .75;
+}
+
+.scale-90 {
+  --transform-scale-x: .9;
+  --transform-scale-y: .9;
+}
+
+.scale-95 {
+  --transform-scale-x: .95;
+  --transform-scale-y: .95;
+}
+
+.scale-100 {
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+}
+
+.scale-105 {
+  --transform-scale-x: 1.05;
+  --transform-scale-y: 1.05;
+}
+
+.scale-110 {
+  --transform-scale-x: 1.1;
+  --transform-scale-y: 1.1;
+}
+
+.scale-125 {
+  --transform-scale-x: 1.25;
+  --transform-scale-y: 1.25;
+}
+
+.scale-150 {
+  --transform-scale-x: 1.5;
+  --transform-scale-y: 1.5;
+}
+
+.scale-x-0 {
+  --transform-scale-x: 0;
+}
+
+.scale-x-50 {
+  --transform-scale-x: .5;
+}
+
+.scale-x-75 {
+  --transform-scale-x: .75;
+}
+
+.scale-x-90 {
+  --transform-scale-x: .9;
+}
+
+.scale-x-95 {
+  --transform-scale-x: .95;
+}
+
+.scale-x-100 {
+  --transform-scale-x: 1;
+}
+
+.scale-x-105 {
+  --transform-scale-x: 1.05;
+}
+
+.scale-x-110 {
+  --transform-scale-x: 1.1;
+}
+
+.scale-x-125 {
+  --transform-scale-x: 1.25;
+}
+
+.scale-x-150 {
+  --transform-scale-x: 1.5;
+}
+
+.scale-y-0 {
+  --transform-scale-y: 0;
+}
+
+.scale-y-50 {
+  --transform-scale-y: .5;
+}
+
+.scale-y-75 {
+  --transform-scale-y: .75;
+}
+
+.scale-y-90 {
+  --transform-scale-y: .9;
+}
+
+.scale-y-95 {
+  --transform-scale-y: .95;
+}
+
+.scale-y-100 {
+  --transform-scale-y: 1;
+}
+
+.scale-y-105 {
+  --transform-scale-y: 1.05;
+}
+
+.scale-y-110 {
+  --transform-scale-y: 1.1;
+}
+
+.scale-y-125 {
+  --transform-scale-y: 1.25;
+}
+
+.scale-y-150 {
+  --transform-scale-y: 1.5;
+}
+
+.hover\:scale-0:hover {
+  --transform-scale-x: 0;
+  --transform-scale-y: 0;
+}
+
+.hover\:scale-50:hover {
+  --transform-scale-x: .5;
+  --transform-scale-y: .5;
+}
+
+.hover\:scale-75:hover {
+  --transform-scale-x: .75;
+  --transform-scale-y: .75;
+}
+
+.hover\:scale-90:hover {
+  --transform-scale-x: .9;
+  --transform-scale-y: .9;
+}
+
+.hover\:scale-95:hover {
+  --transform-scale-x: .95;
+  --transform-scale-y: .95;
+}
+
+.hover\:scale-100:hover {
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+}
+
+.hover\:scale-105:hover {
+  --transform-scale-x: 1.05;
+  --transform-scale-y: 1.05;
+}
+
+.hover\:scale-110:hover {
+  --transform-scale-x: 1.1;
+  --transform-scale-y: 1.1;
+}
+
+.hover\:scale-125:hover {
+  --transform-scale-x: 1.25;
+  --transform-scale-y: 1.25;
+}
+
+.hover\:scale-150:hover {
+  --transform-scale-x: 1.5;
+  --transform-scale-y: 1.5;
+}
+
+.hover\:scale-x-0:hover {
+  --transform-scale-x: 0;
+}
+
+.hover\:scale-x-50:hover {
+  --transform-scale-x: .5;
+}
+
+.hover\:scale-x-75:hover {
+  --transform-scale-x: .75;
+}
+
+.hover\:scale-x-90:hover {
+  --transform-scale-x: .9;
+}
+
+.hover\:scale-x-95:hover {
+  --transform-scale-x: .95;
+}
+
+.hover\:scale-x-100:hover {
+  --transform-scale-x: 1;
+}
+
+.hover\:scale-x-105:hover {
+  --transform-scale-x: 1.05;
+}
+
+.hover\:scale-x-110:hover {
+  --transform-scale-x: 1.1;
+}
+
+.hover\:scale-x-125:hover {
+  --transform-scale-x: 1.25;
+}
+
+.hover\:scale-x-150:hover {
+  --transform-scale-x: 1.5;
+}
+
+.hover\:scale-y-0:hover {
+  --transform-scale-y: 0;
+}
+
+.hover\:scale-y-50:hover {
+  --transform-scale-y: .5;
+}
+
+.hover\:scale-y-75:hover {
+  --transform-scale-y: .75;
+}
+
+.hover\:scale-y-90:hover {
+  --transform-scale-y: .9;
+}
+
+.hover\:scale-y-95:hover {
+  --transform-scale-y: .95;
+}
+
+.hover\:scale-y-100:hover {
+  --transform-scale-y: 1;
+}
+
+.hover\:scale-y-105:hover {
+  --transform-scale-y: 1.05;
+}
+
+.hover\:scale-y-110:hover {
+  --transform-scale-y: 1.1;
+}
+
+.hover\:scale-y-125:hover {
+  --transform-scale-y: 1.25;
+}
+
+.hover\:scale-y-150:hover {
+  --transform-scale-y: 1.5;
+}
+
+.focus\:scale-0:focus {
+  --transform-scale-x: 0;
+  --transform-scale-y: 0;
+}
+
+.focus\:scale-50:focus {
+  --transform-scale-x: .5;
+  --transform-scale-y: .5;
+}
+
+.focus\:scale-75:focus {
+  --transform-scale-x: .75;
+  --transform-scale-y: .75;
+}
+
+.focus\:scale-90:focus {
+  --transform-scale-x: .9;
+  --transform-scale-y: .9;
+}
+
+.focus\:scale-95:focus {
+  --transform-scale-x: .95;
+  --transform-scale-y: .95;
+}
+
+.focus\:scale-100:focus {
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+}
+
+.focus\:scale-105:focus {
+  --transform-scale-x: 1.05;
+  --transform-scale-y: 1.05;
+}
+
+.focus\:scale-110:focus {
+  --transform-scale-x: 1.1;
+  --transform-scale-y: 1.1;
+}
+
+.focus\:scale-125:focus {
+  --transform-scale-x: 1.25;
+  --transform-scale-y: 1.25;
+}
+
+.focus\:scale-150:focus {
+  --transform-scale-x: 1.5;
+  --transform-scale-y: 1.5;
+}
+
+.focus\:scale-x-0:focus {
+  --transform-scale-x: 0;
+}
+
+.focus\:scale-x-50:focus {
+  --transform-scale-x: .5;
+}
+
+.focus\:scale-x-75:focus {
+  --transform-scale-x: .75;
+}
+
+.focus\:scale-x-90:focus {
+  --transform-scale-x: .9;
+}
+
+.focus\:scale-x-95:focus {
+  --transform-scale-x: .95;
+}
+
+.focus\:scale-x-100:focus {
+  --transform-scale-x: 1;
+}
+
+.focus\:scale-x-105:focus {
+  --transform-scale-x: 1.05;
+}
+
+.focus\:scale-x-110:focus {
+  --transform-scale-x: 1.1;
+}
+
+.focus\:scale-x-125:focus {
+  --transform-scale-x: 1.25;
+}
+
+.focus\:scale-x-150:focus {
+  --transform-scale-x: 1.5;
+}
+
+.focus\:scale-y-0:focus {
+  --transform-scale-y: 0;
+}
+
+.focus\:scale-y-50:focus {
+  --transform-scale-y: .5;
+}
+
+.focus\:scale-y-75:focus {
+  --transform-scale-y: .75;
+}
+
+.focus\:scale-y-90:focus {
+  --transform-scale-y: .9;
+}
+
+.focus\:scale-y-95:focus {
+  --transform-scale-y: .95;
+}
+
+.focus\:scale-y-100:focus {
+  --transform-scale-y: 1;
+}
+
+.focus\:scale-y-105:focus {
+  --transform-scale-y: 1.05;
+}
+
+.focus\:scale-y-110:focus {
+  --transform-scale-y: 1.1;
+}
+
+.focus\:scale-y-125:focus {
+  --transform-scale-y: 1.25;
+}
+
+.focus\:scale-y-150:focus {
+  --transform-scale-y: 1.5;
+}
+
+.rotate-0 {
+  --transform-rotate: 0;
+}
+
+.rotate-45 {
+  --transform-rotate: 45deg;
+}
+
+.rotate-90 {
+  --transform-rotate: 90deg;
+}
+
+.rotate-180 {
+  --transform-rotate: 180deg;
+}
+
+.-rotate-180 {
+  --transform-rotate: -180deg;
+}
+
+.-rotate-90 {
+  --transform-rotate: -90deg;
+}
+
+.-rotate-45 {
+  --transform-rotate: -45deg;
+}
+
+.hover\:rotate-0:hover {
+  --transform-rotate: 0;
+}
+
+.hover\:rotate-45:hover {
+  --transform-rotate: 45deg;
+}
+
+.hover\:rotate-90:hover {
+  --transform-rotate: 90deg;
+}
+
+.hover\:rotate-180:hover {
+  --transform-rotate: 180deg;
+}
+
+.hover\:-rotate-180:hover {
+  --transform-rotate: -180deg;
+}
+
+.hover\:-rotate-90:hover {
+  --transform-rotate: -90deg;
+}
+
+.hover\:-rotate-45:hover {
+  --transform-rotate: -45deg;
+}
+
+.focus\:rotate-0:focus {
+  --transform-rotate: 0;
+}
+
+.focus\:rotate-45:focus {
+  --transform-rotate: 45deg;
+}
+
+.focus\:rotate-90:focus {
+  --transform-rotate: 90deg;
+}
+
+.focus\:rotate-180:focus {
+  --transform-rotate: 180deg;
+}
+
+.focus\:-rotate-180:focus {
+  --transform-rotate: -180deg;
+}
+
+.focus\:-rotate-90:focus {
+  --transform-rotate: -90deg;
+}
+
+.focus\:-rotate-45:focus {
+  --transform-rotate: -45deg;
+}
+
+.translate-x-0 {
+  --transform-translate-x: 0;
+}
+
+.translate-x-1 {
+  --transform-translate-x: 0.25rem;
+}
+
+.translate-x-2 {
+  --transform-translate-x: 0.5rem;
+}
+
+.translate-x-3 {
+  --transform-translate-x: 0.75rem;
+}
+
+.translate-x-4 {
+  --transform-translate-x: 1rem;
+}
+
+.translate-x-5 {
+  --transform-translate-x: 1.25rem;
+}
+
+.translate-x-6 {
+  --transform-translate-x: 1.5rem;
+}
+
+.translate-x-8 {
+  --transform-translate-x: 2rem;
+}
+
+.translate-x-10 {
+  --transform-translate-x: 2.5rem;
+}
+
+.translate-x-12 {
+  --transform-translate-x: 3rem;
+}
+
+.translate-x-16 {
+  --transform-translate-x: 4rem;
+}
+
+.translate-x-20 {
+  --transform-translate-x: 5rem;
+}
+
+.translate-x-24 {
+  --transform-translate-x: 6rem;
+}
+
+.translate-x-32 {
+  --transform-translate-x: 8rem;
+}
+
+.translate-x-40 {
+  --transform-translate-x: 10rem;
+}
+
+.translate-x-48 {
+  --transform-translate-x: 12rem;
+}
+
+.translate-x-56 {
+  --transform-translate-x: 14rem;
+}
+
+.translate-x-64 {
+  --transform-translate-x: 16rem;
+}
+
+.translate-x-px {
+  --transform-translate-x: 1px;
+}
+
+.-translate-x-1 {
+  --transform-translate-x: -0.25rem;
+}
+
+.-translate-x-2 {
+  --transform-translate-x: -0.5rem;
+}
+
+.-translate-x-3 {
+  --transform-translate-x: -0.75rem;
+}
+
+.-translate-x-4 {
+  --transform-translate-x: -1rem;
+}
+
+.-translate-x-5 {
+  --transform-translate-x: -1.25rem;
+}
+
+.-translate-x-6 {
+  --transform-translate-x: -1.5rem;
+}
+
+.-translate-x-8 {
+  --transform-translate-x: -2rem;
+}
+
+.-translate-x-10 {
+  --transform-translate-x: -2.5rem;
+}
+
+.-translate-x-12 {
+  --transform-translate-x: -3rem;
+}
+
+.-translate-x-16 {
+  --transform-translate-x: -4rem;
+}
+
+.-translate-x-20 {
+  --transform-translate-x: -5rem;
+}
+
+.-translate-x-24 {
+  --transform-translate-x: -6rem;
+}
+
+.-translate-x-32 {
+  --transform-translate-x: -8rem;
+}
+
+.-translate-x-40 {
+  --transform-translate-x: -10rem;
+}
+
+.-translate-x-48 {
+  --transform-translate-x: -12rem;
+}
+
+.-translate-x-56 {
+  --transform-translate-x: -14rem;
+}
+
+.-translate-x-64 {
+  --transform-translate-x: -16rem;
+}
+
+.-translate-x-px {
+  --transform-translate-x: -1px;
+}
+
+.-translate-x-full {
+  --transform-translate-x: -100%;
+}
+
+.-translate-x-1\/2 {
+  --transform-translate-x: -50%;
+}
+
+.translate-x-1\/2 {
+  --transform-translate-x: 50%;
+}
+
+.translate-x-full {
+  --transform-translate-x: 100%;
+}
+
+.translate-y-0 {
+  --transform-translate-y: 0;
+}
+
+.translate-y-1 {
+  --transform-translate-y: 0.25rem;
+}
+
+.translate-y-2 {
+  --transform-translate-y: 0.5rem;
+}
+
+.translate-y-3 {
+  --transform-translate-y: 0.75rem;
+}
+
+.translate-y-4 {
+  --transform-translate-y: 1rem;
+}
+
+.translate-y-5 {
+  --transform-translate-y: 1.25rem;
+}
+
+.translate-y-6 {
+  --transform-translate-y: 1.5rem;
+}
+
+.translate-y-8 {
+  --transform-translate-y: 2rem;
+}
+
+.translate-y-10 {
+  --transform-translate-y: 2.5rem;
+}
+
+.translate-y-12 {
+  --transform-translate-y: 3rem;
+}
+
+.translate-y-16 {
+  --transform-translate-y: 4rem;
+}
+
+.translate-y-20 {
+  --transform-translate-y: 5rem;
+}
+
+.translate-y-24 {
+  --transform-translate-y: 6rem;
+}
+
+.translate-y-32 {
+  --transform-translate-y: 8rem;
+}
+
+.translate-y-40 {
+  --transform-translate-y: 10rem;
+}
+
+.translate-y-48 {
+  --transform-translate-y: 12rem;
+}
+
+.translate-y-56 {
+  --transform-translate-y: 14rem;
+}
+
+.translate-y-64 {
+  --transform-translate-y: 16rem;
+}
+
+.translate-y-px {
+  --transform-translate-y: 1px;
+}
+
+.-translate-y-1 {
+  --transform-translate-y: -0.25rem;
+}
+
+.-translate-y-2 {
+  --transform-translate-y: -0.5rem;
+}
+
+.-translate-y-3 {
+  --transform-translate-y: -0.75rem;
+}
+
+.-translate-y-4 {
+  --transform-translate-y: -1rem;
+}
+
+.-translate-y-5 {
+  --transform-translate-y: -1.25rem;
+}
+
+.-translate-y-6 {
+  --transform-translate-y: -1.5rem;
+}
+
+.-translate-y-8 {
+  --transform-translate-y: -2rem;
+}
+
+.-translate-y-10 {
+  --transform-translate-y: -2.5rem;
+}
+
+.-translate-y-12 {
+  --transform-translate-y: -3rem;
+}
+
+.-translate-y-16 {
+  --transform-translate-y: -4rem;
+}
+
+.-translate-y-20 {
+  --transform-translate-y: -5rem;
+}
+
+.-translate-y-24 {
+  --transform-translate-y: -6rem;
+}
+
+.-translate-y-32 {
+  --transform-translate-y: -8rem;
+}
+
+.-translate-y-40 {
+  --transform-translate-y: -10rem;
+}
+
+.-translate-y-48 {
+  --transform-translate-y: -12rem;
+}
+
+.-translate-y-56 {
+  --transform-translate-y: -14rem;
+}
+
+.-translate-y-64 {
+  --transform-translate-y: -16rem;
+}
+
+.-translate-y-px {
+  --transform-translate-y: -1px;
+}
+
+.-translate-y-full {
+  --transform-translate-y: -100%;
+}
+
+.-translate-y-1\/2 {
+  --transform-translate-y: -50%;
+}
+
+.translate-y-1\/2 {
+  --transform-translate-y: 50%;
+}
+
+.translate-y-full {
+  --transform-translate-y: 100%;
+}
+
+.hover\:translate-x-0:hover {
+  --transform-translate-x: 0;
+}
+
+.hover\:translate-x-1:hover {
+  --transform-translate-x: 0.25rem;
+}
+
+.hover\:translate-x-2:hover {
+  --transform-translate-x: 0.5rem;
+}
+
+.hover\:translate-x-3:hover {
+  --transform-translate-x: 0.75rem;
+}
+
+.hover\:translate-x-4:hover {
+  --transform-translate-x: 1rem;
+}
+
+.hover\:translate-x-5:hover {
+  --transform-translate-x: 1.25rem;
+}
+
+.hover\:translate-x-6:hover {
+  --transform-translate-x: 1.5rem;
+}
+
+.hover\:translate-x-8:hover {
+  --transform-translate-x: 2rem;
+}
+
+.hover\:translate-x-10:hover {
+  --transform-translate-x: 2.5rem;
+}
+
+.hover\:translate-x-12:hover {
+  --transform-translate-x: 3rem;
+}
+
+.hover\:translate-x-16:hover {
+  --transform-translate-x: 4rem;
+}
+
+.hover\:translate-x-20:hover {
+  --transform-translate-x: 5rem;
+}
+
+.hover\:translate-x-24:hover {
+  --transform-translate-x: 6rem;
+}
+
+.hover\:translate-x-32:hover {
+  --transform-translate-x: 8rem;
+}
+
+.hover\:translate-x-40:hover {
+  --transform-translate-x: 10rem;
+}
+
+.hover\:translate-x-48:hover {
+  --transform-translate-x: 12rem;
+}
+
+.hover\:translate-x-56:hover {
+  --transform-translate-x: 14rem;
+}
+
+.hover\:translate-x-64:hover {
+  --transform-translate-x: 16rem;
+}
+
+.hover\:translate-x-px:hover {
+  --transform-translate-x: 1px;
+}
+
+.hover\:-translate-x-1:hover {
+  --transform-translate-x: -0.25rem;
+}
+
+.hover\:-translate-x-2:hover {
+  --transform-translate-x: -0.5rem;
+}
+
+.hover\:-translate-x-3:hover {
+  --transform-translate-x: -0.75rem;
+}
+
+.hover\:-translate-x-4:hover {
+  --transform-translate-x: -1rem;
+}
+
+.hover\:-translate-x-5:hover {
+  --transform-translate-x: -1.25rem;
+}
+
+.hover\:-translate-x-6:hover {
+  --transform-translate-x: -1.5rem;
+}
+
+.hover\:-translate-x-8:hover {
+  --transform-translate-x: -2rem;
+}
+
+.hover\:-translate-x-10:hover {
+  --transform-translate-x: -2.5rem;
+}
+
+.hover\:-translate-x-12:hover {
+  --transform-translate-x: -3rem;
+}
+
+.hover\:-translate-x-16:hover {
+  --transform-translate-x: -4rem;
+}
+
+.hover\:-translate-x-20:hover {
+  --transform-translate-x: -5rem;
+}
+
+.hover\:-translate-x-24:hover {
+  --transform-translate-x: -6rem;
+}
+
+.hover\:-translate-x-32:hover {
+  --transform-translate-x: -8rem;
+}
+
+.hover\:-translate-x-40:hover {
+  --transform-translate-x: -10rem;
+}
+
+.hover\:-translate-x-48:hover {
+  --transform-translate-x: -12rem;
+}
+
+.hover\:-translate-x-56:hover {
+  --transform-translate-x: -14rem;
+}
+
+.hover\:-translate-x-64:hover {
+  --transform-translate-x: -16rem;
+}
+
+.hover\:-translate-x-px:hover {
+  --transform-translate-x: -1px;
+}
+
+.hover\:-translate-x-full:hover {
+  --transform-translate-x: -100%;
+}
+
+.hover\:-translate-x-1\/2:hover {
+  --transform-translate-x: -50%;
+}
+
+.hover\:translate-x-1\/2:hover {
+  --transform-translate-x: 50%;
+}
+
+.hover\:translate-x-full:hover {
+  --transform-translate-x: 100%;
+}
+
+.hover\:translate-y-0:hover {
+  --transform-translate-y: 0;
+}
+
+.hover\:translate-y-1:hover {
+  --transform-translate-y: 0.25rem;
+}
+
+.hover\:translate-y-2:hover {
+  --transform-translate-y: 0.5rem;
+}
+
+.hover\:translate-y-3:hover {
+  --transform-translate-y: 0.75rem;
+}
+
+.hover\:translate-y-4:hover {
+  --transform-translate-y: 1rem;
+}
+
+.hover\:translate-y-5:hover {
+  --transform-translate-y: 1.25rem;
+}
+
+.hover\:translate-y-6:hover {
+  --transform-translate-y: 1.5rem;
+}
+
+.hover\:translate-y-8:hover {
+  --transform-translate-y: 2rem;
+}
+
+.hover\:translate-y-10:hover {
+  --transform-translate-y: 2.5rem;
+}
+
+.hover\:translate-y-12:hover {
+  --transform-translate-y: 3rem;
+}
+
+.hover\:translate-y-16:hover {
+  --transform-translate-y: 4rem;
+}
+
+.hover\:translate-y-20:hover {
+  --transform-translate-y: 5rem;
+}
+
+.hover\:translate-y-24:hover {
+  --transform-translate-y: 6rem;
+}
+
+.hover\:translate-y-32:hover {
+  --transform-translate-y: 8rem;
+}
+
+.hover\:translate-y-40:hover {
+  --transform-translate-y: 10rem;
+}
+
+.hover\:translate-y-48:hover {
+  --transform-translate-y: 12rem;
+}
+
+.hover\:translate-y-56:hover {
+  --transform-translate-y: 14rem;
+}
+
+.hover\:translate-y-64:hover {
+  --transform-translate-y: 16rem;
+}
+
+.hover\:translate-y-px:hover {
+  --transform-translate-y: 1px;
+}
+
+.hover\:-translate-y-1:hover {
+  --transform-translate-y: -0.25rem;
+}
+
+.hover\:-translate-y-2:hover {
+  --transform-translate-y: -0.5rem;
+}
+
+.hover\:-translate-y-3:hover {
+  --transform-translate-y: -0.75rem;
+}
+
+.hover\:-translate-y-4:hover {
+  --transform-translate-y: -1rem;
+}
+
+.hover\:-translate-y-5:hover {
+  --transform-translate-y: -1.25rem;
+}
+
+.hover\:-translate-y-6:hover {
+  --transform-translate-y: -1.5rem;
+}
+
+.hover\:-translate-y-8:hover {
+  --transform-translate-y: -2rem;
+}
+
+.hover\:-translate-y-10:hover {
+  --transform-translate-y: -2.5rem;
+}
+
+.hover\:-translate-y-12:hover {
+  --transform-translate-y: -3rem;
+}
+
+.hover\:-translate-y-16:hover {
+  --transform-translate-y: -4rem;
+}
+
+.hover\:-translate-y-20:hover {
+  --transform-translate-y: -5rem;
+}
+
+.hover\:-translate-y-24:hover {
+  --transform-translate-y: -6rem;
+}
+
+.hover\:-translate-y-32:hover {
+  --transform-translate-y: -8rem;
+}
+
+.hover\:-translate-y-40:hover {
+  --transform-translate-y: -10rem;
+}
+
+.hover\:-translate-y-48:hover {
+  --transform-translate-y: -12rem;
+}
+
+.hover\:-translate-y-56:hover {
+  --transform-translate-y: -14rem;
+}
+
+.hover\:-translate-y-64:hover {
+  --transform-translate-y: -16rem;
+}
+
+.hover\:-translate-y-px:hover {
+  --transform-translate-y: -1px;
+}
+
+.hover\:-translate-y-full:hover {
+  --transform-translate-y: -100%;
+}
+
+.hover\:-translate-y-1\/2:hover {
+  --transform-translate-y: -50%;
+}
+
+.hover\:translate-y-1\/2:hover {
+  --transform-translate-y: 50%;
+}
+
+.hover\:translate-y-full:hover {
+  --transform-translate-y: 100%;
+}
+
+.focus\:translate-x-0:focus {
+  --transform-translate-x: 0;
+}
+
+.focus\:translate-x-1:focus {
+  --transform-translate-x: 0.25rem;
+}
+
+.focus\:translate-x-2:focus {
+  --transform-translate-x: 0.5rem;
+}
+
+.focus\:translate-x-3:focus {
+  --transform-translate-x: 0.75rem;
+}
+
+.focus\:translate-x-4:focus {
+  --transform-translate-x: 1rem;
+}
+
+.focus\:translate-x-5:focus {
+  --transform-translate-x: 1.25rem;
+}
+
+.focus\:translate-x-6:focus {
+  --transform-translate-x: 1.5rem;
+}
+
+.focus\:translate-x-8:focus {
+  --transform-translate-x: 2rem;
+}
+
+.focus\:translate-x-10:focus {
+  --transform-translate-x: 2.5rem;
+}
+
+.focus\:translate-x-12:focus {
+  --transform-translate-x: 3rem;
+}
+
+.focus\:translate-x-16:focus {
+  --transform-translate-x: 4rem;
+}
+
+.focus\:translate-x-20:focus {
+  --transform-translate-x: 5rem;
+}
+
+.focus\:translate-x-24:focus {
+  --transform-translate-x: 6rem;
+}
+
+.focus\:translate-x-32:focus {
+  --transform-translate-x: 8rem;
+}
+
+.focus\:translate-x-40:focus {
+  --transform-translate-x: 10rem;
+}
+
+.focus\:translate-x-48:focus {
+  --transform-translate-x: 12rem;
+}
+
+.focus\:translate-x-56:focus {
+  --transform-translate-x: 14rem;
+}
+
+.focus\:translate-x-64:focus {
+  --transform-translate-x: 16rem;
+}
+
+.focus\:translate-x-px:focus {
+  --transform-translate-x: 1px;
+}
+
+.focus\:-translate-x-1:focus {
+  --transform-translate-x: -0.25rem;
+}
+
+.focus\:-translate-x-2:focus {
+  --transform-translate-x: -0.5rem;
+}
+
+.focus\:-translate-x-3:focus {
+  --transform-translate-x: -0.75rem;
+}
+
+.focus\:-translate-x-4:focus {
+  --transform-translate-x: -1rem;
+}
+
+.focus\:-translate-x-5:focus {
+  --transform-translate-x: -1.25rem;
+}
+
+.focus\:-translate-x-6:focus {
+  --transform-translate-x: -1.5rem;
+}
+
+.focus\:-translate-x-8:focus {
+  --transform-translate-x: -2rem;
+}
+
+.focus\:-translate-x-10:focus {
+  --transform-translate-x: -2.5rem;
+}
+
+.focus\:-translate-x-12:focus {
+  --transform-translate-x: -3rem;
+}
+
+.focus\:-translate-x-16:focus {
+  --transform-translate-x: -4rem;
+}
+
+.focus\:-translate-x-20:focus {
+  --transform-translate-x: -5rem;
+}
+
+.focus\:-translate-x-24:focus {
+  --transform-translate-x: -6rem;
+}
+
+.focus\:-translate-x-32:focus {
+  --transform-translate-x: -8rem;
+}
+
+.focus\:-translate-x-40:focus {
+  --transform-translate-x: -10rem;
+}
+
+.focus\:-translate-x-48:focus {
+  --transform-translate-x: -12rem;
+}
+
+.focus\:-translate-x-56:focus {
+  --transform-translate-x: -14rem;
+}
+
+.focus\:-translate-x-64:focus {
+  --transform-translate-x: -16rem;
+}
+
+.focus\:-translate-x-px:focus {
+  --transform-translate-x: -1px;
+}
+
+.focus\:-translate-x-full:focus {
+  --transform-translate-x: -100%;
+}
+
+.focus\:-translate-x-1\/2:focus {
+  --transform-translate-x: -50%;
+}
+
+.focus\:translate-x-1\/2:focus {
+  --transform-translate-x: 50%;
+}
+
+.focus\:translate-x-full:focus {
+  --transform-translate-x: 100%;
+}
+
+.focus\:translate-y-0:focus {
+  --transform-translate-y: 0;
+}
+
+.focus\:translate-y-1:focus {
+  --transform-translate-y: 0.25rem;
+}
+
+.focus\:translate-y-2:focus {
+  --transform-translate-y: 0.5rem;
+}
+
+.focus\:translate-y-3:focus {
+  --transform-translate-y: 0.75rem;
+}
+
+.focus\:translate-y-4:focus {
+  --transform-translate-y: 1rem;
+}
+
+.focus\:translate-y-5:focus {
+  --transform-translate-y: 1.25rem;
+}
+
+.focus\:translate-y-6:focus {
+  --transform-translate-y: 1.5rem;
+}
+
+.focus\:translate-y-8:focus {
+  --transform-translate-y: 2rem;
+}
+
+.focus\:translate-y-10:focus {
+  --transform-translate-y: 2.5rem;
+}
+
+.focus\:translate-y-12:focus {
+  --transform-translate-y: 3rem;
+}
+
+.focus\:translate-y-16:focus {
+  --transform-translate-y: 4rem;
+}
+
+.focus\:translate-y-20:focus {
+  --transform-translate-y: 5rem;
+}
+
+.focus\:translate-y-24:focus {
+  --transform-translate-y: 6rem;
+}
+
+.focus\:translate-y-32:focus {
+  --transform-translate-y: 8rem;
+}
+
+.focus\:translate-y-40:focus {
+  --transform-translate-y: 10rem;
+}
+
+.focus\:translate-y-48:focus {
+  --transform-translate-y: 12rem;
+}
+
+.focus\:translate-y-56:focus {
+  --transform-translate-y: 14rem;
+}
+
+.focus\:translate-y-64:focus {
+  --transform-translate-y: 16rem;
+}
+
+.focus\:translate-y-px:focus {
+  --transform-translate-y: 1px;
+}
+
+.focus\:-translate-y-1:focus {
+  --transform-translate-y: -0.25rem;
+}
+
+.focus\:-translate-y-2:focus {
+  --transform-translate-y: -0.5rem;
+}
+
+.focus\:-translate-y-3:focus {
+  --transform-translate-y: -0.75rem;
+}
+
+.focus\:-translate-y-4:focus {
+  --transform-translate-y: -1rem;
+}
+
+.focus\:-translate-y-5:focus {
+  --transform-translate-y: -1.25rem;
+}
+
+.focus\:-translate-y-6:focus {
+  --transform-translate-y: -1.5rem;
+}
+
+.focus\:-translate-y-8:focus {
+  --transform-translate-y: -2rem;
+}
+
+.focus\:-translate-y-10:focus {
+  --transform-translate-y: -2.5rem;
+}
+
+.focus\:-translate-y-12:focus {
+  --transform-translate-y: -3rem;
+}
+
+.focus\:-translate-y-16:focus {
+  --transform-translate-y: -4rem;
+}
+
+.focus\:-translate-y-20:focus {
+  --transform-translate-y: -5rem;
+}
+
+.focus\:-translate-y-24:focus {
+  --transform-translate-y: -6rem;
+}
+
+.focus\:-translate-y-32:focus {
+  --transform-translate-y: -8rem;
+}
+
+.focus\:-translate-y-40:focus {
+  --transform-translate-y: -10rem;
+}
+
+.focus\:-translate-y-48:focus {
+  --transform-translate-y: -12rem;
+}
+
+.focus\:-translate-y-56:focus {
+  --transform-translate-y: -14rem;
+}
+
+.focus\:-translate-y-64:focus {
+  --transform-translate-y: -16rem;
+}
+
+.focus\:-translate-y-px:focus {
+  --transform-translate-y: -1px;
+}
+
+.focus\:-translate-y-full:focus {
+  --transform-translate-y: -100%;
+}
+
+.focus\:-translate-y-1\/2:focus {
+  --transform-translate-y: -50%;
+}
+
+.focus\:translate-y-1\/2:focus {
+  --transform-translate-y: 50%;
+}
+
+.focus\:translate-y-full:focus {
+  --transform-translate-y: 100%;
+}
+
+.skew-x-0 {
+  --transform-skew-x: 0;
+}
+
+.skew-x-3 {
+  --transform-skew-x: 3deg;
+}
+
+.skew-x-6 {
+  --transform-skew-x: 6deg;
+}
+
+.skew-x-12 {
+  --transform-skew-x: 12deg;
+}
+
+.-skew-x-12 {
+  --transform-skew-x: -12deg;
+}
+
+.-skew-x-6 {
+  --transform-skew-x: -6deg;
+}
+
+.-skew-x-3 {
+  --transform-skew-x: -3deg;
+}
+
+.skew-y-0 {
+  --transform-skew-y: 0;
+}
+
+.skew-y-3 {
+  --transform-skew-y: 3deg;
+}
+
+.skew-y-6 {
+  --transform-skew-y: 6deg;
+}
+
+.skew-y-12 {
+  --transform-skew-y: 12deg;
+}
+
+.-skew-y-12 {
+  --transform-skew-y: -12deg;
+}
+
+.-skew-y-6 {
+  --transform-skew-y: -6deg;
+}
+
+.-skew-y-3 {
+  --transform-skew-y: -3deg;
+}
+
+.hover\:skew-x-0:hover {
+  --transform-skew-x: 0;
+}
+
+.hover\:skew-x-3:hover {
+  --transform-skew-x: 3deg;
+}
+
+.hover\:skew-x-6:hover {
+  --transform-skew-x: 6deg;
+}
+
+.hover\:skew-x-12:hover {
+  --transform-skew-x: 12deg;
+}
+
+.hover\:-skew-x-12:hover {
+  --transform-skew-x: -12deg;
+}
+
+.hover\:-skew-x-6:hover {
+  --transform-skew-x: -6deg;
+}
+
+.hover\:-skew-x-3:hover {
+  --transform-skew-x: -3deg;
+}
+
+.hover\:skew-y-0:hover {
+  --transform-skew-y: 0;
+}
+
+.hover\:skew-y-3:hover {
+  --transform-skew-y: 3deg;
+}
+
+.hover\:skew-y-6:hover {
+  --transform-skew-y: 6deg;
+}
+
+.hover\:skew-y-12:hover {
+  --transform-skew-y: 12deg;
+}
+
+.hover\:-skew-y-12:hover {
+  --transform-skew-y: -12deg;
+}
+
+.hover\:-skew-y-6:hover {
+  --transform-skew-y: -6deg;
+}
+
+.hover\:-skew-y-3:hover {
+  --transform-skew-y: -3deg;
+}
+
+.focus\:skew-x-0:focus {
+  --transform-skew-x: 0;
+}
+
+.focus\:skew-x-3:focus {
+  --transform-skew-x: 3deg;
+}
+
+.focus\:skew-x-6:focus {
+  --transform-skew-x: 6deg;
+}
+
+.focus\:skew-x-12:focus {
+  --transform-skew-x: 12deg;
+}
+
+.focus\:-skew-x-12:focus {
+  --transform-skew-x: -12deg;
+}
+
+.focus\:-skew-x-6:focus {
+  --transform-skew-x: -6deg;
+}
+
+.focus\:-skew-x-3:focus {
+  --transform-skew-x: -3deg;
+}
+
+.focus\:skew-y-0:focus {
+  --transform-skew-y: 0;
+}
+
+.focus\:skew-y-3:focus {
+  --transform-skew-y: 3deg;
+}
+
+.focus\:skew-y-6:focus {
+  --transform-skew-y: 6deg;
+}
+
+.focus\:skew-y-12:focus {
+  --transform-skew-y: 12deg;
+}
+
+.focus\:-skew-y-12:focus {
+  --transform-skew-y: -12deg;
+}
+
+.focus\:-skew-y-6:focus {
+  --transform-skew-y: -6deg;
+}
+
+.focus\:-skew-y-3:focus {
+  --transform-skew-y: -3deg;
+}
+
+.transition-none {
+  -webkit-transition-property: none;
+  transition-property: none;
+}
+
+.transition-all {
+  -webkit-transition-property: all;
+  transition-property: all;
+}
+
+.transition {
+  -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, -webkit-transform;
+}
+
+.transition-colors {
+  -webkit-transition-property: background-color, border-color, color, fill, stroke;
+  transition-property: background-color, border-color, color, fill, stroke;
+}
+
+.transition-opacity {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.transition-shadow {
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+
+.transition-transform {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.ease-linear {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.ease-in {
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-out {
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in-out {
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-75 {
+  -webkit-transition-duration: 75ms;
+          transition-duration: 75ms;
+}
+
+.duration-100 {
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+}
+
+.duration-150 {
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+}
+
+.duration-200 {
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
+
+.duration-300 {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.duration-500 {
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+.duration-700 {
+  -webkit-transition-duration: 700ms;
+          transition-duration: 700ms;
+}
+
+.duration-1000 {
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
 }
 
