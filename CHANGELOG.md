@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/movableink/tailwind-config/compare/v0.7.0...v0.8.0) (2020-02-05)
+
+### Features
+
+- bump tailwindcss from 1.1.4 to 1.2.0 ([55098df](https://github.com/movableink/tailwind-config/commit/55098df9b60ae3a54cf31e720b311b8f4fee553a))
+
 ## [0.7.0](https://github.com/movableink/tailwind-config/compare/v0.6.0...v0.7.0) (2020-02-04)
 
 ### Features
