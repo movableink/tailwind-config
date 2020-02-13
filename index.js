@@ -17,6 +17,7 @@ const headingTextComponentsPlugin = require('./plugins/components/heading-text')
  * Configures Tailwind to use Fluid's design tokens
  */
 module.exports = {
+  important: true,
   theme: {
     colors,
     fill: colors,
