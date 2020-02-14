@@ -89,7 +89,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           msg: |
-            ### File Sizes
             | Build | **fluid-tailwind.css** | **fluid-tailwind.min.css** | **fluid-tailwind.min.css.gz** |
             | :-- | :-- | :-- | :-- |
             | `master` | ${{ steps.master-size.outputs.base }} KB | ${{ steps.master-size.outputs.minified }} KB | ${{ steps.master-size.outputs.gzip }} KB |
