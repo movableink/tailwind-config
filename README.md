@@ -41,7 +41,7 @@ If you want to go even _simpler_, you can link against the pre-built CSS file on
 ```html
 <link
   rel="stylesheet"
-  href="http://unpkg.com/@movable/tailwind-config/dist/fluid-tailwind.min.css"
+  href="https://unpkg.com/@movable/tailwind-config/dist/fluid-tailwind.min.css"
 />
 ```
 
