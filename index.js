@@ -37,10 +37,6 @@ module.exports = {
   ],
   corePlugins: {
     height: false,
-    maxHeight: false,
-    maxWidth: false,
-    minHeight: false,
-    minWidth: false,
     width: false
   }
 };
