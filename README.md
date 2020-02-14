@@ -2,6 +2,7 @@
 
 ![Verify](https://github.com/movableink/tailwind-config/workflows/Verify/badge.svg)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/movableink/tailwind-config)
+[![Create CodePen with Template](https://img.shields.io/badge/CodePen-Use%20Template-yellow)](https://codepen.io/pen?template=jOPWJdW)
 
 > [Tailwind][tailwind] configuration file for Movable Ink's Fluid Design System
 
@@ -41,7 +42,7 @@ If you want to go even _simpler_, you can link against the pre-built CSS file on
 ```html
 <link
   rel="stylesheet"
-  href="http://unpkg.com/@movable/tailwind-config/dist/fluid-tailwind.min.css"
+  href="https://unpkg.com/@movable/tailwind-config/dist/fluid-tailwind.min.css"
 />
 ```
 
