@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/movableink/tailwind-config/compare/v0.8.1...v0.9.0) (2020-02-14)
+
+### Features
+
+- enable max/min height/width plugins ([3722fc4](https://github.com/movableink/tailwind-config/commit/3722fc48329ccf79573deb5ced904075f2e1e60d))
+- generate classes with `!important` ([3ea23d7](https://github.com/movableink/tailwind-config/commit/3ea23d75fbf09f062be03e55129a27a48dba4fc7))
+
 ### [0.8.1](https://github.com/movableink/tailwind-config/compare/v0.8.0...v0.8.1) (2020-02-05)
 
 ## [0.8.0](https://github.com/movableink/tailwind-config/compare/v0.7.0...v0.8.0) (2020-02-05)
