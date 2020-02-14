@@ -84,13 +84,11 @@ jobs:
           echo "::set-output name=minified::$(du -k pr-dist/fluid-tailwind.min.css | cut -f1)"
           echo "::set-output name=gzip::$(du -k pr-dist/fluid-tailwind.min.css.gz | cut -f1)"
       - name: Post Comment
-        uses: unsplash/comment-on-pr@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peter-evans/commit-comment@v1
         with:
-          msg: |
-            ### File Sizes
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
             | Build | **fluid-tailwind.css** | **fluid-tailwind.min.css** | **fluid-tailwind.min.css.gz** |
             | :-- | :-- | :-- | :-- |
-            | `master` | ${{ steps.master-size.outputs.base }} KB | ${{ steps.master-size.outputs.minified }} KB | ${{ steps.master-size.outputs.gzip }} KB |
-            | PR Size | ${{ steps.pr-size.outputs.base }} KB | ${{ steps.pr-size.outputs.minified }} KB | ${{ steps.pr-size.outputs.gzip }} KB |
+            | `master` | "${{ steps.master-size.outputs.base }}" KB | "${{ steps.master-size.outputs.minified }}" KB | "${{ steps.master-size.outputs.gzip }}" KB |
+            | PR Size | "${{ steps.pr-size.outputs.base }}" KB | "${{ steps.pr-size.outputs.minified }}" KB | "${{ steps.pr-size.outputs.gzip }}" KB |
