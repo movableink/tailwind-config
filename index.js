@@ -33,9 +33,5 @@ module.exports = {
     bodyTextComponentsPlugin,
     captionTextComponentsPlugin,
     headingTextComponentsPlugin
-  ],
-  corePlugins: {
-    height: false,
-    width: false
-  }
+  ]
 };

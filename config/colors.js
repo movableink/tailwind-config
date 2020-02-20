@@ -104,5 +104,7 @@ module.exports = {
   green,
   yellow,
   orange,
-  red
+  red,
+  white: neutral['100'],
+  black: neutral['900']
 };
