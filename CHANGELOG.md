@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/movableink/tailwind-config/compare/v0.9.1...v1.0.0) (2020-02-20)
+
+### Features
+
+- add `black` and `white` colors to palette ([f509a72](https://github.com/movableink/tailwind-config/commit/f509a729cddf00579629b6c45124cb85e65ad785))
+- enable height and width core plugins ([d9a48aa](https://github.com/movableink/tailwind-config/commit/d9a48aad08ad45e03f63b7485da48d5e57119caf)), closes [#22](https://github.com/movableink/tailwind-config/issues/22)
+
 ### [0.9.1](https://github.com/movableink/tailwind-config/compare/v0.9.0...v0.9.1) (2020-02-15)
 
 ## [0.9.0](https://github.com/movableink/tailwind-config/compare/v0.8.1...v0.9.0) (2020-02-14)
