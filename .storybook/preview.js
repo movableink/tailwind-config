@@ -15,6 +15,9 @@ addDecorator(storyFn => {
     result = html([result]);
   }
 
-  return render(result);
+  const rendered = render(result);
+
+  // Avoid printing serialization code for `<`
+  return rendered.replace(/&amp;/g, '&');
 });
 

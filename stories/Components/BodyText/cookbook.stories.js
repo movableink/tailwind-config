@@ -1,11 +1,14 @@
 import { html } from 'htm/preact';
+import Example from '../../_utils/Example';
 
 export default {
   title: 'Components/Body Text|Cookbook'
 };
 
 export const OverridingFontWeight = () => html`
-  <p class="body-base font-bold">
-    Base body class, but with bold text
-  </p>
+  <${Example}>
+    <p class="body-base font-bold">
+      Base body class, but with bold text
+    </p>
+  </>
 `;

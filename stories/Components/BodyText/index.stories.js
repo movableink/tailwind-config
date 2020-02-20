@@ -1,13 +1,17 @@
 import { LoremIpsum } from 'lorem-ipsum';
 import { html } from 'htm/preact';
+import Example from '../../_utils/Example';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeBodyTextStory(size) {
   return html`
-    <h2><pre>.body-${size}</pre></h2>
-    <p class="body-${size}">${lorem.generateParagraphs(1)}</p>
+    <${Example}>
+      <p class="body-${size}">
+        ${lorem.generateParagraphs(1)}
+      </p>
+    </>
   `;
 }
 

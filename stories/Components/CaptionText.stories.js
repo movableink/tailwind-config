@@ -1,13 +1,15 @@
 import { LoremIpsum } from 'lorem-ipsum';
 import { html } from 'htm/preact';
+import Example from '../_utils/Example';
 import random from '../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeCaptionTextStory(size) {
   return html`
-    <h2><pre>.caption-${size}</pre></h2>
-    <p class="caption-${size}">${lorem.generateParagraphs(1)}</p>
+    <${Example}>
+      <p class="caption-${size}">${lorem.generateParagraphs(1)}</p>
+    </>
   `;
 }
 

@@ -1,15 +1,16 @@
 import { LoremIpsum } from 'lorem-ipsum';
 import { html } from 'htm/preact';
-import Callout from '../../_utils/Callout';
+import Example from '../../_utils/Example';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeLineHeightStory(size, notes) {
   return html`
-    <h2><pre>.leading-${size}</pre></h2>
-    ${notes ? html`<${Callout}>${notes}</Callout>` : ''}
-    <p class="leading-${size}">${lorem.generateParagraphs(1)}</p>
+    <p class="mb-4">${notes}</p>
+    <${Example}>
+      <p class="leading-${size}">${lorem.generateParagraphs(1)}</p>A
+    </>
   `;
 }
 
