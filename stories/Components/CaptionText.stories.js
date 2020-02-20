@@ -1,18 +1,18 @@
 import { LoremIpsum } from 'lorem-ipsum';
+import { html } from 'htm/preact';
 import random from '../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeCaptionTextStory(size) {
-  return `
+  return html`
     <h2><pre>.caption-${size}</pre></h2>
     <p class="caption-${size}">${lorem.generateParagraphs(1)}</p>
   `;
 }
 
 export default {
-  title: 'Components|Caption Text',
-  decorators: [storyFn => `<div class="m-4">${storyFn()}</div>`]
+  title: 'Components|Caption Text'
 };
 
 export const Small = () => makeCaptionTextStory('sm');

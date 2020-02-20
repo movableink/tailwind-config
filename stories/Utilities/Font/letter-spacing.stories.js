@@ -1,20 +1,20 @@
 import { LoremIpsum } from 'lorem-ipsum';
-import makeCallout from '../../_utils/callout';
+import { html } from 'htm/preact';
+import Callout from '../../_utils/Callout';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeLetterSpacingStory(size, notes) {
-  return `
+  return html`
     <h2><pre>.tracking-${size}</pre></h2>
-    ${notes ? makeCallout(notes) : ''}
+    ${notes ? html`<${Callout}>${notes}</Callout>` : ''}
     <p class="tracking-${size}">${lorem.generateParagraphs(1)}</p>
   `;
 }
 
 export default {
-  title: 'Utilities|Font/Letter Spacing',
-  decorators: [storyFn => `<div class="m-4">${storyFn()}</div>`]
+  title: 'Utilities|Font/Letter Spacing'
 };
 
 export const ExtraExtraSmall = () =>
