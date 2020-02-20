@@ -5,7 +5,7 @@ const lorem = new LoremIpsum({ random });
 
 export default {
   title: 'Utilities|Font/Weight',
-  decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
+  decorators: [storyFn => `<div class="m-4">${storyFn()}</div>`]
 };
 
 export const Normal = () => `

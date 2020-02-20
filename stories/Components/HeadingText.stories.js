@@ -18,7 +18,7 @@ function makeHeadingTextStory(size) {
 
 export default {
   title: 'Components|Heading Text',
-  decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
+  decorators: [storyFn => `<div class="m-4">${storyFn()}</div>`]
 };
 
 export const ExtraSmall = () => makeHeadingTextStory('xs');

@@ -1,6 +1,6 @@
 export default {
   title: 'Utilities|Color/Text',
-  decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
+  decorators: [storyFn => `<div class="m-4">${storyFn()}</div>`]
 };
 
 export const ChangeOnHover = () => `

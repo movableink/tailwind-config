@@ -12,7 +12,7 @@ function makeBodyTextStory(size) {
 
 export default {
   title: 'Components|Body Text',
-  decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
+  decorators: [storyFn => `<div class="m-4">${storyFn()}</div>`]
 };
 
 export const Small = () => makeBodyTextStory('sm');
