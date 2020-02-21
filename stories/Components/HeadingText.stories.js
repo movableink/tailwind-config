@@ -1,4 +1,6 @@
 import { LoremIpsum } from 'lorem-ipsum';
+import { html } from 'htm/preact';
+import Example from '../_utils/Example';
 import random from '../_utils/random';
 
 const lorem = new LoremIpsum({
@@ -10,15 +12,15 @@ const lorem = new LoremIpsum({
 });
 
 function makeHeadingTextStory(size) {
-  return `
-    <h2><pre>.heading-${size}</pre></h2>
-    <p class="heading-${size}">${lorem.generateSentences(1)}</p>
+  return html`
+    <${Example}>
+      <p class="heading-${size}">${lorem.generateSentences(1)}</p>
+    </>
   `;
 }
 
 export default {
-  title: 'Components|Heading Text',
-  decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
+  title: 'Components|Heading Text'
 };
 
 export const ExtraSmall = () => makeHeadingTextStory('xs');

@@ -28,7 +28,7 @@ jobs:
       - name: Install Dependencies and Build Stylesheets
         run: yarn install
       - name: Build Storybook
-        run: yarn build-storybook -s dist
+        run: yarn build-storybook -s dist,node_modules/prismjs/themes
       - name: Upload to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:

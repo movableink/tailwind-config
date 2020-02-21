@@ -1,10 +1,14 @@
+import { html } from 'htm/preact';
+import Example from '../../_utils/Example';
+
 export default {
-  title: 'Components/Body Text|Cookbook',
-  decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
+  title: 'Components/Body Text|Cookbook'
 };
 
-export const OverridingFontWeight = () => `
-  <p class="body-base font-bold">
-    Base body class, but with bold text
-  </p>
+export const OverridingFontWeight = () => html`
+  <${Example}>
+    <p class="body-base font-bold">
+      Base body class, but with bold text
+    </p>
+  </>
 `;

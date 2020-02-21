@@ -1,21 +1,25 @@
 import { LoremIpsum } from 'lorem-ipsum';
+import { html } from 'htm/preact';
+import Example from '../../_utils/Example';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 export default {
-  title: 'Utilities|Font/Weight',
-  decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
+  title: 'Utilities|Font/Weight'
 };
 
-export const Normal = () => `
-  <h2><pre>.font-normal</pre></h2>
-  <p class="font-normal">${lorem.generateParagraphs(1)}</p>
+export const Normal = () => html`
+  <${Example}>
+    <p class="font-normal">${lorem.generateParagraphs(1)}</p>
+  </>
 `;
 
-export const Bold = () => `
-  <h2><pre>.font-bold</pre></h2>
-  <p class="font-bold" style="margin-bottom: 16px">${lorem.generateParagraphs(1)}</p>
-  <h2><pre>&lt;strong&gt;</pre></h2>
-  <strong>${lorem.generateParagraphs(1)}</strong>
+export const Bold = () => html`
+  <${Example} className="mb-4">
+    <p class="font-bold">${lorem.generateParagraphs(1)}</p>
+  </>
+  <${Example}>
+    <strong>${lorem.generateParagraphs(1)}</strong>
+  </>
 `;

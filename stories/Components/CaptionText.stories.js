@@ -1,18 +1,20 @@
 import { LoremIpsum } from 'lorem-ipsum';
+import { html } from 'htm/preact';
+import Example from '../_utils/Example';
 import random from '../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeCaptionTextStory(size) {
-  return `
-    <h2><pre>.caption-${size}</pre></h2>
-    <p class="caption-${size}">${lorem.generateParagraphs(1)}</p>
+  return html`
+    <${Example}>
+      <p class="caption-${size}">${lorem.generateParagraphs(1)}</p>
+    </>
   `;
 }
 
 export default {
-  title: 'Components|Caption Text',
-  decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
+  title: 'Components|Caption Text'
 };
 
 export const Small = () => makeCaptionTextStory('sm');

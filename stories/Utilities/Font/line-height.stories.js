@@ -1,20 +1,21 @@
 import { LoremIpsum } from 'lorem-ipsum';
-import makeCallout from '../../_utils/callout';
+import { html } from 'htm/preact';
+import Example from '../../_utils/Example';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeLineHeightStory(size, notes) {
-  return `
-    <h2><pre>.leading-${size}</pre></h2>
-    ${notes ? makeCallout(notes) : ''}
-    <p class="leading-${size}">${lorem.generateParagraphs(1)}</p>
+  return html`
+    <p class="mb-4">${notes}</p>
+    <${Example}>
+      <p class="leading-${size}">${lorem.generateParagraphs(1)}</p>A
+    </>
   `;
 }
 
 export default {
-  title: 'Utilities|Font/Line Height',
-  decorators: [storyFn => `<div style="margin: 16px">${storyFn()}</div>`]
+  title: 'Utilities|Font/Line Height'
 };
 
 export const None = () =>

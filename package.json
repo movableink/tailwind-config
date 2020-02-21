@@ -15,7 +15,7 @@
   "scripts": {
     "build": "tailwind build css/tailwind-imports.css --config index.js -o dist/fluid-tailwind.css",
     "compress": "csso dist/fluid-tailwind.css --output dist/fluid-tailwind.min.css --source-map file --no-restructure",
-    "start": "start-storybook -s dist",
+    "start": "start-storybook -s dist,node_modules/prismjs/themes",
     "lint": "eslint .",
     "pretest": "yarn build",
     "test": "ava",
@@ -35,10 +35,14 @@
     "babel-loader": "^8.0.6",
     "csso-cli": "^3.0.0",
     "eslint-plugin-ava": "^10.0.0",
+    "htm": "^3.0.3",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.7",
     "lorem-ipsum": "^2.0.3",
     "postcss": "^7.0.24",
+    "preact": "^10.3.2",
+    "preact-render-to-string": "^5.1.4",
+    "prismjs": "^1.19.0",
     "seedrandom": "^3.0.5",
     "standard-version": "^7.0.1",
     "tailwindcss": "^1.1.4"
