@@ -26,7 +26,7 @@ export default function Example({ className, children, ...rest }) {
         ${children}
       </div>
       <pre class="p-4 bg-neutral-200" style="tab-size: 2">
-        <code class="block max-w-full whitespace-pre-wrap leading-xs" id=${id} />
+        <code class="block max-w-full leading-xs overflow-x-scroll" id=${id} />
       </pre>
     </div>
   `;
