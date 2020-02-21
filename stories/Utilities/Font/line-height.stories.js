@@ -9,7 +9,7 @@ function makeLineHeightStory(size, notes) {
   return html`
     <p class="mb-4">${notes}</p>
     <${Example}>
-      <p class="leading-${size}">${lorem.generateParagraphs(1)}</p>A
+      <p class="leading-${size}">${lorem.generateParagraphs(1)}</p>
     </>
   `;
 }
