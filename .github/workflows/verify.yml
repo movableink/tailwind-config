@@ -64,6 +64,6 @@ jobs:
       - name: Percy Test
         uses: percy/storybook-action@v0.1.1
         with:
-          storybook-flags: '-s dist'
+          storybook-flags: '-s dist,node_modules/prismjs/themes'
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
