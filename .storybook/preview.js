@@ -1,4 +1,5 @@
 import { addDecorator } from '@storybook/html'
+import { withHTML } from '@whitespace/storybook-addon-html/html';
 import { html } from 'htm/preact';
 import render from 'preact-render-to-string';
 
@@ -21,3 +22,4 @@ addDecorator(storyFn => {
   return rendered.replace(/&amp;/g, '&');
 });
 
+addDecorator(withHTML);
