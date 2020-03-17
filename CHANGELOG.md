@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/movableink/tailwind-config/compare/v1.0.0...v1.1.0) (2020-03-17)
+
+### Features
+
+- allow "current" as fill or stroke setting ([de05fc3](https://github.com/movableink/tailwind-config/commit/de05fc348170d0a46b2ab25a269bb5d43a033ece))
+
 ## [1.0.0](https://github.com/movableink/tailwind-config/compare/v0.9.1...v1.0.0) (2020-02-20)
 
 ### Features
