@@ -19,14 +19,16 @@ const headingTextComponentsPlugin = require('./plugins/components/heading-text')
 module.exports = {
   theme: {
     colors,
-    fill: colors,
     fontFamily,
     fontSize,
     fontWeight,
     letterSpacing,
     lineHeight,
-    stroke: colors,
-    screens: {}
+    screens: {},
+    extend: {
+      fill: colors,
+      stroke: colors
+    }
   },
   plugins: [
     fluidBasePlugin,
