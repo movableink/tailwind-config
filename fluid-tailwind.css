@@ -8323,6 +8323,10 @@ input::placeholder, textarea::placeholder {
   box-shadow: none;
 }
 
+.fill-current {
+  fill: currentColor;
+}
+
 .fill-neutral-100 {
   fill: #ffffff;
 }
@@ -8593,6 +8597,10 @@ input::placeholder, textarea::placeholder {
 
 .fill-black {
   fill: #000000;
+}
+
+.stroke-current {
+  stroke: currentColor;
 }
 
 .stroke-neutral-100 {
