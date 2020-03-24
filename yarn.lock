@@ -1025,9 +1025,9 @@
     rimraf "^2.5.2"
 
 "@movable/eslint-config-node@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config-node/-/eslint-config-node-0.4.1.tgz#493eb32602e61a17417bd6705c7bd10331392e53"
-  integrity sha512-RwPpGV4MRGLUoSOm6QVBjVIDoNDguxj52ix0JnZzfcWLvMs6GfJ5kvN49fxPZE9lFxi++AdxPXzssygIbtddhQ==
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config-node/-/eslint-config-node-0.4.2.tgz#ce4513d781d84ee0d76f77351a38467765869ec1"
+  integrity sha512-9TN3RHfXMYyVfh9ejgk8UrDFe93qXaPvCpsE9vskRhPjFp4/dLoBgpfVVd2Ee815syJ3oxcSjZT474Ejz/DhZQ==
   dependencies:
     eslint-plugin-node "^11.0.0"
 
