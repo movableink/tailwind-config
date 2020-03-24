@@ -7,7 +7,7 @@
 function addDefault(colorDefinition, defaultKey = '400') {
   return {
     default: colorDefinition[defaultKey],
-    ...colorDefinition
+    ...colorDefinition,
   };
 }
 
@@ -21,7 +21,7 @@ const neutral = addDefault(
     600: '#767680',
     700: '#45454b',
     800: '#1c1c1c',
-    900: '#000000' // (Black)
+    900: '#000000', // (Black)
   },
   '500'
 );
@@ -33,7 +33,7 @@ const blue = addDefault({
   400: '#266fed',
   500: '#0d43a0',
   600: '#072251',
-  700: '#030e22'
+  700: '#030e22',
 });
 
 const violet = addDefault({
@@ -43,7 +43,7 @@ const violet = addDefault({
   400: '#7549ea',
   500: '#4b1ec7',
   600: '#2c0e7b',
-  700: '#16073e'
+  700: '#16073e',
 });
 
 const aqua = addDefault({
@@ -53,7 +53,7 @@ const aqua = addDefault({
   400: '#00c2e4',
   500: '#0088a0',
   600: '#004e5c',
-  700: '#002329'
+  700: '#002329',
 });
 
 const green = addDefault({
@@ -63,7 +63,7 @@ const green = addDefault({
   400: '#3cb860',
   500: '#2b8545',
   600: '#1b522b',
-  700: '#0e2b16'
+  700: '#0e2b16',
 });
 
 const yellow = addDefault({
@@ -73,7 +73,7 @@ const yellow = addDefault({
   400: '#ffcb26',
   500: '#f2b800',
   600: '#9d7700',
-  700: '#372a00'
+  700: '#372a00',
 });
 
 const orange = addDefault({
@@ -83,7 +83,7 @@ const orange = addDefault({
   400: '#ff9b00',
   500: '#cc7c00',
   600: '#885300',
-  700: '#452a00'
+  700: '#452a00',
 });
 
 const red = addDefault({
@@ -93,7 +93,7 @@ const red = addDefault({
   400: '#fc5142',
   500: '#e51604',
   600: '#810c02',
-  700: '#4f0801'
+  700: '#4f0801',
 });
 
 module.exports = {
@@ -106,5 +106,5 @@ module.exports = {
   orange,
   red,
   white: neutral['100'],
-  black: neutral['900']
+  black: neutral['900'],
 };

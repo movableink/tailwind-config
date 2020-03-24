@@ -2,7 +2,7 @@
 
 const fontFamily = {
   sans: ['"Open Sans"', 'Helvetica', 'Arial', 'sans-serif'],
-  mono: ['"Source Code Pro"', 'Courier', 'monospace']
+  mono: ['"Source Code Pro"', 'Courier', 'monospace'],
 };
 
 const fontSize = {
@@ -17,12 +17,12 @@ const fontSize = {
   '4xl': '1.802rem',
   '5xl': '2.027rem',
   '6xl': '2.281rem',
-  '7xl': '2.566rem'
+  '7xl': '2.566rem',
 };
 
 const fontWeight = {
   normal: 400,
-  bold: 600
+  bold: 600,
 };
 
 const letterSpacing = {
@@ -30,7 +30,7 @@ const letterSpacing = {
   xs: '-0.0625rem',
   sm: '-0.03125rem',
   base: '0rem',
-  md: '0.025em'
+  md: '0.025em',
 };
 
 const lineHeight = {
@@ -43,7 +43,7 @@ const lineHeight = {
   lg: '2.25rem',
   xl: '2.5rem',
   '2xl': '2.75rem',
-  '3xl': '3.5rem'
+  '3xl': '3.5rem',
 };
 
 module.exports = {
@@ -51,5 +51,5 @@ module.exports = {
   fontSize,
   fontWeight,
   letterSpacing,
-  lineHeight
+  lineHeight,
 };

@@ -2,7 +2,7 @@ import { html } from 'htm/preact';
 import Code from '../_utils/InlineCode';
 
 export default {
-  title: 'Guides|Color'
+  title: 'Guides|Color',
 };
 
 function Cell({ color, value, className = value && value > 400 ? 'text-white' : '' }) {
@@ -113,11 +113,12 @@ export const Aliases = () => html`
 
   <p class="body-base mb-2">
     Each color's alias corresponds to the "middle" step for the range of values. For most colors,
-    this matches the <${Code}>400</> value. For <${Code}>neutral</> however, it matches the <${Code}>500</> value.
+    this matches the <${Code}>400</${Code}> value. For <${Code}>neutral</${Code}> however, it
+    matches the <${Code}>500</${Code}> value.
   </p>
 
   <p class="body-base mb-2">
-    Additionally, an alias for <${Code}>black</> and <${Code}>white</> are provided.
+    Additionally, an alias for <${Code}>black</${Code}> and <${Code}>white</${Code}> are provided.
   </p>
 
   <div class="grid grid-cols-2 gap-4">

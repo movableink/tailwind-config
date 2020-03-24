@@ -10,12 +10,12 @@ function makeLetterSpacingStory(size, notes) {
     <p class="mb-4">${notes}</p>
     <${Example}>
       <p class="tracking-${size}">${lorem.generateParagraphs(1)}</p>
-    </>
+    </${Example}>
   `;
 }
 
 export default {
-  title: 'Utilities|Font/Letter Spacing'
+  title: 'Utilities|Font/Letter Spacing',
 };
 
 export const ExtraExtraSmall = () =>

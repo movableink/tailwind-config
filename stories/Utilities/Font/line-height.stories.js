@@ -10,12 +10,12 @@ function makeLineHeightStory(size, notes) {
     <p class="mb-4">${notes}</p>
     <${Example}>
       <p class="leading-${size}">${lorem.generateParagraphs(1)}</p>
-    </>
+    </${Example}>
   `;
 }
 
 export default {
-  title: 'Utilities|Font/Line Height'
+  title: 'Utilities|Font/Line Height',
 };
 
 export const None = () =>

@@ -11,12 +11,12 @@ function makeBodyTextStory(size) {
       <p class="body-${size}">
         ${lorem.generateParagraphs(1)}
       </p>
-    </>
+    </${Example}>
   `;
 }
 
 export default {
-  title: 'Components|Body Text'
+  title: 'Components|Body Text',
 };
 
 export const Small = () => makeBodyTextStory('sm');
