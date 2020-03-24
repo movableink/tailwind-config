@@ -10,12 +10,12 @@ function makeFontSizeStory(size, notes) {
     <p class="mb-4">${notes}</p>
     <${Example}>
       <p class="text-${size}">${lorem.generateParagraphs(1)}</p>
-    </>
+    </${Example}>
   `;
 }
 
 export default {
-  title: 'Utilities|Font/Size'
+  title: 'Utilities|Font/Size',
 };
 
 export const Minor3 = () =>

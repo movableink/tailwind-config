@@ -7,20 +7,20 @@ const lorem = new LoremIpsum({
   random,
   wordsPerSentence: {
     min: 5,
-    max: 8
-  }
+    max: 8,
+  },
 });
 
 function makeHeadingTextStory(size) {
   return html`
     <${Example}>
       <p class="heading-${size}">${lorem.generateSentences(1)}</p>
-    </>
+    </${Example}>
   `;
 }
 
 export default {
-  title: 'Components|Heading Text'
+  title: 'Components|Heading Text',
 };
 
 export const ExtraSmall = () => makeHeadingTextStory('xs');

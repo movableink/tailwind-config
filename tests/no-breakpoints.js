@@ -15,11 +15,11 @@ async function parse(filePath) {
   return result;
 }
 
-test('there are no width-based media queries', async t => {
+test('there are no width-based media queries', async (t) => {
   const ast = await parse('../dist/fluid-tailwind.css');
 
-  const mediaQueries = ast.nodes.filter(node => node.type === 'atrule');
-  const minWidthMediaQueries = mediaQueries.filter(node => node.params.includes('min-width'));
+  const mediaQueries = ast.nodes.filter((node) => node.type === 'atrule');
+  const minWidthMediaQueries = mediaQueries.filter((node) => node.params.includes('min-width'));
 
   t.is(minWidthMediaQueries.length, 0);
 });

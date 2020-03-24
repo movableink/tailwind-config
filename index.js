@@ -6,7 +6,7 @@ const {
   fontSize,
   fontWeight,
   letterSpacing,
-  lineHeight
+  lineHeight,
 } = require('./config/typography');
 const fluidBasePlugin = require('./plugins/base');
 const bodyTextComponentsPlugin = require('./plugins/components/body-text');
@@ -27,13 +27,13 @@ module.exports = {
     screens: {},
     extend: {
       fill: colors,
-      stroke: colors
-    }
+      stroke: colors,
+    },
   },
   plugins: [
     fluidBasePlugin,
     bodyTextComponentsPlugin,
     captionTextComponentsPlugin,
-    headingTextComponentsPlugin
-  ]
+    headingTextComponentsPlugin,
+  ],
 };

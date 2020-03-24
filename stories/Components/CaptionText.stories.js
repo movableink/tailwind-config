@@ -9,12 +9,12 @@ function makeCaptionTextStory(size) {
   return html`
     <${Example}>
       <p class="caption-${size}">${lorem.generateParagraphs(1)}</p>
-    </>
+    </${Example}>
   `;
 }
 
 export default {
-  title: 'Components|Caption Text'
+  title: 'Components|Caption Text',
 };
 
 export const Small = () => makeCaptionTextStory('sm');
