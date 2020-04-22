@@ -1025,11 +1025,11 @@
     rimraf "^2.5.2"
 
 "@movable/eslint-config-node@^0.4.1":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config-node/-/eslint-config-node-0.4.2.tgz#ce4513d781d84ee0d76f77351a38467765869ec1"
-  integrity sha512-9TN3RHfXMYyVfh9ejgk8UrDFe93qXaPvCpsE9vskRhPjFp4/dLoBgpfVVd2Ee815syJ3oxcSjZT474Ejz/DhZQ==
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config-node/-/eslint-config-node-0.4.3.tgz#09aba5352e149c5338a990cf837a80ac898da9af"
+  integrity sha512-s7p9tIk3XudhPtY5ed6pVbu4glVVDZe5UrKn/BeGoqkvQGjt7VIF1TWnDsVGvD2r3iFglgvzbzGNKoTcsEr5YA==
   dependencies:
-    eslint-plugin-node "^11.0.0"
+    eslint-plugin-node "^11.1.0"
 
 "@movable/eslint-config@^0.5.0":
   version "0.5.1"
@@ -4508,10 +4508,10 @@ eslint-plugin-es@^3.0.0:
     eslint-utils "^2.0.0"
     regexpp "^3.0.0"
 
-eslint-plugin-node@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-11.0.0.tgz#365944bb0804c5d1d501182a9bc41a0ffefed726"
-  integrity sha512-chUs/NVID+sknFiJzxoN9lM7uKSOEta8GC8365hw1nDfwIPIjjpRSwwPvQanWv8dt/pDe9EV4anmVSwdiSndNg==
+eslint-plugin-node@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-11.1.0.tgz#c95544416ee4ada26740a30474eefc5402dc671d"
+  integrity sha512-oUwtPJ1W0SKD0Tr+wqu92c5xuCeQqB3hSCHasn/ZgjFdA9iDGNkNf2Zi9ztY7X+hNuMib23LNGRm6+uN+KLE3g==
   dependencies:
     eslint-plugin-es "^3.0.0"
     eslint-utils "^2.0.0"
