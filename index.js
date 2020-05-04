@@ -36,11 +36,4 @@ module.exports = {
     captionTextComponentsPlugin,
     headingTextComponentsPlugin,
   ],
-  corePlugins: {
-    // Disable property-opacity helpers by default; unneeded and cause payload bloat
-    backgroundOpacity: false,
-    borderOpacity: false,
-    divideOpacity: false,
-    textOpacity: false,
-  },
 };
