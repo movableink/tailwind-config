@@ -9,13 +9,17 @@ export default {
   title: 'Guides|Color',
 };
 
-function Cell({ color, value, className = value && value > 400 ? 'text-white' : '' }) {
+function Cell({ color, value, hex, className = '' }) {
   const identifier = value ? `${color}-${value}` : color;
 
   return html`
-    <div class="flex items-center justify-center bg-${identifier} ${className}">
+    <div class="flex items-center justify-between p-2 bg-${identifier} ${className}">
       <code class="text-sm">
         ${identifier}
+      </code>
+
+      <code class="text-sm">
+        ${hex}
       </code>
     </div>
   `;
@@ -24,17 +28,36 @@ function Cell({ color, value, className = value && value > 400 ? 'text-white' : 
 export const Palette = () => html`
   <h1 class="heading-md mb-2">Color Palette</h1>
 
-  ${colors.map((color) => {
-    const values = Object.keys(colorConfig[color]).filter((value) => value !== 'default');
+  <div class="grid grid-cols-3 gap-4">
+    ${colors.map((color) => {
+      const colorValues = colorConfig[color];
+      const values = Object.keys(colorValues).filter((value) => value !== 'default');
+      const defaultValue = values.find((value) => colorValues[value] === colorValues['default']);
 
-    return html`
-      <div class="grid grid-cols-9 h-24 mb-4">
-        ${values.map((value) => {
-          return html` <${Cell} color=${color} value=${value} /> `;
-        })}
-      </div>
-    `;
-  })}
+      return html`
+        <div class="">
+          ${values.map((value) => {
+            let className = '';
+
+            if (value === defaultValue) {
+              className = 'py-4';
+            }
+
+            if (value >= defaultValue) {
+              className += ' text-white';
+            }
+
+            return html` <${Cell}
+              className=${className}
+              color=${color}
+              value=${value === defaultValue ? undefined : value}
+              hex=${colorValues[value]}
+            />`;
+          })}
+        </div>
+      `;
+    })}
+  </div>
 `;
 
 export const Aliases = () => html`
