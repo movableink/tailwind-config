@@ -1,6 +1,6 @@
 import { LoremIpsum } from 'lorem-ipsum';
 import { html } from 'htm/preact';
-import random from '../_utils/random';
+import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
@@ -9,7 +9,7 @@ function makeCaptionTextStory(size) {
 }
 
 export default {
-  title: 'Components|Caption Text',
+  title: 'Components/Text/Caption',
 };
 
 export const Small = () => makeCaptionTextStory('sm');

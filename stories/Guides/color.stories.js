@@ -10,7 +10,7 @@ function getGlobalAlaisForHex(hex) {
 }
 
 export default {
-  title: 'Guides|Color',
+  title: 'Guides/Color',
 };
 
 export const Palette = () => html`

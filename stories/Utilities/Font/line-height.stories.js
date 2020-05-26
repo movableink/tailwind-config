@@ -12,7 +12,7 @@ function makeLineHeightStory(size, notes) {
 }
 
 export default {
-  title: 'Utilities|Font/Line Height',
+  title: 'Utilities/Font/Line Height',
 };
 
 export const None = () =>

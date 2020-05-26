@@ -12,7 +12,7 @@ function makeLetterSpacingStory(size, notes) {
 }
 
 export default {
-  title: 'Utilities|Font/Letter Spacing',
+  title: 'Utilities/Font/Letter Spacing',
 };
 
 export const ExtraExtraSmall = () =>

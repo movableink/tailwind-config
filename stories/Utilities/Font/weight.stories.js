@@ -5,7 +5,7 @@ import random from '../../_utils/random';
 const lorem = new LoremIpsum({ random });
 
 export default {
-  title: 'Utilities|Font/Weight',
+  title: 'Utilities/Font/Weight',
 };
 
 export const Normal = () => html` <p class="font-normal">${lorem.generateParagraphs(1)}</p> `;
