@@ -1,6 +1,6 @@
 import { LoremIpsum } from 'lorem-ipsum';
 import { html } from 'htm/preact';
-import random from '../../_utils/random';
+import random from '../../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
@@ -13,7 +13,7 @@ function makeBodyTextStory(size) {
 }
 
 export default {
-  title: 'Components/Body Text',
+  title: 'Components/Text/Body',
 };
 
 export const Small = () => makeBodyTextStory('sm');

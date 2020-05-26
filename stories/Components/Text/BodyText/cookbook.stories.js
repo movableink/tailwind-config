@@ -1,7 +1,7 @@
 import { html } from 'htm/preact';
 
 export default {
-  title: 'Components/Body Text/Cookbook',
+  title: 'Components/Text/Body/Cookbook',
 };
 
 export const OverridingFontWeight = () => html`
