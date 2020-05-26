@@ -1,6 +1,5 @@
 import { LoremIpsum } from 'lorem-ipsum';
 import { html } from 'htm/preact';
-import Example from '../../_utils/Example';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
@@ -8,9 +7,7 @@ const lorem = new LoremIpsum({ random });
 function makeLetterSpacingStory(size, notes) {
   return html`
     <p class="mb-4">${notes}</p>
-    <${Example}>
-      <p class="tracking-${size}">${lorem.generateParagraphs(1)}</p>
-    </${Example}>
+    <p class="tracking-${size}">${lorem.generateParagraphs(1)}</p>
   `;
 }
 
