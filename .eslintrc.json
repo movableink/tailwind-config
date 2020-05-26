@@ -22,6 +22,15 @@
         "node/no-unpublished-import": "off",
         "node/no-unsupported-features/es-syntax": "off"
       }
+    },
+    {
+      "files": [".storybook/preview.js"],
+      "parserOptions": {
+        "sourceType": "module"
+      },
+      "rules": {
+        "node/no-unsupported-features/es-syntax": "off"
+      }
     }
   ]
 }

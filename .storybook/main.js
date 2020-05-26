@@ -1,4 +1,4 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.[tj]s']
+  addons: ['@whitespace/storybook-addon-html/register'],
+  stories: ['../stories/**/*.stories.[tj]s'],
 };
-

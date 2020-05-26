@@ -1,14 +1,18 @@
-import { addDecorator } from '@storybook/html'
+import { addDecorator } from '@storybook/html';
+import { withHTML } from '@whitespace/storybook-addon-html/html';
 import { html } from 'htm/preact';
 import render from 'preact-render-to-string';
+import prettierConfig from '@movable/prettier-config';
 
-addDecorator(storyFn => html`
-  <div class="p-4 bg-white h-screen">
-    ${storyFn()}
-  </div>
-`);
+addDecorator(
+  (storyFn) => html`
+    <div class="p-4 bg-white h-screen">
+      ${storyFn()}
+    </div>
+  `
+);
 
-addDecorator(storyFn => {
+addDecorator((storyFn) => {
   let result = storyFn();
 
   if (typeof result === 'string') {
@@ -21,3 +25,4 @@ addDecorator(storyFn => {
   return rendered.replace(/&amp;/g, '&');
 });
 
+addDecorator(withHTML({ prettier: prettierConfig }));
