@@ -5,3 +5,6 @@ tmp
 
 # Dependencies
 node_modules
+
+# Storybook Config Files
+!.storybook/

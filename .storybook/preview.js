@@ -5,14 +5,14 @@ import render from 'preact-render-to-string';
 import prettierConfig from '@movable/prettier-config';
 
 addDecorator(
-  storyFn => html`
+  (storyFn) => html`
     <div class="p-4 bg-white h-screen">
       ${storyFn()}
     </div>
   `
 );
 
-addDecorator(storyFn => {
+addDecorator((storyFn) => {
   let result = storyFn();
 
   if (typeof result === 'string') {
