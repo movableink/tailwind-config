@@ -15,7 +15,7 @@ function makeHeadingTextStory(size) {
 }
 
 export default {
-  title: 'Components|Heading Text',
+  title: 'Components/Heading Text',
 };
 
 export const ExtraSmall = () => makeHeadingTextStory('xs');

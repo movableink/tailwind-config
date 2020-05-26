@@ -12,7 +12,7 @@ function makeFontSizeStory(size, notes) {
 }
 
 export default {
-  title: 'Utilities|Font/Size',
+  title: 'Utilities/Font/Size',
 };
 
 export const Minor3 = () =>

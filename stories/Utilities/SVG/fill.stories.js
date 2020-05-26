@@ -1,7 +1,7 @@
 import { html } from 'htm/preact';
 
 export default {
-  title: 'Utilities|SVG/Path',
+  title: 'Utilities/SVG/Path',
 };
 
 export const SettingColor = () => html`

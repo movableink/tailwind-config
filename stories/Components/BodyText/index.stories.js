@@ -13,7 +13,7 @@ function makeBodyTextStory(size) {
 }
 
 export default {
-  title: 'Components|Body Text',
+  title: 'Components/Body Text',
 };
 
 export const Small = () => makeBodyTextStory('sm');

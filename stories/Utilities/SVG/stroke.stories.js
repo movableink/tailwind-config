@@ -1,7 +1,7 @@
 import { html } from 'htm/preact';
 
 export default {
-  title: 'Utilities|SVG/Stroke',
+  title: 'Utilities/SVG/Stroke',
 };
 
 export const SettingColor = () => html`

@@ -1,7 +1,7 @@
 import { html } from 'htm/preact';
 
 export default {
-  title: 'Utilities|Color/Text',
+  title: 'Utilities/Color/Text',
 };
 
 export const ChangeOnHover = () => html`

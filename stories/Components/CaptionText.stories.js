@@ -9,7 +9,7 @@ function makeCaptionTextStory(size) {
 }
 
 export default {
-  title: 'Components|Caption Text',
+  title: 'Components/Caption Text',
 };
 
 export const Small = () => makeCaptionTextStory('sm');

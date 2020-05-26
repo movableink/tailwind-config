@@ -1,8 +1,14 @@
-import { addDecorator } from '@storybook/html';
+import { addDecorator, addParameters } from '@storybook/html';
 import { withHTML } from '@whitespace/storybook-addon-html/html';
 import { html } from 'htm/preact';
 import render from 'preact-render-to-string';
 import prettierConfig from '@movable/prettier-config';
+
+addParameters({
+  options: {
+    showRoots: true,
+  },
+});
 
 addDecorator(
   (storyFn) => html`
