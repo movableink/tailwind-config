@@ -10,14 +10,6 @@ addParameters({
   },
 });
 
-addDecorator(
-  (storyFn) => html`
-    <div class="p-4 bg-white h-screen">
-      ${storyFn()}
-    </div>
-  `
-);
-
 addDecorator((storyFn) => {
   let result = storyFn();
 
@@ -32,3 +24,11 @@ addDecorator((storyFn) => {
 });
 
 addDecorator(withHTML({ prettier: prettierConfig }));
+
+addDecorator(
+  (storyFn) => `
+    <div class="p-4 bg-white h-screen">
+      ${storyFn()}
+    </div>
+  `
+);
