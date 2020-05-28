@@ -97,6 +97,10 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       ...focused({
         outline: 'none',
       }),
+
+      svg: {
+        fill: 'currentColor',
+      },
     },
 
     /** === Basic Button (Type) === **/
@@ -252,6 +256,15 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       paddingLeft: theme('padding.2'),
       paddingRight: theme('padding.2'),
       paddingTop: theme('padding.1'),
+
+      svg: {
+        height: theme('height.4'),
+        width: theme('width.4'),
+
+        // Add margin to account for `line-height` being
+        marginTop: '2px',
+        marginBottom: '2px',
+      },
     },
 
     /** === Extra-Small Button === **/
@@ -262,6 +275,15 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       paddingLeft: theme('padding.2'),
       paddingRight: theme('padding.2'),
       paddingTop: '0',
+
+      svg: {
+        height: theme('height.3'),
+        width: theme('width.3'),
+
+        // Create the right spacing w/o the line height
+        marginTop: '4px',
+        marginBottom: '4px',
+      },
     },
 
     /** === Small Button === **/
@@ -272,6 +294,15 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       paddingLeft: theme('padding.2'),
       paddingRight: theme('padding.2'),
       paddingTop: theme('padding.1'),
+
+      svg: {
+        height: theme('height.3'),
+        width: theme('width.3'),
+
+        // Create the right spacing w/o the line height
+        marginTop: '2px',
+        marginBottom: '2px',
+      },
     },
 
     /** === Large Button === **/
@@ -282,6 +313,15 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       paddingLeft: theme('padding.3'),
       paddingRight: theme('padding.3'),
       paddingTop: theme('padding.2'),
+
+      svg: {
+        height: theme('height.4'),
+        width: theme('width.4'),
+
+        // Create the right spacing w/o the line height
+        marginTop: '2px',
+        marginBottom: '2px',
+      },
     },
 
     /** === Extra-Large Button === **/
@@ -292,6 +332,11 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       paddingLeft: theme('padding.4'),
       paddingRight: theme('padding.4'),
       paddingTop: theme('padding.3'),
+
+      svg: {
+        height: theme('height.5'),
+        width: theme('width.5'),
+      },
     },
   });
 };
