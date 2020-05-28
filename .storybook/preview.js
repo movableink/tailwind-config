@@ -9,6 +9,7 @@ addParameters({
   },
 });
 
+// Allow using the Preact `html` tag in stories
 addDecorator((storyFn) => {
   let result = storyFn();
 
@@ -19,8 +20,10 @@ addDecorator((storyFn) => {
   return render(result);
 });
 
+// Add HTML code snippet addon
 addDecorator(withHTML({ prettier: prettierConfig }));
 
+// Add a wrapper element for better presentation
 addDecorator(
   (storyFn) => `
     <div class="p-4 bg-white h-screen">
