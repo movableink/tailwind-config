@@ -264,6 +264,11 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
         // Add margin to account for `line-height` being
         marginTop: '2px',
         marginBottom: '2px',
+
+        // Handle spacing if text is also present
+        '&:not(:only-child)': {
+          marginLeft: theme('margin.2'),
+        },
       },
     },
 
@@ -283,6 +288,11 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
         // Create the right spacing w/o the line height
         marginTop: '4px',
         marginBottom: '4px',
+
+        // Handle spacing if text is also present
+        '&:not(:only-child)': {
+          marginLeft: theme('margin.2'),
+        },
       },
     },
 
@@ -302,6 +312,11 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
         // Create the right spacing w/o the line height
         marginTop: '2px',
         marginBottom: '2px',
+
+        // Handle spacing if text is also present
+        '&:not(:only-child)': {
+          marginLeft: theme('margin.2'),
+        },
       },
     },
 
@@ -321,6 +336,11 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
         // Create the right spacing w/o the line height
         marginTop: '2px',
         marginBottom: '2px',
+
+        // Handle spacing if text is also present
+        '&:not(:only-child)': {
+          marginLeft: theme('margin.3'),
+        },
       },
     },
 
@@ -336,6 +356,11 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       svg: {
         height: theme('height.5'),
         width: theme('width.5'),
+
+        // Handle spacing if text is also present
+        '&:not(:only-child)': {
+          marginLeft: theme('margin.4'),
+        },
       },
     },
   });
