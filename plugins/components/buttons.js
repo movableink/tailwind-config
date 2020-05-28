@@ -77,20 +77,12 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       alignItems: 'center',
       display: 'inline-flex',
 
-      // Default padding
-      paddingBottom: theme('padding.1'),
-      paddingLeft: theme('padding.2'),
-      paddingRight: theme('padding.2'),
-      paddingTop: theme('padding.1'),
-
       // Default border
       borderRadius: theme('borderRadius.md'),
       borderWidth: '1px',
 
       // Shared Font Style
-      fontSize: theme('fontSize.sm'),
       fontWeight: theme('fontWeight.bold'),
-      lineHeight: theme('lineHeight.xs'),
 
       // Prevent selection of text
       userSelect: 'none',
@@ -250,6 +242,56 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
         borderColor: theme('colors.blue.300'),
         color: theme('colors.blue.300'),
       }),
+    },
+
+    /** === Basic Button (Size) === **/
+    [fluidButtonWithoutModifier('size')]: {
+      fontSize: theme('fontSize.sm'),
+      lineHeight: theme('lineHeight.xs'),
+      paddingBottom: theme('padding.1'),
+      paddingLeft: theme('padding.2'),
+      paddingRight: theme('padding.2'),
+      paddingTop: theme('padding.1'),
+    },
+
+    /** === Extra-Small Button === **/
+    [`.fluid-button.${e('size:xs')}`]: {
+      fontSize: theme('fontSize.2xs'),
+      lineHeight: theme('lineHeight.xs'),
+      paddingBottom: '0',
+      paddingLeft: theme('padding.2'),
+      paddingRight: theme('padding.2'),
+      paddingTop: '0',
+    },
+
+    /** === Small Button === **/
+    [`.fluid-button.${e('size:sm')}`]: {
+      fontSize: theme('fontSize.xs'),
+      lineHeight: theme('lineHeight.2xs'),
+      paddingBottom: theme('padding.1'),
+      paddingLeft: theme('padding.2'),
+      paddingRight: theme('padding.2'),
+      paddingTop: theme('padding.1'),
+    },
+
+    /** === Large Button === **/
+    [`.fluid-button.${e('size:lg')}`]: {
+      fontSize: theme('fontSize.base'),
+      lineHeight: theme('lineHeight.2xs'),
+      paddingBottom: theme('padding.2'),
+      paddingLeft: theme('padding.3'),
+      paddingRight: theme('padding.3'),
+      paddingTop: theme('padding.2'),
+    },
+
+    /** === Extra-Large Button === **/
+    [`.fluid-button.${e('size:xl')}`]: {
+      fontSize: theme('fontSize.lg'),
+      lineHeight: theme('lineHeight.xs'),
+      paddingBottom: theme('padding.3'),
+      paddingLeft: theme('padding.4'),
+      paddingRight: theme('padding.4'),
+      paddingTop: theme('padding.3'),
     },
   });
 };
