@@ -12,6 +12,7 @@ const fluidBasePlugin = require('./plugins/base');
 const bodyTextComponentsPlugin = require('./plugins/components/body-text');
 const captionTextComponentsPlugin = require('./plugins/components/caption-text');
 const headingTextComponentsPlugin = require('./plugins/components/heading-text');
+const buttonComponentsPlugin = require('./plugins/components/buttons');
 
 /**
  * Configures Tailwind to use Fluid's design tokens
@@ -35,5 +36,6 @@ module.exports = {
     bodyTextComponentsPlugin,
     captionTextComponentsPlugin,
     headingTextComponentsPlugin,
+    buttonComponentsPlugin,
   ],
 };
