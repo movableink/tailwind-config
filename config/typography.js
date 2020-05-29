@@ -1,23 +1,33 @@
 'use strict';
 
+/**
+ * Convert a number of pixels into the appropriate REM value
+ *
+ * @param {number} pixelSize
+ * @return {string}
+ */
+function pxToRem(pixelSize) {
+  return `${pixelSize / 16}rem`;
+}
+
 const fontFamily = {
   sans: ['"Open Sans"', 'Helvetica', 'Arial', 'sans-serif'],
   mono: ['"Source Code Pro"', 'Courier', 'monospace'],
 };
 
 const fontSize = {
-  '2xs': '0.702rem',
-  xs: '0.79rem',
-  sm: '0.889rem',
-  base: '1rem',
-  lg: '1.125rem',
-  xl: '1.266rem',
-  '2xl': '1.424rem',
-  '3xl': '1.602rem',
-  '4xl': '1.802rem',
-  '5xl': '2.027rem',
-  '6xl': '2.281rem',
-  '7xl': '2.566rem',
+  '2xs': pxToRem(11),
+  xs: pxToRem(12),
+  sm: pxToRem(14),
+  base: pxToRem(16),
+  lg: pxToRem(18),
+  xl: pxToRem(20),
+  '2xl': pxToRem(22),
+  '3xl': pxToRem(25),
+  '4xl': pxToRem(28),
+  '5xl': pxToRem(32),
+  '6xl': pxToRem(36),
+  '7xl': pxToRem(41),
 };
 
 const fontWeight = {
