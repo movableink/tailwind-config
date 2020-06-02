@@ -739,7 +739,7 @@ input::placeholder, textarea::placeholder {
   box-shadow: none;
 }
 
-.fluid-button:not([class*="type\:"]):hover:not(:disabled), .fluid-button:not([class*="type\:"]).appearance\:hovered:not(:disabled) {
+.fluid-button:not([class*="type\:"]):hover:not(:disabled):not(.appearance\:disabled), .fluid-button:not([class*="type\:"]).appearance\:hovered:not(:disabled):not(.appearance\:disabled) {
   background: linear-gradient(-180deg, rgba(216, 216, 216, 0) 0%, rgba(0, 0, 0, 0.1) 100%) rgb(250, 250, 250);
 }
 
@@ -748,7 +748,7 @@ input::placeholder, textarea::placeholder {
   border-color: #94b8f6;
 }
 
-.fluid-button:not([class*="type\:"]):active, .fluid-button:not([class*="type\:"]).appearance\:active {
+.fluid-button:not([class*="type\:"]):active:not(.appearance\:disabled), .fluid-button:not([class*="type\:"]).appearance\:active:not(.appearance\:disabled) {
   box-shadow: inset 0px 1px 1px 1px rgba(28, 28, 28, 0.2), 0 0 0 1px #94b8f6;
   border-color: #94b8f6;
 }
@@ -767,7 +767,7 @@ input::placeholder, textarea::placeholder {
   box-shadow: none;
 }
 
-.fluid-button.type\:primary:hover:not(:disabled), .fluid-button.type\:primary.appearance\:hovered:not(:disabled) {
+.fluid-button.type\:primary:hover:not(:disabled):not(.appearance\:disabled), .fluid-button.type\:primary.appearance\:hovered:not(:disabled):not(.appearance\:disabled) {
   background: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%) rgb(20, 106, 255);
 }
 
@@ -776,7 +776,7 @@ input::placeholder, textarea::placeholder {
   border-color: #94b8f6;
 }
 
-.fluid-button.type\:primary:active, .fluid-button.type\:primary.appearance\:active {
+.fluid-button.type\:primary:active:not(.appearance\:disabled), .fluid-button.type\:primary.appearance\:active:not(.appearance\:disabled) {
   box-shadow: inset 0px 1px 1px 1px rgba(28, 28, 28, 0.2), 0 0 0 1px #94b8f6;
   border-color: #94b8f6;
 }
@@ -794,7 +794,7 @@ input::placeholder, textarea::placeholder {
   box-shadow: none;
 }
 
-.fluid-button.type\:outline:hover:not(:disabled), .fluid-button.type\:outline.appearance\:hovered:not(:disabled) {
+.fluid-button.type\:outline:hover:not(:disabled):not(.appearance\:disabled), .fluid-button.type\:outline.appearance\:hovered:not(:disabled):not(.appearance\:disabled) {
   background: linear-gradient(-180deg, rgba(216, 216, 216, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
@@ -803,7 +803,7 @@ input::placeholder, textarea::placeholder {
   border-color: #94b8f6;
 }
 
-.fluid-button.type\:outline:active, .fluid-button.type\:outline.appearance\:active {
+.fluid-button.type\:outline:active:not(.appearance\:disabled), .fluid-button.type\:outline.appearance\:active:not(.appearance\:disabled) {
   box-shadow: inset 0px 1px 1px 1px rgba(28, 28, 28, 0.2), 0 0 0 1px #94b8f6;
   border-color: #94b8f6;
 }
@@ -822,7 +822,7 @@ input::placeholder, textarea::placeholder {
   box-shadow: none;
 }
 
-.fluid-button.type\:destructive:hover:not(:disabled), .fluid-button.type\:destructive.appearance\:hovered:not(:disabled) {
+.fluid-button.type\:destructive:hover:not(:disabled):not(.appearance\:disabled), .fluid-button.type\:destructive.appearance\:hovered:not(:disabled):not(.appearance\:disabled) {
   background: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%) rgb(252, 81, 66);
   color: #ffffff;
   border-color: #e51604;
@@ -833,7 +833,7 @@ input::placeholder, textarea::placeholder {
   border-color: #94b8f6;
 }
 
-.fluid-button.type\:destructive:active, .fluid-button.type\:destructive.appearance\:active {
+.fluid-button.type\:destructive:active:not(.appearance\:disabled), .fluid-button.type\:destructive.appearance\:active:not(.appearance\:disabled) {
   box-shadow: inset 0px 1px 1px 1px rgba(28, 28, 28, 0.2), 0 0 0 1px #94b8f6;
   border-color: #94b8f6;
 }
@@ -848,7 +848,7 @@ input::placeholder, textarea::placeholder {
   color: #c5c5ca;
 }
 
-.fluid-button.type\:plain:hover:not(:disabled), .fluid-button.type\:plain.appearance\:hovered:not(:disabled) {
+.fluid-button.type\:plain:hover:not(:disabled):not(.appearance\:disabled), .fluid-button.type\:plain.appearance\:hovered:not(:disabled):not(.appearance\:disabled) {
   color: #0d43a0;
 }
 
@@ -857,7 +857,7 @@ input::placeholder, textarea::placeholder {
   border-color: #94b8f6;
 }
 
-.fluid-button.type\:plain:active, .fluid-button.type\:plain.appearance\:active {
+.fluid-button.type\:plain:active:not(.appearance\:disabled), .fluid-button.type\:plain.appearance\:active:not(.appearance\:disabled) {
   box-shadow: 0 0 0 1px #94b8f6;
   border-color: #94b8f6;
   color: #94b8f6;
