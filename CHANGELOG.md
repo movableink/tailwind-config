@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/movableink/tailwind-config/compare/v1.2.1...v1.3.0) (2020-06-02)
+
+### Features
+
+- add button types and states ([b6b6138](https://github.com/movableink/tailwind-config/commit/b6b6138cf211be449feb160620cd9c7e960f024d))
+- add button-size classes ([f2f7bd6](https://github.com/movableink/tailwind-config/commit/f2f7bd694e38052e38eb71ca3ff705d887913ace))
+- add icon-only button styles ([a365074](https://github.com/movableink/tailwind-config/commit/a365074d5b445aba94d91006e6316c6c24d14b3d))
+- support text and icon in button ([d3cd3b4](https://github.com/movableink/tailwind-config/commit/d3cd3b42928749e66dea2c9cc2816cf43429d232))
+
+### Bug Fixes
+
+- ensure font sizes match clean `px` sizes ([484b3a1](https://github.com/movableink/tailwind-config/commit/484b3a1638a3c2c61ea561863d3747a27d5d6a6e))
+
 ### [1.2.1](https://github.com/movableink/tailwind-config/compare/v1.2.0...v1.2.1) (2020-05-04)
 
 ## [1.2.0](https://github.com/movableink/tailwind-config/compare/v1.1.0...v1.2.0) (2020-04-22)
