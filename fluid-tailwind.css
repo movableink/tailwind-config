@@ -630,7 +630,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .body-xl {
-  font-size: 1.266rem;
+  font-size: 1.25rem;
   letter-spacing: -0.03125rem;
   line-height: 2rem;
 }
@@ -648,55 +648,55 @@ input::placeholder, textarea::placeholder {
 }
 
 .body-sm {
-  font-size: 0.889rem;
+  font-size: 0.875rem;
   letter-spacing: 0rem;
   line-height: 1.5rem;
 }
 
 .caption-lg {
-  font-size: 0.79rem;
+  font-size: 0.75rem;
   letter-spacing: 0.025em;
   line-height: 1.25rem;
 }
 
 .caption-sm {
-  font-size: 0.702rem;
+  font-size: 0.6875rem;
   letter-spacing: 0.025em;
   line-height: 1rem;
 }
 
 .heading-2xl {
-  font-size: 2.566rem;
+  font-size: 2.5625rem;
   letter-spacing: -0.075rem;
   line-height: 3.5rem;
 }
 
 .heading-xl {
-  font-size: 2.281rem;
+  font-size: 2.25rem;
   letter-spacing: -0.0625rem;
   line-height: 2.75rem;
 }
 
 .heading-lg {
-  font-size: 2.027rem;
+  font-size: 2rem;
   letter-spacing: 0rem;
   line-height: 2.5rem;
 }
 
 .heading-md {
-  font-size: 1.802rem;
+  font-size: 1.75rem;
   letter-spacing: 0rem;
   line-height: 2.25rem;
 }
 
 .heading-sm {
-  font-size: 1.602rem;
+  font-size: 1.5625rem;
   letter-spacing: 0rem;
   line-height: 2.25rem;
 }
 
 .heading-xs {
-  font-size: 1.424rem;
+  font-size: 1.375rem;
   letter-spacing: 0rem;
   line-height: 1.75rem;
 }
@@ -864,7 +864,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .fluid-button:not([class*="size\:"]) {
-  font-size: 0.889rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
@@ -884,7 +884,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .fluid-button.size\:xs {
-  font-size: 0.702rem;
+  font-size: 0.6875rem;
   line-height: 1.25rem;
   padding-bottom: 0;
   padding-left: 0.5rem;
@@ -904,7 +904,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .fluid-button.size\:sm {
-  font-size: 0.79rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
@@ -5448,15 +5448,15 @@ input::placeholder, textarea::placeholder {
 }
 
 .text-2xs {
-  font-size: 0.702rem;
+  font-size: 0.6875rem;
 }
 
 .text-xs {
-  font-size: 0.79rem;
+  font-size: 0.75rem;
 }
 
 .text-sm {
-  font-size: 0.889rem;
+  font-size: 0.875rem;
 }
 
 .text-base {
@@ -5468,31 +5468,31 @@ input::placeholder, textarea::placeholder {
 }
 
 .text-xl {
-  font-size: 1.266rem;
+  font-size: 1.25rem;
 }
 
 .text-2xl {
-  font-size: 1.424rem;
+  font-size: 1.375rem;
 }
 
 .text-3xl {
-  font-size: 1.602rem;
+  font-size: 1.5625rem;
 }
 
 .text-4xl {
-  font-size: 1.802rem;
+  font-size: 1.75rem;
 }
 
 .text-5xl {
-  font-size: 2.027rem;
+  font-size: 2rem;
 }
 
 .text-6xl {
-  font-size: 2.281rem;
+  font-size: 2.25rem;
 }
 
 .text-7xl {
-  font-size: 2.566rem;
+  font-size: 2.5625rem;
 }
 
 .leading-none {
