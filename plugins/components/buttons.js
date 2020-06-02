@@ -12,9 +12,14 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
   const ELEVATED_BOX_SHADOW = '0px 1px 1px 0px rgba(28, 28, 28, 0.15)';
   const FOCUSED_BOX_SHADOW = `0 0 0 1px ${theme('colors.blue.300')}`;
 
+  const activeAppearance = e(`appearance:active`);
+  const disabledAppearance = e(`appearance:disabled`);
+  const focusedAppearance = e(`appearance:focused`);
+  const hoveredAppearance = e(`appearance:hovered`);
+
   function active(styles) {
     return {
-      [`&:active, &.${e(`appearance:active`)}`]: {
+      [`&:active:not(.${disabledAppearance}), &.${activeAppearance}:not(.${disabledAppearance})`]: {
         ...styles,
       },
     };
@@ -22,7 +27,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
 
   function disabled(styles) {
     return {
-      [`&:disabled, &.${e(`appearance:disabled`)}`]: {
+      [`&:disabled, &.${disabledAppearance}`]: {
         ...styles,
       },
     };
@@ -30,7 +35,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
 
   function focused(styles) {
     return {
-      [`&:focus, &.${e(`appearance:focused`)}`]: {
+      [`&:focus, &.${focusedAppearance}`]: {
         ...styles,
       },
     };
@@ -38,7 +43,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
 
   function hovered(styles) {
     return {
-      [`&:hover:not(:disabled), &.${e(`appearance:hovered`)}:not(:disabled)`]: {
+      [`&:hover:not(:disabled):not(.${disabledAppearance}), &.${hoveredAppearance}:not(:disabled):not(.${disabledAppearance})`]: {
         ...styles,
       },
     };
