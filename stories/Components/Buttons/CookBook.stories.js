@@ -10,3 +10,11 @@ export const Anchor = () => html`
     <a class="fluid-button appearance:disabled">I am a (disabled) link</a>
   </div>
 `;
+
+export const ButtonGroup = () => html`
+  <div class="fluid-button-group">
+    <button class="fluid-button">Left Button</button>
+    <button class="fluid-button">Middle Button</button>
+    <button class="fluid-button">Right Button</button>
+  </div>
+`;
