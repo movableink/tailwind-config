@@ -368,5 +368,19 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
         },
       },
     },
+
+    /** === Button Group === **/
+    '.fluid-button-group': {
+      '> .fluid-button:not(:first-child)': {
+        borderTopLeftRadius: 0,
+        borderBottomLeftRadius: 0,
+        borderLeftWidth: 0,
+      },
+
+      '> .fluid-button:not(:last-child)': {
+        borderTopRightRadius: 0,
+        borderBottomRightRadius: 0,
+      },
+    },
   });
 };
