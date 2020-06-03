@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/movableink/tailwind-config/compare/v1.3.1...v1.4.0) (2020-06-03)
+
+### Features
+
+- add `fluid-button-group` styles ([6c99400](https://github.com/movableink/tailwind-config/commit/6c9940053c8488c491f21fe1b82b2c29aa9a28ad))
+
 ### [1.3.1](https://github.com/movableink/tailwind-config/compare/v1.3.0...v1.3.1) (2020-06-02)
 
 ### Bug Fixes
