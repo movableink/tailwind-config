@@ -8,6 +8,10 @@ addParameters({
   a11y: {
     element: '#fluid-root',
   },
+  backgrounds: [
+    { name: 'light', value: 'white', default: true },
+    { name: 'dark', value: 'black' },
+  ],
   options: {
     showRoots: true,
   },
@@ -33,7 +37,7 @@ addDecorator(withHTML({ prettier: prettierConfig }));
 // Add a wrapper element for better presentation
 addDecorator(
   (storyFn) => `
-    <div class="p-4 bg-white h-screen" id="fluid-root">
+    <div class="p-4 h-screen" id="fluid-root">
       ${storyFn()}
     </div>
   `
