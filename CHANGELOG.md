@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/movableink/tailwind-config/compare/v1.4.0...v1.5.0) (2020-06-04)
+
+### Features
+
+- allow overriding button text color ([282c76e](https://github.com/movableink/tailwind-config/commit/282c76e030c29c15d559c912c3eba2ccb9eb8911))
+
 ## [1.4.0](https://github.com/movableink/tailwind-config/compare/v1.3.1...v1.4.0) (2020-06-03)
 
 ### Features
