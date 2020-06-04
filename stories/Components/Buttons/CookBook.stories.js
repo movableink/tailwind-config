@@ -18,3 +18,12 @@ export const ButtonGroup = () => html`
     <button class="fluid-button">Right Button</button>
   </div>
 `;
+
+export const DarkMode = () => html`
+  <button class="fluid-button type:outline text-white">Click Me</button>
+`;
+DarkMode.story = {
+  parameters: {
+    backgrounds: [{ name: 'dark', value: 'black', default: true }],
+  },
+};
