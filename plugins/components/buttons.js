@@ -99,20 +99,11 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       whiteSpace: 'nowrap',
 
       ...disabled({
-        color: 'var(--fluid-button-color-disabled, var(--fluid-button-color))',
         cursor: 'not-allowed',
-      }),
-
-      ...hovered({
-        color: 'var(--fluid-button-color-hovered, var(--fluid-button-color))',
       }),
 
       ...focused({
         outline: 'none',
-      }),
-
-      ...active({
-        color: 'var(--fluid-button-color-active, var(--fluid-button-color))',
       }),
 
       svg: {
@@ -123,12 +114,12 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     /** === Basic Button (Type) === **/
     [fluidButtonWithoutModifier('type')]: {
       '--fluid-button-color': theme('colors.neutral.800'),
-      '--fluid-button-color-disabled': theme('colors.neutral.500'),
       backgroundColor: theme('colors.neutral.200'),
       borderColor: theme('colors.neutral.500'),
       boxShadow: ELEVATED_BOX_SHADOW,
 
       ...disabled({
+        '--fluid-button-color': theme('colors.neutral.500'),
         borderColor: theme('colors.neutral.400'),
         boxShadow: 'none',
       }),
@@ -152,12 +143,12 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     /** === Primary Button === **/
     [`.fluid-button.${e('type:primary')}`]: {
       '--fluid-button-color': theme('colors.white'),
-      '--fluid-button-color-disabled': theme('colors.blue.200'),
       backgroundColor: theme('colors.blue.400'),
       borderColor: theme('colors.blue.500'),
       boxShadow: ELEVATED_BOX_SHADOW,
 
       ...disabled({
+        '--fluid-button-color': theme('colors.blue.200'),
         backgroundColor: theme('colors.blue.100'),
         borderColor: theme('colors.blue.200'),
         boxShadow: 'none',
@@ -182,11 +173,11 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     /** === Outline Button === **/
     [`.fluid-button.${e('type:outline')}`]: {
       '--fluid-button-color': theme('colors.neutral.800'),
-      '--fluid-button-color-disabled': theme('colors.neutral.500'),
       backgroundColor: 'transparent',
       borderColor: theme('colors.neutral.500'),
 
       ...disabled({
+        '--fluid-button-color': theme('colors.neutral.500'),
         backgroundColor: 'rgba(255, 255, 255, 0.3)',
         borderColor: theme('colors.neutral.400'),
         boxShadow: 'none',
@@ -210,19 +201,19 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     /** === Destructive Button === **/
     [`.fluid-button.${e('type:destructive')}`]: {
       '--fluid-button-color': theme('colors.white'),
-      '--fluid-button-color-disabled': theme('colors.red.200'),
-      '--fluid-button-color-hovered': theme('colors.white'),
       backgroundColor: theme('colors.red.400'),
       borderColor: theme('colors.red.500'),
       boxShadow: ELEVATED_BOX_SHADOW,
 
       ...disabled({
+        '--fluid-button-color': theme('colors.red.200'),
         backgroundColor: theme('colors.red.100'),
         borderColor: theme('colors.red.200'),
         boxShadow: 'none',
       }),
 
       ...hovered({
+        '--fluid-button-color': theme('colors.white'),
         background:
           'linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%) rgb(252, 81, 66)',
         borderColor: theme('colors.red.500'),
@@ -242,11 +233,16 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     /** === Plain Button === **/
     [`.fluid-button.${e('type:plain')}`]: {
       '--fluid-button-color': theme('colors.blue.400'),
-      '--fluid-button-color-disabled': theme('colors.neutral.500'),
-      '--fluid-button-color-hovered': theme('colors.blue.500'),
-      '--fluid-button-color-active': theme('colors.blue.300'),
       backgroundColor: 'transparent',
       borderColor: 'transparent',
+
+      ...disabled({
+        '--fluid-button-color': theme('colors.neutral.500'),
+      }),
+
+      ...hovered({
+        '--fluid-button-color': theme('colors.blue.500'),
+      }),
 
       ...focused({
         boxShadow: FOCUSED_BOX_SHADOW,
@@ -254,6 +250,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       }),
 
       ...active({
+        '--fluid-button-color': theme('colors.blue.300'),
         boxShadow: FOCUSED_BOX_SHADOW,
         borderColor: theme('colors.blue.300'),
       }),
