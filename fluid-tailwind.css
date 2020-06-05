@@ -716,20 +716,11 @@ input::placeholder, textarea::placeholder {
 }
 
 .fluid-button:disabled, .fluid-button.appearance\:disabled {
-  color: var(--fluid-button-color-disabled, var(--fluid-button-color));
   cursor: not-allowed;
-}
-
-.fluid-button:hover:not(:disabled):not(.appearance\:disabled), .fluid-button.appearance\:hovered:not(:disabled):not(.appearance\:disabled) {
-  color: var(--fluid-button-color-hovered, var(--fluid-button-color));
 }
 
 .fluid-button:focus, .fluid-button.appearance\:focused {
   outline: none;
-}
-
-.fluid-button:active:not(.appearance\:disabled), .fluid-button.appearance\:active:not(.appearance\:disabled) {
-  color: var(--fluid-button-color-active, var(--fluid-button-color));
 }
 
 .fluid-button svg {
@@ -738,13 +729,13 @@ input::placeholder, textarea::placeholder {
 
 .fluid-button:not([class*="type\:"]) {
   --fluid-button-color: #1c1c1c;
-  --fluid-button-color-disabled: #c5c5ca;
   background-color: #fafafa;
   border-color: #c5c5ca;
   box-shadow: 0px 1px 1px 0px rgba(28, 28, 28, 0.15);
 }
 
 .fluid-button:not([class*="type\:"]):disabled, .fluid-button:not([class*="type\:"]).appearance\:disabled {
+  --fluid-button-color: #c5c5ca;
   border-color: #e8e8ea;
   box-shadow: none;
 }
@@ -765,13 +756,13 @@ input::placeholder, textarea::placeholder {
 
 .fluid-button.type\:primary {
   --fluid-button-color: #ffffff;
-  --fluid-button-color-disabled: #d2e1fa;
   background-color: #266fed;
   border-color: #0d43a0;
   box-shadow: 0px 1px 1px 0px rgba(28, 28, 28, 0.15);
 }
 
 .fluid-button.type\:primary:disabled, .fluid-button.type\:primary.appearance\:disabled {
+  --fluid-button-color: #d2e1fa;
   background-color: #f2f7ff;
   border-color: #d2e1fa;
   box-shadow: none;
@@ -793,12 +784,12 @@ input::placeholder, textarea::placeholder {
 
 .fluid-button.type\:outline {
   --fluid-button-color: #1c1c1c;
-  --fluid-button-color-disabled: #c5c5ca;
   background-color: transparent;
   border-color: #c5c5ca;
 }
 
 .fluid-button.type\:outline:disabled, .fluid-button.type\:outline.appearance\:disabled {
+  --fluid-button-color: #c5c5ca;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: #e8e8ea;
   box-shadow: none;
@@ -820,20 +811,20 @@ input::placeholder, textarea::placeholder {
 
 .fluid-button.type\:destructive {
   --fluid-button-color: #ffffff;
-  --fluid-button-color-disabled: #feccc8;
-  --fluid-button-color-hovered: #ffffff;
   background-color: #fc5142;
   border-color: #e51604;
   box-shadow: 0px 1px 1px 0px rgba(28, 28, 28, 0.15);
 }
 
 .fluid-button.type\:destructive:disabled, .fluid-button.type\:destructive.appearance\:disabled {
+  --fluid-button-color: #feccc8;
   background-color: #ffebe9;
   border-color: #feccc8;
   box-shadow: none;
 }
 
 .fluid-button.type\:destructive:hover:not(:disabled):not(.appearance\:disabled), .fluid-button.type\:destructive.appearance\:hovered:not(:disabled):not(.appearance\:disabled) {
+  --fluid-button-color: #ffffff;
   background: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%) rgb(252, 81, 66);
   border-color: #e51604;
 }
@@ -850,11 +841,16 @@ input::placeholder, textarea::placeholder {
 
 .fluid-button.type\:plain {
   --fluid-button-color: #266fed;
-  --fluid-button-color-disabled: #c5c5ca;
-  --fluid-button-color-hovered: #0d43a0;
-  --fluid-button-color-active: #94b8f6;
   background-color: transparent;
   border-color: transparent;
+}
+
+.fluid-button.type\:plain:disabled, .fluid-button.type\:plain.appearance\:disabled {
+  --fluid-button-color: #c5c5ca;
+}
+
+.fluid-button.type\:plain:hover:not(:disabled):not(.appearance\:disabled), .fluid-button.type\:plain.appearance\:hovered:not(:disabled):not(.appearance\:disabled) {
+  --fluid-button-color: #0d43a0;
 }
 
 .fluid-button.type\:plain:focus, .fluid-button.type\:plain.appearance\:focused {
@@ -863,6 +859,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .fluid-button.type\:plain:active:not(.appearance\:disabled), .fluid-button.type\:plain.appearance\:active:not(.appearance\:disabled) {
+  --fluid-button-color: #94b8f6;
   box-shadow: 0 0 0 1px #94b8f6;
   border-color: #94b8f6;
 }
