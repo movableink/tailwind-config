@@ -27,3 +27,9 @@ DarkMode.story = {
     backgrounds: [{ name: 'dark', value: 'black', default: true }],
   },
 };
+
+export const ColorOverride = () => html`
+  <button class="fluid-button type:plain text-green-400 hover:text-green-500">
+    Click Me
+  </button>
+`;
