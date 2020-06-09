@@ -1901,6 +1901,10 @@ input::placeholder, textarea::placeholder {
   border-color: rgba(0, 0, 0, var(--divide-opacity));
 }
 
+.divide-current > :not(template) ~ :not(template) {
+  border-color: currentColor;
+}
+
 .divide-opacity-0 > :not(template) ~ :not(template) {
   --divide-opacity: 0;
 }
@@ -2393,6 +2397,10 @@ input::placeholder, textarea::placeholder {
   background-color: rgba(0, 0, 0, var(--bg-opacity));
 }
 
+.bg-current {
+  background-color: currentColor;
+}
+
 .hover\:bg-neutral-100:hover {
   --bg-opacity: 1;
   background-color: #ffffff;
@@ -2801,6 +2809,10 @@ input::placeholder, textarea::placeholder {
   background-color: rgba(0, 0, 0, var(--bg-opacity));
 }
 
+.hover\:bg-current:hover {
+  background-color: currentColor;
+}
+
 .focus\:bg-neutral-100:focus {
   --bg-opacity: 1;
   background-color: #ffffff;
@@ -3207,6 +3219,10 @@ input::placeholder, textarea::placeholder {
   --bg-opacity: 1;
   background-color: #000000;
   background-color: rgba(0, 0, 0, var(--bg-opacity));
+}
+
+.focus\:bg-current:focus {
+  background-color: currentColor;
 }
 
 .bg-opacity-0 {
@@ -3757,6 +3773,10 @@ input::placeholder, textarea::placeholder {
   border-color: rgba(0, 0, 0, var(--border-opacity));
 }
 
+.border-current {
+  border-color: currentColor;
+}
+
 .hover\:border-neutral-100:hover {
   --border-opacity: 1;
   border-color: #ffffff;
@@ -4165,6 +4185,10 @@ input::placeholder, textarea::placeholder {
   border-color: rgba(0, 0, 0, var(--border-opacity));
 }
 
+.hover\:border-current:hover {
+  border-color: currentColor;
+}
+
 .focus\:border-neutral-100:focus {
   --border-opacity: 1;
   border-color: #ffffff;
@@ -4571,6 +4595,10 @@ input::placeholder, textarea::placeholder {
   --border-opacity: 1;
   border-color: #000000;
   border-color: rgba(0, 0, 0, var(--border-opacity));
+}
+
+.focus\:border-current:focus {
+  border-color: currentColor;
 }
 
 .border-opacity-0 {
@@ -9587,6 +9615,26 @@ input::placeholder, textarea::placeholder {
   color: rgba(0, 0, 0, var(--placeholder-opacity));
 }
 
+.placeholder-current::-webkit-input-placeholder {
+  color: currentColor;
+}
+
+.placeholder-current::-moz-placeholder {
+  color: currentColor;
+}
+
+.placeholder-current:-ms-input-placeholder {
+  color: currentColor;
+}
+
+.placeholder-current::-ms-input-placeholder {
+  color: currentColor;
+}
+
+.placeholder-current::placeholder {
+  color: currentColor;
+}
+
 .focus\:placeholder-neutral-100:focus::-webkit-input-placeholder {
   --placeholder-opacity: 1;
   color: #ffffff;
@@ -11627,6 +11675,26 @@ input::placeholder, textarea::placeholder {
   color: rgba(0, 0, 0, var(--placeholder-opacity));
 }
 
+.focus\:placeholder-current:focus::-webkit-input-placeholder {
+  color: currentColor;
+}
+
+.focus\:placeholder-current:focus::-moz-placeholder {
+  color: currentColor;
+}
+
+.focus\:placeholder-current:focus:-ms-input-placeholder {
+  color: currentColor;
+}
+
+.focus\:placeholder-current:focus::-ms-input-placeholder {
+  color: currentColor;
+}
+
+.focus\:placeholder-current:focus::placeholder {
+  color: currentColor;
+}
+
 .placeholder-opacity-0::-webkit-input-placeholder {
   --placeholder-opacity: 0;
 }
@@ -13054,6 +13122,10 @@ input::placeholder, textarea::placeholder {
   color: rgba(0, 0, 0, var(--text-opacity));
 }
 
+.text-current {
+  color: currentColor;
+}
+
 .hover\:text-neutral-100:hover {
   --text-opacity: 1;
   color: #ffffff;
@@ -13462,6 +13534,10 @@ input::placeholder, textarea::placeholder {
   color: rgba(0, 0, 0, var(--text-opacity));
 }
 
+.hover\:text-current:hover {
+  color: currentColor;
+}
+
 .focus\:text-neutral-100:focus {
   --text-opacity: 1;
   color: #ffffff;
@@ -13868,6 +13944,10 @@ input::placeholder, textarea::placeholder {
   --text-opacity: 1;
   color: #000000;
   color: rgba(0, 0, 0, var(--text-opacity));
+}
+
+.focus\:text-current:focus {
+  color: currentColor;
 }
 
 .text-opacity-0 {
