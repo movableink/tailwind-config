@@ -962,6 +962,10 @@ input::placeholder, textarea::placeholder {
   margin-left: 1rem;
 }
 
+.fluid-button-group {
+  display: flex;
+}
+
 .fluid-button-group > .fluid-button:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
