@@ -374,6 +374,8 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
 
     /** === Button Group === **/
     '.fluid-button-group': {
+      display: 'flex',
+
       '> .fluid-button:not(:first-child)': {
         borderTopLeftRadius: 0,
         borderBottomLeftRadius: 0,
