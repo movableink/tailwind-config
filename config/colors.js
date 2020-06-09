@@ -107,4 +107,5 @@ module.exports = {
   red,
   white: neutral['100'],
   black: neutral['900'],
+  current: 'currentColor',
 };
