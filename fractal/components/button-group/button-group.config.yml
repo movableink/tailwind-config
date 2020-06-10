@@ -1,0 +1,5 @@
+context:
+  buttons:
+    - text: Left Button
+    - text: Center Button
+    - text: Right Button

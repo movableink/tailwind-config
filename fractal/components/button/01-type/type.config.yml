@@ -1,0 +1,23 @@
+title: Button Types
+collated: true
+context:
+  text: Click Me
+variants:
+  - name: default
+    label: Base
+  - name: primary
+    label: Primary
+    context:
+      type: primary
+  - name: destructive
+    label: Destructive
+    context:
+      type: destructive
+  - name: outline
+    label: Outline
+    context:
+      type: outline
+  - name: plain
+    label: Plain
+    context:
+      type: plain

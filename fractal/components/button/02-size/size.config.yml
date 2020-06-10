@@ -1,0 +1,23 @@
+title: Button Sizes
+collated: true
+context:
+  text: Click Me
+variants:
+  - name: default
+    label: Base
+  - name: extra-small
+    label: Extra Small
+    context:
+      size: xs
+  - name: small
+    label: Small
+    context:
+      size: sm
+  - name: large
+    label: Large
+    context:
+      size: lg
+  - name: extra-large
+    label: Extra Large
+    context:
+      size: xl
