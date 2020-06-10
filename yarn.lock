@@ -1155,7 +1155,7 @@
     lodash "^4.12.0"
     promised-handlebars "^2.0.0"
 
-"@frctl/mandelbrot@^1.3.0":
+"@frctl/mandelbrot@^1.3.0", "@frctl/mandelbrot@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@frctl/mandelbrot/-/mandelbrot-1.4.0.tgz#3ca8517a2e6a8aeef740de584616aaa6e908c75a"
   integrity sha512-rqAoeK+CxcqGa0DJjvjV9L44Srr/0H1XUIJqS+2Lx03i5ya/AehDesKvmID1MrTX28O+wyBuiX91+MQZjNo85A==
