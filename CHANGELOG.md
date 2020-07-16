@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/movableink/tailwind-config/compare/v1.5.1...v1.6.0) (2020-07-16)
+
+### Features
+
+- add `text-current` class ([5a996a5](https://github.com/movableink/tailwind-config/commit/5a996a5471edc49de24e79fb1eb75902869d4083)), closes [#144](https://github.com/movableink/tailwind-config/issues/144)
+
+### Bug Fixes
+
+- use `display: flex` for button group ([fcb43f4](https://github.com/movableink/tailwind-config/commit/fcb43f490939d2b4442e63bf4ea278f2aba5e5fe))
+
 ### [1.5.1](https://github.com/movableink/tailwind-config/compare/v1.5.0...v1.5.1) (2020-06-05)
 
 ### Bug Fixes
