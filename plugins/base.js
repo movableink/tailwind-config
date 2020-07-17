@@ -17,7 +17,7 @@ module.exports = function fluidTailwindPlugin({ addBase, theme }) {
 
     'input, textarea': {
       '&::placeholder': {
-        color: theme('colors.neutral.500'),
+        color: theme('colors.neutral.600'),
       },
     },
   });
