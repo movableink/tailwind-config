@@ -1,5 +1,7 @@
 'use strict';
 
+const { classWithoutModifier } = require('./-utils');
+
 /**
  * Builds out the Fluid Button component classes
  *
@@ -49,31 +51,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     };
   }
 
-  /**
-   * This function returns a selector that matches elements with the
-   * `.fluid-button` class if and only if the element _does not_ have a
-   * class that starts with the provided `modifier`.
-   *
-   * We use an attribute selector here to look into the `class` attribute
-   * for the presence of the modifier
-   *
-   * https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
-   *
-   * We combine this with the `:not` pseudo-class to reverse the selector
-   * and apply the styles when we do _not_ have that modifier somewhere in the
-   * class attribute
-   *
-   * https://developer.mozilla.org/en-US/docs/Web/CSS/:not
-   *
-   * All of this allows the defintion of `.fluid-button` to contain shared
-   * styles for all buttons without any of the Basic-specific styles, which
-   * the other types of buttons might need to override.
-   */
-  function fluidButtonWithoutModifier(modifier) {
-    const escapedModifier = e(`${modifier}:`);
-
-    return `.fluid-button:not([class*="${escapedModifier}"])`;
-  }
+  const fluidButtonWithoutModifier = classWithoutModifier.bind(null, e, 'fluid-button');
 
   addComponents({
     // Styles that belong to all buttons
