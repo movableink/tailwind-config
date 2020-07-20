@@ -1,5 +1,5 @@
+import React from 'react';
 import { LoremIpsum } from 'lorem-ipsum';
-import { html } from 'htm/preact';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({
@@ -11,7 +11,7 @@ const lorem = new LoremIpsum({
 });
 
 function makeHeadingTextStory(size) {
-  return html` <p class="heading-${size}">${lorem.generateSentences(1)}</p> `;
+  return <p className={`heading-${size}`}>{lorem.generateSentences(1)}</p>;
 }
 
 export default {

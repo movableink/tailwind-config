@@ -1,14 +1,16 @@
+import React from 'react';
 import { LoremIpsum } from 'lorem-ipsum';
-import { html } from 'htm/preact';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeLetterSpacingStory(size, notes) {
-  return html`
-    <p class="mb-4">${notes}</p>
-    <p class="tracking-${size}">${lorem.generateParagraphs(1)}</p>
-  `;
+  return (
+    <>
+      <p className="mb-4">{notes}</p>
+      <p className={`tracking-${size}`}>{lorem.generateParagraphs(1)}</p>
+    </>
+  );
 }
 
 export default {

@@ -1,11 +1,11 @@
+import React from 'react';
 import { LoremIpsum } from 'lorem-ipsum';
-import { html } from 'htm/preact';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeCaptionTextStory(size) {
-  return html` <p class="caption-${size}">${lorem.generateParagraphs(1)}</p> `;
+  return <p className={`caption-${size}`}>{lorem.generateParagraphs(1)}</p>;
 }
 
 export default {
