@@ -1,14 +1,16 @@
+import React from 'react';
 import { LoremIpsum } from 'lorem-ipsum';
-import { html } from 'htm/preact';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeLineHeightStory(size, notes) {
-  return html`
-    <p class="mb-4">${notes}</p>
-    <p class="leading-${size}">${lorem.generateParagraphs(1)}</p>
-  `;
+  return (
+    <>
+      <p className="mb-4">{notes}</p>
+      <p className={`leading-${size}`}>{lorem.generateParagraphs(1)}</p>
+    </>
+  );
 }
 
 export default {

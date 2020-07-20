@@ -1,14 +1,16 @@
+import React from 'react';
 import { LoremIpsum } from 'lorem-ipsum';
-import { html } from 'htm/preact';
 import random from '../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeFontSizeStory(size, notes) {
-  return html`
-    <p class="mb-4">${notes}</p>
-    <p class="text-${size}">${lorem.generateParagraphs(1)}</p>
-  `;
+  return (
+    <>
+      <p className="mb-4">{notes}</p>
+      <p className={`text-${size}`}>{lorem.generateParagraphs(1)}</p>
+    </>
+  );
 }
 
 export default {

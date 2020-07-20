@@ -1,4 +1,4 @@
-import { html } from 'htm/preact';
+import React from 'react';
 
 const colorConfig = require('../../config/colors');
 
@@ -13,45 +13,46 @@ export default {
   title: 'Guides/Color',
 };
 
-export const Palette = () => html`
-  <h1 class="heading-md mb-2">Color Palette</h1>
+export const Palette = () => (
+  <>
+    <h1 className="heading-md mb-2">Color Palette</h1>
 
-  <div class="grid grid-cols-3 gap-4">
-    ${colors.map((color) => {
-      const colorValues = colorConfig[color];
-      const values = Object.keys(colorValues).filter((value) => value !== 'default');
-      const defaultValue = values.find((value) => colorValues[value] === colorValues['default']);
+    <div className="grid grid-cols-3 gap-4">
+      {colors.map((color) => {
+        const colorValues = colorConfig[color];
+        const values = Object.keys(colorValues).filter((value) => value !== 'default');
+        const defaultValue = values.find((value) => colorValues[value] === colorValues['default']);
 
-      return html`
-        <div>
-          ${values.map((value) => {
-            const hex = colorValues[value];
-            const identifier = `${color}-${value}`;
-            const alias = getGlobalAlaisForHex(hex) || (value === defaultValue ? color : undefined);
-            let className = '';
+        return (
+          <div key={color}>
+            {values.map((value) => {
+              const hex = colorValues[value];
+              const identifier = `${color}-${value}`;
+              const alias =
+                getGlobalAlaisForHex(hex) || (value === defaultValue ? color : undefined);
+              let className = '';
 
-            if (value === defaultValue) {
-              className = 'py-4';
-            }
+              if (value === defaultValue) {
+                className = 'py-4';
+              }
 
-            if (value >= defaultValue) {
-              className += ' text-white';
-            }
+              if (value >= defaultValue) {
+                className += ' text-white';
+              }
 
-            return html`
-              <div class="flex items-center justify-between p-2 bg-${identifier} ${className}">
-                <code class="text-sm">
-                  ${alias ? `${alias} (${identifier})` : identifier}
-                </code>
-
-                <code class="text-sm">
-                  ${hex}
-                </code>
-              </div>
-            `;
-          })}
-        </div>
-      `;
-    })}
-  </div>
-`;
+              return (
+                <div
+                  key={identifier}
+                  className={`flex items-center justify-between p-2 bg-${identifier} ${className}`}
+                >
+                  <code className="text-sm">{alias ? `${alias} (${identifier})` : identifier}</code>
+                  <code className="text-sm">{hex}</code>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })}
+    </div>
+  </>
+);

@@ -1,15 +1,11 @@
+import React from 'react';
 import { LoremIpsum } from 'lorem-ipsum';
-import { html } from 'htm/preact';
 import random from '../../../_utils/random';
 
 const lorem = new LoremIpsum({ random });
 
 function makeBodyTextStory(size) {
-  return html`
-    <p class="body-${size}">
-      ${lorem.generateParagraphs(1)}
-    </p>
-  `;
+  return <p className={`body-${size}`}>{lorem.generateParagraphs(1)}</p>;
 }
 
 export default {
