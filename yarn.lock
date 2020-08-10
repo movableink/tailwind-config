@@ -1255,14 +1255,14 @@
     eslint-plugin-react "^7.20.3"
 
 "@movable/eslint-config@^0.6.0":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config/-/eslint-config-0.6.3.tgz#3fb01336cedf683f74b555af736671197ecdf118"
-  integrity sha512-LhSXriqV7cykpNabPfXyPLim3hVKzKhCKZ2L7gBCHCQ0h6uZAoLuRVcceqhXPFUBx3++yHSQLW68WnxdmnKabQ==
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config/-/eslint-config-0.6.4.tgz#a26cbcf91922fda1acbb5623faede73a90bf0c8e"
+  integrity sha512-MyafDCncq0ll8ol3BPK6mUXQKxBoeaBLYOs7Ryb6cRrK/4Rt8EFKxrCYa9zZokQapUobz1neq9yb6LWR7dnmeQ==
   dependencies:
     "@movable/eslint-plugin-no-wildcard-postmessage" "^1.0.0"
     "@movable/prettier-config" "^0.3.2"
     babel-eslint "^10.1.0"
-    eslint "^7.5.0"
+    eslint "^7.6.0"
     eslint-config-prettier "^6.11.0"
     eslint-plugin-no-unsanitized "^3.1.2"
     eslint-plugin-prettier "^3.1.4"
@@ -5103,10 +5103,10 @@ eslint-visitor-keys@^1.3.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.3.0.tgz#30ebd1ef7c2fdff01c3a4f151044af25fab0523e"
   integrity sha512-6J72N8UNa462wa/KFODt/PJ3IU60SDpC3QXC1Hjc1BXXpfL2C9R5+AU7jhe0F6GREqVMh4Juu+NY7xn+6dipUQ==
 
-eslint@^7.5.0:
-  version "7.5.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.5.0.tgz#9ecbfad62216d223b82ac9ffea7ef3444671d135"
-  integrity sha512-vlUP10xse9sWt9SGRtcr1LAC67BENcQMFeV+w5EvLEoFe3xJ8cF1Skd0msziRx/VMC+72B4DxreCE+OR12OA6Q==
+eslint@^7.6.0:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.6.0.tgz#522d67cfaea09724d96949c70e7a0550614d64d6"
+  integrity sha512-QlAManNtqr7sozWm5TF4wIH9gmUm2hE3vNRUvyoYAa4y1l5/jxD/PQStEjBMQtCqZmSep8UxrcecI60hOpe61w==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.10.0"
