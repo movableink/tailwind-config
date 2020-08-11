@@ -33,7 +33,7 @@
     "@percy/storybook": "^3.2.0",
     "@storybook/addon-a11y": "^5.3.19",
     "@storybook/addon-backgrounds": "^5.3.19",
-    "@storybook/react": "^5.3.9",
+    "@storybook/react": "^6.0.2",
     "@whitespace/storybook-addon-html": "^1.2.1",
     "ava": "^3.1.0",
     "babel-loader": "^8.0.6",
