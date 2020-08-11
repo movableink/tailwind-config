@@ -32,7 +32,7 @@
     "@movable/prettier-config": "^0.3.0",
     "@percy/storybook": "^3.2.0",
     "@storybook/addon-a11y": "^5.3.19",
-    "@storybook/addon-backgrounds": "^5.3.19",
+    "@storybook/addon-backgrounds": "^6.0.2",
     "@storybook/react": "^5.3.9",
     "@whitespace/storybook-addon-html": "^1.2.1",
     "ava": "^3.1.0",
