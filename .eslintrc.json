@@ -28,12 +28,17 @@
       }
     },
     {
-      "files": [".storybook/preview.js"],
+      "files": [".storybook/manager.js", ".storybook/preview.js"],
       "parserOptions": {
         "sourceType": "module"
       },
       "rules": {
         "node/no-unsupported-features/es-syntax": "off"
+      },
+      "settings": {
+        "node": {
+          "allowModules": ["@storybook/addons"]
+        }
       }
     }
   ]

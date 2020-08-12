@@ -24,9 +24,9 @@ export const ButtonGroup = () => (
 export const DarkMode = () => (
   <button className="fluid-button type:outline text-white">Click Me</button>
 );
-DarkMode.story = {
-  parameters: {
-    backgrounds: [{ name: 'dark', value: 'black', default: true }],
+DarkMode.parameters = {
+  backgrounds: {
+    default: 'dark',
   },
 };
 
