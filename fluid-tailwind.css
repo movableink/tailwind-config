@@ -1908,6 +1908,26 @@ input::placeholder, textarea::placeholder {
   border-color: currentColor;
 }
 
+.divide-solid > :not(template) ~ :not(template) {
+  border-style: solid;
+}
+
+.divide-dashed > :not(template) ~ :not(template) {
+  border-style: dashed;
+}
+
+.divide-dotted > :not(template) ~ :not(template) {
+  border-style: dotted;
+}
+
+.divide-double > :not(template) ~ :not(template) {
+  border-style: double;
+}
+
+.divide-none > :not(template) ~ :not(template) {
+  border-style: none;
+}
+
 .divide-opacity-0 > :not(template) ~ :not(template) {
   --divide-opacity: 0;
 }
@@ -1990,6 +2010,23 @@ input::placeholder, textarea::placeholder {
 
 .bg-scroll {
   background-attachment: scroll;
+}
+
+.bg-clip-border {
+  background-clip: border-box;
+}
+
+.bg-clip-padding {
+  background-clip: padding-box;
+}
+
+.bg-clip-content {
+  background-clip: content-box;
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .bg-neutral-100 {
@@ -3226,6 +3263,2936 @@ input::placeholder, textarea::placeholder {
 
 .focus\:bg-current:focus {
   background-color: currentColor;
+}
+
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--gradient-color-stops));
+}
+
+.bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, var(--gradient-color-stops));
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--gradient-color-stops));
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--gradient-color-stops));
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--gradient-color-stops));
+}
+
+.bg-gradient-to-bl {
+  background-image: linear-gradient(to bottom left, var(--gradient-color-stops));
+}
+
+.bg-gradient-to-l {
+  background-image: linear-gradient(to left, var(--gradient-color-stops));
+}
+
+.bg-gradient-to-tl {
+  background-image: linear-gradient(to top left, var(--gradient-color-stops));
+}
+
+.from-neutral-100 {
+  --gradient-from-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.from-neutral-200 {
+  --gradient-from-color: #fafafa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(250, 250, 250, 0));
+}
+
+.from-neutral-300 {
+  --gradient-from-color: #f1f1f2;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 241, 242, 0));
+}
+
+.from-neutral-400 {
+  --gradient-from-color: #e8e8ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(232, 232, 234, 0));
+}
+
+.from-neutral-500 {
+  --gradient-from-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.from-neutral-600 {
+  --gradient-from-color: #767680;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(118, 118, 128, 0));
+}
+
+.from-neutral-700 {
+  --gradient-from-color: #45454b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(69, 69, 75, 0));
+}
+
+.from-neutral-800 {
+  --gradient-from-color: #1c1c1c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(28, 28, 28, 0));
+}
+
+.from-neutral-900 {
+  --gradient-from-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.from-neutral {
+  --gradient-from-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.from-blue-100 {
+  --gradient-from-color: #f2f7ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(242, 247, 255, 0));
+}
+
+.from-blue-200 {
+  --gradient-from-color: #d2e1fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(210, 225, 250, 0));
+}
+
+.from-blue-300 {
+  --gradient-from-color: #94b8f6;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(148, 184, 246, 0));
+}
+
+.from-blue-400 {
+  --gradient-from-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.from-blue-500 {
+  --gradient-from-color: #0d43a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(13, 67, 160, 0));
+}
+
+.from-blue-600 {
+  --gradient-from-color: #072251;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(7, 34, 81, 0));
+}
+
+.from-blue-700 {
+  --gradient-from-color: #030e22;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(3, 14, 34, 0));
+}
+
+.from-blue {
+  --gradient-from-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.from-violet-100 {
+  --gradient-from-color: #f4f0fd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(244, 240, 253, 0));
+}
+
+.from-violet-200 {
+  --gradient-from-color: #ddd2fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(221, 210, 250, 0));
+}
+
+.from-violet-300 {
+  --gradient-from-color: #b69cff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(182, 156, 255, 0));
+}
+
+.from-violet-400 {
+  --gradient-from-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.from-violet-500 {
+  --gradient-from-color: #4b1ec7;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(75, 30, 199, 0));
+}
+
+.from-violet-600 {
+  --gradient-from-color: #2c0e7b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(44, 14, 123, 0));
+}
+
+.from-violet-700 {
+  --gradient-from-color: #16073e;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(22, 7, 62, 0));
+}
+
+.from-violet {
+  --gradient-from-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.from-aqua-100 {
+  --gradient-from-color: #e4fbff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(228, 251, 255, 0));
+}
+
+.from-aqua-200 {
+  --gradient-from-color: #a0f1ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(160, 241, 255, 0));
+}
+
+.from-aqua-300 {
+  --gradient-from-color: #4be4ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(75, 228, 255, 0));
+}
+
+.from-aqua-400 {
+  --gradient-from-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.from-aqua-500 {
+  --gradient-from-color: #0088a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 136, 160, 0));
+}
+
+.from-aqua-600 {
+  --gradient-from-color: #004e5c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 78, 92, 0));
+}
+
+.from-aqua-700 {
+  --gradient-from-color: #002329;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 35, 41, 0));
+}
+
+.from-aqua {
+  --gradient-from-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.from-green-100 {
+  --gradient-from-color: #f0f5f1;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(240, 245, 241, 0));
+}
+
+.from-green-200 {
+  --gradient-from-color: #c8e6d0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(200, 230, 208, 0));
+}
+
+.from-green-300 {
+  --gradient-from-color: #83d79b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(131, 215, 155, 0));
+}
+
+.from-green-400 {
+  --gradient-from-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.from-green-500 {
+  --gradient-from-color: #2b8545;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(43, 133, 69, 0));
+}
+
+.from-green-600 {
+  --gradient-from-color: #1b522b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(27, 82, 43, 0));
+}
+
+.from-green-700 {
+  --gradient-from-color: #0e2b16;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(14, 43, 22, 0));
+}
+
+.from-green {
+  --gradient-from-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.from-yellow-100 {
+  --gradient-from-color: #faf2d9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(250, 242, 217, 0));
+}
+
+.from-yellow-200 {
+  --gradient-from-color: #ffecae;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 236, 174, 0));
+}
+
+.from-yellow-300 {
+  --gradient-from-color: #ffdb6a;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 219, 106, 0));
+}
+
+.from-yellow-400 {
+  --gradient-from-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.from-yellow-500 {
+  --gradient-from-color: #f2b800;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(242, 184, 0, 0));
+}
+
+.from-yellow-600 {
+  --gradient-from-color: #9d7700;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(157, 119, 0, 0));
+}
+
+.from-yellow-700 {
+  --gradient-from-color: #372a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(55, 42, 0, 0));
+}
+
+.from-yellow {
+  --gradient-from-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.from-orange-100 {
+  --gradient-from-color: #fff2dd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 242, 221, 0));
+}
+
+.from-orange-200 {
+  --gradient-from-color: #ffd088;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 208, 136, 0));
+}
+
+.from-orange-300 {
+  --gradient-from-color: #ffaf33;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 175, 51, 0));
+}
+
+.from-orange-400 {
+  --gradient-from-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.from-orange-500 {
+  --gradient-from-color: #cc7c00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(204, 124, 0, 0));
+}
+
+.from-orange-600 {
+  --gradient-from-color: #885300;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(136, 83, 0, 0));
+}
+
+.from-orange-700 {
+  --gradient-from-color: #452a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(69, 42, 0, 0));
+}
+
+.from-orange {
+  --gradient-from-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.from-red-100 {
+  --gradient-from-color: #ffebe9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 235, 233, 0));
+}
+
+.from-red-200 {
+  --gradient-from-color: #feccc8;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(254, 204, 200, 0));
+}
+
+.from-red-300 {
+  --gradient-from-color: #fd8f85;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(253, 143, 133, 0));
+}
+
+.from-red-400 {
+  --gradient-from-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.from-red-500 {
+  --gradient-from-color: #e51604;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(229, 22, 4, 0));
+}
+
+.from-red-600 {
+  --gradient-from-color: #810c02;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(129, 12, 2, 0));
+}
+
+.from-red-700 {
+  --gradient-from-color: #4f0801;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(79, 8, 1, 0));
+}
+
+.from-red {
+  --gradient-from-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.from-white {
+  --gradient-from-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.from-black {
+  --gradient-from-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.from-current {
+  --gradient-from-color: currentColor;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.via-neutral-100 {
+  --gradient-via-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.via-neutral-200 {
+  --gradient-via-color: #fafafa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(250, 250, 250, 0));
+}
+
+.via-neutral-300 {
+  --gradient-via-color: #f1f1f2;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 241, 242, 0));
+}
+
+.via-neutral-400 {
+  --gradient-via-color: #e8e8ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(232, 232, 234, 0));
+}
+
+.via-neutral-500 {
+  --gradient-via-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.via-neutral-600 {
+  --gradient-via-color: #767680;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(118, 118, 128, 0));
+}
+
+.via-neutral-700 {
+  --gradient-via-color: #45454b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(69, 69, 75, 0));
+}
+
+.via-neutral-800 {
+  --gradient-via-color: #1c1c1c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(28, 28, 28, 0));
+}
+
+.via-neutral-900 {
+  --gradient-via-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.via-neutral {
+  --gradient-via-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.via-blue-100 {
+  --gradient-via-color: #f2f7ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(242, 247, 255, 0));
+}
+
+.via-blue-200 {
+  --gradient-via-color: #d2e1fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(210, 225, 250, 0));
+}
+
+.via-blue-300 {
+  --gradient-via-color: #94b8f6;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(148, 184, 246, 0));
+}
+
+.via-blue-400 {
+  --gradient-via-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.via-blue-500 {
+  --gradient-via-color: #0d43a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(13, 67, 160, 0));
+}
+
+.via-blue-600 {
+  --gradient-via-color: #072251;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(7, 34, 81, 0));
+}
+
+.via-blue-700 {
+  --gradient-via-color: #030e22;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(3, 14, 34, 0));
+}
+
+.via-blue {
+  --gradient-via-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.via-violet-100 {
+  --gradient-via-color: #f4f0fd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(244, 240, 253, 0));
+}
+
+.via-violet-200 {
+  --gradient-via-color: #ddd2fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(221, 210, 250, 0));
+}
+
+.via-violet-300 {
+  --gradient-via-color: #b69cff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(182, 156, 255, 0));
+}
+
+.via-violet-400 {
+  --gradient-via-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.via-violet-500 {
+  --gradient-via-color: #4b1ec7;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(75, 30, 199, 0));
+}
+
+.via-violet-600 {
+  --gradient-via-color: #2c0e7b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(44, 14, 123, 0));
+}
+
+.via-violet-700 {
+  --gradient-via-color: #16073e;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(22, 7, 62, 0));
+}
+
+.via-violet {
+  --gradient-via-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.via-aqua-100 {
+  --gradient-via-color: #e4fbff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(228, 251, 255, 0));
+}
+
+.via-aqua-200 {
+  --gradient-via-color: #a0f1ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(160, 241, 255, 0));
+}
+
+.via-aqua-300 {
+  --gradient-via-color: #4be4ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(75, 228, 255, 0));
+}
+
+.via-aqua-400 {
+  --gradient-via-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.via-aqua-500 {
+  --gradient-via-color: #0088a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 136, 160, 0));
+}
+
+.via-aqua-600 {
+  --gradient-via-color: #004e5c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 78, 92, 0));
+}
+
+.via-aqua-700 {
+  --gradient-via-color: #002329;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 35, 41, 0));
+}
+
+.via-aqua {
+  --gradient-via-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.via-green-100 {
+  --gradient-via-color: #f0f5f1;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 245, 241, 0));
+}
+
+.via-green-200 {
+  --gradient-via-color: #c8e6d0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(200, 230, 208, 0));
+}
+
+.via-green-300 {
+  --gradient-via-color: #83d79b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(131, 215, 155, 0));
+}
+
+.via-green-400 {
+  --gradient-via-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.via-green-500 {
+  --gradient-via-color: #2b8545;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(43, 133, 69, 0));
+}
+
+.via-green-600 {
+  --gradient-via-color: #1b522b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(27, 82, 43, 0));
+}
+
+.via-green-700 {
+  --gradient-via-color: #0e2b16;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(14, 43, 22, 0));
+}
+
+.via-green {
+  --gradient-via-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.via-yellow-100 {
+  --gradient-via-color: #faf2d9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(250, 242, 217, 0));
+}
+
+.via-yellow-200 {
+  --gradient-via-color: #ffecae;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 236, 174, 0));
+}
+
+.via-yellow-300 {
+  --gradient-via-color: #ffdb6a;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 219, 106, 0));
+}
+
+.via-yellow-400 {
+  --gradient-via-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.via-yellow-500 {
+  --gradient-via-color: #f2b800;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(242, 184, 0, 0));
+}
+
+.via-yellow-600 {
+  --gradient-via-color: #9d7700;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(157, 119, 0, 0));
+}
+
+.via-yellow-700 {
+  --gradient-via-color: #372a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(55, 42, 0, 0));
+}
+
+.via-yellow {
+  --gradient-via-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.via-orange-100 {
+  --gradient-via-color: #fff2dd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 242, 221, 0));
+}
+
+.via-orange-200 {
+  --gradient-via-color: #ffd088;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 208, 136, 0));
+}
+
+.via-orange-300 {
+  --gradient-via-color: #ffaf33;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 175, 51, 0));
+}
+
+.via-orange-400 {
+  --gradient-via-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.via-orange-500 {
+  --gradient-via-color: #cc7c00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(204, 124, 0, 0));
+}
+
+.via-orange-600 {
+  --gradient-via-color: #885300;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(136, 83, 0, 0));
+}
+
+.via-orange-700 {
+  --gradient-via-color: #452a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(69, 42, 0, 0));
+}
+
+.via-orange {
+  --gradient-via-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.via-red-100 {
+  --gradient-via-color: #ffebe9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 235, 233, 0));
+}
+
+.via-red-200 {
+  --gradient-via-color: #feccc8;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(254, 204, 200, 0));
+}
+
+.via-red-300 {
+  --gradient-via-color: #fd8f85;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(253, 143, 133, 0));
+}
+
+.via-red-400 {
+  --gradient-via-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.via-red-500 {
+  --gradient-via-color: #e51604;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(229, 22, 4, 0));
+}
+
+.via-red-600 {
+  --gradient-via-color: #810c02;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(129, 12, 2, 0));
+}
+
+.via-red-700 {
+  --gradient-via-color: #4f0801;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(79, 8, 1, 0));
+}
+
+.via-red {
+  --gradient-via-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.via-white {
+  --gradient-via-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.via-black {
+  --gradient-via-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.via-current {
+  --gradient-via-color: currentColor;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.to-neutral-100 {
+  --gradient-to-color: #ffffff;
+}
+
+.to-neutral-200 {
+  --gradient-to-color: #fafafa;
+}
+
+.to-neutral-300 {
+  --gradient-to-color: #f1f1f2;
+}
+
+.to-neutral-400 {
+  --gradient-to-color: #e8e8ea;
+}
+
+.to-neutral-500 {
+  --gradient-to-color: #c5c5ca;
+}
+
+.to-neutral-600 {
+  --gradient-to-color: #767680;
+}
+
+.to-neutral-700 {
+  --gradient-to-color: #45454b;
+}
+
+.to-neutral-800 {
+  --gradient-to-color: #1c1c1c;
+}
+
+.to-neutral-900 {
+  --gradient-to-color: #000000;
+}
+
+.to-neutral {
+  --gradient-to-color: #c5c5ca;
+}
+
+.to-blue-100 {
+  --gradient-to-color: #f2f7ff;
+}
+
+.to-blue-200 {
+  --gradient-to-color: #d2e1fa;
+}
+
+.to-blue-300 {
+  --gradient-to-color: #94b8f6;
+}
+
+.to-blue-400 {
+  --gradient-to-color: #266fed;
+}
+
+.to-blue-500 {
+  --gradient-to-color: #0d43a0;
+}
+
+.to-blue-600 {
+  --gradient-to-color: #072251;
+}
+
+.to-blue-700 {
+  --gradient-to-color: #030e22;
+}
+
+.to-blue {
+  --gradient-to-color: #266fed;
+}
+
+.to-violet-100 {
+  --gradient-to-color: #f4f0fd;
+}
+
+.to-violet-200 {
+  --gradient-to-color: #ddd2fa;
+}
+
+.to-violet-300 {
+  --gradient-to-color: #b69cff;
+}
+
+.to-violet-400 {
+  --gradient-to-color: #7549ea;
+}
+
+.to-violet-500 {
+  --gradient-to-color: #4b1ec7;
+}
+
+.to-violet-600 {
+  --gradient-to-color: #2c0e7b;
+}
+
+.to-violet-700 {
+  --gradient-to-color: #16073e;
+}
+
+.to-violet {
+  --gradient-to-color: #7549ea;
+}
+
+.to-aqua-100 {
+  --gradient-to-color: #e4fbff;
+}
+
+.to-aqua-200 {
+  --gradient-to-color: #a0f1ff;
+}
+
+.to-aqua-300 {
+  --gradient-to-color: #4be4ff;
+}
+
+.to-aqua-400 {
+  --gradient-to-color: #00c2e4;
+}
+
+.to-aqua-500 {
+  --gradient-to-color: #0088a0;
+}
+
+.to-aqua-600 {
+  --gradient-to-color: #004e5c;
+}
+
+.to-aqua-700 {
+  --gradient-to-color: #002329;
+}
+
+.to-aqua {
+  --gradient-to-color: #00c2e4;
+}
+
+.to-green-100 {
+  --gradient-to-color: #f0f5f1;
+}
+
+.to-green-200 {
+  --gradient-to-color: #c8e6d0;
+}
+
+.to-green-300 {
+  --gradient-to-color: #83d79b;
+}
+
+.to-green-400 {
+  --gradient-to-color: #3cb860;
+}
+
+.to-green-500 {
+  --gradient-to-color: #2b8545;
+}
+
+.to-green-600 {
+  --gradient-to-color: #1b522b;
+}
+
+.to-green-700 {
+  --gradient-to-color: #0e2b16;
+}
+
+.to-green {
+  --gradient-to-color: #3cb860;
+}
+
+.to-yellow-100 {
+  --gradient-to-color: #faf2d9;
+}
+
+.to-yellow-200 {
+  --gradient-to-color: #ffecae;
+}
+
+.to-yellow-300 {
+  --gradient-to-color: #ffdb6a;
+}
+
+.to-yellow-400 {
+  --gradient-to-color: #ffcb26;
+}
+
+.to-yellow-500 {
+  --gradient-to-color: #f2b800;
+}
+
+.to-yellow-600 {
+  --gradient-to-color: #9d7700;
+}
+
+.to-yellow-700 {
+  --gradient-to-color: #372a00;
+}
+
+.to-yellow {
+  --gradient-to-color: #ffcb26;
+}
+
+.to-orange-100 {
+  --gradient-to-color: #fff2dd;
+}
+
+.to-orange-200 {
+  --gradient-to-color: #ffd088;
+}
+
+.to-orange-300 {
+  --gradient-to-color: #ffaf33;
+}
+
+.to-orange-400 {
+  --gradient-to-color: #ff9b00;
+}
+
+.to-orange-500 {
+  --gradient-to-color: #cc7c00;
+}
+
+.to-orange-600 {
+  --gradient-to-color: #885300;
+}
+
+.to-orange-700 {
+  --gradient-to-color: #452a00;
+}
+
+.to-orange {
+  --gradient-to-color: #ff9b00;
+}
+
+.to-red-100 {
+  --gradient-to-color: #ffebe9;
+}
+
+.to-red-200 {
+  --gradient-to-color: #feccc8;
+}
+
+.to-red-300 {
+  --gradient-to-color: #fd8f85;
+}
+
+.to-red-400 {
+  --gradient-to-color: #fc5142;
+}
+
+.to-red-500 {
+  --gradient-to-color: #e51604;
+}
+
+.to-red-600 {
+  --gradient-to-color: #810c02;
+}
+
+.to-red-700 {
+  --gradient-to-color: #4f0801;
+}
+
+.to-red {
+  --gradient-to-color: #fc5142;
+}
+
+.to-white {
+  --gradient-to-color: #ffffff;
+}
+
+.to-black {
+  --gradient-to-color: #000000;
+}
+
+.to-current {
+  --gradient-to-color: currentColor;
+}
+
+.hover\:from-neutral-100:hover {
+  --gradient-from-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.hover\:from-neutral-200:hover {
+  --gradient-from-color: #fafafa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(250, 250, 250, 0));
+}
+
+.hover\:from-neutral-300:hover {
+  --gradient-from-color: #f1f1f2;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 241, 242, 0));
+}
+
+.hover\:from-neutral-400:hover {
+  --gradient-from-color: #e8e8ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(232, 232, 234, 0));
+}
+
+.hover\:from-neutral-500:hover {
+  --gradient-from-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.hover\:from-neutral-600:hover {
+  --gradient-from-color: #767680;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(118, 118, 128, 0));
+}
+
+.hover\:from-neutral-700:hover {
+  --gradient-from-color: #45454b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(69, 69, 75, 0));
+}
+
+.hover\:from-neutral-800:hover {
+  --gradient-from-color: #1c1c1c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(28, 28, 28, 0));
+}
+
+.hover\:from-neutral-900:hover {
+  --gradient-from-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.hover\:from-neutral:hover {
+  --gradient-from-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.hover\:from-blue-100:hover {
+  --gradient-from-color: #f2f7ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(242, 247, 255, 0));
+}
+
+.hover\:from-blue-200:hover {
+  --gradient-from-color: #d2e1fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(210, 225, 250, 0));
+}
+
+.hover\:from-blue-300:hover {
+  --gradient-from-color: #94b8f6;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(148, 184, 246, 0));
+}
+
+.hover\:from-blue-400:hover {
+  --gradient-from-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.hover\:from-blue-500:hover {
+  --gradient-from-color: #0d43a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(13, 67, 160, 0));
+}
+
+.hover\:from-blue-600:hover {
+  --gradient-from-color: #072251;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(7, 34, 81, 0));
+}
+
+.hover\:from-blue-700:hover {
+  --gradient-from-color: #030e22;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(3, 14, 34, 0));
+}
+
+.hover\:from-blue:hover {
+  --gradient-from-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.hover\:from-violet-100:hover {
+  --gradient-from-color: #f4f0fd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(244, 240, 253, 0));
+}
+
+.hover\:from-violet-200:hover {
+  --gradient-from-color: #ddd2fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(221, 210, 250, 0));
+}
+
+.hover\:from-violet-300:hover {
+  --gradient-from-color: #b69cff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(182, 156, 255, 0));
+}
+
+.hover\:from-violet-400:hover {
+  --gradient-from-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.hover\:from-violet-500:hover {
+  --gradient-from-color: #4b1ec7;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(75, 30, 199, 0));
+}
+
+.hover\:from-violet-600:hover {
+  --gradient-from-color: #2c0e7b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(44, 14, 123, 0));
+}
+
+.hover\:from-violet-700:hover {
+  --gradient-from-color: #16073e;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(22, 7, 62, 0));
+}
+
+.hover\:from-violet:hover {
+  --gradient-from-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.hover\:from-aqua-100:hover {
+  --gradient-from-color: #e4fbff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(228, 251, 255, 0));
+}
+
+.hover\:from-aqua-200:hover {
+  --gradient-from-color: #a0f1ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(160, 241, 255, 0));
+}
+
+.hover\:from-aqua-300:hover {
+  --gradient-from-color: #4be4ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(75, 228, 255, 0));
+}
+
+.hover\:from-aqua-400:hover {
+  --gradient-from-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.hover\:from-aqua-500:hover {
+  --gradient-from-color: #0088a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 136, 160, 0));
+}
+
+.hover\:from-aqua-600:hover {
+  --gradient-from-color: #004e5c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 78, 92, 0));
+}
+
+.hover\:from-aqua-700:hover {
+  --gradient-from-color: #002329;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 35, 41, 0));
+}
+
+.hover\:from-aqua:hover {
+  --gradient-from-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.hover\:from-green-100:hover {
+  --gradient-from-color: #f0f5f1;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(240, 245, 241, 0));
+}
+
+.hover\:from-green-200:hover {
+  --gradient-from-color: #c8e6d0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(200, 230, 208, 0));
+}
+
+.hover\:from-green-300:hover {
+  --gradient-from-color: #83d79b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(131, 215, 155, 0));
+}
+
+.hover\:from-green-400:hover {
+  --gradient-from-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.hover\:from-green-500:hover {
+  --gradient-from-color: #2b8545;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(43, 133, 69, 0));
+}
+
+.hover\:from-green-600:hover {
+  --gradient-from-color: #1b522b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(27, 82, 43, 0));
+}
+
+.hover\:from-green-700:hover {
+  --gradient-from-color: #0e2b16;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(14, 43, 22, 0));
+}
+
+.hover\:from-green:hover {
+  --gradient-from-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.hover\:from-yellow-100:hover {
+  --gradient-from-color: #faf2d9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(250, 242, 217, 0));
+}
+
+.hover\:from-yellow-200:hover {
+  --gradient-from-color: #ffecae;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 236, 174, 0));
+}
+
+.hover\:from-yellow-300:hover {
+  --gradient-from-color: #ffdb6a;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 219, 106, 0));
+}
+
+.hover\:from-yellow-400:hover {
+  --gradient-from-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.hover\:from-yellow-500:hover {
+  --gradient-from-color: #f2b800;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(242, 184, 0, 0));
+}
+
+.hover\:from-yellow-600:hover {
+  --gradient-from-color: #9d7700;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(157, 119, 0, 0));
+}
+
+.hover\:from-yellow-700:hover {
+  --gradient-from-color: #372a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(55, 42, 0, 0));
+}
+
+.hover\:from-yellow:hover {
+  --gradient-from-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.hover\:from-orange-100:hover {
+  --gradient-from-color: #fff2dd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 242, 221, 0));
+}
+
+.hover\:from-orange-200:hover {
+  --gradient-from-color: #ffd088;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 208, 136, 0));
+}
+
+.hover\:from-orange-300:hover {
+  --gradient-from-color: #ffaf33;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 175, 51, 0));
+}
+
+.hover\:from-orange-400:hover {
+  --gradient-from-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.hover\:from-orange-500:hover {
+  --gradient-from-color: #cc7c00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(204, 124, 0, 0));
+}
+
+.hover\:from-orange-600:hover {
+  --gradient-from-color: #885300;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(136, 83, 0, 0));
+}
+
+.hover\:from-orange-700:hover {
+  --gradient-from-color: #452a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(69, 42, 0, 0));
+}
+
+.hover\:from-orange:hover {
+  --gradient-from-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.hover\:from-red-100:hover {
+  --gradient-from-color: #ffebe9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 235, 233, 0));
+}
+
+.hover\:from-red-200:hover {
+  --gradient-from-color: #feccc8;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(254, 204, 200, 0));
+}
+
+.hover\:from-red-300:hover {
+  --gradient-from-color: #fd8f85;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(253, 143, 133, 0));
+}
+
+.hover\:from-red-400:hover {
+  --gradient-from-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.hover\:from-red-500:hover {
+  --gradient-from-color: #e51604;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(229, 22, 4, 0));
+}
+
+.hover\:from-red-600:hover {
+  --gradient-from-color: #810c02;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(129, 12, 2, 0));
+}
+
+.hover\:from-red-700:hover {
+  --gradient-from-color: #4f0801;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(79, 8, 1, 0));
+}
+
+.hover\:from-red:hover {
+  --gradient-from-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.hover\:from-white:hover {
+  --gradient-from-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.hover\:from-black:hover {
+  --gradient-from-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.hover\:from-current:hover {
+  --gradient-from-color: currentColor;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.hover\:via-neutral-100:hover {
+  --gradient-via-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.hover\:via-neutral-200:hover {
+  --gradient-via-color: #fafafa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(250, 250, 250, 0));
+}
+
+.hover\:via-neutral-300:hover {
+  --gradient-via-color: #f1f1f2;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 241, 242, 0));
+}
+
+.hover\:via-neutral-400:hover {
+  --gradient-via-color: #e8e8ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(232, 232, 234, 0));
+}
+
+.hover\:via-neutral-500:hover {
+  --gradient-via-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.hover\:via-neutral-600:hover {
+  --gradient-via-color: #767680;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(118, 118, 128, 0));
+}
+
+.hover\:via-neutral-700:hover {
+  --gradient-via-color: #45454b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(69, 69, 75, 0));
+}
+
+.hover\:via-neutral-800:hover {
+  --gradient-via-color: #1c1c1c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(28, 28, 28, 0));
+}
+
+.hover\:via-neutral-900:hover {
+  --gradient-via-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.hover\:via-neutral:hover {
+  --gradient-via-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.hover\:via-blue-100:hover {
+  --gradient-via-color: #f2f7ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(242, 247, 255, 0));
+}
+
+.hover\:via-blue-200:hover {
+  --gradient-via-color: #d2e1fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(210, 225, 250, 0));
+}
+
+.hover\:via-blue-300:hover {
+  --gradient-via-color: #94b8f6;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(148, 184, 246, 0));
+}
+
+.hover\:via-blue-400:hover {
+  --gradient-via-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.hover\:via-blue-500:hover {
+  --gradient-via-color: #0d43a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(13, 67, 160, 0));
+}
+
+.hover\:via-blue-600:hover {
+  --gradient-via-color: #072251;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(7, 34, 81, 0));
+}
+
+.hover\:via-blue-700:hover {
+  --gradient-via-color: #030e22;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(3, 14, 34, 0));
+}
+
+.hover\:via-blue:hover {
+  --gradient-via-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.hover\:via-violet-100:hover {
+  --gradient-via-color: #f4f0fd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(244, 240, 253, 0));
+}
+
+.hover\:via-violet-200:hover {
+  --gradient-via-color: #ddd2fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(221, 210, 250, 0));
+}
+
+.hover\:via-violet-300:hover {
+  --gradient-via-color: #b69cff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(182, 156, 255, 0));
+}
+
+.hover\:via-violet-400:hover {
+  --gradient-via-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.hover\:via-violet-500:hover {
+  --gradient-via-color: #4b1ec7;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(75, 30, 199, 0));
+}
+
+.hover\:via-violet-600:hover {
+  --gradient-via-color: #2c0e7b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(44, 14, 123, 0));
+}
+
+.hover\:via-violet-700:hover {
+  --gradient-via-color: #16073e;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(22, 7, 62, 0));
+}
+
+.hover\:via-violet:hover {
+  --gradient-via-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.hover\:via-aqua-100:hover {
+  --gradient-via-color: #e4fbff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(228, 251, 255, 0));
+}
+
+.hover\:via-aqua-200:hover {
+  --gradient-via-color: #a0f1ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(160, 241, 255, 0));
+}
+
+.hover\:via-aqua-300:hover {
+  --gradient-via-color: #4be4ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(75, 228, 255, 0));
+}
+
+.hover\:via-aqua-400:hover {
+  --gradient-via-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.hover\:via-aqua-500:hover {
+  --gradient-via-color: #0088a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 136, 160, 0));
+}
+
+.hover\:via-aqua-600:hover {
+  --gradient-via-color: #004e5c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 78, 92, 0));
+}
+
+.hover\:via-aqua-700:hover {
+  --gradient-via-color: #002329;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 35, 41, 0));
+}
+
+.hover\:via-aqua:hover {
+  --gradient-via-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.hover\:via-green-100:hover {
+  --gradient-via-color: #f0f5f1;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 245, 241, 0));
+}
+
+.hover\:via-green-200:hover {
+  --gradient-via-color: #c8e6d0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(200, 230, 208, 0));
+}
+
+.hover\:via-green-300:hover {
+  --gradient-via-color: #83d79b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(131, 215, 155, 0));
+}
+
+.hover\:via-green-400:hover {
+  --gradient-via-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.hover\:via-green-500:hover {
+  --gradient-via-color: #2b8545;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(43, 133, 69, 0));
+}
+
+.hover\:via-green-600:hover {
+  --gradient-via-color: #1b522b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(27, 82, 43, 0));
+}
+
+.hover\:via-green-700:hover {
+  --gradient-via-color: #0e2b16;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(14, 43, 22, 0));
+}
+
+.hover\:via-green:hover {
+  --gradient-via-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.hover\:via-yellow-100:hover {
+  --gradient-via-color: #faf2d9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(250, 242, 217, 0));
+}
+
+.hover\:via-yellow-200:hover {
+  --gradient-via-color: #ffecae;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 236, 174, 0));
+}
+
+.hover\:via-yellow-300:hover {
+  --gradient-via-color: #ffdb6a;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 219, 106, 0));
+}
+
+.hover\:via-yellow-400:hover {
+  --gradient-via-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.hover\:via-yellow-500:hover {
+  --gradient-via-color: #f2b800;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(242, 184, 0, 0));
+}
+
+.hover\:via-yellow-600:hover {
+  --gradient-via-color: #9d7700;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(157, 119, 0, 0));
+}
+
+.hover\:via-yellow-700:hover {
+  --gradient-via-color: #372a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(55, 42, 0, 0));
+}
+
+.hover\:via-yellow:hover {
+  --gradient-via-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.hover\:via-orange-100:hover {
+  --gradient-via-color: #fff2dd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 242, 221, 0));
+}
+
+.hover\:via-orange-200:hover {
+  --gradient-via-color: #ffd088;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 208, 136, 0));
+}
+
+.hover\:via-orange-300:hover {
+  --gradient-via-color: #ffaf33;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 175, 51, 0));
+}
+
+.hover\:via-orange-400:hover {
+  --gradient-via-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.hover\:via-orange-500:hover {
+  --gradient-via-color: #cc7c00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(204, 124, 0, 0));
+}
+
+.hover\:via-orange-600:hover {
+  --gradient-via-color: #885300;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(136, 83, 0, 0));
+}
+
+.hover\:via-orange-700:hover {
+  --gradient-via-color: #452a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(69, 42, 0, 0));
+}
+
+.hover\:via-orange:hover {
+  --gradient-via-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.hover\:via-red-100:hover {
+  --gradient-via-color: #ffebe9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 235, 233, 0));
+}
+
+.hover\:via-red-200:hover {
+  --gradient-via-color: #feccc8;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(254, 204, 200, 0));
+}
+
+.hover\:via-red-300:hover {
+  --gradient-via-color: #fd8f85;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(253, 143, 133, 0));
+}
+
+.hover\:via-red-400:hover {
+  --gradient-via-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.hover\:via-red-500:hover {
+  --gradient-via-color: #e51604;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(229, 22, 4, 0));
+}
+
+.hover\:via-red-600:hover {
+  --gradient-via-color: #810c02;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(129, 12, 2, 0));
+}
+
+.hover\:via-red-700:hover {
+  --gradient-via-color: #4f0801;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(79, 8, 1, 0));
+}
+
+.hover\:via-red:hover {
+  --gradient-via-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.hover\:via-white:hover {
+  --gradient-via-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.hover\:via-black:hover {
+  --gradient-via-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.hover\:via-current:hover {
+  --gradient-via-color: currentColor;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.hover\:to-neutral-100:hover {
+  --gradient-to-color: #ffffff;
+}
+
+.hover\:to-neutral-200:hover {
+  --gradient-to-color: #fafafa;
+}
+
+.hover\:to-neutral-300:hover {
+  --gradient-to-color: #f1f1f2;
+}
+
+.hover\:to-neutral-400:hover {
+  --gradient-to-color: #e8e8ea;
+}
+
+.hover\:to-neutral-500:hover {
+  --gradient-to-color: #c5c5ca;
+}
+
+.hover\:to-neutral-600:hover {
+  --gradient-to-color: #767680;
+}
+
+.hover\:to-neutral-700:hover {
+  --gradient-to-color: #45454b;
+}
+
+.hover\:to-neutral-800:hover {
+  --gradient-to-color: #1c1c1c;
+}
+
+.hover\:to-neutral-900:hover {
+  --gradient-to-color: #000000;
+}
+
+.hover\:to-neutral:hover {
+  --gradient-to-color: #c5c5ca;
+}
+
+.hover\:to-blue-100:hover {
+  --gradient-to-color: #f2f7ff;
+}
+
+.hover\:to-blue-200:hover {
+  --gradient-to-color: #d2e1fa;
+}
+
+.hover\:to-blue-300:hover {
+  --gradient-to-color: #94b8f6;
+}
+
+.hover\:to-blue-400:hover {
+  --gradient-to-color: #266fed;
+}
+
+.hover\:to-blue-500:hover {
+  --gradient-to-color: #0d43a0;
+}
+
+.hover\:to-blue-600:hover {
+  --gradient-to-color: #072251;
+}
+
+.hover\:to-blue-700:hover {
+  --gradient-to-color: #030e22;
+}
+
+.hover\:to-blue:hover {
+  --gradient-to-color: #266fed;
+}
+
+.hover\:to-violet-100:hover {
+  --gradient-to-color: #f4f0fd;
+}
+
+.hover\:to-violet-200:hover {
+  --gradient-to-color: #ddd2fa;
+}
+
+.hover\:to-violet-300:hover {
+  --gradient-to-color: #b69cff;
+}
+
+.hover\:to-violet-400:hover {
+  --gradient-to-color: #7549ea;
+}
+
+.hover\:to-violet-500:hover {
+  --gradient-to-color: #4b1ec7;
+}
+
+.hover\:to-violet-600:hover {
+  --gradient-to-color: #2c0e7b;
+}
+
+.hover\:to-violet-700:hover {
+  --gradient-to-color: #16073e;
+}
+
+.hover\:to-violet:hover {
+  --gradient-to-color: #7549ea;
+}
+
+.hover\:to-aqua-100:hover {
+  --gradient-to-color: #e4fbff;
+}
+
+.hover\:to-aqua-200:hover {
+  --gradient-to-color: #a0f1ff;
+}
+
+.hover\:to-aqua-300:hover {
+  --gradient-to-color: #4be4ff;
+}
+
+.hover\:to-aqua-400:hover {
+  --gradient-to-color: #00c2e4;
+}
+
+.hover\:to-aqua-500:hover {
+  --gradient-to-color: #0088a0;
+}
+
+.hover\:to-aqua-600:hover {
+  --gradient-to-color: #004e5c;
+}
+
+.hover\:to-aqua-700:hover {
+  --gradient-to-color: #002329;
+}
+
+.hover\:to-aqua:hover {
+  --gradient-to-color: #00c2e4;
+}
+
+.hover\:to-green-100:hover {
+  --gradient-to-color: #f0f5f1;
+}
+
+.hover\:to-green-200:hover {
+  --gradient-to-color: #c8e6d0;
+}
+
+.hover\:to-green-300:hover {
+  --gradient-to-color: #83d79b;
+}
+
+.hover\:to-green-400:hover {
+  --gradient-to-color: #3cb860;
+}
+
+.hover\:to-green-500:hover {
+  --gradient-to-color: #2b8545;
+}
+
+.hover\:to-green-600:hover {
+  --gradient-to-color: #1b522b;
+}
+
+.hover\:to-green-700:hover {
+  --gradient-to-color: #0e2b16;
+}
+
+.hover\:to-green:hover {
+  --gradient-to-color: #3cb860;
+}
+
+.hover\:to-yellow-100:hover {
+  --gradient-to-color: #faf2d9;
+}
+
+.hover\:to-yellow-200:hover {
+  --gradient-to-color: #ffecae;
+}
+
+.hover\:to-yellow-300:hover {
+  --gradient-to-color: #ffdb6a;
+}
+
+.hover\:to-yellow-400:hover {
+  --gradient-to-color: #ffcb26;
+}
+
+.hover\:to-yellow-500:hover {
+  --gradient-to-color: #f2b800;
+}
+
+.hover\:to-yellow-600:hover {
+  --gradient-to-color: #9d7700;
+}
+
+.hover\:to-yellow-700:hover {
+  --gradient-to-color: #372a00;
+}
+
+.hover\:to-yellow:hover {
+  --gradient-to-color: #ffcb26;
+}
+
+.hover\:to-orange-100:hover {
+  --gradient-to-color: #fff2dd;
+}
+
+.hover\:to-orange-200:hover {
+  --gradient-to-color: #ffd088;
+}
+
+.hover\:to-orange-300:hover {
+  --gradient-to-color: #ffaf33;
+}
+
+.hover\:to-orange-400:hover {
+  --gradient-to-color: #ff9b00;
+}
+
+.hover\:to-orange-500:hover {
+  --gradient-to-color: #cc7c00;
+}
+
+.hover\:to-orange-600:hover {
+  --gradient-to-color: #885300;
+}
+
+.hover\:to-orange-700:hover {
+  --gradient-to-color: #452a00;
+}
+
+.hover\:to-orange:hover {
+  --gradient-to-color: #ff9b00;
+}
+
+.hover\:to-red-100:hover {
+  --gradient-to-color: #ffebe9;
+}
+
+.hover\:to-red-200:hover {
+  --gradient-to-color: #feccc8;
+}
+
+.hover\:to-red-300:hover {
+  --gradient-to-color: #fd8f85;
+}
+
+.hover\:to-red-400:hover {
+  --gradient-to-color: #fc5142;
+}
+
+.hover\:to-red-500:hover {
+  --gradient-to-color: #e51604;
+}
+
+.hover\:to-red-600:hover {
+  --gradient-to-color: #810c02;
+}
+
+.hover\:to-red-700:hover {
+  --gradient-to-color: #4f0801;
+}
+
+.hover\:to-red:hover {
+  --gradient-to-color: #fc5142;
+}
+
+.hover\:to-white:hover {
+  --gradient-to-color: #ffffff;
+}
+
+.hover\:to-black:hover {
+  --gradient-to-color: #000000;
+}
+
+.hover\:to-current:hover {
+  --gradient-to-color: currentColor;
+}
+
+.focus\:from-neutral-100:focus {
+  --gradient-from-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.focus\:from-neutral-200:focus {
+  --gradient-from-color: #fafafa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(250, 250, 250, 0));
+}
+
+.focus\:from-neutral-300:focus {
+  --gradient-from-color: #f1f1f2;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 241, 242, 0));
+}
+
+.focus\:from-neutral-400:focus {
+  --gradient-from-color: #e8e8ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(232, 232, 234, 0));
+}
+
+.focus\:from-neutral-500:focus {
+  --gradient-from-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.focus\:from-neutral-600:focus {
+  --gradient-from-color: #767680;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(118, 118, 128, 0));
+}
+
+.focus\:from-neutral-700:focus {
+  --gradient-from-color: #45454b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(69, 69, 75, 0));
+}
+
+.focus\:from-neutral-800:focus {
+  --gradient-from-color: #1c1c1c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(28, 28, 28, 0));
+}
+
+.focus\:from-neutral-900:focus {
+  --gradient-from-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.focus\:from-neutral:focus {
+  --gradient-from-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.focus\:from-blue-100:focus {
+  --gradient-from-color: #f2f7ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(242, 247, 255, 0));
+}
+
+.focus\:from-blue-200:focus {
+  --gradient-from-color: #d2e1fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(210, 225, 250, 0));
+}
+
+.focus\:from-blue-300:focus {
+  --gradient-from-color: #94b8f6;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(148, 184, 246, 0));
+}
+
+.focus\:from-blue-400:focus {
+  --gradient-from-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.focus\:from-blue-500:focus {
+  --gradient-from-color: #0d43a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(13, 67, 160, 0));
+}
+
+.focus\:from-blue-600:focus {
+  --gradient-from-color: #072251;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(7, 34, 81, 0));
+}
+
+.focus\:from-blue-700:focus {
+  --gradient-from-color: #030e22;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(3, 14, 34, 0));
+}
+
+.focus\:from-blue:focus {
+  --gradient-from-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.focus\:from-violet-100:focus {
+  --gradient-from-color: #f4f0fd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(244, 240, 253, 0));
+}
+
+.focus\:from-violet-200:focus {
+  --gradient-from-color: #ddd2fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(221, 210, 250, 0));
+}
+
+.focus\:from-violet-300:focus {
+  --gradient-from-color: #b69cff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(182, 156, 255, 0));
+}
+
+.focus\:from-violet-400:focus {
+  --gradient-from-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.focus\:from-violet-500:focus {
+  --gradient-from-color: #4b1ec7;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(75, 30, 199, 0));
+}
+
+.focus\:from-violet-600:focus {
+  --gradient-from-color: #2c0e7b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(44, 14, 123, 0));
+}
+
+.focus\:from-violet-700:focus {
+  --gradient-from-color: #16073e;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(22, 7, 62, 0));
+}
+
+.focus\:from-violet:focus {
+  --gradient-from-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.focus\:from-aqua-100:focus {
+  --gradient-from-color: #e4fbff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(228, 251, 255, 0));
+}
+
+.focus\:from-aqua-200:focus {
+  --gradient-from-color: #a0f1ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(160, 241, 255, 0));
+}
+
+.focus\:from-aqua-300:focus {
+  --gradient-from-color: #4be4ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(75, 228, 255, 0));
+}
+
+.focus\:from-aqua-400:focus {
+  --gradient-from-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.focus\:from-aqua-500:focus {
+  --gradient-from-color: #0088a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 136, 160, 0));
+}
+
+.focus\:from-aqua-600:focus {
+  --gradient-from-color: #004e5c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 78, 92, 0));
+}
+
+.focus\:from-aqua-700:focus {
+  --gradient-from-color: #002329;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 35, 41, 0));
+}
+
+.focus\:from-aqua:focus {
+  --gradient-from-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.focus\:from-green-100:focus {
+  --gradient-from-color: #f0f5f1;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(240, 245, 241, 0));
+}
+
+.focus\:from-green-200:focus {
+  --gradient-from-color: #c8e6d0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(200, 230, 208, 0));
+}
+
+.focus\:from-green-300:focus {
+  --gradient-from-color: #83d79b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(131, 215, 155, 0));
+}
+
+.focus\:from-green-400:focus {
+  --gradient-from-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.focus\:from-green-500:focus {
+  --gradient-from-color: #2b8545;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(43, 133, 69, 0));
+}
+
+.focus\:from-green-600:focus {
+  --gradient-from-color: #1b522b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(27, 82, 43, 0));
+}
+
+.focus\:from-green-700:focus {
+  --gradient-from-color: #0e2b16;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(14, 43, 22, 0));
+}
+
+.focus\:from-green:focus {
+  --gradient-from-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.focus\:from-yellow-100:focus {
+  --gradient-from-color: #faf2d9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(250, 242, 217, 0));
+}
+
+.focus\:from-yellow-200:focus {
+  --gradient-from-color: #ffecae;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 236, 174, 0));
+}
+
+.focus\:from-yellow-300:focus {
+  --gradient-from-color: #ffdb6a;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 219, 106, 0));
+}
+
+.focus\:from-yellow-400:focus {
+  --gradient-from-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.focus\:from-yellow-500:focus {
+  --gradient-from-color: #f2b800;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(242, 184, 0, 0));
+}
+
+.focus\:from-yellow-600:focus {
+  --gradient-from-color: #9d7700;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(157, 119, 0, 0));
+}
+
+.focus\:from-yellow-700:focus {
+  --gradient-from-color: #372a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(55, 42, 0, 0));
+}
+
+.focus\:from-yellow:focus {
+  --gradient-from-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.focus\:from-orange-100:focus {
+  --gradient-from-color: #fff2dd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 242, 221, 0));
+}
+
+.focus\:from-orange-200:focus {
+  --gradient-from-color: #ffd088;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 208, 136, 0));
+}
+
+.focus\:from-orange-300:focus {
+  --gradient-from-color: #ffaf33;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 175, 51, 0));
+}
+
+.focus\:from-orange-400:focus {
+  --gradient-from-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.focus\:from-orange-500:focus {
+  --gradient-from-color: #cc7c00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(204, 124, 0, 0));
+}
+
+.focus\:from-orange-600:focus {
+  --gradient-from-color: #885300;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(136, 83, 0, 0));
+}
+
+.focus\:from-orange-700:focus {
+  --gradient-from-color: #452a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(69, 42, 0, 0));
+}
+
+.focus\:from-orange:focus {
+  --gradient-from-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.focus\:from-red-100:focus {
+  --gradient-from-color: #ffebe9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 235, 233, 0));
+}
+
+.focus\:from-red-200:focus {
+  --gradient-from-color: #feccc8;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(254, 204, 200, 0));
+}
+
+.focus\:from-red-300:focus {
+  --gradient-from-color: #fd8f85;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(253, 143, 133, 0));
+}
+
+.focus\:from-red-400:focus {
+  --gradient-from-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.focus\:from-red-500:focus {
+  --gradient-from-color: #e51604;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(229, 22, 4, 0));
+}
+
+.focus\:from-red-600:focus {
+  --gradient-from-color: #810c02;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(129, 12, 2, 0));
+}
+
+.focus\:from-red-700:focus {
+  --gradient-from-color: #4f0801;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(79, 8, 1, 0));
+}
+
+.focus\:from-red:focus {
+  --gradient-from-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.focus\:from-white:focus {
+  --gradient-from-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.focus\:from-black:focus {
+  --gradient-from-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.focus\:from-current:focus {
+  --gradient-from-color: currentColor;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.focus\:via-neutral-100:focus {
+  --gradient-via-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.focus\:via-neutral-200:focus {
+  --gradient-via-color: #fafafa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(250, 250, 250, 0));
+}
+
+.focus\:via-neutral-300:focus {
+  --gradient-via-color: #f1f1f2;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 241, 242, 0));
+}
+
+.focus\:via-neutral-400:focus {
+  --gradient-via-color: #e8e8ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(232, 232, 234, 0));
+}
+
+.focus\:via-neutral-500:focus {
+  --gradient-via-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.focus\:via-neutral-600:focus {
+  --gradient-via-color: #767680;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(118, 118, 128, 0));
+}
+
+.focus\:via-neutral-700:focus {
+  --gradient-via-color: #45454b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(69, 69, 75, 0));
+}
+
+.focus\:via-neutral-800:focus {
+  --gradient-via-color: #1c1c1c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(28, 28, 28, 0));
+}
+
+.focus\:via-neutral-900:focus {
+  --gradient-via-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.focus\:via-neutral:focus {
+  --gradient-via-color: #c5c5ca;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(197, 197, 202, 0));
+}
+
+.focus\:via-blue-100:focus {
+  --gradient-via-color: #f2f7ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(242, 247, 255, 0));
+}
+
+.focus\:via-blue-200:focus {
+  --gradient-via-color: #d2e1fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(210, 225, 250, 0));
+}
+
+.focus\:via-blue-300:focus {
+  --gradient-via-color: #94b8f6;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(148, 184, 246, 0));
+}
+
+.focus\:via-blue-400:focus {
+  --gradient-via-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.focus\:via-blue-500:focus {
+  --gradient-via-color: #0d43a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(13, 67, 160, 0));
+}
+
+.focus\:via-blue-600:focus {
+  --gradient-via-color: #072251;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(7, 34, 81, 0));
+}
+
+.focus\:via-blue-700:focus {
+  --gradient-via-color: #030e22;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(3, 14, 34, 0));
+}
+
+.focus\:via-blue:focus {
+  --gradient-via-color: #266fed;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(38, 111, 237, 0));
+}
+
+.focus\:via-violet-100:focus {
+  --gradient-via-color: #f4f0fd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(244, 240, 253, 0));
+}
+
+.focus\:via-violet-200:focus {
+  --gradient-via-color: #ddd2fa;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(221, 210, 250, 0));
+}
+
+.focus\:via-violet-300:focus {
+  --gradient-via-color: #b69cff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(182, 156, 255, 0));
+}
+
+.focus\:via-violet-400:focus {
+  --gradient-via-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.focus\:via-violet-500:focus {
+  --gradient-via-color: #4b1ec7;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(75, 30, 199, 0));
+}
+
+.focus\:via-violet-600:focus {
+  --gradient-via-color: #2c0e7b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(44, 14, 123, 0));
+}
+
+.focus\:via-violet-700:focus {
+  --gradient-via-color: #16073e;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(22, 7, 62, 0));
+}
+
+.focus\:via-violet:focus {
+  --gradient-via-color: #7549ea;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(117, 73, 234, 0));
+}
+
+.focus\:via-aqua-100:focus {
+  --gradient-via-color: #e4fbff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(228, 251, 255, 0));
+}
+
+.focus\:via-aqua-200:focus {
+  --gradient-via-color: #a0f1ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(160, 241, 255, 0));
+}
+
+.focus\:via-aqua-300:focus {
+  --gradient-via-color: #4be4ff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(75, 228, 255, 0));
+}
+
+.focus\:via-aqua-400:focus {
+  --gradient-via-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.focus\:via-aqua-500:focus {
+  --gradient-via-color: #0088a0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 136, 160, 0));
+}
+
+.focus\:via-aqua-600:focus {
+  --gradient-via-color: #004e5c;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 78, 92, 0));
+}
+
+.focus\:via-aqua-700:focus {
+  --gradient-via-color: #002329;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 35, 41, 0));
+}
+
+.focus\:via-aqua:focus {
+  --gradient-via-color: #00c2e4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 194, 228, 0));
+}
+
+.focus\:via-green-100:focus {
+  --gradient-via-color: #f0f5f1;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 245, 241, 0));
+}
+
+.focus\:via-green-200:focus {
+  --gradient-via-color: #c8e6d0;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(200, 230, 208, 0));
+}
+
+.focus\:via-green-300:focus {
+  --gradient-via-color: #83d79b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(131, 215, 155, 0));
+}
+
+.focus\:via-green-400:focus {
+  --gradient-via-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.focus\:via-green-500:focus {
+  --gradient-via-color: #2b8545;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(43, 133, 69, 0));
+}
+
+.focus\:via-green-600:focus {
+  --gradient-via-color: #1b522b;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(27, 82, 43, 0));
+}
+
+.focus\:via-green-700:focus {
+  --gradient-via-color: #0e2b16;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(14, 43, 22, 0));
+}
+
+.focus\:via-green:focus {
+  --gradient-via-color: #3cb860;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(60, 184, 96, 0));
+}
+
+.focus\:via-yellow-100:focus {
+  --gradient-via-color: #faf2d9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(250, 242, 217, 0));
+}
+
+.focus\:via-yellow-200:focus {
+  --gradient-via-color: #ffecae;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 236, 174, 0));
+}
+
+.focus\:via-yellow-300:focus {
+  --gradient-via-color: #ffdb6a;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 219, 106, 0));
+}
+
+.focus\:via-yellow-400:focus {
+  --gradient-via-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.focus\:via-yellow-500:focus {
+  --gradient-via-color: #f2b800;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(242, 184, 0, 0));
+}
+
+.focus\:via-yellow-600:focus {
+  --gradient-via-color: #9d7700;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(157, 119, 0, 0));
+}
+
+.focus\:via-yellow-700:focus {
+  --gradient-via-color: #372a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(55, 42, 0, 0));
+}
+
+.focus\:via-yellow:focus {
+  --gradient-via-color: #ffcb26;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 203, 38, 0));
+}
+
+.focus\:via-orange-100:focus {
+  --gradient-via-color: #fff2dd;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 242, 221, 0));
+}
+
+.focus\:via-orange-200:focus {
+  --gradient-via-color: #ffd088;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 208, 136, 0));
+}
+
+.focus\:via-orange-300:focus {
+  --gradient-via-color: #ffaf33;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 175, 51, 0));
+}
+
+.focus\:via-orange-400:focus {
+  --gradient-via-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.focus\:via-orange-500:focus {
+  --gradient-via-color: #cc7c00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(204, 124, 0, 0));
+}
+
+.focus\:via-orange-600:focus {
+  --gradient-via-color: #885300;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(136, 83, 0, 0));
+}
+
+.focus\:via-orange-700:focus {
+  --gradient-via-color: #452a00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(69, 42, 0, 0));
+}
+
+.focus\:via-orange:focus {
+  --gradient-via-color: #ff9b00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 155, 0, 0));
+}
+
+.focus\:via-red-100:focus {
+  --gradient-via-color: #ffebe9;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 235, 233, 0));
+}
+
+.focus\:via-red-200:focus {
+  --gradient-via-color: #feccc8;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(254, 204, 200, 0));
+}
+
+.focus\:via-red-300:focus {
+  --gradient-via-color: #fd8f85;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(253, 143, 133, 0));
+}
+
+.focus\:via-red-400:focus {
+  --gradient-via-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.focus\:via-red-500:focus {
+  --gradient-via-color: #e51604;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(229, 22, 4, 0));
+}
+
+.focus\:via-red-600:focus {
+  --gradient-via-color: #810c02;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(129, 12, 2, 0));
+}
+
+.focus\:via-red-700:focus {
+  --gradient-via-color: #4f0801;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(79, 8, 1, 0));
+}
+
+.focus\:via-red:focus {
+  --gradient-via-color: #fc5142;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(252, 81, 66, 0));
+}
+
+.focus\:via-white:focus {
+  --gradient-via-color: #ffffff;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.focus\:via-black:focus {
+  --gradient-via-color: #000000;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
+}
+
+.focus\:via-current:focus {
+  --gradient-via-color: currentColor;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.focus\:to-neutral-100:focus {
+  --gradient-to-color: #ffffff;
+}
+
+.focus\:to-neutral-200:focus {
+  --gradient-to-color: #fafafa;
+}
+
+.focus\:to-neutral-300:focus {
+  --gradient-to-color: #f1f1f2;
+}
+
+.focus\:to-neutral-400:focus {
+  --gradient-to-color: #e8e8ea;
+}
+
+.focus\:to-neutral-500:focus {
+  --gradient-to-color: #c5c5ca;
+}
+
+.focus\:to-neutral-600:focus {
+  --gradient-to-color: #767680;
+}
+
+.focus\:to-neutral-700:focus {
+  --gradient-to-color: #45454b;
+}
+
+.focus\:to-neutral-800:focus {
+  --gradient-to-color: #1c1c1c;
+}
+
+.focus\:to-neutral-900:focus {
+  --gradient-to-color: #000000;
+}
+
+.focus\:to-neutral:focus {
+  --gradient-to-color: #c5c5ca;
+}
+
+.focus\:to-blue-100:focus {
+  --gradient-to-color: #f2f7ff;
+}
+
+.focus\:to-blue-200:focus {
+  --gradient-to-color: #d2e1fa;
+}
+
+.focus\:to-blue-300:focus {
+  --gradient-to-color: #94b8f6;
+}
+
+.focus\:to-blue-400:focus {
+  --gradient-to-color: #266fed;
+}
+
+.focus\:to-blue-500:focus {
+  --gradient-to-color: #0d43a0;
+}
+
+.focus\:to-blue-600:focus {
+  --gradient-to-color: #072251;
+}
+
+.focus\:to-blue-700:focus {
+  --gradient-to-color: #030e22;
+}
+
+.focus\:to-blue:focus {
+  --gradient-to-color: #266fed;
+}
+
+.focus\:to-violet-100:focus {
+  --gradient-to-color: #f4f0fd;
+}
+
+.focus\:to-violet-200:focus {
+  --gradient-to-color: #ddd2fa;
+}
+
+.focus\:to-violet-300:focus {
+  --gradient-to-color: #b69cff;
+}
+
+.focus\:to-violet-400:focus {
+  --gradient-to-color: #7549ea;
+}
+
+.focus\:to-violet-500:focus {
+  --gradient-to-color: #4b1ec7;
+}
+
+.focus\:to-violet-600:focus {
+  --gradient-to-color: #2c0e7b;
+}
+
+.focus\:to-violet-700:focus {
+  --gradient-to-color: #16073e;
+}
+
+.focus\:to-violet:focus {
+  --gradient-to-color: #7549ea;
+}
+
+.focus\:to-aqua-100:focus {
+  --gradient-to-color: #e4fbff;
+}
+
+.focus\:to-aqua-200:focus {
+  --gradient-to-color: #a0f1ff;
+}
+
+.focus\:to-aqua-300:focus {
+  --gradient-to-color: #4be4ff;
+}
+
+.focus\:to-aqua-400:focus {
+  --gradient-to-color: #00c2e4;
+}
+
+.focus\:to-aqua-500:focus {
+  --gradient-to-color: #0088a0;
+}
+
+.focus\:to-aqua-600:focus {
+  --gradient-to-color: #004e5c;
+}
+
+.focus\:to-aqua-700:focus {
+  --gradient-to-color: #002329;
+}
+
+.focus\:to-aqua:focus {
+  --gradient-to-color: #00c2e4;
+}
+
+.focus\:to-green-100:focus {
+  --gradient-to-color: #f0f5f1;
+}
+
+.focus\:to-green-200:focus {
+  --gradient-to-color: #c8e6d0;
+}
+
+.focus\:to-green-300:focus {
+  --gradient-to-color: #83d79b;
+}
+
+.focus\:to-green-400:focus {
+  --gradient-to-color: #3cb860;
+}
+
+.focus\:to-green-500:focus {
+  --gradient-to-color: #2b8545;
+}
+
+.focus\:to-green-600:focus {
+  --gradient-to-color: #1b522b;
+}
+
+.focus\:to-green-700:focus {
+  --gradient-to-color: #0e2b16;
+}
+
+.focus\:to-green:focus {
+  --gradient-to-color: #3cb860;
+}
+
+.focus\:to-yellow-100:focus {
+  --gradient-to-color: #faf2d9;
+}
+
+.focus\:to-yellow-200:focus {
+  --gradient-to-color: #ffecae;
+}
+
+.focus\:to-yellow-300:focus {
+  --gradient-to-color: #ffdb6a;
+}
+
+.focus\:to-yellow-400:focus {
+  --gradient-to-color: #ffcb26;
+}
+
+.focus\:to-yellow-500:focus {
+  --gradient-to-color: #f2b800;
+}
+
+.focus\:to-yellow-600:focus {
+  --gradient-to-color: #9d7700;
+}
+
+.focus\:to-yellow-700:focus {
+  --gradient-to-color: #372a00;
+}
+
+.focus\:to-yellow:focus {
+  --gradient-to-color: #ffcb26;
+}
+
+.focus\:to-orange-100:focus {
+  --gradient-to-color: #fff2dd;
+}
+
+.focus\:to-orange-200:focus {
+  --gradient-to-color: #ffd088;
+}
+
+.focus\:to-orange-300:focus {
+  --gradient-to-color: #ffaf33;
+}
+
+.focus\:to-orange-400:focus {
+  --gradient-to-color: #ff9b00;
+}
+
+.focus\:to-orange-500:focus {
+  --gradient-to-color: #cc7c00;
+}
+
+.focus\:to-orange-600:focus {
+  --gradient-to-color: #885300;
+}
+
+.focus\:to-orange-700:focus {
+  --gradient-to-color: #452a00;
+}
+
+.focus\:to-orange:focus {
+  --gradient-to-color: #ff9b00;
+}
+
+.focus\:to-red-100:focus {
+  --gradient-to-color: #ffebe9;
+}
+
+.focus\:to-red-200:focus {
+  --gradient-to-color: #feccc8;
+}
+
+.focus\:to-red-300:focus {
+  --gradient-to-color: #fd8f85;
+}
+
+.focus\:to-red-400:focus {
+  --gradient-to-color: #fc5142;
+}
+
+.focus\:to-red-500:focus {
+  --gradient-to-color: #e51604;
+}
+
+.focus\:to-red-600:focus {
+  --gradient-to-color: #810c02;
+}
+
+.focus\:to-red-700:focus {
+  --gradient-to-color: #4f0801;
+}
+
+.focus\:to-red:focus {
+  --gradient-to-color: #fc5142;
+}
+
+.focus\:to-white:focus {
+  --gradient-to-color: #ffffff;
+}
+
+.focus\:to-black:focus {
+  --gradient-to-color: #000000;
+}
+
+.focus\:to-current:focus {
+  --gradient-to-color: currentColor;
 }
 
 .bg-opacity-0 {
@@ -5126,6 +8093,10 @@ input::placeholder, textarea::placeholder {
 
 .inline-grid {
   display: inline-grid;
+}
+
+.contents {
+  display: contents;
 }
 
 .hidden {
@@ -14670,6 +17641,120 @@ input::placeholder, textarea::placeholder {
        column-gap: 1px;
 }
 
+.gap-x-0 {
+  grid-column-gap: 0;
+  -moz-column-gap: 0;
+       column-gap: 0;
+}
+
+.gap-x-1 {
+  grid-column-gap: 0.25rem;
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+
+.gap-x-2 {
+  grid-column-gap: 0.5rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
+.gap-x-3 {
+  grid-column-gap: 0.75rem;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
+.gap-x-4 {
+  grid-column-gap: 1rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+.gap-x-5 {
+  grid-column-gap: 1.25rem;
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+
+.gap-x-6 {
+  grid-column-gap: 1.5rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+.gap-x-8 {
+  grid-column-gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.gap-x-10 {
+  grid-column-gap: 2.5rem;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+}
+
+.gap-x-12 {
+  grid-column-gap: 3rem;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+
+.gap-x-16 {
+  grid-column-gap: 4rem;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+
+.gap-x-20 {
+  grid-column-gap: 5rem;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+
+.gap-x-24 {
+  grid-column-gap: 6rem;
+  -moz-column-gap: 6rem;
+       column-gap: 6rem;
+}
+
+.gap-x-32 {
+  grid-column-gap: 8rem;
+  -moz-column-gap: 8rem;
+       column-gap: 8rem;
+}
+
+.gap-x-40 {
+  grid-column-gap: 10rem;
+  -moz-column-gap: 10rem;
+       column-gap: 10rem;
+}
+
+.gap-x-48 {
+  grid-column-gap: 12rem;
+  -moz-column-gap: 12rem;
+       column-gap: 12rem;
+}
+
+.gap-x-56 {
+  grid-column-gap: 14rem;
+  -moz-column-gap: 14rem;
+       column-gap: 14rem;
+}
+
+.gap-x-64 {
+  grid-column-gap: 16rem;
+  -moz-column-gap: 16rem;
+       column-gap: 16rem;
+}
+
+.gap-x-px {
+  grid-column-gap: 1px;
+  -moz-column-gap: 1px;
+       column-gap: 1px;
+}
+
 .row-gap-0 {
   grid-row-gap: 0;
   row-gap: 0;
@@ -14761,6 +17846,101 @@ input::placeholder, textarea::placeholder {
 }
 
 .row-gap-px {
+  grid-row-gap: 1px;
+  row-gap: 1px;
+}
+
+.gap-y-0 {
+  grid-row-gap: 0;
+  row-gap: 0;
+}
+
+.gap-y-1 {
+  grid-row-gap: 0.25rem;
+  row-gap: 0.25rem;
+}
+
+.gap-y-2 {
+  grid-row-gap: 0.5rem;
+  row-gap: 0.5rem;
+}
+
+.gap-y-3 {
+  grid-row-gap: 0.75rem;
+  row-gap: 0.75rem;
+}
+
+.gap-y-4 {
+  grid-row-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.gap-y-5 {
+  grid-row-gap: 1.25rem;
+  row-gap: 1.25rem;
+}
+
+.gap-y-6 {
+  grid-row-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.gap-y-8 {
+  grid-row-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.gap-y-10 {
+  grid-row-gap: 2.5rem;
+  row-gap: 2.5rem;
+}
+
+.gap-y-12 {
+  grid-row-gap: 3rem;
+  row-gap: 3rem;
+}
+
+.gap-y-16 {
+  grid-row-gap: 4rem;
+  row-gap: 4rem;
+}
+
+.gap-y-20 {
+  grid-row-gap: 5rem;
+  row-gap: 5rem;
+}
+
+.gap-y-24 {
+  grid-row-gap: 6rem;
+  row-gap: 6rem;
+}
+
+.gap-y-32 {
+  grid-row-gap: 8rem;
+  row-gap: 8rem;
+}
+
+.gap-y-40 {
+  grid-row-gap: 10rem;
+  row-gap: 10rem;
+}
+
+.gap-y-48 {
+  grid-row-gap: 12rem;
+  row-gap: 12rem;
+}
+
+.gap-y-56 {
+  grid-row-gap: 14rem;
+  row-gap: 14rem;
+}
+
+.gap-y-64 {
+  grid-row-gap: 16rem;
+  row-gap: 16rem;
+}
+
+.gap-y-px {
   grid-row-gap: 1px;
   row-gap: 1px;
 }
@@ -16903,31 +20083,18 @@ input::placeholder, textarea::placeholder {
 }
 
 @-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
   to {
     transform: rotate(360deg);
   }
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
   to {
     transform: rotate(360deg);
   }
 }
 
 @-webkit-keyframes ping {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
   75%, 100% {
     transform: scale(2);
     opacity: 0;
@@ -16935,11 +20102,6 @@ input::placeholder, textarea::placeholder {
 }
 
 @keyframes ping {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
   75%, 100% {
     transform: scale(2);
     opacity: 0;
@@ -16947,20 +20109,12 @@ input::placeholder, textarea::placeholder {
 }
 
 @-webkit-keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-
   50% {
     opacity: .5;
   }
 }
 
 @keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-
   50% {
     opacity: .5;
   }
@@ -16974,7 +20128,7 @@ input::placeholder, textarea::placeholder {
   }
 
   50% {
-    transform: translateY(0);
+    transform: none;
     -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
             animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
@@ -16988,7 +20142,7 @@ input::placeholder, textarea::placeholder {
   }
 
   50% {
-    transform: translateY(0);
+    transform: none;
     -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
             animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
