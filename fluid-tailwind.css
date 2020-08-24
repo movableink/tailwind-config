@@ -3265,6 +3265,10 @@ input::placeholder, textarea::placeholder {
   background-color: currentColor;
 }
 
+.bg-none {
+  background-image: none;
+}
+
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--gradient-color-stops));
 }
