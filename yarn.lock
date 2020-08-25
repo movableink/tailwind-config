@@ -47,7 +47,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.11.0", "@babel/generator@^7.11.4":
+"@babel/generator@^7.11.0":
   version "7.11.4"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.11.4.tgz#1ec7eec00defba5d6f83e50e3ee72ae2fee482be"
   integrity sha512-Rn26vueFx0eOoz7iifCN2UHT6rGtnkSGWSoDRIy8jZN3B91PzeSULbswfLoOWuTuAcNwpG/mxy+uCTDnZ9Mp1g==
@@ -324,7 +324,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.10.4", "@babel/parser@^7.11.0", "@babel/parser@^7.11.2", "@babel/parser@^7.11.4", "@babel/parser@^7.7.0":
+"@babel/parser@^7.10.4", "@babel/parser@^7.11.0", "@babel/parser@^7.11.1", "@babel/parser@^7.11.2", "@babel/parser@^7.7.0":
   version "7.11.4"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.11.4.tgz#6fa1a118b8b0d80d0267b719213dc947e88cc0ca"
   integrity sha512-MggwidiH+E9j5Sh8pbrX5sJvMcsqS5o+7iB42M9/k0CD63MjYbdP4nhSh7uB5wnv2/RVzTZFTxzF/kIa5mrCqA==
@@ -1402,11 +1402,11 @@
     eslint-plugin-node "^11.1.0"
 
 "@movable/eslint-config-react@^0.6.0":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config-react/-/eslint-config-react-0.6.2.tgz#cb50e568adc4bb841fa8e655a5efe00ffddb4f84"
-  integrity sha512-Ao0rdt08TRlMAsLaOmKVrnz3gOb6Ln3/1/MGIlxpRp9eYvNBUmgijaDUJ6QCTeg7Qc/M1SoahwWG7eMxWYXjvA==
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config-react/-/eslint-config-react-0.6.3.tgz#3ac1bc69df563a9625465b1e7e97dfc5fb9d514c"
+  integrity sha512-qJa+iS6XAD78h2pQj1xUTq2MgSfGlxP2QWjRz2Yy/z0xrRqaM97CroSTaKuX0NldnXzoJUhlRVnTv8W86kY9cw==
   dependencies:
-    eslint-plugin-react "^7.20.5"
+    eslint-plugin-react "^7.20.6"
 
 "@movable/eslint-config@^0.6.0":
   version "0.6.4"
@@ -5439,10 +5439,10 @@ eslint-plugin-prettier@^3.1.4:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react@^7.20.5:
-  version "7.20.5"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.20.5.tgz#29480f3071f64a04b2c3d99d9b460ce0f76fb857"
-  integrity sha512-ajbJfHuFnpVNJjhyrfq+pH1C0gLc2y94OiCbAXT5O0J0YCKaFEHDV8+3+mDOr+w8WguRX+vSs1bM2BDG0VLvCw==
+eslint-plugin-react@^7.20.6:
+  version "7.20.6"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.20.6.tgz#4d7845311a93c463493ccfa0a19c9c5d0fd69f60"
+  integrity sha512-kidMTE5HAEBSLu23CUDvj8dc3LdBU0ri1scwHBZjI41oDv4tjsWZKU7MQccFzH1QYPYhsnTF2ovh7JlcIcmxgg==
   dependencies:
     array-includes "^3.1.1"
     array.prototype.flatmap "^1.2.3"
