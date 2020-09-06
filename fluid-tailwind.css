@@ -8135,6 +8135,74 @@ input::placeholder, textarea::placeholder {
   flex-wrap: nowrap;
 }
 
+.place-items-auto {
+  place-items: auto;
+}
+
+.place-items-start {
+  place-items: start;
+}
+
+.place-items-end {
+  place-items: end;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+.place-items-stretch {
+  place-items: stretch;
+}
+
+.place-content-center {
+  place-content: center;
+}
+
+.place-content-start {
+  place-content: start;
+}
+
+.place-content-end {
+  place-content: end;
+}
+
+.place-content-between {
+  place-content: space-between;
+}
+
+.place-content-around {
+  place-content: space-around;
+}
+
+.place-content-evenly {
+  place-content: space-evenly;
+}
+
+.place-content-stretch {
+  place-content: stretch;
+}
+
+.place-self-auto {
+  place-self: auto;
+}
+
+.place-self-start {
+  place-self: start;
+}
+
+.place-self-end {
+  place-self: end;
+}
+
+.place-self-center {
+  place-self: center;
+}
+
+.place-self-stretch {
+  place-self: stretch;
+}
+
 .items-start {
   align-items: flex-start;
 }
@@ -8155,6 +8223,30 @@ input::placeholder, textarea::placeholder {
   align-items: stretch;
 }
 
+.content-center {
+  align-content: center;
+}
+
+.content-start {
+  align-content: flex-start;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.content-between {
+  align-content: space-between;
+}
+
+.content-around {
+  align-content: space-around;
+}
+
+.content-evenly {
+  align-content: space-evenly;
+}
+
 .self-auto {
   align-self: auto;
 }
@@ -8173,6 +8265,26 @@ input::placeholder, textarea::placeholder {
 
 .self-stretch {
   align-self: stretch;
+}
+
+.justify-items-auto {
+  justify-items: auto;
+}
+
+.justify-items-start {
+  justify-items: start;
+}
+
+.justify-items-end {
+  justify-items: end;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-items-stretch {
+  justify-items: stretch;
 }
 
 .justify-start {
@@ -8199,24 +8311,24 @@ input::placeholder, textarea::placeholder {
   justify-content: space-evenly;
 }
 
-.content-center {
-  align-content: center;
+.justify-self-auto {
+  justify-self: auto;
 }
 
-.content-start {
-  align-content: flex-start;
+.justify-self-start {
+  justify-self: start;
 }
 
-.content-end {
-  align-content: flex-end;
+.justify-self-end {
+  justify-self: end;
 }
 
-.content-between {
-  align-content: space-between;
+.justify-self-center {
+  justify-self: center;
 }
 
-.content-around {
-  align-content: space-around;
+.justify-self-stretch {
+  justify-self: stretch;
 }
 
 .flex-1 {
@@ -17095,6 +17207,51 @@ input::placeholder, textarea::placeholder {
 .subpixel-antialiased {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+}
+
+.ordinal, .slashed-zero, .lining-nums, .oldstyle-nums, .proportional-nums, .tabular-nums, .diagonal-fractions, .stacked-fractions {
+  --font-variant-numeric-ordinal: /*!*/;
+  --font-variant-numeric-slashed-zero: /*!*/;
+  --font-variant-numeric-figure: /*!*/;
+  --font-variant-numeric-spacing: /*!*/;
+  --font-variant-numeric-fraction: /*!*/;
+  font-variant-numeric: var(--font-variant-numeric-ordinal) var(--font-variant-numeric-slashed-zero) var(--font-variant-numeric-figure) var(--font-variant-numeric-spacing) var(--font-variant-numeric-fraction);
+}
+
+.normal-nums {
+  font-variant-numeric: normal;
+}
+
+.ordinal {
+  --font-variant-numeric-ordinal: ordinal;
+}
+
+.slashed-zero {
+  --font-variant-numeric-slashed-zero: slashed-zero;
+}
+
+.lining-nums {
+  --font-variant-numeric-figure: lining-nums;
+}
+
+.oldstyle-nums {
+  --font-variant-numeric-figure: oldstyle-nums;
+}
+
+.proportional-nums {
+  --font-variant-numeric-spacing: proportional-nums;
+}
+
+.tabular-nums {
+  --font-variant-numeric-spacing: tabular-nums;
+}
+
+.diagonal-fractions {
+  --font-variant-numeric-fraction: diagonal-fractions;
+}
+
+.stacked-fractions {
+  --font-variant-numeric-fraction: stacked-fractions;
 }
 
 .tracking-2xs {
