@@ -5,6 +5,17 @@
  */
 
 /**
+ * Create a Tailwind `@apply` usage from a list of classes
+ *
+ * @param {...string} classList
+ */
+function apply(...classList) {
+  return {
+    [`@apply ${classList.join(' ')}`]: {},
+  };
+}
+
+/**
  * This function returns a selector that matches elements with the
  * given class if and only if the element _does not_ have a class that
  * starts with the provided `modifier`.
@@ -36,5 +47,6 @@ function classWithoutModifier(e, className, modifier) {
 }
 
 module.exports = {
+  apply,
   classWithoutModifier,
 };
