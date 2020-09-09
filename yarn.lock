@@ -11409,6 +11409,14 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
+tailwindcss-shadow-outline-colors@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/tailwindcss-shadow-outline-colors/-/tailwindcss-shadow-outline-colors-0.0.8.tgz#0fa4a729636ad509eb51c96fa795578092459b67"
+  integrity sha512-HY+WeCmttEhZXPpFbzbVy90f3g3Oe2crCwwRV3wtvZx6GfVMh2x4ZAsF8r1clshq8hWKu18t2io5hQkhhMx1+w==
+  dependencies:
+    color "^3.1.2"
+    lodash "^4.17.15"
+
 tailwindcss@^1.1.4:
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.8.5.tgz#3b4624530b5fd71688fd04d16d8bd8c8d56834de"
