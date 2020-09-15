@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/movableink/tailwind-config/compare/v1.6.0...v1.7.0) (2020-09-15)
+
+### Features
+
+- add `shadow-outline` ccolor utilities ([3043ba7](https://github.com/movableink/tailwind-config/commit/3043ba7cbc2e4f0165883d770cd05fe1bb320461))
+- enable `focus-within` and `disabled` variants for border color ([f7c6cfa](https://github.com/movableink/tailwind-config/commit/f7c6cfa53a2f8c5b5a2f9ec5d75bd7aa1a4d3784))
+
 ## [1.6.0](https://github.com/movableink/tailwind-config/compare/v1.5.1...v1.6.0) (2020-07-16)
 
 ### Features
