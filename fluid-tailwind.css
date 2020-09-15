@@ -7575,6 +7575,830 @@ input::placeholder, textarea::placeholder {
   border-color: currentColor;
 }
 
+.disabled\:border-neutral-100:disabled {
+  --border-opacity: 1;
+  border-color: #ffffff;
+  border-color: rgba(255, 255, 255, var(--border-opacity));
+}
+
+.disabled\:border-neutral-200:disabled {
+  --border-opacity: 1;
+  border-color: #fafafa;
+  border-color: rgba(250, 250, 250, var(--border-opacity));
+}
+
+.disabled\:border-neutral-300:disabled {
+  --border-opacity: 1;
+  border-color: #f1f1f2;
+  border-color: rgba(241, 241, 242, var(--border-opacity));
+}
+
+.disabled\:border-neutral-400:disabled {
+  --border-opacity: 1;
+  border-color: #e8e8ea;
+  border-color: rgba(232, 232, 234, var(--border-opacity));
+}
+
+.disabled\:border-neutral-500:disabled {
+  --border-opacity: 1;
+  border-color: #c5c5ca;
+  border-color: rgba(197, 197, 202, var(--border-opacity));
+}
+
+.disabled\:border-neutral-600:disabled {
+  --border-opacity: 1;
+  border-color: #767680;
+  border-color: rgba(118, 118, 128, var(--border-opacity));
+}
+
+.disabled\:border-neutral-700:disabled {
+  --border-opacity: 1;
+  border-color: #45454b;
+  border-color: rgba(69, 69, 75, var(--border-opacity));
+}
+
+.disabled\:border-neutral-800:disabled {
+  --border-opacity: 1;
+  border-color: #1c1c1c;
+  border-color: rgba(28, 28, 28, var(--border-opacity));
+}
+
+.disabled\:border-neutral-900:disabled {
+  --border-opacity: 1;
+  border-color: #000000;
+  border-color: rgba(0, 0, 0, var(--border-opacity));
+}
+
+.disabled\:border-neutral:disabled {
+  --border-opacity: 1;
+  border-color: #c5c5ca;
+  border-color: rgba(197, 197, 202, var(--border-opacity));
+}
+
+.disabled\:border-blue-100:disabled {
+  --border-opacity: 1;
+  border-color: #f2f7ff;
+  border-color: rgba(242, 247, 255, var(--border-opacity));
+}
+
+.disabled\:border-blue-200:disabled {
+  --border-opacity: 1;
+  border-color: #d2e1fa;
+  border-color: rgba(210, 225, 250, var(--border-opacity));
+}
+
+.disabled\:border-blue-300:disabled {
+  --border-opacity: 1;
+  border-color: #94b8f6;
+  border-color: rgba(148, 184, 246, var(--border-opacity));
+}
+
+.disabled\:border-blue-400:disabled {
+  --border-opacity: 1;
+  border-color: #266fed;
+  border-color: rgba(38, 111, 237, var(--border-opacity));
+}
+
+.disabled\:border-blue-500:disabled {
+  --border-opacity: 1;
+  border-color: #0d43a0;
+  border-color: rgba(13, 67, 160, var(--border-opacity));
+}
+
+.disabled\:border-blue-600:disabled {
+  --border-opacity: 1;
+  border-color: #072251;
+  border-color: rgba(7, 34, 81, var(--border-opacity));
+}
+
+.disabled\:border-blue-700:disabled {
+  --border-opacity: 1;
+  border-color: #030e22;
+  border-color: rgba(3, 14, 34, var(--border-opacity));
+}
+
+.disabled\:border-blue:disabled {
+  --border-opacity: 1;
+  border-color: #266fed;
+  border-color: rgba(38, 111, 237, var(--border-opacity));
+}
+
+.disabled\:border-violet-100:disabled {
+  --border-opacity: 1;
+  border-color: #f4f0fd;
+  border-color: rgba(244, 240, 253, var(--border-opacity));
+}
+
+.disabled\:border-violet-200:disabled {
+  --border-opacity: 1;
+  border-color: #ddd2fa;
+  border-color: rgba(221, 210, 250, var(--border-opacity));
+}
+
+.disabled\:border-violet-300:disabled {
+  --border-opacity: 1;
+  border-color: #b69cff;
+  border-color: rgba(182, 156, 255, var(--border-opacity));
+}
+
+.disabled\:border-violet-400:disabled {
+  --border-opacity: 1;
+  border-color: #7549ea;
+  border-color: rgba(117, 73, 234, var(--border-opacity));
+}
+
+.disabled\:border-violet-500:disabled {
+  --border-opacity: 1;
+  border-color: #4b1ec7;
+  border-color: rgba(75, 30, 199, var(--border-opacity));
+}
+
+.disabled\:border-violet-600:disabled {
+  --border-opacity: 1;
+  border-color: #2c0e7b;
+  border-color: rgba(44, 14, 123, var(--border-opacity));
+}
+
+.disabled\:border-violet-700:disabled {
+  --border-opacity: 1;
+  border-color: #16073e;
+  border-color: rgba(22, 7, 62, var(--border-opacity));
+}
+
+.disabled\:border-violet:disabled {
+  --border-opacity: 1;
+  border-color: #7549ea;
+  border-color: rgba(117, 73, 234, var(--border-opacity));
+}
+
+.disabled\:border-aqua-100:disabled {
+  --border-opacity: 1;
+  border-color: #e4fbff;
+  border-color: rgba(228, 251, 255, var(--border-opacity));
+}
+
+.disabled\:border-aqua-200:disabled {
+  --border-opacity: 1;
+  border-color: #a0f1ff;
+  border-color: rgba(160, 241, 255, var(--border-opacity));
+}
+
+.disabled\:border-aqua-300:disabled {
+  --border-opacity: 1;
+  border-color: #4be4ff;
+  border-color: rgba(75, 228, 255, var(--border-opacity));
+}
+
+.disabled\:border-aqua-400:disabled {
+  --border-opacity: 1;
+  border-color: #00c2e4;
+  border-color: rgba(0, 194, 228, var(--border-opacity));
+}
+
+.disabled\:border-aqua-500:disabled {
+  --border-opacity: 1;
+  border-color: #0088a0;
+  border-color: rgba(0, 136, 160, var(--border-opacity));
+}
+
+.disabled\:border-aqua-600:disabled {
+  --border-opacity: 1;
+  border-color: #004e5c;
+  border-color: rgba(0, 78, 92, var(--border-opacity));
+}
+
+.disabled\:border-aqua-700:disabled {
+  --border-opacity: 1;
+  border-color: #002329;
+  border-color: rgba(0, 35, 41, var(--border-opacity));
+}
+
+.disabled\:border-aqua:disabled {
+  --border-opacity: 1;
+  border-color: #00c2e4;
+  border-color: rgba(0, 194, 228, var(--border-opacity));
+}
+
+.disabled\:border-green-100:disabled {
+  --border-opacity: 1;
+  border-color: #f0f5f1;
+  border-color: rgba(240, 245, 241, var(--border-opacity));
+}
+
+.disabled\:border-green-200:disabled {
+  --border-opacity: 1;
+  border-color: #c8e6d0;
+  border-color: rgba(200, 230, 208, var(--border-opacity));
+}
+
+.disabled\:border-green-300:disabled {
+  --border-opacity: 1;
+  border-color: #83d79b;
+  border-color: rgba(131, 215, 155, var(--border-opacity));
+}
+
+.disabled\:border-green-400:disabled {
+  --border-opacity: 1;
+  border-color: #3cb860;
+  border-color: rgba(60, 184, 96, var(--border-opacity));
+}
+
+.disabled\:border-green-500:disabled {
+  --border-opacity: 1;
+  border-color: #2b8545;
+  border-color: rgba(43, 133, 69, var(--border-opacity));
+}
+
+.disabled\:border-green-600:disabled {
+  --border-opacity: 1;
+  border-color: #1b522b;
+  border-color: rgba(27, 82, 43, var(--border-opacity));
+}
+
+.disabled\:border-green-700:disabled {
+  --border-opacity: 1;
+  border-color: #0e2b16;
+  border-color: rgba(14, 43, 22, var(--border-opacity));
+}
+
+.disabled\:border-green:disabled {
+  --border-opacity: 1;
+  border-color: #3cb860;
+  border-color: rgba(60, 184, 96, var(--border-opacity));
+}
+
+.disabled\:border-yellow-100:disabled {
+  --border-opacity: 1;
+  border-color: #faf2d9;
+  border-color: rgba(250, 242, 217, var(--border-opacity));
+}
+
+.disabled\:border-yellow-200:disabled {
+  --border-opacity: 1;
+  border-color: #ffecae;
+  border-color: rgba(255, 236, 174, var(--border-opacity));
+}
+
+.disabled\:border-yellow-300:disabled {
+  --border-opacity: 1;
+  border-color: #ffdb6a;
+  border-color: rgba(255, 219, 106, var(--border-opacity));
+}
+
+.disabled\:border-yellow-400:disabled {
+  --border-opacity: 1;
+  border-color: #ffcb26;
+  border-color: rgba(255, 203, 38, var(--border-opacity));
+}
+
+.disabled\:border-yellow-500:disabled {
+  --border-opacity: 1;
+  border-color: #f2b800;
+  border-color: rgba(242, 184, 0, var(--border-opacity));
+}
+
+.disabled\:border-yellow-600:disabled {
+  --border-opacity: 1;
+  border-color: #9d7700;
+  border-color: rgba(157, 119, 0, var(--border-opacity));
+}
+
+.disabled\:border-yellow-700:disabled {
+  --border-opacity: 1;
+  border-color: #372a00;
+  border-color: rgba(55, 42, 0, var(--border-opacity));
+}
+
+.disabled\:border-yellow:disabled {
+  --border-opacity: 1;
+  border-color: #ffcb26;
+  border-color: rgba(255, 203, 38, var(--border-opacity));
+}
+
+.disabled\:border-orange-100:disabled {
+  --border-opacity: 1;
+  border-color: #fff2dd;
+  border-color: rgba(255, 242, 221, var(--border-opacity));
+}
+
+.disabled\:border-orange-200:disabled {
+  --border-opacity: 1;
+  border-color: #ffd088;
+  border-color: rgba(255, 208, 136, var(--border-opacity));
+}
+
+.disabled\:border-orange-300:disabled {
+  --border-opacity: 1;
+  border-color: #ffaf33;
+  border-color: rgba(255, 175, 51, var(--border-opacity));
+}
+
+.disabled\:border-orange-400:disabled {
+  --border-opacity: 1;
+  border-color: #ff9b00;
+  border-color: rgba(255, 155, 0, var(--border-opacity));
+}
+
+.disabled\:border-orange-500:disabled {
+  --border-opacity: 1;
+  border-color: #cc7c00;
+  border-color: rgba(204, 124, 0, var(--border-opacity));
+}
+
+.disabled\:border-orange-600:disabled {
+  --border-opacity: 1;
+  border-color: #885300;
+  border-color: rgba(136, 83, 0, var(--border-opacity));
+}
+
+.disabled\:border-orange-700:disabled {
+  --border-opacity: 1;
+  border-color: #452a00;
+  border-color: rgba(69, 42, 0, var(--border-opacity));
+}
+
+.disabled\:border-orange:disabled {
+  --border-opacity: 1;
+  border-color: #ff9b00;
+  border-color: rgba(255, 155, 0, var(--border-opacity));
+}
+
+.disabled\:border-red-100:disabled {
+  --border-opacity: 1;
+  border-color: #ffebe9;
+  border-color: rgba(255, 235, 233, var(--border-opacity));
+}
+
+.disabled\:border-red-200:disabled {
+  --border-opacity: 1;
+  border-color: #feccc8;
+  border-color: rgba(254, 204, 200, var(--border-opacity));
+}
+
+.disabled\:border-red-300:disabled {
+  --border-opacity: 1;
+  border-color: #fd8f85;
+  border-color: rgba(253, 143, 133, var(--border-opacity));
+}
+
+.disabled\:border-red-400:disabled {
+  --border-opacity: 1;
+  border-color: #fc5142;
+  border-color: rgba(252, 81, 66, var(--border-opacity));
+}
+
+.disabled\:border-red-500:disabled {
+  --border-opacity: 1;
+  border-color: #e51604;
+  border-color: rgba(229, 22, 4, var(--border-opacity));
+}
+
+.disabled\:border-red-600:disabled {
+  --border-opacity: 1;
+  border-color: #810c02;
+  border-color: rgba(129, 12, 2, var(--border-opacity));
+}
+
+.disabled\:border-red-700:disabled {
+  --border-opacity: 1;
+  border-color: #4f0801;
+  border-color: rgba(79, 8, 1, var(--border-opacity));
+}
+
+.disabled\:border-red:disabled {
+  --border-opacity: 1;
+  border-color: #fc5142;
+  border-color: rgba(252, 81, 66, var(--border-opacity));
+}
+
+.disabled\:border-white:disabled {
+  --border-opacity: 1;
+  border-color: #ffffff;
+  border-color: rgba(255, 255, 255, var(--border-opacity));
+}
+
+.disabled\:border-black:disabled {
+  --border-opacity: 1;
+  border-color: #000000;
+  border-color: rgba(0, 0, 0, var(--border-opacity));
+}
+
+.disabled\:border-current:disabled {
+  border-color: currentColor;
+}
+
+.focus-within\:border-neutral-100:focus-within {
+  --border-opacity: 1;
+  border-color: #ffffff;
+  border-color: rgba(255, 255, 255, var(--border-opacity));
+}
+
+.focus-within\:border-neutral-200:focus-within {
+  --border-opacity: 1;
+  border-color: #fafafa;
+  border-color: rgba(250, 250, 250, var(--border-opacity));
+}
+
+.focus-within\:border-neutral-300:focus-within {
+  --border-opacity: 1;
+  border-color: #f1f1f2;
+  border-color: rgba(241, 241, 242, var(--border-opacity));
+}
+
+.focus-within\:border-neutral-400:focus-within {
+  --border-opacity: 1;
+  border-color: #e8e8ea;
+  border-color: rgba(232, 232, 234, var(--border-opacity));
+}
+
+.focus-within\:border-neutral-500:focus-within {
+  --border-opacity: 1;
+  border-color: #c5c5ca;
+  border-color: rgba(197, 197, 202, var(--border-opacity));
+}
+
+.focus-within\:border-neutral-600:focus-within {
+  --border-opacity: 1;
+  border-color: #767680;
+  border-color: rgba(118, 118, 128, var(--border-opacity));
+}
+
+.focus-within\:border-neutral-700:focus-within {
+  --border-opacity: 1;
+  border-color: #45454b;
+  border-color: rgba(69, 69, 75, var(--border-opacity));
+}
+
+.focus-within\:border-neutral-800:focus-within {
+  --border-opacity: 1;
+  border-color: #1c1c1c;
+  border-color: rgba(28, 28, 28, var(--border-opacity));
+}
+
+.focus-within\:border-neutral-900:focus-within {
+  --border-opacity: 1;
+  border-color: #000000;
+  border-color: rgba(0, 0, 0, var(--border-opacity));
+}
+
+.focus-within\:border-neutral:focus-within {
+  --border-opacity: 1;
+  border-color: #c5c5ca;
+  border-color: rgba(197, 197, 202, var(--border-opacity));
+}
+
+.focus-within\:border-blue-100:focus-within {
+  --border-opacity: 1;
+  border-color: #f2f7ff;
+  border-color: rgba(242, 247, 255, var(--border-opacity));
+}
+
+.focus-within\:border-blue-200:focus-within {
+  --border-opacity: 1;
+  border-color: #d2e1fa;
+  border-color: rgba(210, 225, 250, var(--border-opacity));
+}
+
+.focus-within\:border-blue-300:focus-within {
+  --border-opacity: 1;
+  border-color: #94b8f6;
+  border-color: rgba(148, 184, 246, var(--border-opacity));
+}
+
+.focus-within\:border-blue-400:focus-within {
+  --border-opacity: 1;
+  border-color: #266fed;
+  border-color: rgba(38, 111, 237, var(--border-opacity));
+}
+
+.focus-within\:border-blue-500:focus-within {
+  --border-opacity: 1;
+  border-color: #0d43a0;
+  border-color: rgba(13, 67, 160, var(--border-opacity));
+}
+
+.focus-within\:border-blue-600:focus-within {
+  --border-opacity: 1;
+  border-color: #072251;
+  border-color: rgba(7, 34, 81, var(--border-opacity));
+}
+
+.focus-within\:border-blue-700:focus-within {
+  --border-opacity: 1;
+  border-color: #030e22;
+  border-color: rgba(3, 14, 34, var(--border-opacity));
+}
+
+.focus-within\:border-blue:focus-within {
+  --border-opacity: 1;
+  border-color: #266fed;
+  border-color: rgba(38, 111, 237, var(--border-opacity));
+}
+
+.focus-within\:border-violet-100:focus-within {
+  --border-opacity: 1;
+  border-color: #f4f0fd;
+  border-color: rgba(244, 240, 253, var(--border-opacity));
+}
+
+.focus-within\:border-violet-200:focus-within {
+  --border-opacity: 1;
+  border-color: #ddd2fa;
+  border-color: rgba(221, 210, 250, var(--border-opacity));
+}
+
+.focus-within\:border-violet-300:focus-within {
+  --border-opacity: 1;
+  border-color: #b69cff;
+  border-color: rgba(182, 156, 255, var(--border-opacity));
+}
+
+.focus-within\:border-violet-400:focus-within {
+  --border-opacity: 1;
+  border-color: #7549ea;
+  border-color: rgba(117, 73, 234, var(--border-opacity));
+}
+
+.focus-within\:border-violet-500:focus-within {
+  --border-opacity: 1;
+  border-color: #4b1ec7;
+  border-color: rgba(75, 30, 199, var(--border-opacity));
+}
+
+.focus-within\:border-violet-600:focus-within {
+  --border-opacity: 1;
+  border-color: #2c0e7b;
+  border-color: rgba(44, 14, 123, var(--border-opacity));
+}
+
+.focus-within\:border-violet-700:focus-within {
+  --border-opacity: 1;
+  border-color: #16073e;
+  border-color: rgba(22, 7, 62, var(--border-opacity));
+}
+
+.focus-within\:border-violet:focus-within {
+  --border-opacity: 1;
+  border-color: #7549ea;
+  border-color: rgba(117, 73, 234, var(--border-opacity));
+}
+
+.focus-within\:border-aqua-100:focus-within {
+  --border-opacity: 1;
+  border-color: #e4fbff;
+  border-color: rgba(228, 251, 255, var(--border-opacity));
+}
+
+.focus-within\:border-aqua-200:focus-within {
+  --border-opacity: 1;
+  border-color: #a0f1ff;
+  border-color: rgba(160, 241, 255, var(--border-opacity));
+}
+
+.focus-within\:border-aqua-300:focus-within {
+  --border-opacity: 1;
+  border-color: #4be4ff;
+  border-color: rgba(75, 228, 255, var(--border-opacity));
+}
+
+.focus-within\:border-aqua-400:focus-within {
+  --border-opacity: 1;
+  border-color: #00c2e4;
+  border-color: rgba(0, 194, 228, var(--border-opacity));
+}
+
+.focus-within\:border-aqua-500:focus-within {
+  --border-opacity: 1;
+  border-color: #0088a0;
+  border-color: rgba(0, 136, 160, var(--border-opacity));
+}
+
+.focus-within\:border-aqua-600:focus-within {
+  --border-opacity: 1;
+  border-color: #004e5c;
+  border-color: rgba(0, 78, 92, var(--border-opacity));
+}
+
+.focus-within\:border-aqua-700:focus-within {
+  --border-opacity: 1;
+  border-color: #002329;
+  border-color: rgba(0, 35, 41, var(--border-opacity));
+}
+
+.focus-within\:border-aqua:focus-within {
+  --border-opacity: 1;
+  border-color: #00c2e4;
+  border-color: rgba(0, 194, 228, var(--border-opacity));
+}
+
+.focus-within\:border-green-100:focus-within {
+  --border-opacity: 1;
+  border-color: #f0f5f1;
+  border-color: rgba(240, 245, 241, var(--border-opacity));
+}
+
+.focus-within\:border-green-200:focus-within {
+  --border-opacity: 1;
+  border-color: #c8e6d0;
+  border-color: rgba(200, 230, 208, var(--border-opacity));
+}
+
+.focus-within\:border-green-300:focus-within {
+  --border-opacity: 1;
+  border-color: #83d79b;
+  border-color: rgba(131, 215, 155, var(--border-opacity));
+}
+
+.focus-within\:border-green-400:focus-within {
+  --border-opacity: 1;
+  border-color: #3cb860;
+  border-color: rgba(60, 184, 96, var(--border-opacity));
+}
+
+.focus-within\:border-green-500:focus-within {
+  --border-opacity: 1;
+  border-color: #2b8545;
+  border-color: rgba(43, 133, 69, var(--border-opacity));
+}
+
+.focus-within\:border-green-600:focus-within {
+  --border-opacity: 1;
+  border-color: #1b522b;
+  border-color: rgba(27, 82, 43, var(--border-opacity));
+}
+
+.focus-within\:border-green-700:focus-within {
+  --border-opacity: 1;
+  border-color: #0e2b16;
+  border-color: rgba(14, 43, 22, var(--border-opacity));
+}
+
+.focus-within\:border-green:focus-within {
+  --border-opacity: 1;
+  border-color: #3cb860;
+  border-color: rgba(60, 184, 96, var(--border-opacity));
+}
+
+.focus-within\:border-yellow-100:focus-within {
+  --border-opacity: 1;
+  border-color: #faf2d9;
+  border-color: rgba(250, 242, 217, var(--border-opacity));
+}
+
+.focus-within\:border-yellow-200:focus-within {
+  --border-opacity: 1;
+  border-color: #ffecae;
+  border-color: rgba(255, 236, 174, var(--border-opacity));
+}
+
+.focus-within\:border-yellow-300:focus-within {
+  --border-opacity: 1;
+  border-color: #ffdb6a;
+  border-color: rgba(255, 219, 106, var(--border-opacity));
+}
+
+.focus-within\:border-yellow-400:focus-within {
+  --border-opacity: 1;
+  border-color: #ffcb26;
+  border-color: rgba(255, 203, 38, var(--border-opacity));
+}
+
+.focus-within\:border-yellow-500:focus-within {
+  --border-opacity: 1;
+  border-color: #f2b800;
+  border-color: rgba(242, 184, 0, var(--border-opacity));
+}
+
+.focus-within\:border-yellow-600:focus-within {
+  --border-opacity: 1;
+  border-color: #9d7700;
+  border-color: rgba(157, 119, 0, var(--border-opacity));
+}
+
+.focus-within\:border-yellow-700:focus-within {
+  --border-opacity: 1;
+  border-color: #372a00;
+  border-color: rgba(55, 42, 0, var(--border-opacity));
+}
+
+.focus-within\:border-yellow:focus-within {
+  --border-opacity: 1;
+  border-color: #ffcb26;
+  border-color: rgba(255, 203, 38, var(--border-opacity));
+}
+
+.focus-within\:border-orange-100:focus-within {
+  --border-opacity: 1;
+  border-color: #fff2dd;
+  border-color: rgba(255, 242, 221, var(--border-opacity));
+}
+
+.focus-within\:border-orange-200:focus-within {
+  --border-opacity: 1;
+  border-color: #ffd088;
+  border-color: rgba(255, 208, 136, var(--border-opacity));
+}
+
+.focus-within\:border-orange-300:focus-within {
+  --border-opacity: 1;
+  border-color: #ffaf33;
+  border-color: rgba(255, 175, 51, var(--border-opacity));
+}
+
+.focus-within\:border-orange-400:focus-within {
+  --border-opacity: 1;
+  border-color: #ff9b00;
+  border-color: rgba(255, 155, 0, var(--border-opacity));
+}
+
+.focus-within\:border-orange-500:focus-within {
+  --border-opacity: 1;
+  border-color: #cc7c00;
+  border-color: rgba(204, 124, 0, var(--border-opacity));
+}
+
+.focus-within\:border-orange-600:focus-within {
+  --border-opacity: 1;
+  border-color: #885300;
+  border-color: rgba(136, 83, 0, var(--border-opacity));
+}
+
+.focus-within\:border-orange-700:focus-within {
+  --border-opacity: 1;
+  border-color: #452a00;
+  border-color: rgba(69, 42, 0, var(--border-opacity));
+}
+
+.focus-within\:border-orange:focus-within {
+  --border-opacity: 1;
+  border-color: #ff9b00;
+  border-color: rgba(255, 155, 0, var(--border-opacity));
+}
+
+.focus-within\:border-red-100:focus-within {
+  --border-opacity: 1;
+  border-color: #ffebe9;
+  border-color: rgba(255, 235, 233, var(--border-opacity));
+}
+
+.focus-within\:border-red-200:focus-within {
+  --border-opacity: 1;
+  border-color: #feccc8;
+  border-color: rgba(254, 204, 200, var(--border-opacity));
+}
+
+.focus-within\:border-red-300:focus-within {
+  --border-opacity: 1;
+  border-color: #fd8f85;
+  border-color: rgba(253, 143, 133, var(--border-opacity));
+}
+
+.focus-within\:border-red-400:focus-within {
+  --border-opacity: 1;
+  border-color: #fc5142;
+  border-color: rgba(252, 81, 66, var(--border-opacity));
+}
+
+.focus-within\:border-red-500:focus-within {
+  --border-opacity: 1;
+  border-color: #e51604;
+  border-color: rgba(229, 22, 4, var(--border-opacity));
+}
+
+.focus-within\:border-red-600:focus-within {
+  --border-opacity: 1;
+  border-color: #810c02;
+  border-color: rgba(129, 12, 2, var(--border-opacity));
+}
+
+.focus-within\:border-red-700:focus-within {
+  --border-opacity: 1;
+  border-color: #4f0801;
+  border-color: rgba(79, 8, 1, var(--border-opacity));
+}
+
+.focus-within\:border-red:focus-within {
+  --border-opacity: 1;
+  border-color: #fc5142;
+  border-color: rgba(252, 81, 66, var(--border-opacity));
+}
+
+.focus-within\:border-white:focus-within {
+  --border-opacity: 1;
+  border-color: #ffffff;
+  border-color: rgba(255, 255, 255, var(--border-opacity));
+}
+
+.focus-within\:border-black:focus-within {
+  --border-opacity: 1;
+  border-color: #000000;
+  border-color: rgba(0, 0, 0, var(--border-opacity));
+}
+
+.focus-within\:border-current:focus-within {
+  border-color: currentColor;
+}
+
 .border-opacity-0 {
   --border-opacity: 0;
 }
@@ -20332,5 +21156,41 @@ input::placeholder, textarea::placeholder {
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+.shadow-outline-blue-200 {
+  box-shadow: 0 0 0 2px rgb(210, 225, 250);
+}
+
+.shadow-outline-red-200 {
+  box-shadow: 0 0 0 2px rgb(254, 204, 200);
+}
+
+.shadow-outline-orange-200 {
+  box-shadow: 0 0 0 2px rgb(255, 208, 136);
+}
+
+.focus\:shadow-outline-blue-200:focus {
+  box-shadow: 0 0 0 2px rgb(210, 225, 250);
+}
+
+.focus\:shadow-outline-red-200:focus {
+  box-shadow: 0 0 0 2px rgb(254, 204, 200);
+}
+
+.focus\:shadow-outline-orange-200:focus {
+  box-shadow: 0 0 0 2px rgb(255, 208, 136);
+}
+
+.focus-within\:shadow-outline-blue-200:focus-within {
+  box-shadow: 0 0 0 2px rgb(210, 225, 250);
+}
+
+.focus-within\:shadow-outline-red-200:focus-within {
+  box-shadow: 0 0 0 2px rgb(254, 204, 200);
+}
+
+.focus-within\:shadow-outline-orange-200:focus-within {
+  box-shadow: 0 0 0 2px rgb(255, 208, 136);
 }
 
