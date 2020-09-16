@@ -43,7 +43,7 @@
     "husky": "^4.2.1",
     "lint-staged": "^10.0.7",
     "lorem-ipsum": "^2.0.3",
-    "postcss": "^7.0.24",
+    "postcss": "^8.0.3",
     "prettier": "2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
