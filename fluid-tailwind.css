@@ -879,7 +879,7 @@ input::placeholder, textarea::placeholder {
   margin-bottom: 2px;
 }
 
-.fluid-button:not([class*="size\:"]) svg:not(:only-child) {
+.fluid-button:not([class*="size\:"]) :not(.sr-only) + svg {
   margin-left: 0.5rem;
 }
 
@@ -899,7 +899,7 @@ input::placeholder, textarea::placeholder {
   margin-bottom: 4px;
 }
 
-.fluid-button.size\:xs svg:not(:only-child) {
+.fluid-button.size\:xs :not(.sr-only) + svg {
   margin-left: 0.5rem;
 }
 
@@ -919,7 +919,7 @@ input::placeholder, textarea::placeholder {
   margin-bottom: 2px;
 }
 
-.fluid-button.size\:sm svg:not(:only-child) {
+.fluid-button.size\:sm :not(.sr-only) + svg {
   margin-left: 0.5rem;
 }
 
@@ -939,7 +939,7 @@ input::placeholder, textarea::placeholder {
   margin-bottom: 2px;
 }
 
-.fluid-button.size\:lg svg:not(:only-child) {
+.fluid-button.size\:lg :not(.sr-only) + svg {
   margin-left: 0.75rem;
 }
 
@@ -957,7 +957,7 @@ input::placeholder, textarea::placeholder {
   width: 1.25rem;
 }
 
-.fluid-button.size\:xl svg:not(:only-child) {
+.fluid-button.size\:xl :not(.sr-only) + svg {
   margin-left: 1rem;
 }
 
