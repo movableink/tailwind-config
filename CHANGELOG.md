@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.1](https://github.com/movableink/tailwind-config/compare/v1.7.0...v1.7.1) (2020-09-24)
+
+### Bug Fixes
+
+- add border between `type:plain` buttons in group ([9698512](https://github.com/movableink/tailwind-config/commit/9698512e7c31ef2ef7a070224aadc0cc5e201572))
+- allow an `sr-only` element within an icon-only button ([fcc3dd3](https://github.com/movableink/tailwind-config/commit/fcc3dd3038ddeecde1833423e4342473956842e8)), closes [#257](https://github.com/movableink/tailwind-config/issues/257)
+
 ## [1.7.0](https://github.com/movableink/tailwind-config/compare/v1.6.0...v1.7.0) (2020-09-15)
 
 ### Features
