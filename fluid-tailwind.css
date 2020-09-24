@@ -968,12 +968,16 @@ input::placeholder, textarea::placeholder {
 .fluid-button-group > .fluid-button:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  border-left-width: 0;
 }
 
 .fluid-button-group > .fluid-button:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-right-width: 0;
+}
+
+.fluid-button-group > .fluid-button.type\:plain ~ .fluid-button.type\:plain {
+  border-left-color: #c5c5ca;
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
