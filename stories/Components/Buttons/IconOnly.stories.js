@@ -6,31 +6,36 @@ export default {
 };
 
 export const Compact = () => (
-  <button className="fluid-button size:xs" aria-label="Settings">
+  <button className="fluid-button size:xs">
+    <span className="sr-only">Settings</span>
     <Gear />
   </button>
 );
 
 export const Small = () => (
-  <button className="fluid-button size:sm" aria-label="Settings">
+  <button className="fluid-button size:sm">
+    <span className="sr-only">Settings</span>
     <Gear />
   </button>
 );
 
 export const Base = () => (
-  <button className="fluid-button" aria-label="Settings">
+  <button className="fluid-button">
+    <span className="sr-only">Settings</span>
     <Gear />
   </button>
 );
 
 export const Large = () => (
-  <button className="fluid-button size:lg" aria-label="Settings">
+  <button className="fluid-button size:lg">
+    <span className="sr-only">Settings</span>
     <Gear />
   </button>
 );
 
 export const ExtraLarge = () => (
-  <button className="fluid-button size:xl" aria-label="Settings">
+  <button className="fluid-button size:xl">
+    <span className="sr-only">Settings</span>
     <Gear />
   </button>
 );
