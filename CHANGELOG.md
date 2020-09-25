@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.2](https://github.com/movableink/tailwind-config/compare/v1.7.1...v1.7.2) (2020-09-25)
+
+### Bug Fixes
+
+- revert "fix: add border between `type:plain` buttons in group" ([76471bc](https://github.com/movableink/tailwind-config/commit/76471bc592f4d730e242bf8424a990632d1bac3f))
+
 ### [1.7.1](https://github.com/movableink/tailwind-config/compare/v1.7.0...v1.7.1) (2020-09-24)
 
 ### Bug Fixes
