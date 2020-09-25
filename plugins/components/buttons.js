@@ -379,17 +379,12 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       '> .fluid-button:not(:first-child)': {
         borderTopLeftRadius: 0,
         borderBottomLeftRadius: 0,
+        borderLeftWidth: 0,
       },
 
       '> .fluid-button:not(:last-child)': {
         borderTopRightRadius: 0,
         borderBottomRightRadius: 0,
-        borderRightWidth: 0,
-      },
-
-      // Add border between `type:plain` buttons
-      [`> .fluid-button.${e('type:plain')} ~ .fluid-button.${e('type:plain')}`]: {
-        borderLeftColor: theme('colors.neutral.500'),
       },
     },
   });
