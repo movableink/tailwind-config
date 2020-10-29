@@ -22,6 +22,10 @@
     "release": "standard-version",
     "prepare": "yarn build && yarn compress"
   },
+  "resolutions": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@commitlint/cli": "^11.0.0",
