@@ -18,7 +18,9 @@ With the imports from Tailwind in place, you can leverage the Movable Ink config
 
 ```javascript
 // tailwind.config.js
-module.exports = require('@movable/tailwind-config');
+module.exports = {
+  presets: [require('@movable/tailwind-config')],
+};
 ```
 
 ### Pre-Built File
