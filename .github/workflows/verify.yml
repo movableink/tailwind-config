@@ -57,8 +57,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - run: yarn install
       - name: Percy Test
-        uses: percy/storybook-action@v0.1.1
+        uses: percy/storybook-action@v0.1.6
         with:
-          storybook-flags: '-s dist,node_modules/prismjs/themes'
+          storybook-flags: '-s dist'
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
