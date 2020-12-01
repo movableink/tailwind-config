@@ -6,7 +6,7 @@
  */
 function addDefault(colorDefinition, defaultKey = '400') {
   return {
-    default: colorDefinition[defaultKey],
+    DEFAULT: colorDefinition[defaultKey],
     ...colorDefinition,
   };
 }

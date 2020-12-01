@@ -20,8 +20,8 @@ export const Palette = () => (
     <div className="grid grid-cols-3 gap-4">
       {colors.map((color) => {
         const colorValues = colorConfig[color];
-        const values = Object.keys(colorValues).filter((value) => value !== 'default');
-        const defaultValue = values.find((value) => colorValues[value] === colorValues['default']);
+        const values = Object.keys(colorValues).filter((value) => value !== 'DEFAULT');
+        const defaultValue = values.find((value) => colorValues[value] === colorValues['DEFAULT']);
 
         return (
           <div key={color}>
