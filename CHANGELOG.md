@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/movableink/tailwind-config/compare/v1.7.2...v2.0.0) (2020-12-01)
+
+### ⚠ BREAKING CHANGES
+
+- Configuration is no longer compatible with Tailwind V1.
+
+- upgrade to Tailwind V2 ([0537dab](https://github.com/movableink/tailwind-config/commit/0537dab81490c315a54ad68838f0c1c87fc4996f))
+
 ### [1.7.2](https://github.com/movableink/tailwind-config/compare/v1.7.1...v1.7.2) (2020-09-25)
 
 ### Bug Fixes
