@@ -34,7 +34,7 @@
     "@storybook/addon-a11y": "^6.1.9",
     "@storybook/addon-backgrounds": "^6.1.9",
     "@storybook/react": "^6.1.9",
-    "@whitespace/storybook-addon-html": "^3.0.0",
+    "@whitespace/storybook-addon-html": "^4.0.1",
     "ava": "^3.1.0",
     "babel-loader": "^8.0.6",
     "csso-cli": "^3.0.0",

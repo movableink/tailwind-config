@@ -51,15 +51,6 @@
     jsesc "^2.5.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.12.5":
-  version "7.12.5"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.12.5.tgz#a2c50de5c8b6d708ab95be5e6053936c1884a4de"
-  integrity sha512-m16TQQJ8hPt7E+OS/XVQg/7U184MLXtvuGbCdA7na61vha+ImkyyNM/9DDA0unYCVZn3ZOhng+qz48/KBOT96A==
-  dependencies:
-    "@babel/types" "^7.12.5"
-    jsesc "^2.5.1"
-    source-map "^0.5.0"
-
 "@babel/helper-annotate-as-pure@^7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.10.4.tgz#5bf0d495a3f757ac3bda48b5bf3b3ba309c72ba3"
@@ -1471,7 +1462,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addons@6.1.10", "@storybook/addons@^6.1.10":
+"@storybook/addons@6.1.10":
   version "6.1.10"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.1.10.tgz#3219134bb57d26b97c1d36c0eca3649a7f952d82"
   integrity sha512-hTyqBDujXnOsk63EiHDPtHqXl9ZJKHf2AGjnvYVe8hjHyYPFlHM5mb0LGoZ2QEe3hd99voe3oEk33phZ+XSbZA==
@@ -2196,18 +2187,17 @@
     text-table "^0.2.0"
     webpack-log "^1.1.2"
 
-"@whitespace/storybook-addon-html@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@whitespace/storybook-addon-html/-/storybook-addon-html-3.0.0.tgz#ca8060aad8dc6e7df193cb7f0e5c8183bafc5522"
-  integrity sha512-4hNyiAqUf2+z8tsa0f0H+RklfpHG+5UtMWekel+aWtgH41yAtadsCnJJF3fcSfn8NDpB1PcA2P/eQwip6jsDrg==
+"@whitespace/storybook-addon-html@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@whitespace/storybook-addon-html/-/storybook-addon-html-4.0.1.tgz#f3d0dd489c1966705427fa01aba0323437094282"
+  integrity sha512-mSOsMaBt4P9Lvm4POzdC1gLBO7zmgIlbhEG8uvAbeMR5N4EjfEbtMuLDlg8oHk1xvpFu6CcB6dE01ZIcxQ2hoQ==
   dependencies:
-    "@babel/generator" "^7.12.5"
-    "@babel/parser" "^7.12.7"
-    "@storybook/addons" "^6.1.10"
+    "@babel/generator" "^7.12.10"
+    "@babel/parser" "^7.12.10"
     "@storybook/api" "^6.1.10"
     "@storybook/components" "^6.1.10"
     prettier "^2.2.1"
-    react-syntax-highlighter "^15.4.1"
+    react-syntax-highlighter "^15.4.3"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -9675,7 +9665,7 @@ react-syntax-highlighter@^13.5.0:
     prismjs "^1.21.0"
     refractor "^3.1.0"
 
-react-syntax-highlighter@^15.4.1:
+react-syntax-highlighter@^15.4.3:
   version "15.4.3"
   resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-15.4.3.tgz#fffe3286677ac470b963b364916d16374996f3a6"
   integrity sha512-TnhGgZKXr5o8a63uYdRTzeb8ijJOgRGe0qjrE0eK/gajtdyqnSO6LqB3vW16hHB0cFierYSoy/AOJw8z1Dui8g==
