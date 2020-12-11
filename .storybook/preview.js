@@ -1,6 +1,5 @@
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
-import { withHTML } from '@whitespace/storybook-addon-html/react';
 import prettierConfig from '@movable/prettier-config';
 
 addParameters({
@@ -14,10 +13,10 @@ addParameters({
       { name: 'dark', value: 'black' },
     ],
   },
+  html: {
+    prettier: prettierConfig,
+  },
 });
-
-// Add HTML code snippet addon
-addDecorator(withHTML({ prettier: prettierConfig }));
 
 // Add a wrapper element for better presentation
 addDecorator((storyFn) => <div id="fluid-root">{storyFn()}</div>);
