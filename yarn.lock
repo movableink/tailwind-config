@@ -279,15 +279,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.12.10":
+"@babel/parser@^7.12.10", "@babel/parser@^7.12.7", "@babel/parser@^7.7.0":
   version "7.12.10"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.10.tgz#824600d59e96aea26a5a2af5a9d812af05c3ae81"
   integrity sha512-PJdRPwyoOqFAWfLytxrWwGrAxghCgh/yTNCYciOz8QgjflA7aZhECPZAa2VUedKg2+QMWkI0L9lynh2SNmNEgA==
-
-"@babel/parser@^7.12.7", "@babel/parser@^7.7.0":
-  version "7.12.7"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.7.tgz#fee7b39fe809d0e73e5b25eecaf5780ef3d73056"
-  integrity sha512-oWR02Ubp4xTLCAqPRiNIuMVgNO5Aif/xpXtabhzW2HWUD47XJsAB4Zd/Rg30+XeQA3juXigV7hlquOTmwqLiwg==
 
 "@babel/plugin-proposal-async-generator-functions@^7.12.1":
   version "7.12.1"
@@ -2188,9 +2183,9 @@
     webpack-log "^1.1.2"
 
 "@whitespace/storybook-addon-html@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@whitespace/storybook-addon-html/-/storybook-addon-html-4.0.1.tgz#f3d0dd489c1966705427fa01aba0323437094282"
-  integrity sha512-mSOsMaBt4P9Lvm4POzdC1gLBO7zmgIlbhEG8uvAbeMR5N4EjfEbtMuLDlg8oHk1xvpFu6CcB6dE01ZIcxQ2hoQ==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@whitespace/storybook-addon-html/-/storybook-addon-html-4.0.2.tgz#9c027255df1874ffddff50e80a12128958f90bcf"
+  integrity sha512-JSRIj59UFVrgAsmqAbTqESMBFF5TnTxxsQGd4nPsPzIYz61s7whPs9iMjKWZIFLadN+FZiAubfD+PXU5srrVNg==
   dependencies:
     "@babel/generator" "^7.12.10"
     "@babel/parser" "^7.12.10"
