@@ -1301,11 +1301,11 @@
     eslint-plugin-node "^11.1.0"
 
 "@movable/eslint-config-react@^0.6.0":
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config-react/-/eslint-config-react-0.6.4.tgz#4bc9c8866830cf2c65c7747de5b65374572cc23e"
-  integrity sha512-cGwqc4jNqGk3ElfS1V8AzyeP8poP+MZBpMQzgcHojClto7h5pef4lJZ60oXpZH3WLaKDNMgEdUIxQ+OtaOCxaw==
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config-react/-/eslint-config-react-0.6.5.tgz#b100ce7be0197a3c2c8a0d44b316bf65073cec32"
+  integrity sha512-hB1PQrrjtkitOXjrDOMLru22ojw8LxRdpO0KxnqhKim0UQ5Zsm0bjKzKWMXX3CcAn4mL7Yu4K0EaURg3BpJ47A==
   dependencies:
-    eslint-plugin-react "^7.21.4"
+    eslint-plugin-react "^7.22.0"
 
 "@movable/eslint-config@^0.6.0":
   version "0.6.9"
@@ -5288,10 +5288,10 @@ eslint-plugin-prettier@^3.3.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react@^7.21.4:
-  version "7.21.4"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.21.4.tgz#31060b2e5ff82b12e24a3cc33edb7d12f904775c"
-  integrity sha512-uHeQ8A0hg0ltNDXFu3qSfFqTNPXm1XithH6/SY318UX76CMj7Q599qWpgmMhVQyvhq36pm7qvoN3pb6/3jsTFg==
+eslint-plugin-react@^7.22.0:
+  version "7.22.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.22.0.tgz#3d1c542d1d3169c45421c1215d9470e341707269"
+  integrity sha512-p30tuX3VS+NWv9nQot9xIGAHBXR0+xJVaZriEsHoJrASGCJZDJ8JLNM0YqKqI0AKm6Uxaa1VUHoNEibxRCMQHA==
   dependencies:
     array-includes "^3.1.1"
     array.prototype.flatmap "^1.2.3"
@@ -5302,7 +5302,7 @@ eslint-plugin-react@^7.21.4:
     object.fromentries "^2.0.2"
     object.values "^1.1.1"
     prop-types "^15.7.2"
-    resolve "^1.17.0"
+    resolve "^1.18.1"
     string.prototype.matchall "^4.0.2"
 
 eslint-scope@^4.0.3:
@@ -10193,7 +10193,7 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
 
-resolve@^1.1.6, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.12.0, resolve@^1.17.0, resolve@^1.19.0:
+resolve@^1.1.6, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.12.0, resolve@^1.17.0, resolve@^1.18.1, resolve@^1.19.0:
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.19.0.tgz#1af5bf630409734a067cae29318aac7fa29a267c"
   integrity sha512-rArEXAgsBG4UgRGcynxWIWKFvh/XZCcS8UJdHhwy91zwAvCZIbcs+vAbflgBnNjYMs/i/i+/Ux6IZhML1yPvxg==
