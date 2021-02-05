@@ -1454,16 +1454,16 @@
     util-deprecate "^1.0.2"
 
 "@storybook/addon-backgrounds@^6.1.9":
-  version "6.1.15"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-backgrounds/-/addon-backgrounds-6.1.15.tgz#2b7b68bad10b22af5736979563123f3d3bf86003"
-  integrity sha512-nb9XMXjjjUZoq8Km9PpgIRRo8eWRdjWiSg4QAD8lHtzEC06b2pWjEepZ/77vVw1lL2acTnbyZKvj8yKfs5fqEA==
+  version "6.1.17"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-backgrounds/-/addon-backgrounds-6.1.17.tgz#df4eeec1df72d5f835e82bee433493110463f896"
+  integrity sha512-1a8Vu50eQWdwMek9w2QOehhu10aZYzyR404qwGvPCRGt5uMMsKxoKvv1M6/ETW7d2G4Srl/Ka+k4x6ykoHIepA==
   dependencies:
-    "@storybook/addons" "6.1.15"
-    "@storybook/api" "6.1.15"
-    "@storybook/client-logger" "6.1.15"
-    "@storybook/components" "6.1.15"
-    "@storybook/core-events" "6.1.15"
-    "@storybook/theming" "6.1.15"
+    "@storybook/addons" "6.1.17"
+    "@storybook/api" "6.1.17"
+    "@storybook/client-logger" "6.1.17"
+    "@storybook/components" "6.1.17"
+    "@storybook/core-events" "6.1.17"
+    "@storybook/theming" "6.1.17"
     core-js "^3.0.1"
     global "^4.3.2"
     memoizerific "^1.11.3"
@@ -1501,7 +1501,7 @@
     global "^4.3.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/api@6.1.15", "@storybook/api@^6.1.11":
+"@storybook/api@6.1.15":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/api/-/api-6.1.15.tgz#285ba42f7a8efcd3bd0e586a5e978487d826fbb4"
   integrity sha512-C4D08e2ZbSe62nNKtmh9YBraoWb2j6Chw8VCkuj91kuKHh3YDNc1gjj5Fi+KYZwIcy0EllzW3RFQs+YR1/Vg1g==
@@ -1526,7 +1526,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/api@6.1.17":
+"@storybook/api@6.1.17", "@storybook/api@^6.1.11":
   version "6.1.17"
   resolved "https://registry.yarnpkg.com/@storybook/api/-/api-6.1.17.tgz#50393ce9b718063b67680212df895eceacc0c11d"
   integrity sha512-sthcfuk2EQ3F5R620PBqpI4Pno3g7KQm6YPZA0DXB+LD/z61xH9ToE1gTLF4nzlE6HwghwkXOZyRwDowRdG+7A==
@@ -1659,7 +1659,7 @@
     core-js "^3.0.1"
     global "^4.3.2"
 
-"@storybook/components@6.1.15", "@storybook/components@^6.1.11":
+"@storybook/components@6.1.15":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.1.15.tgz#b4a2af23ee6b9cba4c255191eae3d3463e29bfb7"
   integrity sha512-lPbA/zyBfctdlpDhRTcRFLWlZPJ3PB4+wI0FUvYs69iG3/bNbQPYu8vRmNhCZOsaGt+b+dik4Tfcth8Bu+eQug==
@@ -1685,7 +1685,7 @@
     react-textarea-autosize "^8.1.1"
     ts-dedent "^2.0.0"
 
-"@storybook/components@6.1.17":
+"@storybook/components@6.1.17", "@storybook/components@^6.1.11":
   version "6.1.17"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.1.17.tgz#f92d36e370ec6039d8c7cee9ef13dda866eed3da"
   integrity sha512-rIEll0UTxEKmG4IsSS5K+6DjRLVtX8J+9cg79GSAC7N1ZHUR1UQmjjJaehJa5q/NQ5H8C39acxpT4Py/BcsL2g==
