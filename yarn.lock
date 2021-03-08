@@ -1290,9 +1290,9 @@
     eslint-plugin-node "^11.1.0"
 
 "@movable/eslint-config-react@^0.6.0":
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config-react/-/eslint-config-react-0.6.5.tgz#b100ce7be0197a3c2c8a0d44b316bf65073cec32"
-  integrity sha512-hB1PQrrjtkitOXjrDOMLru22ojw8LxRdpO0KxnqhKim0UQ5Zsm0bjKzKWMXX3CcAn4mL7Yu4K0EaURg3BpJ47A==
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config-react/-/eslint-config-react-0.6.6.tgz#b8db5908cfc588d7473f5493d0c771ad1da0f2bf"
+  integrity sha512-oUTgNkM60Y2nzbdQAEL0tTeE1QUFsCj7nBQY/q45PWvGEwjBnU7fufXdCZCwerj2fYX5Dm2TdsvtGruJKbfIfg==
   dependencies:
     eslint-plugin-react "^7.22.0"
 
