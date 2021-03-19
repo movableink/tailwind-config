@@ -35,6 +35,14 @@ module.exports = {
     fontWeight,
     letterSpacing,
     lineHeight,
+    fill: {
+      ...colors,
+      current: 'current',
+    },
+    stroke: {
+      ...colors,
+      current: 'current',
+    },
     screens: {},
   },
   variants: {
