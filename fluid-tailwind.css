@@ -22133,12 +22133,556 @@ input::placeholder, textarea::placeholder {
   --tw-ring-opacity: 1;
 }
 
+.fill-neutral-100 {
+  fill: #ffffff;
+}
+
+.fill-neutral-200 {
+  fill: #fafafa;
+}
+
+.fill-neutral-300 {
+  fill: #f1f1f2;
+}
+
+.fill-neutral-400 {
+  fill: #e8e8ea;
+}
+
+.fill-neutral-500 {
+  fill: #c5c5ca;
+}
+
+.fill-neutral-600 {
+  fill: #767680;
+}
+
+.fill-neutral-700 {
+  fill: #45454b;
+}
+
+.fill-neutral-800 {
+  fill: #1c1c1c;
+}
+
+.fill-neutral-900 {
+  fill: #000000;
+}
+
+.fill-neutral {
+  fill: #c5c5ca;
+}
+
+.fill-blue-100 {
+  fill: #f2f7ff;
+}
+
+.fill-blue-200 {
+  fill: #d2e1fa;
+}
+
+.fill-blue-300 {
+  fill: #94b8f6;
+}
+
+.fill-blue-400 {
+  fill: #266fed;
+}
+
+.fill-blue-500 {
+  fill: #0d43a0;
+}
+
+.fill-blue-600 {
+  fill: #072251;
+}
+
+.fill-blue-700 {
+  fill: #030e22;
+}
+
+.fill-blue {
+  fill: #266fed;
+}
+
+.fill-violet-100 {
+  fill: #f4f0fd;
+}
+
+.fill-violet-200 {
+  fill: #ddd2fa;
+}
+
+.fill-violet-300 {
+  fill: #b69cff;
+}
+
+.fill-violet-400 {
+  fill: #7549ea;
+}
+
+.fill-violet-500 {
+  fill: #4b1ec7;
+}
+
+.fill-violet-600 {
+  fill: #2c0e7b;
+}
+
+.fill-violet-700 {
+  fill: #16073e;
+}
+
+.fill-violet {
+  fill: #7549ea;
+}
+
+.fill-aqua-100 {
+  fill: #e4fbff;
+}
+
+.fill-aqua-200 {
+  fill: #a0f1ff;
+}
+
+.fill-aqua-300 {
+  fill: #4be4ff;
+}
+
+.fill-aqua-400 {
+  fill: #00c2e4;
+}
+
+.fill-aqua-500 {
+  fill: #0088a0;
+}
+
+.fill-aqua-600 {
+  fill: #004e5c;
+}
+
+.fill-aqua-700 {
+  fill: #002329;
+}
+
+.fill-aqua {
+  fill: #00c2e4;
+}
+
+.fill-green-100 {
+  fill: #f0f5f1;
+}
+
+.fill-green-200 {
+  fill: #c8e6d0;
+}
+
+.fill-green-300 {
+  fill: #83d79b;
+}
+
+.fill-green-400 {
+  fill: #3cb860;
+}
+
+.fill-green-500 {
+  fill: #2b8545;
+}
+
+.fill-green-600 {
+  fill: #1b522b;
+}
+
+.fill-green-700 {
+  fill: #0e2b16;
+}
+
+.fill-green {
+  fill: #3cb860;
+}
+
+.fill-yellow-100 {
+  fill: #faf2d9;
+}
+
+.fill-yellow-200 {
+  fill: #ffecae;
+}
+
+.fill-yellow-300 {
+  fill: #ffdb6a;
+}
+
+.fill-yellow-400 {
+  fill: #ffcb26;
+}
+
+.fill-yellow-500 {
+  fill: #f2b800;
+}
+
+.fill-yellow-600 {
+  fill: #9d7700;
+}
+
+.fill-yellow-700 {
+  fill: #372a00;
+}
+
+.fill-yellow {
+  fill: #ffcb26;
+}
+
+.fill-orange-100 {
+  fill: #fff2dd;
+}
+
+.fill-orange-200 {
+  fill: #ffd088;
+}
+
+.fill-orange-300 {
+  fill: #ffaf33;
+}
+
+.fill-orange-400 {
+  fill: #ff9b00;
+}
+
+.fill-orange-500 {
+  fill: #cc7c00;
+}
+
+.fill-orange-600 {
+  fill: #885300;
+}
+
+.fill-orange-700 {
+  fill: #452a00;
+}
+
+.fill-orange {
+  fill: #ff9b00;
+}
+
+.fill-red-100 {
+  fill: #ffebe9;
+}
+
+.fill-red-200 {
+  fill: #feccc8;
+}
+
+.fill-red-300 {
+  fill: #fd8f85;
+}
+
+.fill-red-400 {
+  fill: #fc5142;
+}
+
+.fill-red-500 {
+  fill: #e51604;
+}
+
+.fill-red-600 {
+  fill: #810c02;
+}
+
+.fill-red-700 {
+  fill: #4f0801;
+}
+
+.fill-red {
+  fill: #fc5142;
+}
+
+.fill-white {
+  fill: #ffffff;
+}
+
+.fill-black {
+  fill: #000000;
+}
+
 .fill-current {
-  fill: currentColor;
+  fill: current;
+}
+
+.stroke-neutral-100 {
+  stroke: #ffffff;
+}
+
+.stroke-neutral-200 {
+  stroke: #fafafa;
+}
+
+.stroke-neutral-300 {
+  stroke: #f1f1f2;
+}
+
+.stroke-neutral-400 {
+  stroke: #e8e8ea;
+}
+
+.stroke-neutral-500 {
+  stroke: #c5c5ca;
+}
+
+.stroke-neutral-600 {
+  stroke: #767680;
+}
+
+.stroke-neutral-700 {
+  stroke: #45454b;
+}
+
+.stroke-neutral-800 {
+  stroke: #1c1c1c;
+}
+
+.stroke-neutral-900 {
+  stroke: #000000;
+}
+
+.stroke-neutral {
+  stroke: #c5c5ca;
+}
+
+.stroke-blue-100 {
+  stroke: #f2f7ff;
+}
+
+.stroke-blue-200 {
+  stroke: #d2e1fa;
+}
+
+.stroke-blue-300 {
+  stroke: #94b8f6;
+}
+
+.stroke-blue-400 {
+  stroke: #266fed;
+}
+
+.stroke-blue-500 {
+  stroke: #0d43a0;
+}
+
+.stroke-blue-600 {
+  stroke: #072251;
+}
+
+.stroke-blue-700 {
+  stroke: #030e22;
+}
+
+.stroke-blue {
+  stroke: #266fed;
+}
+
+.stroke-violet-100 {
+  stroke: #f4f0fd;
+}
+
+.stroke-violet-200 {
+  stroke: #ddd2fa;
+}
+
+.stroke-violet-300 {
+  stroke: #b69cff;
+}
+
+.stroke-violet-400 {
+  stroke: #7549ea;
+}
+
+.stroke-violet-500 {
+  stroke: #4b1ec7;
+}
+
+.stroke-violet-600 {
+  stroke: #2c0e7b;
+}
+
+.stroke-violet-700 {
+  stroke: #16073e;
+}
+
+.stroke-violet {
+  stroke: #7549ea;
+}
+
+.stroke-aqua-100 {
+  stroke: #e4fbff;
+}
+
+.stroke-aqua-200 {
+  stroke: #a0f1ff;
+}
+
+.stroke-aqua-300 {
+  stroke: #4be4ff;
+}
+
+.stroke-aqua-400 {
+  stroke: #00c2e4;
+}
+
+.stroke-aqua-500 {
+  stroke: #0088a0;
+}
+
+.stroke-aqua-600 {
+  stroke: #004e5c;
+}
+
+.stroke-aqua-700 {
+  stroke: #002329;
+}
+
+.stroke-aqua {
+  stroke: #00c2e4;
+}
+
+.stroke-green-100 {
+  stroke: #f0f5f1;
+}
+
+.stroke-green-200 {
+  stroke: #c8e6d0;
+}
+
+.stroke-green-300 {
+  stroke: #83d79b;
+}
+
+.stroke-green-400 {
+  stroke: #3cb860;
+}
+
+.stroke-green-500 {
+  stroke: #2b8545;
+}
+
+.stroke-green-600 {
+  stroke: #1b522b;
+}
+
+.stroke-green-700 {
+  stroke: #0e2b16;
+}
+
+.stroke-green {
+  stroke: #3cb860;
+}
+
+.stroke-yellow-100 {
+  stroke: #faf2d9;
+}
+
+.stroke-yellow-200 {
+  stroke: #ffecae;
+}
+
+.stroke-yellow-300 {
+  stroke: #ffdb6a;
+}
+
+.stroke-yellow-400 {
+  stroke: #ffcb26;
+}
+
+.stroke-yellow-500 {
+  stroke: #f2b800;
+}
+
+.stroke-yellow-600 {
+  stroke: #9d7700;
+}
+
+.stroke-yellow-700 {
+  stroke: #372a00;
+}
+
+.stroke-yellow {
+  stroke: #ffcb26;
+}
+
+.stroke-orange-100 {
+  stroke: #fff2dd;
+}
+
+.stroke-orange-200 {
+  stroke: #ffd088;
+}
+
+.stroke-orange-300 {
+  stroke: #ffaf33;
+}
+
+.stroke-orange-400 {
+  stroke: #ff9b00;
+}
+
+.stroke-orange-500 {
+  stroke: #cc7c00;
+}
+
+.stroke-orange-600 {
+  stroke: #885300;
+}
+
+.stroke-orange-700 {
+  stroke: #452a00;
+}
+
+.stroke-orange {
+  stroke: #ff9b00;
+}
+
+.stroke-red-100 {
+  stroke: #ffebe9;
+}
+
+.stroke-red-200 {
+  stroke: #feccc8;
+}
+
+.stroke-red-300 {
+  stroke: #fd8f85;
+}
+
+.stroke-red-400 {
+  stroke: #fc5142;
+}
+
+.stroke-red-500 {
+  stroke: #e51604;
+}
+
+.stroke-red-600 {
+  stroke: #810c02;
+}
+
+.stroke-red-700 {
+  stroke: #4f0801;
+}
+
+.stroke-red {
+  stroke: #fc5142;
+}
+
+.stroke-white {
+  stroke: #ffffff;
+}
+
+.stroke-black {
+  stroke: #000000;
 }
 
 .stroke-current {
-  stroke: currentColor;
+  stroke: current;
 }
 
 .stroke-0 {
