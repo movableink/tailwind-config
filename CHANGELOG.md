@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/movableink/tailwind-config/compare/v2.0.1...v2.0.2) (2021-03-23)
+
+### Bug Fixes
+
+- correctly set value for `current` color rules ([63b04b9](https://github.com/movableink/tailwind-config/commit/63b04b937426f69ee04d04a8ec4203a5328a13c3))
+
 ### [2.0.1](https://github.com/movableink/tailwind-config/compare/v2.0.0...v2.0.1) (2021-03-19)
 
 ### Bug Fixes
