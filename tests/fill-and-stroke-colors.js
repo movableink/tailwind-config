@@ -22,6 +22,10 @@ test('`fill-current` is present', async (t) => {
     .find((node) => node.selector === '.fill-current');
 
   t.truthy(fillCurrentRule);
+
+  const fillDecl = fillCurrentRule.nodes.find((decl) => decl.prop === 'fill');
+
+  t.is(fillDecl.value, 'currentColor');
 });
 
 test('all colors of stroke are present', async (t) => {
@@ -43,4 +47,8 @@ test('`stroke-current` is present', async (t) => {
     .find((node) => node.selector === '.stroke-current');
 
   t.truthy(strokeCurrentRule);
+
+  const strokeDecl = strokeCurrentRule.nodes.find((decl) => decl.prop === 'stroke');
+
+  t.is(strokeDecl.value, 'currentColor');
 });

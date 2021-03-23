@@ -37,11 +37,11 @@ module.exports = {
     lineHeight,
     fill: {
       ...colors,
-      current: 'current',
+      current: 'currentColor',
     },
     stroke: {
       ...colors,
-      current: 'current',
+      current: 'currentColor',
     },
     screens: {},
   },
