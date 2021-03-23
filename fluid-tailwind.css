@@ -22406,7 +22406,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .fill-current {
-  fill: current;
+  fill: currentColor;
 }
 
 .stroke-neutral-100 {
@@ -22682,7 +22682,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .stroke-current {
-  stroke: current;
+  stroke: currentColor;
 }
 
 .stroke-0 {
