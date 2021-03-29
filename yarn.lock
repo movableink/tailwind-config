@@ -50,7 +50,7 @@
     semver "^6.3.0"
     source-map "^0.5.0"
 
-"@babel/generator@^7.12.11", "@babel/generator@^7.13.0", "@babel/generator@^7.13.9":
+"@babel/generator@^7.13.0", "@babel/generator@^7.13.9":
   version "7.13.9"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.13.9.tgz#3a7aa96f9efb8e2be42d38d80e2ceb4c64d8de39"
   integrity sha512-mHOOmY0Axl/JCTkxTU6Lf5sWOg/v8nUa+Xkt4zMTftX0wqmb6Sh7J8gvcehBw7q0AhrhAR+FDacKjCZ2X8K+Sw==
@@ -287,10 +287,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.12.11", "@babel/parser@^7.12.13", "@babel/parser@^7.13.0", "@babel/parser@^7.13.10", "@babel/parser@^7.7.0":
-  version "7.13.11"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.13.11.tgz#f93ebfc99d21c1772afbbaa153f47e7ce2f50b88"
-  integrity sha512-PhuoqeHoO9fc4ffMEVk4qb/w/s2iOSWohvbHxLtxui0eBg3Lg5gN1U8wp1V1u61hOWkPQJJyJzGH6Y+grwkq8Q==
+"@babel/parser@^7.12.13", "@babel/parser@^7.13.0", "@babel/parser@^7.13.10", "@babel/parser@^7.13.12", "@babel/parser@^7.7.0":
+  version "7.13.13"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.13.13.tgz#42f03862f4aed50461e543270916b47dd501f0df"
+  integrity sha512-OhsyMrqygfk5v8HmWwOzlYjJrtLaFhF34MrfG/Z73DgYCI6ojNUTUp2TYbtnjo8PegeJp12eamsNettCQjKjVw==
 
 "@babel/plugin-proposal-async-generator-functions@^7.12.1":
   version "7.12.1"
@@ -1480,7 +1480,7 @@
     global "^4.3.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/api@6.1.21", "@storybook/api@^6.1.11":
+"@storybook/api@6.1.21", "@storybook/api@^6.1.21":
   version "6.1.21"
   resolved "https://registry.yarnpkg.com/@storybook/api/-/api-6.1.21.tgz#be753ca8d3602efe4a11783c81c689463bee0825"
   integrity sha512-QjZk70VSXMw/wPPoWdMp5Bl9VmkfmGhIz8PALrFLLEZHjzptpfZE2qkGEEJHG0NAksFUv6NxGki2/632dzR7Ug==
@@ -1559,7 +1559,7 @@
     core-js "^3.0.1"
     global "^4.3.2"
 
-"@storybook/components@6.1.21", "@storybook/components@^6.1.11":
+"@storybook/components@6.1.21", "@storybook/components@^6.1.21":
   version "6.1.21"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.1.21.tgz#7b9bfd51e73c179654a114275e5073f494d2a005"
   integrity sha512-2NjkyS1yeYXlRY7azt88woqd6eqJA00oloIxgMAFLVpRmvFxoHalY61wNrvxl2QSu9cNofp984AbGc8gPbizBA==
@@ -2185,15 +2185,15 @@
     text-table "^0.2.0"
     webpack-log "^1.1.2"
 
-"@whitespace/storybook-addon-html@^4.0.1":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@whitespace/storybook-addon-html/-/storybook-addon-html-4.2.0.tgz#d91512b2959fa9d8c137c6daa910460cc2c30e09"
-  integrity sha512-jhM/esThcfh4LnHCCPnKGE0WFZ/OqfNbZ63x297xMcL81HiZEYW7Rnp2tgYTXKfMYyuB4MdgRwPxY9qz2aL2OA==
+"@whitespace/storybook-addon-html@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@whitespace/storybook-addon-html/-/storybook-addon-html-5.0.0.tgz#4fd009c1625c909218f2a1a2e6e10524feb05fe6"
+  integrity sha512-1OkgqEGNcXFzeOCGtJsEcPPswVy+mDRgDOFClXWX/f2SG/JBfkltXoFnCj2EfGwhIQaVGxjT7k1gqANKy5VeJQ==
   dependencies:
-    "@babel/generator" "^7.12.11"
-    "@babel/parser" "^7.12.11"
-    "@storybook/api" "^6.1.11"
-    "@storybook/components" "^6.1.11"
+    "@babel/generator" "^7.13.9"
+    "@babel/parser" "^7.13.12"
+    "@storybook/api" "^6.1.21"
+    "@storybook/components" "^6.1.21"
     prettier "^2.2.1"
     react-syntax-highlighter "^15.4.3"
 
