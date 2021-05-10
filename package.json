@@ -45,7 +45,7 @@
     "lint-staged": "^10.0.7",
     "lorem-ipsum": "^2.0.3",
     "postcss": "^8.2.9",
-    "prettier": "2.2.1",
+    "prettier": "2.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "seedrandom": "^3.0.5",
