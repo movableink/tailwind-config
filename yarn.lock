@@ -1279,11 +1279,11 @@
     eslint-plugin-node "^11.1.0"
 
 "@movable/eslint-config-react@^0.6.0":
-  version "0.6.6"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config-react/-/eslint-config-react-0.6.6.tgz#b8db5908cfc588d7473f5493d0c771ad1da0f2bf"
-  integrity sha512-oUTgNkM60Y2nzbdQAEL0tTeE1QUFsCj7nBQY/q45PWvGEwjBnU7fufXdCZCwerj2fYX5Dm2TdsvtGruJKbfIfg==
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config-react/-/eslint-config-react-0.6.7.tgz#d2da2d5134f714660a2080ce89014482f979b925"
+  integrity sha512-gaX2VAkddTOO6eWzH6bHcIRqiSyaYqBpVI+puFVZzxuVtowN/rLXOAIXnKEZYGsYnXKZTEmn533gFQdym45DwA==
   dependencies:
-    eslint-plugin-react "^7.22.0"
+    eslint-plugin-react "^7.23.2"
 
 "@movable/eslint-config@^0.6.0":
   version "0.6.10"
@@ -5037,7 +5037,7 @@ eslint-plugin-prettier@^3.3.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react@^7.22.0:
+eslint-plugin-react@^7.23.2:
   version "7.23.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.23.2.tgz#2d2291b0f95c03728b55869f01102290e792d494"
   integrity sha512-AfjgFQB+nYszudkxRkTFu0UR1zEQig0ArVMPloKhxwlwkzaw/fBiH0QWcBBhZONlXqQC51+nfqFrkn4EzHcGBw==
