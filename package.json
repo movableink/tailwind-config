@@ -28,7 +28,7 @@
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@movable/eslint-config": "^0.6.0",
-    "@movable/eslint-config-node": "^0.4.1",
+    "@movable/eslint-config-node": "^1.0.0",
     "@movable/eslint-config-react": "^1.0.1",
     "@movable/prettier-config": "^0.3.0",
     "@percy/storybook": "^3.3.0",
