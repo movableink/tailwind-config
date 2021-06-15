@@ -1,6 +1,6 @@
 name: File Size
 
-on: [pull_request]
+on: []
 
 jobs:
   build_master:
