@@ -1,6 +1,9 @@
 name: File Size
 
-on: []
+on:
+  pull_request:
+    branches:
+      - reporting
 
 jobs:
   build_master:
