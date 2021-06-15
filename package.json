@@ -30,7 +30,7 @@
     "@movable/eslint-config": "^0.6.0",
     "@movable/eslint-config-node": "^1.0.0",
     "@movable/eslint-config-react": "^1.0.1",
-    "@movable/prettier-config": "^0.3.0",
+    "@movable/prettier-config": "^1.0.0",
     "@percy/storybook": "^3.3.0",
     "@storybook/addon-a11y": "^6.2.5",
     "@storybook/addon-backgrounds": "^6.2.5",
