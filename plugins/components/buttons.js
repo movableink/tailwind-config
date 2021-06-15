@@ -43,9 +43,10 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
 
   function hovered(styles) {
     return {
-      [`&:hover:not(:disabled):not(.${disabledAppearance}), &.${hoveredAppearance}:not(:disabled):not(.${disabledAppearance})`]: {
-        ...styles,
-      },
+      [`&:hover:not(:disabled):not(.${disabledAppearance}), &.${hoveredAppearance}:not(:disabled):not(.${disabledAppearance})`]:
+        {
+          ...styles,
+        },
     };
   }
 
