@@ -28,6 +28,7 @@ const BORDER_COLOR_VARIANTS = [
  * Configures Tailwind to use Fluid's design tokens
  */
 module.exports = {
+  // Base Config
   theme: {
     colors,
     fontFamily,
@@ -45,9 +46,23 @@ module.exports = {
     },
     screens: {},
   },
+
+  // Additions to the Base Config (Added to default values)
+  extend: {
+    maxHeight: {
+      modal: '90vh',
+    },
+    maxWidth: {
+      container: '960px',
+      'screen-xl': '1280px',
+    },
+  },
+
   variants: {
     borderColor: BORDER_COLOR_VARIANTS,
+    visibility: ['responsive', 'group-hover'],
   },
+
   plugins: [
     fluidBasePlugin,
     bodyTextComponentsPlugin,

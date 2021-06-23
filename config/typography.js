@@ -16,6 +16,12 @@ const fontFamily = {
 };
 
 const fontSize = {
+  // Extra Config (for Fluid) TODO: Phase this out!
+  '5xs': pxToRem(7),
+  '4xs': pxToRem(8),
+  '3xs': pxToRem(9),
+
+  // Desired Config
   '2xs': pxToRem(11),
   xs: pxToRem(12),
   sm: pxToRem(14),
