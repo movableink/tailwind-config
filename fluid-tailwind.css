@@ -1048,6 +1048,14 @@ input::placeholder, textarea::placeholder {
   visibility: hidden;
 }
 
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
+.group:hover .group-hover\:invisible {
+  visibility: hidden;
+}
+
 .static {
   position: static;
 }
@@ -12471,6 +12479,10 @@ input::placeholder, textarea::placeholder {
   border-color: currentColor;
 }
 
+.divide-transparent > :not([hidden]) ~ :not([hidden]) {
+  border-color: transparent;
+}
+
 .divide-opacity-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 0;
 }
@@ -13549,6 +13561,10 @@ input::placeholder, textarea::placeholder {
   border-color: currentColor;
 }
 
+.border-transparent {
+  border-color: transparent;
+}
+
 .hover\:border-neutral-100:hover {
   --tw-border-opacity: 1;
   border-color: rgba(255, 255, 255, var(--tw-border-opacity));
@@ -13891,6 +13907,10 @@ input::placeholder, textarea::placeholder {
 
 .hover\:border-current:hover {
   border-color: currentColor;
+}
+
+.hover\:border-transparent:hover {
+  border-color: transparent;
 }
 
 .focus\:border-neutral-100:focus {
@@ -14237,6 +14257,10 @@ input::placeholder, textarea::placeholder {
   border-color: currentColor;
 }
 
+.focus\:border-transparent:focus {
+  border-color: transparent;
+}
+
 .disabled\:border-neutral-100:disabled {
   --tw-border-opacity: 1;
   border-color: rgba(255, 255, 255, var(--tw-border-opacity));
@@ -14581,6 +14605,10 @@ input::placeholder, textarea::placeholder {
   border-color: currentColor;
 }
 
+.disabled\:border-transparent:disabled {
+  border-color: transparent;
+}
+
 .focus-within\:border-neutral-100:focus-within {
   --tw-border-opacity: 1;
   border-color: rgba(255, 255, 255, var(--tw-border-opacity));
@@ -14923,6 +14951,10 @@ input::placeholder, textarea::placeholder {
 
 .focus-within\:border-current:focus-within {
   border-color: currentColor;
+}
+
+.focus-within\:border-transparent:focus-within {
+  border-color: transparent;
 }
 
 .border-opacity-0 {
@@ -15569,6 +15601,10 @@ input::placeholder, textarea::placeholder {
   background-color: currentColor;
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .group:hover .group-hover\:bg-neutral-100 {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -15911,6 +15947,10 @@ input::placeholder, textarea::placeholder {
 
 .group:hover .group-hover\:bg-current {
   background-color: currentColor;
+}
+
+.group:hover .group-hover\:bg-transparent {
+  background-color: transparent;
 }
 
 .focus-within\:bg-neutral-100:focus-within {
@@ -16257,6 +16297,10 @@ input::placeholder, textarea::placeholder {
   background-color: currentColor;
 }
 
+.focus-within\:bg-transparent:focus-within {
+  background-color: transparent;
+}
+
 .hover\:bg-neutral-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -16601,6 +16645,10 @@ input::placeholder, textarea::placeholder {
   background-color: currentColor;
 }
 
+.hover\:bg-transparent:hover {
+  background-color: transparent;
+}
+
 .focus\:bg-neutral-100:focus {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -16943,6 +16991,10 @@ input::placeholder, textarea::placeholder {
 
 .focus\:bg-current:focus {
   background-color: currentColor;
+}
+
+.focus\:bg-transparent:focus {
+  background-color: transparent;
 }
 
 .bg-opacity-0 {
@@ -17626,6 +17678,11 @@ input::placeholder, textarea::placeholder {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
+.from-transparent {
+  --tw-gradient-from: transparent;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
+}
+
 .hover\:from-neutral-100:hover {
   --tw-gradient-from: #ffffff;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
@@ -17969,6 +18026,11 @@ input::placeholder, textarea::placeholder {
 .hover\:from-current:hover {
   --tw-gradient-from: currentColor;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+}
+
+.hover\:from-transparent:hover {
+  --tw-gradient-from: transparent;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
 }
 
 .focus\:from-neutral-100:focus {
@@ -18316,6 +18378,11 @@ input::placeholder, textarea::placeholder {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
+.focus\:from-transparent:focus {
+  --tw-gradient-from: transparent;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
+}
+
 .via-neutral-100 {
   --tw-gradient-stops: var(--tw-gradient-from), #ffffff, var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
@@ -18590,6 +18657,10 @@ input::placeholder, textarea::placeholder {
 
 .via-current {
   --tw-gradient-stops: var(--tw-gradient-from), currentColor, var(--tw-gradient-to, rgba(255, 255, 255, 0));
+}
+
+.via-transparent {
+  --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0));
 }
 
 .hover\:via-neutral-100:hover {
@@ -18868,6 +18939,10 @@ input::placeholder, textarea::placeholder {
   --tw-gradient-stops: var(--tw-gradient-from), currentColor, var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
+.hover\:via-transparent:hover {
+  --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0));
+}
+
 .focus\:via-neutral-100:focus {
   --tw-gradient-stops: var(--tw-gradient-from), #ffffff, var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
@@ -19142,6 +19217,10 @@ input::placeholder, textarea::placeholder {
 
 .focus\:via-current:focus {
   --tw-gradient-stops: var(--tw-gradient-from), currentColor, var(--tw-gradient-to, rgba(255, 255, 255, 0));
+}
+
+.focus\:via-transparent:focus {
+  --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0));
 }
 
 .to-neutral-100 {
@@ -19420,6 +19499,10 @@ input::placeholder, textarea::placeholder {
   --tw-gradient-to: currentColor;
 }
 
+.to-transparent {
+  --tw-gradient-to: transparent;
+}
+
 .hover\:to-neutral-100:hover {
   --tw-gradient-to: #ffffff;
 }
@@ -19696,6 +19779,10 @@ input::placeholder, textarea::placeholder {
   --tw-gradient-to: currentColor;
 }
 
+.hover\:to-transparent:hover {
+  --tw-gradient-to: transparent;
+}
+
 .focus\:to-neutral-100:focus {
   --tw-gradient-to: #ffffff;
 }
@@ -19970,6 +20057,10 @@ input::placeholder, textarea::placeholder {
 
 .focus\:to-current:focus {
   --tw-gradient-to: currentColor;
+}
+
+.focus\:to-transparent:focus {
+  --tw-gradient-to: transparent;
 }
 
 .decoration-slice {
@@ -20371,6 +20462,10 @@ input::placeholder, textarea::placeholder {
   fill: currentColor;
 }
 
+.fill-transparent {
+  fill: transparent;
+}
+
 .stroke-neutral-100 {
   stroke: #ffffff;
 }
@@ -20645,6 +20740,10 @@ input::placeholder, textarea::placeholder {
 
 .stroke-current {
   stroke: currentColor;
+}
+
+.stroke-transparent {
+  stroke: transparent;
 }
 
 .stroke-0 {
@@ -21827,6 +21926,18 @@ input::placeholder, textarea::placeholder {
   font-family: "Source Code Pro", Courier, monospace;
 }
 
+.text-5xs {
+  font-size: 0.4375rem;
+}
+
+.text-4xs {
+  font-size: 0.5rem;
+}
+
+.text-3xs {
+  font-size: 0.5625rem;
+}
+
 .text-2xs {
   font-size: 0.6875rem;
 }
@@ -22356,6 +22467,10 @@ input::placeholder, textarea::placeholder {
   color: currentColor;
 }
 
+.text-transparent {
+  color: transparent;
+}
+
 .group:hover .group-hover\:text-neutral-100 {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
@@ -22698,6 +22813,10 @@ input::placeholder, textarea::placeholder {
 
 .group:hover .group-hover\:text-current {
   color: currentColor;
+}
+
+.group:hover .group-hover\:text-transparent {
+  color: transparent;
 }
 
 .focus-within\:text-neutral-100:focus-within {
@@ -23044,6 +23163,10 @@ input::placeholder, textarea::placeholder {
   color: currentColor;
 }
 
+.focus-within\:text-transparent:focus-within {
+  color: transparent;
+}
+
 .hover\:text-neutral-100:hover {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
@@ -23388,6 +23511,10 @@ input::placeholder, textarea::placeholder {
   color: currentColor;
 }
 
+.hover\:text-transparent:hover {
+  color: transparent;
+}
+
 .focus\:text-neutral-100:focus {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
@@ -23730,6 +23857,10 @@ input::placeholder, textarea::placeholder {
 
 .focus\:text-current:focus {
   color: currentColor;
+}
+
+.focus\:text-transparent:focus {
+  color: transparent;
 }
 
 .text-opacity-0 {
@@ -25134,6 +25265,18 @@ input::placeholder, textarea::placeholder {
   color: currentColor;
 }
 
+.placeholder-transparent::-moz-placeholder {
+  color: transparent;
+}
+
+.placeholder-transparent:-ms-input-placeholder {
+  color: transparent;
+}
+
+.placeholder-transparent::placeholder {
+  color: transparent;
+}
+
 .focus\:placeholder-neutral-100:focus::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-placeholder-opacity));
@@ -26166,6 +26309,18 @@ input::placeholder, textarea::placeholder {
   color: currentColor;
 }
 
+.focus\:placeholder-transparent:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.focus\:placeholder-transparent:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.focus\:placeholder-transparent:focus::placeholder {
+  color: transparent;
+}
+
 .placeholder-opacity-0::-moz-placeholder {
   --tw-placeholder-opacity: 0;
 }
@@ -26800,6 +26955,10 @@ input::placeholder, textarea::placeholder {
 
 .caret-current {
   caret-color: currentColor;
+}
+
+.caret-transparent {
+  caret-color: transparent;
 }
 
 .opacity-0 {
@@ -27952,6 +28111,10 @@ input::placeholder, textarea::placeholder {
   --tw-ring-color: currentColor;
 }
 
+.ring-transparent {
+  --tw-ring-color: transparent;
+}
+
 .focus-within\:ring-neutral-100:focus-within {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(255, 255, 255, var(--tw-ring-opacity));
@@ -28296,6 +28459,10 @@ input::placeholder, textarea::placeholder {
   --tw-ring-color: currentColor;
 }
 
+.focus-within\:ring-transparent:focus-within {
+  --tw-ring-color: transparent;
+}
+
 .focus\:ring-neutral-100:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(255, 255, 255, var(--tw-ring-opacity));
@@ -28638,6 +28805,10 @@ input::placeholder, textarea::placeholder {
 
 .focus\:ring-current:focus {
   --tw-ring-color: currentColor;
+}
+
+.focus\:ring-transparent:focus {
+  --tw-ring-color: transparent;
 }
 
 .ring-opacity-0 {
@@ -29156,6 +29327,10 @@ input::placeholder, textarea::placeholder {
   --tw-ring-offset-color: currentColor;
 }
 
+.ring-offset-transparent {
+  --tw-ring-offset-color: transparent;
+}
+
 .focus-within\:ring-offset-neutral-100:focus-within {
   --tw-ring-offset-color: #ffffff;
 }
@@ -29432,6 +29607,10 @@ input::placeholder, textarea::placeholder {
   --tw-ring-offset-color: currentColor;
 }
 
+.focus-within\:ring-offset-transparent:focus-within {
+  --tw-ring-offset-color: transparent;
+}
+
 .focus\:ring-offset-neutral-100:focus {
   --tw-ring-offset-color: #ffffff;
 }
@@ -29706,6 +29885,10 @@ input::placeholder, textarea::placeholder {
 
 .focus\:ring-offset-current:focus {
   --tw-ring-offset-color: currentColor;
+}
+
+.focus\:ring-offset-transparent:focus {
+  --tw-ring-offset-color: transparent;
 }
 
 .filter {
