@@ -33,3 +33,9 @@ DarkMode.parameters = {
 export const ColorOverride = () => (
   <button className="fluid-button type:plain text-green-400 hover:text-green-500">Click Me</button>
 );
+
+export const OverflowWithEllipsis = () => (
+  <button className="fluid-button w-20">
+    <span className="overflow-hidden overflow-ellipsis">My Content is Pretty Long</span>
+  </button>
+);
