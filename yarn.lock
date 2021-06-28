@@ -1676,16 +1676,16 @@
     util-deprecate "^1.0.2"
 
 "@storybook/addon-backgrounds@^6.2.5":
-  version "6.2.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-backgrounds/-/addon-backgrounds-6.2.9.tgz#4f75aa58b262f461d9f8713d65d11407f4e53537"
-  integrity sha512-oPSdeoUuvaXshY5sQRagbYXpr6ZEVUuLhGYBnZTlvm19QMeNCXQE+rdlgzcgyafq4mc1FI/udE2MpJ1dhfS6pQ==
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-backgrounds/-/addon-backgrounds-6.3.1.tgz#710703d13577213688cc509cfd8a884bb8353fe1"
+  integrity sha512-bgH2yX5Uc2T0CXu+X9/x67gFjYgyn3OHvJ0CmmUOwT/Up3guGqsv4AiAaDoC+MFiBDw/UP8cRtXPgNUVA4vAaA==
   dependencies:
-    "@storybook/addons" "6.2.9"
-    "@storybook/api" "6.2.9"
-    "@storybook/client-logger" "6.2.9"
-    "@storybook/components" "6.2.9"
-    "@storybook/core-events" "6.2.9"
-    "@storybook/theming" "6.2.9"
+    "@storybook/addons" "6.3.1"
+    "@storybook/api" "6.3.1"
+    "@storybook/client-logger" "6.3.1"
+    "@storybook/components" "6.3.1"
+    "@storybook/core-events" "6.3.1"
+    "@storybook/theming" "6.3.1"
     core-js "^3.8.2"
     global "^4.4.0"
     memoizerific "^1.11.3"
@@ -1723,7 +1723,7 @@
     global "^4.4.0"
     regenerator-runtime "^0.13.7"
 
-"@storybook/api@6.2.9", "@storybook/api@^6.1.21":
+"@storybook/api@6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/api/-/api-6.2.9.tgz#a9b46569192ad5d8da6435c9d63dc4b0c8463b51"
   integrity sha512-okkA3HAScE9tGnYBrjTOcgzT+L1lRHNoEh3ZfGgh1u/XNEyHGNkj4grvkd6nX7BzRcYQ/l2VkcKCqmOjUnSkVQ==
@@ -1749,7 +1749,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/api@6.3.1":
+"@storybook/api@6.3.1", "@storybook/api@^6.1.21":
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/@storybook/api/-/api-6.3.1.tgz#17b0a50208212666992fac5da74cc56de66078d2"
   integrity sha512-70T9xaKWMP9xE4zOLLQiqmmWbsYk3nAFfwSnCu8oGb2Iq5bwfGDnm///n1/84OkObYv4OzVoRbIyLD+Xsx1Fnw==
@@ -1959,7 +1959,7 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
-"@storybook/components@6.2.9", "@storybook/components@^6.1.21":
+"@storybook/components@6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.2.9.tgz#7189f9715b05720fe083ae8ad014849f14e98e73"
   integrity sha512-hnV1MI2aB2g1sJ7NJphpxi7TwrMZQ/tpCJeHnkjmzyC6ez1MXqcBXGrEEdSXzRfAxjQTOEpu6H1mnns0xMP0Ag==
@@ -1989,7 +1989,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/components@6.3.1":
+"@storybook/components@6.3.1", "@storybook/components@^6.1.21":
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.3.1.tgz#a94488941a64c64bba7d6e042e4a1d4ce99bc58d"
   integrity sha512-sCNalGXSMzVCoElRUYKS+EuIJQr5zNbPepFVzZWXGj2cKd7z6LtHNyEN/3eTnR7Ivdpaf43IZc9pIBmBvSmIFQ==
