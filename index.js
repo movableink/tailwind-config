@@ -13,6 +13,7 @@ const bodyTextComponentsPlugin = require('./plugins/components/body-text');
 const captionTextComponentsPlugin = require('./plugins/components/caption-text');
 const headingTextComponentsPlugin = require('./plugins/components/heading-text');
 const buttonComponentsPlugin = require('./plugins/components/buttons');
+const tableCellComponentsPlugin = require('./plugins/components/table-cells');
 
 const BORDER_COLOR_VARIANTS = [
   // Default
@@ -69,6 +70,7 @@ module.exports = {
     captionTextComponentsPlugin,
     headingTextComponentsPlugin,
     buttonComponentsPlugin,
+    tableCellComponentsPlugin,
   ],
 
   // Export constants used in configuration to enable extension
