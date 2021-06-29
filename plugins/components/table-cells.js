@@ -7,10 +7,10 @@ module.exports = function tableCellComponentsPlugin({ addComponents, e, theme })
     color: theme('colors.neutral.700'),
     fontSize: theme('fontSize.base'),
 
-    paddingTop: 'var(--fluid-table-cell-spacing)',
-    paddingRight: 'var(--fluid-table-cell-spacing)',
-    paddingBottom: 'var(--fluid-table-cell-spacing)',
-    paddingLeft: 'var(--fluid-table-cell-spacing)',
+    paddingTop: 'var(--fluid-table-cell-y-spacing)',
+    paddingRight: 'var(--fluid-table-cell-x-spacing)',
+    paddingBottom: 'var(--fluid-table-cell-y-spacing)',
+    paddingLeft: 'var(--fluid-table-cell-x-spacing)',
 
     svg: {
       height: theme('height.4'),
@@ -30,19 +30,23 @@ module.exports = function tableCellComponentsPlugin({ addComponents, e, theme })
       ...defaultClasses,
     },
     [`${tableCellClass}:not([class*="spacing"])`]: {
-      '--fluid-table-cell-spacing': theme('padding.3'),
+      '--fluid-table-cell-x-spacing': theme('padding.3'),
+      '--fluid-table-cell-y-spacing': theme('padding.3'),
     },
     /** == Default Spacing == **/
     [`${tableCellClass}.${e('spacing:default')}`]: {
-      '--fluid-table-cell-spacing': theme('padding.3'),
+      '--fluid-table-cell-x-spacing': theme('padding.3'),
+      '--fluid-table-cell-y-spacing': theme('padding.3'),
     },
     /** == Relaxed Spacing == **/
     [`${tableCellClass}.${e('spacing:relaxed')}`]: {
-      '--fluid-table-cell-spacing': theme('padding.4'),
+      '--fluid-table-cell-x-spacing': theme('padding.4'),
+      '--fluid-table-cell-y-spacing': theme('padding.4'),
     },
     /** == Compact Spacing == **/
     [`${tableCellClass}.${e('spacing:compact')}`]: {
-      '--fluid-table-cell-spacing': theme('padding.2'),
+      '--fluid-table-cell-x-spacing': theme('padding.2'),
+      '--fluid-table-cell-y-spacing': theme('padding.1'),
     },
 
     /** == Table Header Cell == **/
@@ -50,21 +54,26 @@ module.exports = function tableCellComponentsPlugin({ addComponents, e, theme })
       ...defaultClasses,
       fontStyle: theme('fontStyle.bold'),
       backgroundColor: theme('colors.neutral.300'),
+      textAlign: 'left',
+    },
+    [`${tableHeaderCellClass}:not([class*="spacing"])`]: {
+      '--fluid-table-cell-x-spacing': theme('padding.3'),
+      '--fluid-table-cell-y-spacing': theme('padding.3'),
     },
     /** == Default Spacing == **/
-    [`${tableHeaderCellClass}:not([class*="spacing"])`]: {
-      '--fluid-table-cell-spacing': theme('padding.3'),
-    },
     [`${tableHeaderCellClass}.${e('spacing:default')}`]: {
-      '--fluid-table-cell-spacing': theme('padding.3'),
+      '--fluid-table-cell-x-spacing': theme('padding.3'),
+      '--fluid-table-cell-y-spacing': theme('padding.3'),
     },
     /** == Relaxed Spacing == **/
     [`${tableHeaderCellClass}.${e('spacing:relaxed')}`]: {
-      '--fluid-table-cell-spacing': theme('padding.4'),
+      '--fluid-table-cell-x-spacing': theme('padding.4'),
+      '--fluid-table-cell-y-spacing': theme('padding.4'),
     },
     /** == Compact Spacing == **/
     [`${tableHeaderCellClass}.${e('spacing:compact')}`]: {
-      '--fluid-table-cell-spacing': theme('padding.2'),
+      '--fluid-table-cell-x-spacing': theme('padding.2'),
+      '--fluid-table-cell-y-spacing': theme('padding.1'),
     },
   });
 };
