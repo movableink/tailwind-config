@@ -13,7 +13,7 @@
     "plugins"
   ],
   "scripts": {
-    "build": "tailwind build css/tailwind-imports.css --config index.js -o dist/fluid-tailwind.css",
+    "build": "tailwind build -i css/tailwind-imports.css --config index.js -o dist/fluid-tailwind.css",
     "compress": "csso dist/fluid-tailwind.css --output dist/fluid-tailwind.min.css --source-map file --no-restructure",
     "start": "start-storybook -s dist",
     "lint": "eslint .",
