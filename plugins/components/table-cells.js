@@ -11,14 +11,6 @@ module.exports = function tableCellComponentsPlugin({ addComponents, e, theme })
     paddingRight: 'var(--fluid-table-cell-x-spacing)',
     paddingBottom: 'var(--fluid-table-cell-y-spacing)',
     paddingLeft: 'var(--fluid-table-cell-x-spacing)',
-
-    svg: {
-      height: theme('height.4'),
-      width: theme('width.4'),
-      display: 'inline-block',
-      marginLeft: theme('margin.3'),
-      marginRight: theme('margin.3'),
-    },
   };
 
   const tableCellClass = '.fluid-table__td';
@@ -29,6 +21,10 @@ module.exports = function tableCellComponentsPlugin({ addComponents, e, theme })
     [`${tableCellClass}`]: {
       ...defaultClasses,
     },
+    /** == No Spacing == **/
+    [`${tableCellClass}.${e('spacing:none')}`]: {},
+    [`${tableHeaderCellClass}.${e('spacing:none')}`]: {},
+
     [`${tableCellClass}:not([class*="spacing"])`]: {
       '--fluid-table-cell-x-spacing': theme('padding.3'),
       '--fluid-table-cell-y-spacing': theme('padding.3'),
@@ -48,7 +44,6 @@ module.exports = function tableCellComponentsPlugin({ addComponents, e, theme })
       '--fluid-table-cell-x-spacing': theme('padding.2'),
       '--fluid-table-cell-y-spacing': theme('padding.1'),
     },
-
     /** == Table Header Cell == **/
     [`${tableHeaderCellClass}`]: {
       ...defaultClasses,
@@ -56,6 +51,7 @@ module.exports = function tableCellComponentsPlugin({ addComponents, e, theme })
       backgroundColor: theme('colors.neutral.300'),
       textAlign: 'left',
     },
+    /** == No Spacing Modifier == **/
     [`${tableHeaderCellClass}:not([class*="spacing"])`]: {
       '--fluid-table-cell-x-spacing': theme('padding.3'),
       '--fluid-table-cell-y-spacing': theme('padding.3'),
@@ -74,6 +70,14 @@ module.exports = function tableCellComponentsPlugin({ addComponents, e, theme })
     [`${tableHeaderCellClass}.${e('spacing:compact')}`]: {
       '--fluid-table-cell-x-spacing': theme('padding.2'),
       '--fluid-table-cell-y-spacing': theme('padding.1'),
+    },
+    /** == ICON ==**/
+    '.fluid-table-cell-icon': {
+      height: theme('height.4'),
+      width: theme('width.4'),
+      display: 'inline-block',
+      marginLeft: theme('margin.3'),
+      marginRight: theme('margin.3'),
     },
   });
 };
