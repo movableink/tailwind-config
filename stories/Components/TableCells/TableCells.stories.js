@@ -12,12 +12,12 @@ export const Spacing = () => (
         <tr>
           <th className="fluid-table__th spacing:default">Text Only</th>
           <th className="fluid-table__th spacing:default">
-            <Gear />
+            <Gear className="fluid-table-cell-icon" />
             Icon Left w/Text
           </th>
           <th className="fluid-table__th spacing:default">
             Icon Right w/Text
-            <Gear />
+            <Gear className="fluid-table-cell-icon" />
           </th>
         </tr>
       </thead>
@@ -33,12 +33,12 @@ export const Spacing = () => (
         <tr className="divide-x">
           <td className="fluid-table__td">No Spacing</td>
           <td className="fluid-table__td">
-            <Gear />
+            <Gear className="fluid-table-cell-icon" />
             No Spacing
           </td>
           <td className="fluid-table__td">
             No Spacing
-            <Gear />
+            <Gear className="fluid-table-cell-icon" />
           </td>
         </tr>
         <tr>
@@ -52,12 +52,12 @@ export const Spacing = () => (
         <tr className="divide-x">
           <td className="fluid-table__td spacing:default">Default Spacing</td>
           <td className="fluid-table__td spacing:default">
-            <Gear />
+            <Gear className="fluid-table-cell-icon" />
             Default Spacing
           </td>
           <td className="fluid-table__td spacing:default">
             Default Spacing
-            <Gear />
+            <Gear className="fluid-table-cell-icon" />
           </td>
         </tr>
 
@@ -73,12 +73,12 @@ export const Spacing = () => (
         <tr className="divide-x">
           <td className="fluid-table__td spacing:relaxed">Relax Spacing</td>
           <td className="fluid-table__td spacing:relaxed">
-            <Gear />
+            <Gear className="fluid-table-cell-icon" />
             <span>Relax Spacing</span>
           </td>
           <td className="fluid-table__td spacing:relaxed">
             <span>Relax Spacing</span>
-            <Gear />
+            <Gear className="fluid-table-cell-icon" />
           </td>
         </tr>
 
@@ -94,12 +94,38 @@ export const Spacing = () => (
         <tr className="divide-x">
           <td className="fluid-table__td spacing:compact">Compact Spacing</td>
           <td className="fluid-table__td spacing:compact">
-            <Gear />
+            <Gear className="fluid-table-cell-icon" />
             Compact Spacing
           </td>
           <td className="fluid-table__td spacing:compact">
             Compact Spacing
-            <Gear />
+            <Gear className="fluid-table-cell-icon" />
+          </td>
+        </tr>
+
+        <tr>
+          <th
+            className="fluid-table__th spacing:relaxed bg-transparent text-neutral-500 italic"
+            colSpan="3"
+          >
+            Modifier `spacing:none`
+            <br />
+            <em className="font-normal">
+              This is an escape hatch to be used when you do <strong>NOT</strong> want spacing
+              included. *All other styles are included like borders, font stylings.
+            </em>
+          </th>
+        </tr>
+
+        <tr className="divide-x">
+          <td className="fluid-table__td spacing:none">No Spacing</td>
+          <td className="fluid-table__td spacing:none">
+            <Gear className="fluid-table-cell-icon" />
+            No Spacing
+          </td>
+          <td className="fluid-table__td spacing:none">
+            No Spacing
+            <Gear className="fluid-table-cell-icon" />
           </td>
         </tr>
       </tbody>
