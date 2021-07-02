@@ -10,17 +10,17 @@ After cloning this repository and installing the dependencies by running
 yarn install
 ```
 
-You can build and run Storybook through the following:
+In one terminal window, run the following to build the Tailwind output and automatically re-build when any input files change:
 
 ```bash
-yarn build
-yarn start
+yarn build --watch
 ```
 
-- `yarn build` creates the Tailwind stylesheet
-- `yarn start` runs Storybook
+In another terminal window, run the following to start Storybook and create a development environment for the Tailwind config:
 
-If you change the Tailwind configuration, make sure to run `yarn build` again to re-build the CSS file.
+```bash
+yarn storybook
+```
 
 ## Conventional Commits
 
