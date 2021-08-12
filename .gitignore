@@ -4,3 +4,12 @@ storybook-static
 
 # Dependencies
 node_modules
+
+# Yarn 3 (w/o zero-install)
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
