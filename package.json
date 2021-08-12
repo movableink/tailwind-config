@@ -17,7 +17,6 @@
     "compress": "csso dist/fluid-tailwind.css --output dist/fluid-tailwind.min.css --source-map file --no-restructure",
     "storybook": "start-storybook -s dist",
     "lint": "eslint .",
-    "pretest": "yarn build",
     "test": "ava",
     "release": "standard-version",
     "prepare": "husky install",
