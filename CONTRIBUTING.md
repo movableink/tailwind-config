@@ -29,3 +29,5 @@ Each commit should follow the [Conventional Commits](https://www.conventionalcom
 ## Publishing a Version
 
 Releases are published automatically using GitHub Actions. They are automatically published monthly, but can be manually triggered as well. Check out the GitHub "release" action to manually trigger the release workflow.
+
+When triggering the workflow manually, you can optionally choose to create a `major`, `minor` or `patch` version rather than allowing the Conventional Commits plugin determine the right version to create.
