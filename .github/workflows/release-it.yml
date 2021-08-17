@@ -5,6 +5,11 @@ on:
     # Run the first of the month at 9:30am
     - cron: '30 9 1 * *'
   workflow_dispatch:
+    inputs:
+      increment:
+        description: Override Default Version Increment
+        required: false
+        default: ''
 
 jobs:
   release:
@@ -37,6 +42,6 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - run: yarn release
+      - run: yarn release ${{ github.event.inputs.increment }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
