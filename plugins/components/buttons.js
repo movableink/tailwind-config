@@ -234,8 +234,12 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     /** === Plain Button === **/
     [`.fluid-button.${e('type:plain')}`]: {
       '--fluid-button-color': theme('colors.blue.400'),
-      backgroundColor: 'transparent',
       borderColor: 'transparent',
+
+      // Add the transparent background if the class string doesn't include `bg-`
+      '&:not([class*="bg-"])': {
+        backgroundColor: 'transparent',
+      },
 
       ...disabled({
         '--fluid-button-color': theme('colors.neutral.500'),
