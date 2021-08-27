@@ -1,3 +1,9 @@
+## [2.2.0](https://github.com/movableink/tailwind-config/compare/v2.1.1...v2.2.0) (2021-08-27)
+
+### Features
+
+- **button:** plain style background override ([7391e90](https://github.com/movableink/tailwind-config/commit/7391e90bc57f56204e7a1b8fdf47f287bf5aaad8))
+
 ### [2.1.1](https://github.com/movableink/tailwind-config/compare/v2.1.0...v2.1.1) (2021-08-17)
 
 ## [2.1.0](https://github.com/movableink/tailwind-config/compare/v2.0.2...v2.1.0) (2021-06-23)
