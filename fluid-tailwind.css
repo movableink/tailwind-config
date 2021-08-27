@@ -817,8 +817,11 @@ input::placeholder, textarea::placeholder {
 
 .fluid-button.type\:plain {
   --fluid-button-color: #266fed;
-  background-color: transparent;
   border-color: transparent;
+}
+
+.fluid-button.type\:plain:not([class*="bg-"]) {
+  background-color: transparent;
 }
 
 .fluid-button.type\:plain:disabled, .fluid-button.type\:plain.appearance\:disabled {
