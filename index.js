@@ -14,20 +14,17 @@ const captionTextComponentsPlugin = require('./plugins/components/caption-text')
 const headingTextComponentsPlugin = require('./plugins/components/heading-text');
 const buttonComponentsPlugin = require('./plugins/components/buttons');
 
-const BORDER_COLOR_VARIANTS = [
-  // Default
-  'responsive',
-  'hover',
-  'focus',
-  // Custom
-  'disabled',
-  'focus-within',
-];
+const { safelist, buildSafelist } = require('./utility/build-safelist');
 
 /**
  * Configures Tailwind to use Fluid's design tokens
  */
 module.exports = {
+  content: [
+    './stores/**/*.js',
+    './plugins/*.js',
+    './plugins/**/*.js',
+  ],
   // Base Config
   theme: {
     colors,
@@ -58,11 +55,6 @@ module.exports = {
     },
   },
 
-  variants: {
-    borderColor: BORDER_COLOR_VARIANTS,
-    visibility: ['responsive', 'group-hover'],
-  },
-
   plugins: [
     fluidBasePlugin,
     bodyTextComponentsPlugin,
@@ -70,7 +62,8 @@ module.exports = {
     headingTextComponentsPlugin,
     buttonComponentsPlugin,
   ],
-
-  // Export constants used in configuration to enable extension
-  BORDER_COLOR_VARIANTS,
+  // Tailwind > 3.0 requires JIT usage `safelist` is the only way to ensure our custom classes get built
+  safelist: [
+    ...safelist,
+  ]
 };
