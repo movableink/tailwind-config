@@ -8,10 +8,6 @@
  * * The `active` styles for each button _must_ be inserted after the `focus` styles
  */
 module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
-  const DEPRESSED_BOX_SHADOW = 'inset 0px 1px 1px 1px rgba(28, 28, 28, 0.2)';
-  const ELEVATED_BOX_SHADOW = '0px 1px 1px 0px rgba(28, 28, 28, 0.15)';
-  const FOCUSED_BOX_SHADOW = `0 0 0 1px ${theme('colors.blue.300')}`;
-
   const activeAppearance = e(`appearance:active`);
   const disabledAppearance = e(`appearance:disabled`);
   const focusedAppearance = e(`appearance:focused`);
@@ -117,7 +113,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       '--fluid-button-color': theme('colors.neutral.800'),
       backgroundColor: theme('colors.neutral.200'),
       borderColor: theme('colors.neutral.500'),
-      boxShadow: ELEVATED_BOX_SHADOW,
+      boxShadow: 'none',
 
       ...disabled({
         '--fluid-button-color': theme('colors.neutral.500'),
@@ -131,12 +127,12 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       }),
 
       ...focused({
-        boxShadow: `${ELEVATED_BOX_SHADOW}, 0 0 0 1px ${theme('colors.blue.300')}`,
+        boxShadow: 'none',
         borderColor: theme('colors.blue.300'),
       }),
 
       ...active({
-        boxShadow: `${DEPRESSED_BOX_SHADOW}, ${FOCUSED_BOX_SHADOW}`,
+        boxShadow: 'none',
         borderColor: theme('colors.blue.300'),
       }),
     },
@@ -146,7 +142,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       '--fluid-button-color': theme('colors.white'),
       backgroundColor: theme('colors.blue.400'),
       borderColor: theme('colors.blue.500'),
-      boxShadow: ELEVATED_BOX_SHADOW,
+      boxShadow: 'none',
 
       ...disabled({
         '--fluid-button-color': theme('colors.blue.200'),
@@ -161,12 +157,12 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       }),
 
       ...focused({
-        boxShadow: `${ELEVATED_BOX_SHADOW}, ${FOCUSED_BOX_SHADOW}`,
+        boxShadow: 'none',
         borderColor: theme('colors.blue.300'),
       }),
 
       ...active({
-        boxShadow: `${DEPRESSED_BOX_SHADOW}, ${FOCUSED_BOX_SHADOW}`,
+        boxShadow: 'none',
         borderColor: theme('colors.blue.300'),
       }),
     },
@@ -189,12 +185,12 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       }),
 
       ...focused({
-        boxShadow: FOCUSED_BOX_SHADOW,
+        boxShadow: 'none',
         borderColor: theme('colors.blue.300'),
       }),
 
       ...active({
-        boxShadow: `${DEPRESSED_BOX_SHADOW}, ${FOCUSED_BOX_SHADOW}`,
+        boxShadow: 'none',
         borderColor: theme('colors.blue.300'),
       }),
     },
@@ -204,7 +200,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       '--fluid-button-color': theme('colors.white'),
       backgroundColor: theme('colors.red.400'),
       borderColor: theme('colors.red.500'),
-      boxShadow: ELEVATED_BOX_SHADOW,
+      boxShadow: 'none',
 
       ...disabled({
         '--fluid-button-color': theme('colors.red.200'),
@@ -221,12 +217,12 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       }),
 
       ...focused({
-        boxShadow: `${ELEVATED_BOX_SHADOW}, ${FOCUSED_BOX_SHADOW}`,
+        boxShadow: 'none',
         borderColor: theme('colors.blue.300'),
       }),
 
       ...active({
-        boxShadow: `${DEPRESSED_BOX_SHADOW}, ${FOCUSED_BOX_SHADOW}`,
+        boxShadow: 'none',
         borderColor: theme('colors.blue.300'),
       }),
     },
@@ -250,13 +246,13 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       }),
 
       ...focused({
-        boxShadow: FOCUSED_BOX_SHADOW,
+        boxShadow: 'none',
         borderColor: theme('colors.blue.300'),
       }),
 
       ...active({
         '--fluid-button-color': theme('colors.blue.300'),
-        boxShadow: FOCUSED_BOX_SHADOW,
+        boxShadow: 'none',
         borderColor: theme('colors.blue.300'),
       }),
     },
