@@ -1,3 +1,5 @@
+### [2.3.2](https://github.com/movableink/tailwind-config/compare/v2.3.1...v2.3.2) (2022-03-01)
+
 ### [2.3.1](https://github.com/movableink/tailwind-config/compare/v2.3.0...v2.3.1) (2022-02-01)
 
 ## [2.3.0](https://github.com/movableink/tailwind-config/compare/v2.2.5...v2.3.0) (2022-01-24)
