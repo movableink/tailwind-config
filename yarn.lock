@@ -2312,7 +2312,7 @@ __metadata:
     eslint: ^7.32.0
     eslint-plugin-ava: ^12.0.0
     htm: ^3.0.3
-    husky: ^6.0.0
+    husky: ^8.0.1
     lint-staged: ^11.0.0
     lorem-ipsum: ^2.0.3
     postcss: ^8.2.9
@@ -9698,12 +9698,12 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"husky@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "husky@npm:6.0.0"
+"husky@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "husky@npm:8.0.1"
   bin:
     husky: lib/bin.js
-  checksum: db6da76a670b2cd1e967990decfd291e6f35a5aee4d362208a51771474d3b4896d526acb4bf0413c2d7154716e42a4d8b6cc19f2bb108e48d1f554624c723a00
+  checksum: 943a73a13d0201318fd30e83d299bb81d866bd245b69e6277804c3b462638dc1921694cb94c2b8c920a4a187060f7d6058d3365152865406352e934c5fff70dc
   languageName: node
   linkType: hard
 
