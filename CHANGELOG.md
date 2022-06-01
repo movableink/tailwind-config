@@ -1,3 +1,9 @@
+## [2.4.0](https://github.com/movableink/tailwind-config/compare/v2.3.4...v2.4.0) (2022-06-01)
+
+### Features
+
+- **dependencies:** updated husky dropped support for node 12 ([c84f73a](https://github.com/movableink/tailwind-config/commit/c84f73aa00f246850f5593d58c6bbb6865781970))
+
 ### [2.3.4](https://github.com/movableink/tailwind-config/compare/v2.3.3...v2.3.4) (2022-05-01)
 
 ### [2.3.3](https://github.com/movableink/tailwind-config/compare/v2.3.2...v2.3.3) (2022-04-01)
