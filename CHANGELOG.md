@@ -1,3 +1,9 @@
+### [2.4.1](https://github.com/movableink/tailwind-config/compare/v2.4.0...v2.4.1) (2022-06-30)
+
+### Bug Fixes
+
+- **security:** shell-quote has been flagged <1.7.2 ([fc5efff](https://github.com/movableink/tailwind-config/commit/fc5efff6c3c38805759d234709cab7faec39fd25))
+
 ## [2.4.0](https://github.com/movableink/tailwind-config/compare/v2.3.4...v2.4.0) (2022-06-01)
 
 ### Features
