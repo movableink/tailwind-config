@@ -1,4 +1,4 @@
-# `@movable/tailwind-config`
+# `@movable/tailwind-config` [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 ![Verify](https://github.com/movableink/tailwind-config/workflows/Verify/badge.svg)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/movableink/tailwind-config)
@@ -66,3 +66,17 @@ Include the following `link` in the `head` of your document, _before_ any other 
 [tailwind]: https://tailwindcss.com
 [tailwind-installation]: https://tailwindcss.com/docs/installation
 [unpkg]: https://unpkg.com
+
+## Conventional Commits
+
+This repo has [conventional-commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) We lint for this both pre-commit and on PR actions. It is **required** and will not pass without it.
+
+Ex:
+
+```
+fix(percy): added percy snapshots for all component states
+
+- active
+- disabled
+- focused
+```
