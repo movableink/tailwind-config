@@ -1,3 +1,16 @@
+## [2.5.0](https://github.com/movableink/tailwind-config/compare/v2.4.2...v2.5.0) (2023-01-12)
+
+### Features
+
+- update monospace font stack ([93248f2](https://github.com/movableink/tailwind-config/commit/93248f284415c8ad24cffe1433dc9fdf3da70b99))
+- **docs:** conventional commits to readme for easier clarification ([e409316](https://github.com/movableink/tailwind-config/commit/e409316de4f31d2134397a0a2cff126c9260e634))
+
+### Bug Fixes
+
+- **releases:** added files when to release ([5152490](https://github.com/movableink/tailwind-config/commit/51524900c87e8a3f6ee9407df9cfaf8a1673eeb7))
+- dedupe of yarn packages ([4342a78](https://github.com/movableink/tailwind-config/commit/4342a7841538f5493e5ba04d71ec76eda6c2d8c5))
+- only run release if certain files change ([9bbd944](https://github.com/movableink/tailwind-config/commit/9bbd944cbcdae7c358c013b815b033d9c26936f5))
+
 ### [2.4.2](https://github.com/movableink/tailwind-config/compare/v2.4.1...v2.4.2) (2022-07-01)
 
 ### [2.4.1](https://github.com/movableink/tailwind-config/compare/v2.4.0...v2.4.1) (2022-06-30)
