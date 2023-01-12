@@ -1,12 +1,16 @@
 name: Release
 
 on:
-  paths:
-    - 'config/*.js'
-    - 'package*.json'
-  schedule:
-    # Run the first of the month at 9:30am
-    - cron: '30 9 1 * *'
+  push:
+    brances:
+      - master
+      - main
+    paths:
+      - 'config/*'
+      - 'plugins/*'
+      - 'package.json'
+      - 'index.js'
+
   workflow_dispatch:
     inputs:
       increment:
