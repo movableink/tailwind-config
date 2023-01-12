@@ -528,7 +528,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "Source Code Pro", Courier, monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
 /**
@@ -21916,7 +21916,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .font-mono {
-  font-family: "Source Code Pro", Courier, monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
 .text-5xs {
