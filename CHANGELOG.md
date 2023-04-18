@@ -1,3 +1,9 @@
+## [2.6.0](https://github.com/movableink/tailwind-config/compare/v2.5.0...v2.6.0) (2023-04-18)
+
+### Features
+
+- **component:** added new banner component ([8b23183](https://github.com/movableink/tailwind-config/commit/8b231838975fc20169908ec689137240352102cf))
+
 ## [2.5.0](https://github.com/movableink/tailwind-config/compare/v2.4.2...v2.5.0) (2023-01-12)
 
 ### Features
