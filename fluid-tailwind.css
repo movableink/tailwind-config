@@ -956,6 +956,101 @@ input::placeholder, textarea::placeholder {
   border-bottom-right-radius: 0;
 }
 
+.fluid-banner {
+  display: flex;
+  gap: 1.25rem;
+  border-color: transparent;
+  border-width: 1px;
+  border-radius: 0.125rem;
+  padding: 1.25rem;
+}
+
+.fluid-banner svg.fluid-banner--icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.fluid-banner svg.fluid-banner--close {
+  width: 1rem;
+  height: 1rem;
+}
+
+.fluid-banner .fluid-banner--content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.fluid-banner .fluid-banner--content h4 {
+  font-weight: 600;
+}
+
+.fluid-banner .fluid-banner--content h4, .fluid-banner .fluid-banner--content p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+.fluid-banner:not([class*="size\:"]) {
+  background: #fafafa;
+  color: #45454b;
+}
+
+.fluid-banner:not([class*="size\:"]) svg.fluid-banner--icon, .fluid-banner:not([class*="size\:"]) svg.fluid-banner--close {
+  fill: #45454b;
+}
+
+.fluid-banner.type\:destructive {
+  background: #feccc8;
+  color: #810c02;
+}
+
+.fluid-banner.type\:destructive svg.fluid-banner--icon {
+  fill: #fc5142;
+}
+
+.fluid-banner.type\:destructive svg.fluid-banner--close {
+  fill: #810c02;
+}
+
+.fluid-banner.type\:info {
+  background: #d2e1fa;
+  color: #072251;
+}
+
+.fluid-banner.type\:info svg.fluid-banner--icon {
+  fill: #266fed;
+}
+
+.fluid-banner.type\:info svg.fluid-banner--close {
+  fill: #072251;
+}
+
+.fluid-banner.type\:confirm {
+  background: #c8e6d0;
+  color: #1b522b;
+}
+
+.fluid-banner.type\:confirm svg.fluid-banner--icon {
+  fill: #3cb860;
+}
+
+.fluid-banner.type\:confirm svg.fluid-banner--close {
+  fill: #1b522b;
+}
+
+.fluid-banner.type\:alert {
+  background: #ffd088;
+  color: #452a00;
+}
+
+.fluid-banner.type\:alert svg.fluid-banner--icon {
+  fill: #ff9b00;
+}
+
+.fluid-banner.type\:alert svg.fluid-banner--close {
+  fill: #452a00;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
