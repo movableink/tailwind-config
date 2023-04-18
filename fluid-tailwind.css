@@ -990,12 +990,12 @@ input::placeholder, textarea::placeholder {
   line-height: 1.75rem;
 }
 
-.fluid-banner:not([class*="size\:"]) {
+.fluid-banner:not([class*="type\:"]) {
   background: #fafafa;
   color: #45454b;
 }
 
-.fluid-banner:not([class*="size\:"]) svg.fluid-banner--icon, .fluid-banner:not([class*="size\:"]) svg.fluid-banner--close {
+.fluid-banner:not([class*="type\:"]) svg.fluid-banner--icon, .fluid-banner:not([class*="type\:"]) svg.fluid-banner--close {
   fill: #45454b;
 }
 
