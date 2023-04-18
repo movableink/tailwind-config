@@ -46,7 +46,7 @@ module.exports = function bannerComponentsPlugin({ addComponents, e, theme }) {
     },
 
     /** === Default (Type) === **/
-    [fluidBannerWithoutModifier('size')]: {
+    [fluidBannerWithoutModifier('type')]: {
       background: theme('colors.neutral.200'),
       color: theme('colors.neutral.700'),
 
