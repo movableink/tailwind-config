@@ -1,3 +1,13 @@
+## [3.0.0](https://github.com/movableink/tailwind-config/compare/v2.6.3...v3.0.0) (2023-06-20)
+
+### ⚠ BREAKING CHANGES
+
+- migrates colors to match mui color palette
+
+### Features
+
+- migrates colors to match mui color palette ([ae2b62d](https://github.com/movableink/tailwind-config/commit/ae2b62d1f842c7b5dc7061c0024492e39212c78e))
+
 ### [2.6.3](https://github.com/movableink/tailwind-config/compare/v2.6.2...v2.6.3) (2023-04-19)
 
 ### [2.6.2](https://github.com/movableink/tailwind-config/compare/v2.6.1...v2.6.2) (2023-04-19)
