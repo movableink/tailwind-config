@@ -1,6 +1,6 @@
 {
   "name": "@movable/tailwind-config",
-  "version": "2.6.3",
+  "version": "2.6.4",
   "description": "Tailwind Config for Fluid",
   "main": "index.js",
   "repository": "git@github.com:movableink/tailwind-config.git",
