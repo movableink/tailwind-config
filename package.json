@@ -1,6 +1,6 @@
 {
   "name": "@movable/tailwind-config",
-  "version": "2.5.0",
+  "version": "2.6.3",
   "description": "Tailwind Config for Fluid",
   "main": "index.js",
   "repository": "git@github.com:movableink/tailwind-config.git",
@@ -54,7 +54,8 @@
     "tailwindcss": "^2.1.1"
   },
   "resolutions": {
-    "shell-quote": "^1.7.3"
+    "shell-quote": "^1.7.3",
+    "minimist": "^1.2.6"
   },
   "engines": {
     "node": ">=10.18"

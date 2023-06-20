@@ -1,3 +1,20 @@
+### [2.6.3](https://github.com/movableink/tailwind-config/compare/v2.6.2...v2.6.3) (2023-04-19)
+
+### [2.6.2](https://github.com/movableink/tailwind-config/compare/v2.6.1...v2.6.2) (2023-04-19)
+
+### Bug Fixes
+
+- **security:** minimist must be ^1.2.6 ([f357fa1](https://github.com/movableink/tailwind-config/commit/f357fa1074d4eae5a306e6baa41bf2978123b91f))
+- **typo:** should be type not size ([94f43c5](https://github.com/movableink/tailwind-config/commit/94f43c568c543cb5a27afd0437964dff9032ae69))
+
+### [2.6.1](https://github.com/movableink/tailwind-config/compare/v2.6.0...v2.6.1) (2023-04-18)
+
+## [2.6.0](https://github.com/movableink/tailwind-config/compare/v2.5.0...v2.6.0) (2023-04-18)
+
+### Features
+
+- **component:** added new banner component ([8b23183](https://github.com/movableink/tailwind-config/commit/8b231838975fc20169908ec689137240352102cf))
+
 ## [2.5.0](https://github.com/movableink/tailwind-config/compare/v2.4.2...v2.5.0) (2023-01-12)
 
 ### Features
