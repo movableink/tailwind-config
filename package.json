@@ -20,7 +20,8 @@
     "test": "ava",
     "release": "release-it",
     "prepare": "husky install",
-    "prepublishOnly": "yarn build && yarn compress"
+    "prepublishOnly": "yarn build && yarn compress",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
