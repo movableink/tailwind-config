@@ -10,8 +10,7 @@ test('all colors of fill are present', async (t) => {
     .filter((node) => node.type === 'rule')
     .filter((node) => node.selector.startsWith('.fill-neutral'));
 
-  // 9 colors plus default
-  t.is(fillNeutralRules.length, 10);
+  t.is(fillNeutralRules.length, 17);
 });
 
 test('`fill-current` is present', async (t) => {
@@ -35,8 +34,7 @@ test('all colors of stroke are present', async (t) => {
     .filter((node) => node.type === 'rule')
     .filter((node) => node.selector.startsWith('.stroke-neutral'));
 
-  // 9 colors plus default
-  t.is(strokeNeutralRules.length, 10);
+  t.is(strokeNeutralRules.length, 17);
 });
 
 test('`stroke-current` is present', async (t) => {
