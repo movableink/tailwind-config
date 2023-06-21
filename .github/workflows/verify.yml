@@ -63,4 +63,5 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - run: yarn snapshot
-        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
