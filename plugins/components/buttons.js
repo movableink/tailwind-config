@@ -83,7 +83,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       display: 'inline-flex',
 
       // Default border
-      borderRadius: theme('borderRadius.md'),
+      borderRadius: '4px',
       borderWidth: '1px',
 
       // Shared Font Style
@@ -96,6 +96,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       whiteSpace: 'nowrap',
 
       ...disabled({
+        boxShadow: 'none',
         cursor: 'not-allowed',
       }),
 
@@ -110,126 +111,119 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
 
     /** === Basic Button (Type) === **/
     [fluidButtonWithoutModifier('type')]: {
-      '--fluid-button-color': theme('colors.neutral.800'),
-      backgroundColor: theme('colors.neutral.200'),
-      borderColor: theme('colors.neutral.500'),
+      '--fluid-button-color': theme('colors.neutral.900'),
+      backgroundColor: theme('colors.neutral.100'),
+      borderColor: theme('colors.neutral.100'),
       boxShadow: 'none',
 
       ...disabled({
-        '--fluid-button-color': theme('colors.neutral.500'),
-        borderColor: theme('colors.neutral.400'),
-        boxShadow: 'none',
+        '--fluid-button-color': theme('colors.neutral.700'),
+        backgroundColor: theme('colors.neutral.200'),
+        borderColor: theme('colors.neutral.200'),
       }),
 
       ...hovered({
-        background:
-          'linear-gradient(-180deg, rgba(216, 216, 216, 0) 0%, rgba(0, 0, 0, 0.1) 100%) rgb(250, 250, 250)',
+        background: theme('colors.neutral.200'),
       }),
 
       ...focused({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.300'),
       }),
 
       ...active({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.300'),
       }),
     },
 
     /** === Primary Button === **/
     [`.fluid-button.${e('type:primary')}`]: {
       '--fluid-button-color': theme('colors.white'),
-      backgroundColor: theme('colors.blue.400'),
-      borderColor: theme('colors.blue.500'),
+      backgroundColor: theme('colors.blue.700'),
+      borderColor: theme('colors.blue.700'),
       boxShadow: 'none',
 
       ...disabled({
-        '--fluid-button-color': theme('colors.blue.200'),
-        backgroundColor: theme('colors.blue.100'),
-        borderColor: theme('colors.blue.200'),
-        boxShadow: 'none',
+        '--fluid-button-color': theme('colors.neutral.700'),
+        backgroundColor: theme('colors.neutral.200'),
+        borderColor: theme('colors.neutral.200'),
       }),
 
       ...hovered({
-        background:
-          'linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%) rgb(20, 106, 255)',
+        background: theme('colors.blue.800'),
       }),
 
       ...focused({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.300'),
+        borderColor: theme('colors.blue.700'),
       }),
 
       ...active({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.300'),
+        borderColor: theme('colors.blue.700'),
       }),
     },
 
     /** === Outline Button === **/
     [`.fluid-button.${e('type:outline')}`]: {
-      '--fluid-button-color': theme('colors.neutral.800'),
+      '--fluid-button-color': theme('colors.neutral.900'),
       backgroundColor: 'transparent',
-      borderColor: theme('colors.neutral.500'),
+      borderColor: theme('colors.neutral.400'),
 
       ...disabled({
-        '--fluid-button-color': theme('colors.neutral.500'),
-        backgroundColor: 'rgba(255, 255, 255, 0.3)',
-        borderColor: theme('colors.neutral.400'),
-        boxShadow: 'none',
+        '--fluid-button-color': theme('colors.neutral.700'),
+        backgroundColor: theme('colors.neutral.200'),
+        borderColor: theme('colors.neutral.200'),
       }),
 
       ...hovered({
-        background: 'linear-gradient(-180deg, rgba(216, 216, 216, 0) 0%, rgba(0, 0, 0, 0.1) 100%)',
+        backgroundColor: theme('colors.neutral.50'),
+        borderColor: theme('colors.neutral.400'),
       }),
 
       ...focused({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.300'),
+        borderColor: theme('colors.neutral.400'),
       }),
 
       ...active({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.300'),
+        borderColor: theme('colors.neutral.400'),
       }),
     },
 
     /** === Destructive Button === **/
     [`.fluid-button.${e('type:destructive')}`]: {
       '--fluid-button-color': theme('colors.white'),
-      backgroundColor: theme('colors.red.400'),
-      borderColor: theme('colors.red.500'),
+      backgroundColor: theme('colors.red.700'),
+      borderColor: theme('colors.red.700'),
       boxShadow: 'none',
 
       ...disabled({
-        '--fluid-button-color': theme('colors.red.200'),
-        backgroundColor: theme('colors.red.100'),
-        borderColor: theme('colors.red.200'),
-        boxShadow: 'none',
+        '--fluid-button-color': theme('colors.neutral.700'),
+        backgroundColor: theme('colors.neutral.200'),
+        borderColor: theme('colors.neutral.200'),
       }),
 
       ...hovered({
         '--fluid-button-color': theme('colors.white'),
-        background:
-          'linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%) rgb(252, 81, 66)',
-        borderColor: theme('colors.red.500'),
+        backgroundColor: theme('colors.red.800'),
+        borderColor: theme('colors.red.800'),
       }),
 
       ...focused({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.300'),
+        borderColor: theme('colors.red.700'),
       }),
 
       ...active({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.300'),
+        borderColor: theme('colors.red.700'),
       }),
     },
 
     /** === Plain Button === **/
     [`.fluid-button.${e('type:plain')}`]: {
-      '--fluid-button-color': theme('colors.blue.400'),
+      '--fluid-button-color': theme('colors.blue.700'),
       borderColor: 'transparent',
 
       // Add the transparent background if the class string doesn't include `bg-`
@@ -238,22 +232,24 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       },
 
       ...disabled({
-        '--fluid-button-color': theme('colors.neutral.500'),
+        '--fluid-button-color': theme('colors.neutral.700'),
+        backgroundColor: theme('colors.neutral.200'),
+        borderColor: theme('colors.neutral.200'),
       }),
 
       ...hovered({
-        '--fluid-button-color': theme('colors.blue.500'),
+        '--fluid-button-color': theme('colors.blue.800'),
       }),
 
       ...focused({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.300'),
+        borderColor: theme('colors.blue.200'),
       }),
 
       ...active({
-        '--fluid-button-color': theme('colors.blue.300'),
+        '--fluid-button-color': theme('colors.blue.800'),
         boxShadow: 'none',
-        borderColor: theme('colors.blue.300'),
+        borderColor: theme('colors.blue.200'),
       }),
     },
 
