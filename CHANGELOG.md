@@ -1,3 +1,5 @@
+### [3.0.1](https://github.com/movableink/tailwind-config/compare/v3.0.1-alpha.0...v3.0.1) (2023-06-26)
+
 ### [3.0.1-alpha.0](https://github.com/movableink/tailwind-config/compare/v2.6.3...v3.0.1-alpha.0) (2023-06-26)
 
 ### ⚠ BREAKING CHANGES
