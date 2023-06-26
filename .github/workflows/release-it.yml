@@ -1,16 +1,6 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - master
-      - main
-    paths:
-      - 'config/*'
-      - 'plugins/*'
-      - 'package.json'
-      - 'index.js'
-
   workflow_dispatch:
     inputs:
       increment:
