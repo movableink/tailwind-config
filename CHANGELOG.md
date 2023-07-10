@@ -1,3 +1,9 @@
+### [3.0.2-alpha.0](https://github.com/movableink/tailwind-config/compare/v3.0.1-alpha.0...v3.0.2-alpha.0) (2023-07-10)
+
+### Features
+
+- mui typography changes ([d445b9e](https://github.com/movableink/tailwind-config/commit/d445b9e3e61488c9ab7ab7a6598f58d4c4798427))
+
 ### [3.0.1](https://github.com/movableink/tailwind-config/compare/v3.0.1-alpha.0...v3.0.1) (2023-06-26)
 
 ### [3.0.1-alpha.0](https://github.com/movableink/tailwind-config/compare/v2.6.3...v3.0.1-alpha.0) (2023-06-26)
