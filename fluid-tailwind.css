@@ -1050,6 +1050,79 @@ input::placeholder, textarea::placeholder {
   fill: #663c00;
 }
 
+h1 {
+  font-size: 6rem;
+  letter-spacing: -0.075rem;
+  line-height: 120%;
+}
+
+h2 {
+  font-size: 3.75rem;
+  letter-spacing: -0.075rem;
+  line-height: 120%;
+}
+
+h3 {
+  font-size: 3rem;
+  letter-spacing: -0.0625rem;
+  line-height: 120%;
+}
+
+h4 {
+  font-size: 2.125rem;
+  letter-spacing: 0rem;
+  line-height: 120%;
+}
+
+h5 {
+  font-size: 1.5rem;
+  letter-spacing: 0rem;
+  line-height: 120%;
+}
+
+h6 {
+  font-size: 1.25rem;
+  letter-spacing: 0rem;
+  line-height: 120%;
+}
+
+.subtitle1 {
+  font-size: 1rem;
+  letter-spacing: 0rem;
+  line-height: 1.75rem;
+}
+
+.subtitle2 {
+  font-size: 0.75rem;
+  letter-spacing: 0rem;
+  line-height: 1.25rem;
+}
+
+.body1 {
+  font-size: 1rem;
+  letter-spacing: 0rem;
+  line-height: 1.75rem;
+}
+
+.body2 {
+  font-size: 0.875rem;
+  letter-spacing: 0rem;
+  line-height: 1.5rem;
+}
+
+.caption {
+  font-size: 0.75rem;
+  letter-spacing: 0.025em;
+  line-height: 1rem;
+}
+
+.overline {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  line-height: 1.25rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -28497,6 +28570,30 @@ input::placeholder, textarea::placeholder {
 
 .text-7xl {
   font-size: 2.5625rem;
+}
+
+.text-h6 {
+  font-size: 1.25rem;
+}
+
+.text-h5 {
+  font-size: 1.5rem;
+}
+
+.text-h4 {
+  font-size: 2.125rem;
+}
+
+.text-h3 {
+  font-size: 3rem;
+}
+
+.text-h2 {
+  font-size: 3.75rem;
+}
+
+.text-h1 {
+  font-size: 6rem;
 }
 
 .font-normal {
