@@ -42,6 +42,14 @@ const fontSize = {
   '5xl': pxToRem(32),
   '6xl': pxToRem(36),
   '7xl': pxToRem(41),
+
+  // MUI Specific
+  h6: pxToRem(20),
+  h5: pxToRem(24),
+  h4: pxToRem(34),
+  h3: pxToRem(48),
+  h2: pxToRem(60),
+  h1: pxToRem(96),
 };
 
 const fontWeight = {
