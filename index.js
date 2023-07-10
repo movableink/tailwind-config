@@ -12,6 +12,7 @@ const fluidBasePlugin = require('./plugins/base');
 const bodyTextComponentsPlugin = require('./plugins/components/body-text');
 const captionTextComponentsPlugin = require('./plugins/components/caption-text');
 const headingTextComponentsPlugin = require('./plugins/components/heading-text');
+const MuiTypographyComponentsPlugin = require('./plugins/components/mui-typography');
 const buttonComponentsPlugin = require('./plugins/components/buttons');
 const bannerComponentsPlugin = require('./plugins/components/banners');
 
@@ -71,6 +72,7 @@ module.exports = {
     headingTextComponentsPlugin,
     buttonComponentsPlugin,
     bannerComponentsPlugin,
+    MuiTypographyComponentsPlugin,
   ],
 
   // Export constants used in configuration to enable extension
