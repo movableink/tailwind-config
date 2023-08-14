@@ -707,7 +707,7 @@ input::placeholder, textarea::placeholder {
 .fluid-button:not([class*="type\:"]) {
   --fluid-button-color: #212121;
   background-color: #f5f5f5;
-  border-color: #f5f5f5;
+  border-color: #bdbdbd;
   box-shadow: none;
 }
 
