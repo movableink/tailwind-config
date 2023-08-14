@@ -113,7 +113,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     [fluidButtonWithoutModifier('type')]: {
       '--fluid-button-color': theme('colors.neutral.900'),
       backgroundColor: theme('colors.neutral.100'),
-      borderColor: theme('colors.neutral.100'),
+      borderColor: theme('colors.neutral.400'),
       boxShadow: 'none',
 
       ...disabled({
