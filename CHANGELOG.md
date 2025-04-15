@@ -1,3 +1,13 @@
+## [3.2.0](https://github.com/movableink/tailwind-config/compare/v3.1.1...v3.2.0) (2025-04-15)
+
+### Features
+
+- add deep purple ([559e6e0](https://github.com/movableink/tailwind-config/commit/559e6e0fad2eafa6900a993f66e0a4248135e971))
+
+### Bug Fixes
+
+- **lint:** linter fix ([801e097](https://github.com/movableink/tailwind-config/commit/801e0975c50e599d44e0226ebc7f9fd10233f0d8))
+
 ### [3.1.1](https://github.com/movableink/tailwind-config/compare/v3.1.0...v3.1.1) (2023-08-14)
 
 ## [3.1.0](https://github.com/movableink/tailwind-config/compare/v3.0.1-alpha.0...v3.1.0) (2023-07-25)
