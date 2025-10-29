@@ -1,3 +1,9 @@
+## [3.3.0](https://github.com/movableink/tailwind-config/compare/v3.2.0...v3.3.0) (2025-10-29)
+
+### Features
+
+- add inkux primary, text and custom colors ([a0d89e2](https://github.com/movableink/tailwind-config/commit/a0d89e20db7ac4f575e64b83f29c935f7a03607d))
+
 ## [3.2.0](https://github.com/movableink/tailwind-config/compare/v3.1.1...v3.2.0) (2025-04-15)
 
 ### Features
