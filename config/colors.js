@@ -203,6 +203,79 @@ const red = addDefault({
   a700: '#d50000',
 });
 
+const customColors = {
+  blue600: '#1389F6',
+  blue700: '#287DFD',
+  blue800: '#285AE6',
+  blue900: '#0A3BC1',
+  blue1000: '#030E22',
+  green100: '#c8e6d6',
+  green200: '#a5d6be',
+  green300: '#81c7aa',
+  green400: '#66bba0',
+  green50: '#e9f5ef',
+  green500: '#4caf8c',
+  green600: '#43a17c',
+  green700: '#388f6e',
+  green800: '#2e7d5a',
+  green900: '#1b5e41',
+  green1000: '#1E4620', //successContent
+  greenA100: '#b8f5d4',
+  greenA200: '#69f0c3',
+  greenA400: '#00e6a9',
+  greenA700: '#00C780',
+  greenA900: '#00A56A',
+  lightBlue1000: '#014361',
+  neutral00: '#FFFFFF',
+  neutral1000: '#000000',
+  neutralA100: '#D5D5D5',
+  neutralA200: '#AAAAAA',
+  neutralA400: '#616161',
+  neutralA700: '#303030',
+  orange1000: '#663C00', //warningContent
+  purple1000: '#270B4A',
+  yellow1000: '#E65100',
+  red1000: '#5F2120', //errorContent
+  cyan1000: '#002329',
+  deepPurpleA800: '#500fc4',
+  deepPurple1000: '#16073E',
+};
+
+const text = addDefault(
+  {
+    primary: neutral['900'],
+    secondary: neutral['700'],
+    disabled: neutral['500'],
+  },
+  'primary'
+);
+
+const primary = addDefault(
+  {
+    main: blue['A700'],
+    dark: customColors.blue800,
+    light: blue['A200'],
+    contrastText: customColors.neutral00,
+    hover: 'rgba(41, 182, 246, 0.04)',
+    selected: 'rgba(41, 182, 246, 0.08)',
+    focus: 'rgba(41, 182, 246, 0.12)',
+    focusVisible: 'rgba(41, 182, 246, 0.30)',
+    outlinedBorder: customColors.blue800,
+  },
+  'main'
+);
+
+const error = addDefault(
+  {
+    main: red['A700'],
+    dark: red[800],
+    light: red['A200'],
+    contrastText: customColors.neutral00,
+    hover: 'rgb(211 47 47, 0.04)',
+  },
+  'main'
+);
+
 module.exports = {
   neutral,
   blue,
@@ -217,4 +290,7 @@ module.exports = {
   black: neutral['1000'],
   current: 'currentColor',
   transparent: 'transparent',
+  text,
+  primary,
+  error,
 };
