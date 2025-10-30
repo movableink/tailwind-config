@@ -138,92 +138,92 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     /** === Primary Button === **/
     [`.fluid-button.${e('type:primary')}`]: {
       '--fluid-button-color': theme('colors.white'),
-      backgroundColor: theme('colors.blue.700'),
-      borderColor: theme('colors.blue.700'),
+      backgroundColor: theme('colors.primary.main'),
+      borderColor: theme('colors.primary.main'),
       boxShadow: 'none',
 
       ...disabled({
-        '--fluid-button-color': theme('colors.neutral.700'),
+        '--fluid-button-color': theme('colors.text.disabled'),
         backgroundColor: theme('colors.neutral.200'),
         borderColor: theme('colors.neutral.200'),
       }),
 
       ...hovered({
-        background: theme('colors.blue.800'),
+        background: theme('colors.primary.dark'),
+        borderColor: theme('colors.primary.dark'),
       }),
 
       ...focused({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.700'),
+        borderColor: theme('colors.primary.light'),
       }),
 
       ...active({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.700'),
+        borderColor: theme('colors.primary.light'),
       }),
     },
 
     /** === Outline Button === **/
     [`.fluid-button.${e('type:outline')}`]: {
-      '--fluid-button-color': theme('colors.neutral.900'),
+      '--fluid-button-color': theme('colors.primary.dark'),
       backgroundColor: 'transparent',
-      borderColor: theme('colors.neutral.400'),
+      borderColor: theme('colors.neutral.500'),
 
       ...disabled({
-        '--fluid-button-color': theme('colors.neutral.700'),
-        backgroundColor: theme('colors.neutral.200'),
+        '--fluid-button-color': theme('colors.text.disabled'),
         borderColor: theme('colors.neutral.200'),
       }),
 
       ...hovered({
-        backgroundColor: theme('colors.neutral.50'),
-        borderColor: theme('colors.neutral.400'),
+        backgroundColor: theme('colors.primary.hover'),
+        borderColor: theme('colors.primary.dark'),
       }),
 
       ...focused({
         boxShadow: 'none',
-        borderColor: theme('colors.neutral.400'),
+        borderColor: theme('colors.primary.light'),
       }),
 
       ...active({
         boxShadow: 'none',
-        borderColor: theme('colors.neutral.400'),
+        borderColor: theme('colors.primary.light'),
       }),
     },
 
     /** === Destructive Button === **/
     [`.fluid-button.${e('type:destructive')}`]: {
       '--fluid-button-color': theme('colors.white'),
-      backgroundColor: theme('colors.red.700'),
-      borderColor: theme('colors.red.700'),
-      boxShadow: 'none',
+      backgroundColor: theme('colors.error.main'),
+      borderColor: 'transparent',
+      boxShadow: theme('colors.error.main'),
 
       ...disabled({
-        '--fluid-button-color': theme('colors.neutral.700'),
+        '--fluid-button-color': theme('colors.text.disabled'),
         backgroundColor: theme('colors.neutral.200'),
         borderColor: theme('colors.neutral.200'),
       }),
 
       ...hovered({
         '--fluid-button-color': theme('colors.white'),
-        backgroundColor: theme('colors.red.800'),
-        borderColor: theme('colors.red.800'),
+        backgroundColor: theme('colors.error.dark'),
+        borderColor: theme('colors.error.dark'),
       }),
 
       ...focused({
         boxShadow: 'none',
-        borderColor: theme('colors.red.700'),
+        borderColor: theme('colors.primary.light'),
       }),
 
       ...active({
         boxShadow: 'none',
-        borderColor: theme('colors.red.700'),
+        borderColor: theme('colors.primary.light'),
       }),
     },
 
     /** === Plain Button === **/
     [`.fluid-button.${e('type:plain')}`]: {
-      '--fluid-button-color': theme('colors.blue.700'),
+      '--fluid-button-color': theme('colors.primary.dark'),
       borderColor: 'transparent',
 
       // Add the transparent background if the class string doesn't include `bg-`
@@ -232,24 +232,21 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       },
 
       ...disabled({
-        '--fluid-button-color': theme('colors.neutral.700'),
-        backgroundColor: theme('colors.neutral.200'),
-        borderColor: theme('colors.neutral.200'),
+        '--fluid-button-color': theme('colors.text.disabled'),
       }),
 
       ...hovered({
-        '--fluid-button-color': theme('colors.blue.800'),
+        backgroundColor: theme('colors.primary.hover'),
       }),
 
       ...focused({
         boxShadow: 'none',
-        borderColor: theme('colors.blue.200'),
+        borderColor: theme('colors.primary.light'),
       }),
 
       ...active({
-        '--fluid-button-color': theme('colors.blue.800'),
         boxShadow: 'none',
-        borderColor: theme('colors.blue.200'),
+        borderColor: theme('colors.primary.light'),
       }),
     },
 
@@ -257,10 +254,10 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     [fluidButtonWithoutModifier('size')]: {
       fontSize: theme('fontSize.sm'),
       lineHeight: theme('lineHeight.xs'),
-      paddingBottom: theme('padding.1'),
-      paddingLeft: theme('padding.2'),
-      paddingRight: theme('padding.2'),
-      paddingTop: theme('padding.1'),
+      paddingBottom: theme('padding.2'),
+      paddingLeft: theme('padding.4'),
+      paddingRight: theme('padding.4'),
+      paddingTop: theme('padding.2'),
 
       svg: {
         height: theme('height.4'),
@@ -330,8 +327,8 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       fontSize: theme('fontSize.base'),
       lineHeight: theme('lineHeight.2xs'),
       paddingBottom: theme('padding.2'),
-      paddingLeft: theme('padding.3'),
-      paddingRight: theme('padding.3'),
+      paddingLeft: theme('padding.5'),
+      paddingRight: theme('padding.5'),
       paddingTop: theme('padding.2'),
 
       svg: {
@@ -354,8 +351,8 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       fontSize: theme('fontSize.lg'),
       lineHeight: theme('lineHeight.xs'),
       paddingBottom: theme('padding.3'),
-      paddingLeft: theme('padding.4'),
-      paddingRight: theme('padding.4'),
+      paddingLeft: theme('padding.5'),
+      paddingRight: theme('padding.5'),
       paddingTop: theme('padding.3'),
 
       svg: {
