@@ -271,7 +271,7 @@ const error = addDefault(
     dark: red[800],
     light: red['A200'],
     contrastText: customColors.neutral00,
-    hover: 'rgb(211 47 47, 0.04)',
+    hover: 'rgba(211, 47, 47, 0.04)',
   },
   'main'
 );
