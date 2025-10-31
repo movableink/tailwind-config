@@ -12,6 +12,7 @@ function pxToRem(pixelSize) {
 
 const fontFamily = {
   sans: ['"Open Sans"', 'Helvetica', 'Arial', 'sans-serif'],
+  inter: ['"Inter"', 'sans-serif'],
   mono: [
     'ui-monospace',
     'SFMono-Regular',

@@ -276,6 +276,15 @@ const error = addDefault(
   'main'
 );
 
+const action = addDefault({
+  active: '#616161',
+  hover: 'rgba(97, 97, 97, 0.04)',
+  selected: 'rgba(97, 97, 97, 0.08)',
+  focus: 'rgba(97, 97, 97, 0.12)',
+  disabledBackground: '#EEEEEE',
+  disabled: '#9E9E9E',
+});
+
 module.exports = {
   neutral,
   blue,
@@ -293,4 +302,6 @@ module.exports = {
   text,
   primary,
   error,
+  action,
+  divider: '#E0E0E0',
 };
