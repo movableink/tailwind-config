@@ -1,3 +1,10 @@
+### [3.3.1-alpha.0](https://github.com/movableink/tailwind-config/compare/v3.3.0...v3.3.1-alpha.0) (2025-10-30)
+
+### Bug Fixes
+
+- bad red color definition ([fb2cbb6](https://github.com/movableink/tailwind-config/commit/fb2cbb62b1432497a5cbb34fa3077a1fb3c90f36))
+- hardcode theme color values ([9843190](https://github.com/movableink/tailwind-config/commit/984319014b9962bae3ce9bf164d332cc7d037cd4))
+
 ## [3.3.0](https://github.com/movableink/tailwind-config/compare/v3.2.0...v3.3.0) (2025-10-29)
 
 ### Features

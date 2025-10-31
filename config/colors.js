@@ -252,9 +252,9 @@ const text = addDefault(
 
 const primary = addDefault(
   {
-    main: blue['A700'],
+    main: '#2962ff',
     dark: customColors.blue800,
-    light: blue['A200'],
+    light: '#448aff',
     contrastText: customColors.neutral00,
     hover: 'rgba(41, 182, 246, 0.04)',
     selected: 'rgba(41, 182, 246, 0.08)',
@@ -267,11 +267,11 @@ const primary = addDefault(
 
 const error = addDefault(
   {
-    main: red['A700'],
-    dark: red[800],
-    light: red['A200'],
+    main: '#d50000',
+    dark: '#c62828',
+    light: '#ff5252',
     contrastText: customColors.neutral00,
-    hover: 'rgb(211 47 47, 0.04)',
+    hover: 'rgba(211, 47, 47, 0.04)',
   },
   'main'
 );
