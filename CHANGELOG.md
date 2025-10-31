@@ -1,3 +1,11 @@
+### [3.3.1-alpha.1](https://github.com/movableink/tailwind-config/compare/v3.3.1-alpha.0...v3.3.1-alpha.1) (2025-10-31)
+
+### Features
+
+- add inkux-ified button styles ([a1fc764](https://github.com/movableink/tailwind-config/commit/a1fc7644466523af9182758c632d48e1e3786145))
+- add inter font ([f6c0b76](https://github.com/movableink/tailwind-config/commit/f6c0b7629d6c6e912f260c3aff9067f6ab671c1b))
+- update base values ([2698e79](https://github.com/movableink/tailwind-config/commit/2698e79a79a42d523899fab45bb70f44b88b7eac))
+
 ### [3.3.1-alpha.0](https://github.com/movableink/tailwind-config/compare/v3.3.0...v3.3.1-alpha.0) (2025-10-30)
 
 ### Bug Fixes
