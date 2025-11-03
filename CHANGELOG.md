@@ -1,3 +1,12 @@
+## [3.4.0](https://github.com/movableink/tailwind-config/compare/v3.3.1...v3.4.0) (2025-11-03)
+
+### Features
+
+- add action and divider colors ([487ba38](https://github.com/movableink/tailwind-config/commit/487ba386c8fb95a5eeda1838e31abc403ed4e438))
+- add inkux-ified button styles ([718ce51](https://github.com/movableink/tailwind-config/commit/718ce51cc218666d1656cd39a082c618677d0012))
+- add inter font ([f6c0b76](https://github.com/movableink/tailwind-config/commit/f6c0b7629d6c6e912f260c3aff9067f6ab671c1b))
+- update base values ([71ebe76](https://github.com/movableink/tailwind-config/commit/71ebe76c7f2b2cc7bdcb45fdbe8fcfd5e151c8e5))
+
 ### [3.3.1](https://github.com/movableink/tailwind-config/compare/v3.3.1-alpha.0...v3.3.1) (2025-10-31)
 
 ### [3.3.1-alpha.0](https://github.com/movableink/tailwind-config/compare/v3.3.0...v3.3.1-alpha.0) (2025-10-30)
