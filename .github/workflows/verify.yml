@@ -9,12 +9,10 @@ on:
       - master
 jobs:
   lint:
-    runs-on: gha-runner
-    permissions:
-      contents: read
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: volta-cli/action@v1
+      - uses: volta-cli/action@v4
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
@@ -30,9 +28,7 @@ jobs:
       - run: yarn prettier --check "**/*{json,md,yml}"
 
   test:
-    runs-on: gha-runner
-    permissions:
-      contents: read
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: volta-cli/action@v1
@@ -51,9 +47,7 @@ jobs:
       - run: yarn test
 
   snapshot:
-    runs-on: gha-runner
-    permissions:
-      contents: read
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: volta-cli/action@v1
