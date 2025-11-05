@@ -21,7 +21,8 @@
     "release": "release-it",
     "prepare": "husky install",
     "prepublishOnly": "yarn build && yarn compress",
-    "snapshot": "build-storybook && percy-storybook --widths=1280"
+    "build-storybook": "storybook build",
+    "snapshot": "PERCY_TOKEN=$PERCY_TOKEN percy storybook --widths=1280"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
