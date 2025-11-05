@@ -55,6 +55,7 @@ const fontSize = {
 
 const fontWeight = {
   normal: 400,
+  semibold: 500,
   bold: 600,
 };
 
@@ -64,6 +65,7 @@ const letterSpacing = {
   sm: '-0.03125rem',
   base: '0rem',
   md: '0.025em',
+  wide: '0.03rem',
 };
 
 const lineHeight = {

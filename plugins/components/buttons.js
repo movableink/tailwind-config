@@ -83,11 +83,12 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       display: 'inline-flex',
 
       // Default border
-      borderRadius: '4px',
+      borderRadius: '8px',
       borderWidth: '1px',
 
       // Shared Font Style
-      fontWeight: theme('fontWeight.bold'),
+      fontWeight: theme('fontWeight.semibold'),
+      letterSpacing: theme('letterSpacing.wide'),
 
       // Prevent selection of text
       userSelect: 'none',
@@ -253,7 +254,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     /** === Basic Button (Size) === **/
     [fluidButtonWithoutModifier('size')]: {
       fontSize: theme('fontSize.sm'),
-      lineHeight: theme('lineHeight.xs'),
+      lineHeight: theme('lineHeight.sm'),
       paddingBottom: theme('padding.2'),
       paddingLeft: theme('padding.4'),
       paddingRight: theme('padding.4'),
@@ -301,7 +302,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     /** === Small Button === **/
     [`.fluid-button.${e('size:sm')}`]: {
       fontSize: theme('fontSize.xs'),
-      lineHeight: theme('lineHeight.2xs'),
+      lineHeight: theme('lineHeight.xs'),
       paddingBottom: theme('padding.1'),
       paddingLeft: theme('padding.2'),
       paddingRight: theme('padding.2'),
@@ -325,7 +326,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     /** === Large Button === **/
     [`.fluid-button.${e('size:lg')}`]: {
       fontSize: theme('fontSize.base'),
-      lineHeight: theme('lineHeight.2xs'),
+      lineHeight: theme('lineHeight.base'),
       paddingBottom: theme('padding.2'),
       paddingLeft: theme('padding.5'),
       paddingRight: theme('padding.5'),
