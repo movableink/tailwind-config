@@ -1,3 +1,9 @@
+### [3.5.1-alpha.0](https://github.com/movableink/tailwind-config/compare/v3.5.0...v3.5.1-alpha.0) (2025-11-05)
+
+### Features
+
+- add select button size ([d46aeea](https://github.com/movableink/tailwind-config/commit/d46aeea73757b7e579e12342422cc2144d3e0829))
+
 ## [3.5.0](https://github.com/movableink/tailwind-config/compare/v3.4.0...v3.5.0) (2025-11-05)
 
 ### Features
