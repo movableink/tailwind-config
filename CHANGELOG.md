@@ -1,3 +1,13 @@
+## [3.5.0](https://github.com/movableink/tailwind-config/compare/v3.4.0...v3.5.0) (2025-11-05)
+
+### Features
+
+- add font semibold and tracking wide to theme ([1bf69be](https://github.com/movableink/tailwind-config/commit/1bf69be21832bd5c2adb95ecce5a335416dd68ab))
+
+### Bug Fixes
+
+- update button padding, size, and border radius ([9125f3f](https://github.com/movableink/tailwind-config/commit/9125f3f51e9b185aa5c23c504d41e0e827fc966b))
+
 ## [3.4.0](https://github.com/movableink/tailwind-config/compare/v3.3.1...v3.4.0) (2025-11-03)
 
 ### Features
