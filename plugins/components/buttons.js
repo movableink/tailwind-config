@@ -323,6 +323,30 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       },
     },
 
+    /** === Select Button === **/
+    [`.fluid-button.${e('size:select')}`]: {
+      fontSize: theme('fontSize.base'),
+      lineHeight: theme('lineHeight.sm'),
+      paddingBottom: theme('padding[1.5]'),
+      paddingLeft: theme('padding.2'),
+      paddingRight: theme('padding.2'),
+      paddingTop: theme('padding[1.5]'),
+
+      svg: {
+        height: theme('height.3'),
+        width: theme('width.3'),
+
+        // Create the right spacing w/o the line height
+        marginTop: '2px',
+        marginBottom: '2px',
+      },
+
+      // Handle spacing if text is also present
+      ':not(.sr-only) + svg': {
+        marginLeft: theme('margin.2'),
+      },
+    },
+
     /** === Large Button === **/
     [`.fluid-button.${e('size:lg')}`]: {
       fontSize: theme('fontSize.base'),
