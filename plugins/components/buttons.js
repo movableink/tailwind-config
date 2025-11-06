@@ -251,6 +251,39 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
       }),
     },
 
+    /** === Plain, Destructive Button === **/
+    [`.fluid-button.${e('type:plain')}.${e('type:destructive')}`]: {
+      '--fluid-button-color': theme('colors.error.main'),
+      borderColor: 'transparent',
+
+      // Add the transparent background if the class string doesn't include `bg-`
+      '&:not([class*="bg-"])': {
+        backgroundColor: 'transparent',
+      },
+
+      ...disabled({
+        '--fluid-button-color': theme('colors.text.disabled'),
+      }),
+
+      ...hovered({
+        '--fluid-button-color': theme('colors.error.main'),
+        borderColor: 'transparent',
+        backgroundColor: theme('colors.error.hover'),
+      }),
+
+      ...focused({
+        boxShadow: 'none',
+        borderColor: theme('colors.primary.light'),
+        backgroundColor: theme('colors.error.hover'),
+      }),
+
+      ...active({
+        boxShadow: 'none',
+        borderColor: theme('colors.primary.light'),
+        backgroundColor: theme('colors.error.hover'),
+      }),
+    },
+
     /** === Basic Button (Size) === **/
     [fluidButtonWithoutModifier('size')]: {
       fontSize: theme('fontSize.sm'),

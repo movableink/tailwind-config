@@ -1,3 +1,9 @@
+### [3.5.1-alpha.1](https://github.com/movableink/tailwind-config/compare/v3.5.0...v3.5.1-alpha.1) (2025-11-05)
+
+### Features
+
+- add plain destructive type button ([e5cb352](https://github.com/movableink/tailwind-config/commit/e5cb352f06206d59f153a0d2f05cd9a84eba386f))
+
 ## [3.5.0](https://github.com/movableink/tailwind-config/compare/v3.4.0...v3.5.0) (2025-11-05)
 
 ### Features
