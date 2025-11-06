@@ -167,7 +167,7 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
 
     /** === Outline Button === **/
     [`.fluid-button.${e('type:outline')}`]: {
-      '--fluid-button-color': theme('colors.primary.dark'),
+      '--fluid-button-color': theme('colors.text.primary'),
       backgroundColor: 'transparent',
       borderColor: theme('colors.neutral.500'),
 
