@@ -1,3 +1,9 @@
+### [3.5.2](https://github.com/movableink/tailwind-config/compare/v3.5.1...v3.5.2) (2025-11-06)
+
+### Bug Fixes
+
+- change outline button color back to cause fewer deltas ([d33507a](https://github.com/movableink/tailwind-config/commit/d33507a1ab3073b83ada5877a0b54fb124434fa9))
+
 ### [3.5.1](https://github.com/movableink/tailwind-config/compare/v3.5.1-alpha.1...v3.5.1) (2025-11-06)
 
 ### [3.5.1-alpha.1](https://github.com/movableink/tailwind-config/compare/v3.5.0...v3.5.1-alpha.1) (2025-11-05)
