@@ -1,3 +1,5 @@
+### [3.5.1](https://github.com/movableink/tailwind-config/compare/v3.5.1-alpha.1...v3.5.1) (2025-11-06)
+
 ### [3.5.1-alpha.1](https://github.com/movableink/tailwind-config/compare/v3.5.0...v3.5.1-alpha.1) (2025-11-05)
 
 ### Features
