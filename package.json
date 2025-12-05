@@ -67,7 +67,7 @@
     "*.{json,md,yml}": "prettier --write"
   },
   "volta": {
-    "node": "14.19.3",
+    "node": "20.18.0",
     "yarn": "1.22.4"
   },
   "packageManager": "yarn@3.0.0"
