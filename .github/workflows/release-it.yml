@@ -3,10 +3,26 @@ name: Release
 on:
   workflow_dispatch:
     inputs:
+      release_type:
+        description: 'Release type'
+        required: true
+        type: choice
+        options:
+          - release
+          - prerelease
+        default: release
       increment:
-        description: Override Default Version Increment
+        description: 'Override Default Version Increment (optional)'
         required: false
         default: ''
+      dist_tag:
+        description: 'Pre-release dist tag (only used for prerelease)'
+        required: false
+        default: 'alpha'
+
+permissions:
+  contents: write
+  id-token: write
 
 jobs:
   release:
@@ -14,31 +30,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Necessary to generate changelog from commit history
-      - uses: volta-cli/action@v1
+          fetch-depth: 0
 
-      - name: git config
-        run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      - uses: actions/cache@v4
+      - uses: nicksteffens/npm-oidc-release@v1
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - run: yarn install --immutable
-
-      - name: Configure NPM with auth token
-        run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - run: yarn release ${{ github.event.inputs.increment }}
+          release_type: ${{ inputs.release_type }}
+          increment: ${{ inputs.increment }}
+          dist_tag: ${{ inputs.dist_tag }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,4 +1,7 @@
 {
+  "npm": {
+    "skipChecks": true
+  },
   "hooks": {
     "after:release": "prettier --write CHANGELOG.md"
   },
