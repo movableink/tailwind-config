@@ -70,5 +70,5 @@
     "node": "14.19.3",
     "yarn": "3.8.7"
   },
-  "packageManager": "yarn@3.0.0"
+  "packageManager": "yarn@3.8.7"
 }
