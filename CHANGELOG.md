@@ -1,3 +1,5 @@
+### [3.5.3-oidc.1](https://github.com/movableink/tailwind-config/compare/v3.5.3-oidc.0...v3.5.3-oidc.1) (2025-12-05)
+
 ### [3.5.3-oidc.0](https://github.com/movableink/tailwind-config/compare/v3.5.2...v3.5.3-oidc.0) (2025-12-05)
 
 ### Bug Fixes
