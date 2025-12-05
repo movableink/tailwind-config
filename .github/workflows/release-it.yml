@@ -3,10 +3,23 @@ name: Release
 on:
   workflow_dispatch:
     inputs:
+      release_type:
+        description: 'Release type'
+        required: true
+        type: choice
+        default: 'release'
+        options:
+          - release
+          - prerelease
+          - graduate
       increment:
-        description: Override Default Version Increment
+        description: 'Version increment (optional - leave blank for auto)'
         required: false
         default: ''
+
+permissions:
+  contents: write
+  id-token: write
 
 jobs:
   release:
@@ -14,8 +27,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Necessary to generate changelog from commit history
+          fetch-depth: 0
+
       - uses: volta-cli/action@v1
+
+      - name: Upgrade npm for OIDC support
+        run: npm install -g npm@latest
 
       - name: git config
         run: |
@@ -24,7 +41,8 @@ jobs:
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+
       - uses: actions/cache@v4
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -34,11 +52,28 @@ jobs:
 
       - run: yarn install --immutable
 
-      - name: Configure NPM with auth token
-        run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+          registry-url: 'https://registry.npmjs.org'
 
-      - run: yarn release ${{ github.event.inputs.increment }}
+      - name: Release
+        if: ${{ github.event.inputs.release_type == 'release' }}
+        run: yarn release --ci ${{ github.event.inputs.increment }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Prerelease
+        if: ${{ github.event.inputs.release_type == 'prerelease' }}
+        run: yarn release --ci --preRelease=beta ${{ github.event.inputs.increment }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Graduate prerelease
+        if: ${{ github.event.inputs.release_type == 'graduate' }}
+        run: yarn release --ci ${{ github.event.inputs.increment }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
