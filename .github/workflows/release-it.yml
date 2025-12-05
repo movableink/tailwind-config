@@ -7,16 +7,16 @@ on:
         description: 'Release type'
         required: true
         type: choice
-        default: 'release'
         options:
           - release
           - prerelease
+        default: release
       increment:
-        description: 'Version increment (optional)'
+        description: 'Override Default Version Increment (optional)'
         required: false
         default: ''
       dist_tag:
-        description: 'Pre-release dist tag'
+        description: 'Pre-release dist tag (only used for prerelease)'
         required: false
         default: 'alpha'
 
@@ -32,10 +32,39 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: nicksteffens/npm-oidc-release@v1
+      - name: Setup Node with NPM registry
+        uses: actions/setup-node@v4
         with:
-          release_type: ${{ inputs.release_type }}
-          increment: ${{ inputs.increment }}
-          dist_tag: ${{ inputs.dist_tag }}
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Upgrade npm for OIDC support
+        run: npm install -g npm@latest
+
+      - name: git config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v4
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - run: yarn install --immutable
+
+      - name: Run release-it
+        run: |
+          if [ "${{ inputs.release_type }}" == "prerelease" ]; then
+            npx release-it --ci ${{ inputs.increment }} --preRelease=${{ inputs.dist_tag }} --github.preRelease
+          else
+            npx release-it --ci ${{ inputs.increment }}
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
