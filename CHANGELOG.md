@@ -1,3 +1,10 @@
+### [3.5.3-oidc.0](https://github.com/movableink/tailwind-config/compare/v3.5.2...v3.5.3-oidc.0) (2025-12-05)
+
+### Bug Fixes
+
+- add dist_tag input for prerelease workflow ([aa0e425](https://github.com/movableink/tailwind-config/commit/aa0e425447eb7a181bbada7413ed7165607b644f))
+- remove NPM_TOKEN, rely on OIDC authentication ([d399c30](https://github.com/movableink/tailwind-config/commit/d399c301ef07d5144d073a1d9e3fbcc608527e78))
+
 ### [3.5.2](https://github.com/movableink/tailwind-config/compare/v3.5.1...v3.5.2) (2025-11-06)
 
 ### Bug Fixes
