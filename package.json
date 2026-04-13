@@ -66,9 +66,5 @@
     "*.js": "eslint --fix",
     "*.{json,md,yml}": "prettier --write"
   },
-  "volta": {
-    "node": "14.19.3",
-    "yarn": "3.8.7"
-  },
   "packageManager": "yarn@3.8.7"
 }
