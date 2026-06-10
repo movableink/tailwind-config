@@ -5151,7 +5151,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:2.4.2, chalk@npm:^2.0.0, chalk@npm:^2.4.1, chalk@npm:^2.4.2":
+"chalk@npm:2.4.2, chalk@npm:^2.0.0, chalk@npm:^2.4.1":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
   dependencies:
@@ -11589,12 +11589,12 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.23":
-  version: 3.1.23
-  resolution: "nanoid@npm:3.1.23"
+"nanoid@npm:^3.3.12":
+  version: 3.3.12
+  resolution: "nanoid@npm:3.3.12"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: 8fa8dc3283a4fa159700a36cb22f61197547c8155831cb74f1b9c51fbc29ea80c136fd91001468d147a31d3a77f884958aec6c1beabac903c89780acacca9327
+  checksum: 38699257447dc59e21e73e0510d0dfb16b7a610d9ca80633d5c3a68f9b4298c990513d30404ca8f163c2d03225ee01695ff8898bea6179183f38f0477b7635ac
   languageName: node
   linkType: hard
 
@@ -12600,6 +12600,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"picocolors@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "picocolors@npm:0.2.1"
+  checksum: 3b0f441f0062def0c0f39e87b898ae7461c3a16ffc9f974f320b44c799418cabff17780ee647fda42b856a1dc45897e2c62047e1b546d94d6d5c6962f45427b2
+  languageName: node
+  linkType: hard
+
 "picocolors@npm:^1.1.1":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
@@ -12877,24 +12884,23 @@ fsevents@~2.3.2:
   linkType: hard
 
 "postcss@npm:^7.0.14, postcss@npm:^7.0.26, postcss@npm:^7.0.32, postcss@npm:^7.0.36, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
-  version: 7.0.36
-  resolution: "postcss@npm:7.0.36"
+  version: 7.0.39
+  resolution: "postcss@npm:7.0.39"
   dependencies:
-    chalk: ^2.4.2
+    picocolors: ^0.2.1
     source-map: ^0.6.1
-    supports-color: ^6.1.0
-  checksum: 4cfc0989b9ad5d0e8971af80d87f9c5beac5c84cb89ff22ad69852edf73c0a2fa348e7e0a135b5897bf893edad0fe86c428769050431ad9b532f072ff530828d
+  checksum: 4ac793f506c23259189064bdc921260d869a115a82b5e713973c5af8e94fbb5721a5cc3e1e26840500d7e1f1fa42a209747c5b1a151918a9bc11f0d7ed9048e3
   languageName: node
   linkType: hard
 
 "postcss@npm:^8.1.6, postcss@npm:^8.2.1, postcss@npm:^8.2.9":
-  version: 8.3.5
-  resolution: "postcss@npm:8.3.5"
+  version: 8.5.15
+  resolution: "postcss@npm:8.5.15"
   dependencies:
-    colorette: ^1.2.2
-    nanoid: ^3.1.23
-    source-map-js: ^0.6.2
-  checksum: c73fc4825ed27396d453a942628cd8e34dd43c11b724f43f65f376d3900037736013b6446f1d9947ce5a847837cf96649e9a3f200ca2bd94a884e91e56ee1ceb
+    nanoid: ^3.3.12
+    picocolors: ^1.1.1
+    source-map-js: ^1.2.1
+  checksum: 82e046d5bd0c537e7bcae1b97ec366968cac4ebdbd38773b69a2a4ad437f26641643a48f120317dd167199ac718ff8a0ab7dd102258430e4c919daaef0e57904
   languageName: node
   linkType: hard
 
@@ -14810,10 +14816,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^0.6.2":
-  version: 0.6.2
-  resolution: "source-map-js@npm:0.6.2"
-  checksum: 9c8151a29e00fd8d3ba87709fdf9a9ce48313d653f4a29a39b4ae53d346ac79e005de624796ff42eff55cbaf26d2e87f4466001ca87831d400d818c5cf146a0e
+"source-map-js@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "source-map-js@npm:1.2.1"
+  checksum: 4eb0cd997cdf228bc253bcaff9340afeb706176e64868ecd20efbe6efea931465f43955612346d6b7318789e5265bdc419bc7669c1cebe3db0eb255f57efa76b
   languageName: node
   linkType: hard
 
@@ -15374,15 +15380,6 @@ resolve@^2.0.0-next.3:
   dependencies:
     has-flag: ^3.0.0
   checksum: 95f6f4ba5afdf92f495b5a912d4abee8dcba766ae719b975c56c084f5004845f6f5a5f7769f52d53f40e21952a6d87411bafe34af4a01e65f9926002e38e1dac
-  languageName: node
-  linkType: hard
-
-"supports-color@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "supports-color@npm:6.1.0"
-  dependencies:
-    has-flag: ^3.0.0
-  checksum: 74358f9535c83ee113fbaac354b11e808060f6e7d8722082ee43af3578469134e89d00026dce2a6b93ce4e5b89d0e9a10f638b2b9f64c7838c2fb2883a47b3d5
   languageName: node
   linkType: hard
 
