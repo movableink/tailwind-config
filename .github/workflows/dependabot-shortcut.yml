@@ -149,19 +149,19 @@ jobs:
           STORY_ID: ${{ steps.create-shortcut-story.outputs.story_id }}
           PR_BODY: ${{ steps.get-pr.outputs.pr_body }}
 
-      - name: Assign story to Designer Team
+      - name: Assign story to Design Systems Team
         if: steps.get-pr.outputs.skip_creation == 'false'
         env:
           SHORTCUT_API_TOKEN: ${{ secrets.SHORTCUT_API_TOKEN }}
           STORY_ID: ${{ steps.create-shortcut-story.outputs.story_id }}
         run: |
-          # Update the story to assign it to the Designer Team
-          echo "Assigning story $STORY_ID to Designer Team..."
+          # Update the story to assign it to the Design Systems Team
+          echo "Assigning story $STORY_ID to Design Systems Team..."
           UPDATE_RESPONSE=$(curl -X PUT \
             -H "Content-Type: application/json" \
             -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
             -d "{
-              \"group_id\": \"696925b3-5d50-4a5c-8856-78a67f65fe4c\"
+              \"group_id\": \"698e17ad-ae60-4ddd-af00-37d5ca5810a2\"
             }" \
             -w "\nHTTP_STATUS:%{http_code}\n" \
             -L "https://api.app.shortcut.com/api/v3/stories/$STORY_ID")
