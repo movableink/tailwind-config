@@ -1,0 +1,258 @@
+name: Create Shortcut Ticket for Dependabot PRs
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to create ticket for'
+        required: true
+        type: number
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  create-shortcut-ticket:
+    if: ${{ (github.event_name == 'pull_request_target' && (github.actor == 'dependabot[bot]' || github.actor == 'app/dependabot')) || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get PR details
+        id: get-pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            let pr;
+            if (context.eventName === 'pull_request_target') {
+              pr = context.payload.pull_request;
+            } else {
+              // workflow_dispatch
+              const prNumber = context.payload.inputs.pr_number;
+              const { data } = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber
+              });
+              pr = data;
+            }
+
+            // Check if ticket already exists in PR body
+            const shortcutRegex = /🎫 Shortcut ticket created: (https:\/\/app\.shortcut\.com\/[^\s\)]+)/;
+            const scIdRegex = /\[sc-(\d+)\]/;
+            const existingTicket = pr.body.match(shortcutRegex);
+            const existingScId = pr.body.match(scIdRegex);
+
+            if (existingTicket || existingScId) {
+              if (existingTicket) {
+                core.info(`Shortcut ticket already exists: ${existingTicket[1]}`);
+                core.setOutput('existing_ticket', existingTicket[1]);
+              } else if (existingScId) {
+                const scId = existingScId[1];
+                const ticketUrl = `https://app.shortcut.com/movableink-epd/story/${scId}`;
+                core.info(`Shortcut ticket already exists: [sc-${scId}]`);
+                core.setOutput('existing_ticket', ticketUrl);
+              }
+              core.setOutput('skip_creation', 'true');
+            } else {
+              core.setOutput('skip_creation', 'false');
+            }
+
+            core.setOutput('pr_title', pr.title);
+            core.setOutput('pr_url', pr.html_url);
+            core.setOutput('pr_body', pr.body);
+            core.setOutput('pr_number', pr.number);
+
+      - name: Create Shortcut Story
+        if: steps.get-pr.outputs.skip_creation == 'false'
+        id: create-shortcut-story
+        env:
+          SHORTCUT_API_TOKEN: ${{ secrets.SHORTCUT_API_TOKEN }}
+          PR_TITLE: ${{ steps.get-pr.outputs.pr_title }}
+          PR_URL: ${{ steps.get-pr.outputs.pr_url }}
+          PR_BODY: ${{ steps.get-pr.outputs.pr_body }}
+        run: |
+          # Extract dependency name and versions from PR title
+          # Example old: "chore(deps-dev): bump @movable/ui from 3.1.0 to 3.2.0"
+          # Example new: "chore(deps-dev): update @movable/ui requirement from ^3.11.0 to ^3.13.0 in /packages/studio"
+          DEPENDENCY_INFO=$(echo "$PR_TITLE" | sed -n 's/.*\(bump\|update\) \([^ ]*\) \(requirement \)\?from \([^ ]*\) to \([^ ]*\).*/\2 from \4 to \5/p')
+          DEPENDENCY_NAME=$(echo "$PR_TITLE" | sed -n 's/.*\(bump\|update\) \([^ ]*\) \(requirement \)\?from.*/\2/p')
+
+          # Create story description with proper JSON escaping
+          STORY_DESCRIPTION="Dependabot PR: $PR_TITLE\\n\\nLink: $PR_URL\\n\\n$PR_BODY"
+          # Escape quotes and backslashes for JSON
+          STORY_DESCRIPTION=$(echo "$STORY_DESCRIPTION" | sed 's/\\/\\\\/g; s/"/\\"/g')
+
+          # Create Shortcut story using jq for proper JSON encoding
+          echo "Creating Shortcut story with dependency info: $DEPENDENCY_INFO"
+          STORY_RESPONSE=$(jq -n \
+            --arg name "$DEPENDENCY_INFO" \
+            --arg description "$STORY_DESCRIPTION" \
+            '{
+              name: $name,
+              description: $description,
+              story_type: "chore",
+              workflow_state_id: 500203878,
+              labels: [{name: "dependabot"}]
+            }' | curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
+            -d @- \
+            -w "\nHTTP_STATUS:%{http_code}\n" \
+            -L "https://api.app.shortcut.com/api/v3/stories")
+
+          # Debug output
+          echo "API Response: $STORY_RESPONSE"
+
+          # Extract HTTP status and response body
+          HTTP_STATUS=$(echo "$STORY_RESPONSE" | grep "HTTP_STATUS:" | cut -d: -f2)
+          RESPONSE_BODY=$(echo "$STORY_RESPONSE" | sed '/HTTP_STATUS:/d')
+
+          echo "HTTP Status: $HTTP_STATUS"
+          echo "Response Body: $RESPONSE_BODY"
+
+          # Check if the API call was successful
+          if [ "$HTTP_STATUS" != "201" ] && [ "$HTTP_STATUS" != "200" ]; then
+            echo "Error: Shortcut API call failed with status $HTTP_STATUS"
+            echo "Response: $RESPONSE_BODY"
+            exit 1
+          fi
+
+          # Extract story ID and URL from successful response
+          STORY_ID=$(echo "$RESPONSE_BODY" | jq -r '.id')
+          STORY_URL=$(echo "$RESPONSE_BODY" | jq -r '.app_url')
+
+          echo "Created Shortcut story: $STORY_URL"
+          echo "story_id=$STORY_ID" >> $GITHUB_OUTPUT
+          echo "story_url=$STORY_URL" >> $GITHUB_OUTPUT
+
+      - name: Update PR body with story ID
+        if: steps.get-pr.outputs.skip_creation == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = process.env.PR_NUMBER;
+            const storyId = process.env.STORY_ID;
+            const currentBody = process.env.PR_BODY;
+
+            const updatedBody = `${currentBody}\n\n[sc-${storyId}]`;
+
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              body: updatedBody
+            });
+        env:
+          PR_NUMBER: ${{ steps.get-pr.outputs.pr_number }}
+          STORY_ID: ${{ steps.create-shortcut-story.outputs.story_id }}
+          PR_BODY: ${{ steps.get-pr.outputs.pr_body }}
+
+      - name: Assign story to Designer Team
+        if: steps.get-pr.outputs.skip_creation == 'false'
+        env:
+          SHORTCUT_API_TOKEN: ${{ secrets.SHORTCUT_API_TOKEN }}
+          STORY_ID: ${{ steps.create-shortcut-story.outputs.story_id }}
+        run: |
+          # Update the story to assign it to the Designer Team
+          echo "Assigning story $STORY_ID to Designer Team..."
+          UPDATE_RESPONSE=$(curl -X PUT \
+            -H "Content-Type: application/json" \
+            -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
+            -d "{
+              \"group_id\": \"696925b3-5d50-4a5c-8856-78a67f65fe4c\"
+            }" \
+            -w "\nHTTP_STATUS:%{http_code}\n" \
+            -L "https://api.app.shortcut.com/api/v3/stories/$STORY_ID")
+
+          # Extract HTTP status and response body
+          HTTP_STATUS=$(echo "$UPDATE_RESPONSE" | grep "HTTP_STATUS:" | cut -d: -f2)
+          RESPONSE_BODY=$(echo "$UPDATE_RESPONSE" | sed '/HTTP_STATUS:/d')
+
+          echo "Team assignment HTTP Status: $HTTP_STATUS"
+          echo "Team assignment Response: $RESPONSE_BODY"
+
+          # Check if the update was successful
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "Warning: Failed to assign story to team with status $HTTP_STATUS"
+            echo "Story was created successfully but team assignment failed"
+          else
+            echo "✅ Successfully assigned story to Designer Team"
+          fi
+
+      - name: Assign story to monthly epic
+        if: steps.get-pr.outputs.skip_creation == 'false'
+        env:
+          SHORTCUT_API_TOKEN: ${{ secrets.SHORTCUT_API_TOKEN }}
+          STORY_ID: ${{ steps.create-shortcut-story.outputs.story_id }}
+        run: |
+          # Get current month and map to epic ID
+          CURRENT_MONTH=$(date +%m)
+
+          case $CURRENT_MONTH in
+            02) EPIC_ID=187448 ;; # February 2026
+            03) EPIC_ID=187449 ;; # March 2026
+            04) EPIC_ID=187450 ;; # April 2026
+            05) EPIC_ID=187451 ;; # May 2026
+            06) EPIC_ID=187452 ;; # June 2026
+            07) EPIC_ID=187453 ;; # July 2026
+            08) EPIC_ID=187454 ;; # August 2026
+            09) EPIC_ID=187455 ;; # September 2026
+            10) EPIC_ID=187456 ;; # October 2026
+            11) EPIC_ID=187457 ;; # November 2026
+            12) EPIC_ID=187458 ;; # December 2026
+            *) echo "⚠️  Warning: No epic mapping for month $CURRENT_MONTH - story created without epic"; exit 0 ;;
+          esac
+
+          echo "Assigning story $STORY_ID to epic $EPIC_ID for month $CURRENT_MONTH..."
+          UPDATE_RESPONSE=$(curl -X PUT \
+            -H "Content-Type: application/json" \
+            -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
+            -d "{
+              \"epic_id\": $EPIC_ID
+            }" \
+            -w "\nHTTP_STATUS:%{http_code}\n" \
+            -L "https://api.app.shortcut.com/api/v3/stories/$STORY_ID")
+
+          # Extract HTTP status and response body
+          HTTP_STATUS=$(echo "$UPDATE_RESPONSE" | grep "HTTP_STATUS:" | cut -d: -f2)
+          RESPONSE_BODY=$(echo "$UPDATE_RESPONSE" | sed '/HTTP_STATUS:/d')
+
+          echo "Epic assignment HTTP Status: $HTTP_STATUS"
+          echo "Epic assignment Response: $RESPONSE_BODY"
+
+          # Check if the update was successful
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "Warning: Failed to assign story to epic with status $HTTP_STATUS"
+            echo "Story was created successfully but epic assignment failed"
+          else
+            echo "✅ Successfully assigned story to epic $EPIC_ID"
+          fi
+
+      - name: Comment on PR with Shortcut link
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = process.env.PR_NUMBER;
+            let comment;
+
+            if (process.env.SKIP_CREATION === 'true') {
+              const existingTicket = process.env.EXISTING_TICKET;
+              comment = `🎫 Shortcut ticket already exists: ${existingTicket}`;
+            } else {
+              const storyUrl = process.env.STORY_URL;
+              comment = `🎫 Shortcut ticket created: ${storyUrl}`;
+            }
+
+            github.rest.issues.createComment({
+              issue_number: prNumber,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+        env:
+          PR_NUMBER: ${{ steps.get-pr.outputs.pr_number }}
+          SKIP_CREATION: ${{ steps.get-pr.outputs.skip_creation }}
+          EXISTING_TICKET: ${{ steps.get-pr.outputs.existing_ticket }}
+          STORY_URL: ${{ steps.create-shortcut-story.outputs.story_url }}
