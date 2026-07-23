@@ -17045,11 +17045,11 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "ws@npm:^6.1.0":
-  version: 6.2.2
-  resolution: "ws@npm:6.2.2"
+  version: 6.2.6
+  resolution: "ws@npm:6.2.6"
   dependencies:
     async-limiter: ~1.0.0
-  checksum: aec3154ec51477c094ac2cb5946a156e17561a581fa27005cbf22c53ac57f8d4e5f791dd4bbba6a488602cb28778c8ab7df06251d590507c3c550fd8ebeee949
+  checksum: a112f68d8a876ac50a72dc180518f10955a94497f6dcb475d66d92400d36079bbabe24f204e820c3765470831c967f4ab7a38f138cb17e17172697677403848b
   languageName: node
   linkType: hard
 
