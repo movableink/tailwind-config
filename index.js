@@ -24,7 +24,22 @@ const BORDER_COLOR_VARIANTS = [
   // Custom
   'disabled',
   'focus-within',
+  // Must come after `focus`: Tailwind emits variants in list order, so the
+  // later one wins when both match.
+  'focus-visible',
 ];
+
+/**
+ * Tailwind's own default variants for the outline and ring plugins, plus
+ * `focus-visible`, so apps can build focus indicators out of utilities rather
+ * than hand-written CSS (WCAG 2.4.7).
+ *
+ * `dark` is inert today — this config does not set `darkMode` — but it is kept
+ * where Tailwind has it by default so a downstream app that turns dark mode on
+ * does not silently lose it.
+ */
+const FOCUS_RING_VARIANTS = ['responsive', 'focus-within', 'focus', 'focus-visible'];
+const FOCUS_RING_COLOR_VARIANTS = ['responsive', 'dark', 'focus-within', 'focus', 'focus-visible'];
 
 /**
  * Configures Tailwind to use Fluid's design tokens
@@ -63,6 +78,11 @@ module.exports = {
   variants: {
     borderColor: BORDER_COLOR_VARIANTS,
     visibility: ['responsive', 'group-hover'],
+    outline: FOCUS_RING_VARIANTS,
+    ringWidth: FOCUS_RING_VARIANTS,
+    ringOffsetWidth: FOCUS_RING_VARIANTS,
+    ringColor: FOCUS_RING_COLOR_VARIANTS,
+    ringOffsetColor: FOCUS_RING_COLOR_VARIANTS,
   },
 
   plugins: [
@@ -77,4 +97,6 @@ module.exports = {
 
   // Export constants used in configuration to enable extension
   BORDER_COLOR_VARIANTS,
+  FOCUS_RING_VARIANTS,
+  FOCUS_RING_COLOR_VARIANTS,
 };
