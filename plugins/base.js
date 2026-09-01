@@ -17,7 +17,15 @@ module.exports = function fluidTailwindPlugin({ addBase, theme }) {
 
     'input, textarea': {
       '&::placeholder': {
-        color: theme('colors.neutral.500'),
+        // `neutral.600` (#757575) is ~4.6:1 on white and passes WCAG 1.4.3 for
+        // normal text. Do not lighten this — `neutral.500` (#9e9e9e) is only
+        // ~2.7:1 and fails.
+        color: theme('colors.neutral.600'),
+
+        // Preflight already sets this, but consumers running with
+        // `corePlugins: { preflight: false }` would otherwise inherit Firefox's
+        // default placeholder opacity, dragging the ratio back below 4.5:1.
+        opacity: 1,
       },
     },
   });
