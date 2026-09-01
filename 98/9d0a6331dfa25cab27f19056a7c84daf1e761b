@@ -1,0 +1,26 @@
+tests/focus-visible-variants.js
+  s_fdef53791a800f::t_3efc44ff2589c0 1-8,10-24,26-33
+  s_fdef53791a800f::t_27bb828e75e37f 9,25
+index.js
+  s_fdef53791a800f::t_750ce1db184ee0 81-85
+  s_fdef53791a800f::t_634fc00e4d7761 42
+  s_fdef53791a800f::t_e990d3a21c4f2d 100-101
+  s_fdef53791a800f::t_a81d560e813b59 27-29,32-41
+  s_fdef53791a800f::t_efefb125eabfa0 43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "989d0a6331dfa25cab27f19056a7c84daf1e761b",
+  "prompts": {},
+  "sessions": {
+    "s_fdef53791a800f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8f29981c-d64d-4b06-87b3-a1a74086c5db",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Michael Nutt <michael@nuttnet.net>"
+    }
+  }
+}
