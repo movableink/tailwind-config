@@ -2156,7 +2156,7 @@ __metadata:
     csso-cli: ^3.0.0
     eslint: ^7.32.0
     eslint-plugin-ava: ^12.0.0
-    htm: ^3.0.3
+    htm: ^3.1.1
     husky: ^8.0.1
     lint-staged: ^11.0.0
     lorem-ipsum: ^3.0.0
@@ -9560,10 +9560,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"htm@npm:^3.0.3":
-  version: 3.0.4
-  resolution: "htm@npm:3.0.4"
-  checksum: c019c18a1a606b9fbac515cd60f4b06abf8bc4fef6ebc39bb65c0a58a3d18965af18f7695ac889f2837e9c90076aa80cc829fe8295093aded57e7fc0019501b0
+"htm@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "htm@npm:3.1.1"
+  checksum: 1827a0cafffcff69690b048a4df59944086d7503fe5eb7c10b40834439205bdf992941e7aa25e92b3c2c086170565b4ed7c365bc072d31067c6e7a4e478776bd
   languageName: node
   linkType: hard
 
