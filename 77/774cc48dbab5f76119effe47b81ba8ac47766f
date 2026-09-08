@@ -1,0 +1,22 @@
+plugins/components/buttons.js
+  s_fdef53791a800f::t_c0bcfedb089f8c 40-55
+  s_fdef53791a800f::t_ab2debd59a4761 120-128,130-136
+tests/button-focus.js
+  s_fdef53791a800f::t_bb87d2e745c5e6 1-59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "77774cc48dbab5f76119effe47b81ba8ac47766f",
+  "prompts": {},
+  "sessions": {
+    "s_fdef53791a800f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8f29981c-d64d-4b06-87b3-a1a74086c5db",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Michael Nutt <michael@nuttnet.net>"
+    }
+  }
+}

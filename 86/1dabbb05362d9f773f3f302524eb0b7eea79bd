@@ -1,0 +1,21 @@
+tests/base-styles.js
+  s_fdef53791a800f::t_bd9212c2b8a024 1-26
+plugins/base.js
+  s_fdef53791a800f::t_d652efb895454f 20-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "861dabbb05362d9f773f3f302524eb0b7eea79bd",
+  "prompts": {},
+  "sessions": {
+    "s_fdef53791a800f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8f29981c-d64d-4b06-87b3-a1a74086c5db",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Michael Nutt <michael@nuttnet.net>"
+    }
+  }
+}
