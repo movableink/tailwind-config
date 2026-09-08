@@ -1,0 +1,14 @@
+.github/workflows/dependabot-shortcut.yml
+  h_c63a54193210ab 152,158-159,164
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "996ee21ba464d6c707ab1db6ec1b350e4fce3591",
+  "prompts": {},
+  "humans": {
+    "h_c63a54193210ab": {
+      "author": "Nicklas Steffens <nicksteffens@users.noreply.github.com>"
+    }
+  }
+}

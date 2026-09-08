@@ -1,0 +1,14 @@
+.github/dependabot.yml
+  h_c63a54193210ab 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "5ef228662431facd4b0c726d37b9346a17166edf",
+  "prompts": {},
+  "humans": {
+    "h_c63a54193210ab": {
+      "author": "Nicklas Steffens <nicksteffens@users.noreply.github.com>"
+    }
+  }
+}

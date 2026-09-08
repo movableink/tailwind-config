@@ -1,0 +1,28 @@
+.github/workflows/report-file-size.yml
+  77e24a9460a4cd31 17,42
+.github/workflows/verify.yml
+  77e24a9460a4cd31 15,34
+.github/workflows/deploy.yml
+  77e24a9460a4cd31 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "0a339d074d5ae650fe75e66a5fc4e623189ff183",
+  "prompts": {
+    "77e24a9460a4cd31": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a198ab43-8908-40ad-8ac9-cf43aecad5b8",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Nicklas Steffens",
+      "messages": [],
+      "total_additions": 5,
+      "total_deletions": 5,
+      "accepted_lines": 5,
+      "overriden_lines": 0,
+      "messages_url": "https://git-ai.k8s.misrv.net/cas/3cfbf1d0499e8061e39814d1198659dc7546156e242f1e0872c3ae1c3210703c"
+    }
+  }
+}

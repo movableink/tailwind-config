@@ -1,0 +1,9 @@
+.github/SMOKE_TEST_DELETE_ME.md
+  ai_agent 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "18f3f5391971d8b99b3c624c8b4376b77289baf9",
+  "prompts": {}
+}

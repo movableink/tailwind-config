@@ -1,0 +1,21 @@
+.github/workflows/dependabot-shortcut.yml
+  s_e7bf5000907282::t_57b7f24371f2b1 1-258
+.github/dependabot.yml
+  s_e7bf5000907282::t_4ed8a782798a1d 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "9aa71cc0529ea1dee52343f41d3d62afe8e9fd10",
+  "prompts": {},
+  "sessions": {
+    "s_e7bf5000907282": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "723e8078-59ad-4a4b-b238-399481d9ccb4",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Nicklas Steffens <nicksteffens@users.noreply.github.com>"
+    }
+  }
+}
