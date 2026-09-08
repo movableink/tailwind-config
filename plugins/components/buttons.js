@@ -37,6 +37,22 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
     };
   }
 
+  /**
+   * Keyboard-visible focus, as opposed to the `focused` helper above, which
+   * matches _any_ focus (including a mouse click).
+   *
+   * Includes the static `appearance:focused` class, like the other appearance
+   * helpers, so Storybook's "Focused" swatches depict what a keyboard user
+   * actually sees.
+   */
+  function focusVisible(styles) {
+    return {
+      [`&:focus-visible, &.${focusedAppearance}`]: {
+        ...styles,
+      },
+    };
+  }
+
   function hovered(styles) {
     return {
       [`&:hover:not(:disabled):not(.${disabledAppearance}), &.${hoveredAppearance}:not(:disabled):not(.${disabledAppearance})`]:
@@ -101,8 +117,23 @@ module.exports = function buttonComponentsPlugin({ addComponents, e, theme }) {
         cursor: 'not-allowed',
       }),
 
-      ...focused({
+      // Suppress the user-agent outline only where the browser would not draw a
+      // focus ring anyway (pointer / programmatic focus). Keyboard focus keeps a
+      // visible indicator — WCAG 2.4.7. The `appearance:focused` exclusion keeps
+      // the static class authoritative, matching `hovered`/`active`.
+      //
+      // Deliberately its own rule rather than part of the ring below: a browser
+      // without `:focus-visible` support drops this declaration block, failing
+      // toward a *visible* outline.
+      [`&:focus:not(:focus-visible):not(.${focusedAppearance})`]: {
         outline: 'none',
+      },
+
+      // `primary.main` is ~4.9:1 on white and ~4.3:1 on black, clearing the 3:1
+      // required of a focus indicator by WCAG 1.4.11 on either background.
+      ...focusVisible({
+        outline: `2px solid ${theme('colors.primary.main')}`,
+        outlineOffset: '2px',
       }),
 
       svg: {
