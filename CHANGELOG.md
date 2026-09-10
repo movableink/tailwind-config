@@ -1,3 +1,15 @@
+## [3.6.0](https://github.com/movableink/tailwind-config/compare/v3.5.3-oidc.1...v3.6.0) (2026-09-10)
+
+### Features
+
+- **variants:** add focus-visible variants for outline and ring ([989d0a6](https://github.com/movableink/tailwind-config/commit/989d0a6331dfa25cab27f19056a7c84daf1e761b))
+
+### Bug Fixes
+
+- **base:** darken placeholder text to meet WCAG AA contrast ([861dabb](https://github.com/movableink/tailwind-config/commit/861dabbb05362d9f773f3f302524eb0b7eea79bd)), closes [#9e9e9](https://github.com/movableink/tailwind-config/issues/9e9e9) [#757575](https://github.com/movableink/tailwind-config/issues/757575)
+- **buttons:** keep focus visible for keyboard users ([77774cc](https://github.com/movableink/tailwind-config/commit/77774cc48dbab5f76119effe47b81ba8ac47766f))
+- use design-systems team instead of individual ([2dd58d3](https://github.com/movableink/tailwind-config/commit/2dd58d3124f4ff959cd9681879fc3724c4e023b8))
+
 ### [3.5.3-oidc.1](https://github.com/movableink/tailwind-config/compare/v3.5.3-oidc.0...v3.5.3-oidc.1) (2025-12-05)
 
 ### [3.5.3-oidc.0](https://github.com/movableink/tailwind-config/compare/v3.5.2...v3.5.3-oidc.0) (2025-12-05)
